@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include '/php/config.inc.php';?>
+<?php include 'php/config.inc.php';?>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
