@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>My first Three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+  <body>
+    <div id="container"></div>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
+    <script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+    <script src="http://threejs.org/examples/js/shaders/CopyShader.js"></script>
+		<script src="http://threejs.org/examples/js/shaders/BokehShader.js"></script>
+		<script src="http://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+		<script src="http://threejs.org/examples/js/postprocessing/RenderPass.js"></script>
+		<script src="http://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
+		<script src="http://threejs.org/examples/js/postprocessing/MaskPass.js"></script>
+		<script src="http://threejs.org/examples/js/postprocessing/BokehPass.js"></script>
+    
+		<script>
+			var container, camera, controls, scene, renderer, composer;
+      
+      var postprocessing = {};
+      // postprocessing
+
+
+      init();
+			animate();
+
+			function init() {
+				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000 );
+				camera.position.z = 10;
+
+        controls = new THREE.TrackballControls( camera );
+				controls.rotateSpeed = 1.0;
+				controls.zoomSpeed = 1.2;
+				controls.panSpeed = 0.8;
+				controls.noZoom = false;
+				controls.noPan = false;
+				controls.staticMoving = true;
+				controls.dynamicDampingFactor = 0.3;
+				controls.keys = [ 65, 83, 68 ];
+				controls.addEventListener( 'change', render );
+
+				// world
+				scene = new THREE.Scene();
+				scene.fog = new THREE.FogExp2( 0xccccdd, 0.005 );
+        
+        var hex = 0x333377;
+        var arrows = [];
+        for(var i = 0; i<=300; i++) {
+          var dir = new THREE.Vector3( 0, Math.cos(i/3), -Math.sin(i/3));
+          var origin = new THREE.Vector3( 0.03*i, 0, 0 );
+          var length = Math.exp(-(i-150)*(i-150)*0.001);
+          arrows[i] = new THREE.ArrowHelper(dir, origin, length, hex );
+          scene.add( arrows[i] );
+        }
+    
+    
+        // lights
+				light = new THREE.DirectionalLight( 0xffffff );
+				light.position.set( 1, 1, 1 );
+				scene.add( light );
+
+				light = new THREE.DirectionalLight( 0x002288 );
+				light.position.set( -1, -1, -1 );
+				scene.add( light );
+
+				light = new THREE.AmbientLight( 0x222222 );
+				scene.add( light );
+
+
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setClearColor( scene.fog.color, 1 );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container = document.getElementById( 'container' );
+				container.appendChild( renderer.domElement );
+        
+        //postprocess
+        composer = new THREE.EffectComposer( renderer );
+        composer.addPass( new THREE.RenderPass( scene, camera ) );
+        initPostprocessing();
+
+
+
+
+
+
+				window.addEventListener( 'resize', onWindowResize, false );
+        
+        
+        
+  			render();
+			}
+      
+      function updateQuant() {
+        
+      }
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				controls.handleResize();
+				render();
+			}
+      
+      function initPostprocessing() {
+				var renderPass = new THREE.RenderPass( scene, camera );
+
+				var bokehPass = new THREE.BokehPass( scene, camera, {
+					focus: 		1,
+					aperture:	0.025,
+					maxblur:	1.0,
+
+					width: window.innerWidth,
+					height: window.innerWidth
+				} );
+				bokehPass.renderToScreen = true;
+
+          composer.addPass( renderPass );
+				composer.addPass( bokehPass );
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				controls.update();
+			}
+
+			function render() {
+				composer.render();
+			}   
+		</script>
+	</body>
+</html>
