@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSockets-Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="title"></div>
+    <input id="sendMe">
+    <button id="sendButton">Send</button>
+    <div id="chat"></div>
+      <script>
+        var ws = new WebSocket("ws://sockets.mbed.org/ws/loopMe/rw");
+ 
+        ws.onopen = function(e) { 
+            document.getElementById("title").innerHTML = "Websockets streaming on channel: looopMe!!";
+        };
+        ws.onmessage = function(e) {
+          console.log("message: " + e.data);
+          document.getElementById("chat").innerHTML += e.data + "<br>"
+        };
+        ws.onclose = function(e) { console.log("socket closed"); };
+        
+        document.getElementById("sendButton").addEventListener("click", function() {
+          ws.send(document.getElementById("sendMe").value);
+          console.log("try");
+        });
+ 
+    </script>
+  </body>
+
+</html>
