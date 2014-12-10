@@ -80,7 +80,7 @@
           
           function createFileTable() {
             _.templateSettings = {interpolate: /\{\{(.+?)\}\}/g}; // {{test}}
-            var rowTemplate = _.template("<tr data-file='{{f.file}}' data-folder='{{f.folder}}'><td><input type='checkbox'></td><td>{{f.folder}}</td><td>{{f.file}}</td><td><iframe width=200 height=100 src='{{f.folder}}/{{f.file}}'></iframe></td><td>{{notInInfos}}</td></tr>");
+            var rowTemplate = _.template("<tr data-file='{{f.file}}' data-folder='{{f.folder}}'><td><input type='checkbox'></td><td>{{f.folder}}</td><td>{{f.file}}</td><td><iframe width=200 height=100 src='{{f.folder}}/{{f.file}}'></iframe></td><td>{{notInInfos}}</td><td class='tags'><select></select></td></tr>");
             var $fileTable = $(".fileTable").empty();
             for(var i in looD.files) {
               $fileTable.append(rowTemplate({f: looD.files[i], notInInfos: (_.contains(looD.notInInfos, looD.files[i].file)?"<button class='updateCms'>in Infos eintragen</button>":"ok")}))
@@ -101,7 +101,8 @@
           function checkFiles() {
             looD.filelist = _.map(looD.files, function(obj){return obj.file;});
             looD.infolist = _.map(looD.cms, function(obj){return obj.file;});
-
+            looD.merge = looD.files.map(function(f){return _.extend(f, _.findWhere(looD.cms, {file: f.file}) || {notininfos: true});});
+            log(looD.merge);
             looD.notInInfos = _.difference(looD.filelist, looD.infolist);
             looD.notInFiles = _.difference(looD.infolist, looD.filelist);
             if(looD.notInInfos.length!==0) {log("not all Files are in sync");}
