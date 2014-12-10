@@ -1,0 +1,28 @@
+{
+  "name": "loooping",
+  "version": "0.0.0",
+  "homepage": "https://github.com/adilu/loooping",
+  "description": "Physics Universe",
+  "main": "[\"index.php\"]",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "adrian.luethi"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "mathjs": "~1.1.1",
+    "polymer": "Polymer/Polymer#~0.5.1",
+    "underscore": "~1.7.0"
+  }
+}
