@@ -15,6 +15,8 @@
 
         <link rel="stylesheet" href="css/initialize.css">
         <link rel="stylesheet" href="css/loooping.css">
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <link rel="import" href="bower_components/sortable-table/sortable-table.html">
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>

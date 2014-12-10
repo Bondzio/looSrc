@@ -15,6 +15,9 @@
 
         <link rel="stylesheet" href="css/initialize.css">
         <link rel="stylesheet" href="css/loooping.css">
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <link rel="import" href="elements/aha-table.html">
+        <link rel="import" href="elements/loo-dropdown.html">
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
@@ -44,7 +47,13 @@
                     <!--tr><th>Datei</th><th>Ordner</th><th>Vorschau</th></tr-->
 
                   </table>
-
+                  <aha-table class="fileTable" selectable searchable copyable removable data-sizelist="50" copytitle="copy">
+                    <aha-column name="folder" type="string" sortable searchable editable></aha-column>
+                    <aha-column name="file"   type="string" sortable searchable editable></aha-column>
+                    <aha-column name="status"  type="string" sortable searchable editable></aha-column>
+                    <aha-column name="rating"   type="choice" sortable searchable placeholder="-" editable></aha-column>
+                  </aha-table>
+                  <loo-dropdown></loo-dropdown>
                 </div>
 
                 <!--aside>
@@ -86,6 +95,7 @@
               $fileTable.append(rowTemplate({f: looD.files[i], notInInfos: (_.contains(looD.notInInfos, looD.files[i].file)?"<button class='updateCms'>in Infos eintragen</button>":"ok")}))
             }
             $fileTable.off("click.updateCms").on("click.updateCms", ".updateCms", updateCms);
+            $("aha-table")[0].data = looD.merge;
           }
           
           function updateCms(e) {

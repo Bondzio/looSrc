@@ -6,47 +6,11 @@
  * @module aha-table
  *
  *
- * Searchable Sortable Editable Paginatable Data Table
- *
- * aha-table is an data table/grid, it cousumes a modal data
- * and modal meta to show a table that can search, sort, edit
- * in place and pagiation, click to edit.
- * 
- * Examples:
- *
- *     <aha-table></aha-table>
- *
- *     <aha-table id="raw" 
- *         selectable="true" 
- *         copyable="true"
- *         seachable="true"
- *         pagesize="20" 
- *         pagesizetitle="Page Size:" 
- *         summarytitle="Viewing">
- *         <aha-column name="title" 
- *             type="string" 
- *             label="My Title"
- *             sortable="true"
- *             searchable="true"
- *             required="true"
- *             editable="false"
- *             placeholder="" 
- *             default="" 
- *             hint="Meaning title will help you remember">
- *         </aha-column>
- *     </aha-table/>
- *
- * Available Event Hander:
- *     after-invalid(Object detail)
- *     after-td-click(Object detail)
- *     after-td-dbclick(Object detail)
- *     after-create(Object new_record)
- *     after-copy(Object new_record)
- *     after-remove(Object removed_record)
- *
  * @class aha-table
  * @author Louis Liu<louis.wenchao.liu@gmail.com>
- *
+ * 
+ * @LOO hardcoded titles for performance
+   //selecttitle selectalltitle sorttitle  copytitle removetitle edittitle searchtitle firsttitle nexttitle previoustitle lasttitle columntitle
  */
 -->
 
@@ -54,8 +18,7 @@
 
 <polymer-element name="aha-table" attributes="
 selectable searchable copyable removable
-pagesize data-sizelist
-selecttitle selectalltitle sorttitle columntitle copytitle removetitle edittitle searchtitle firsttitle nexttitle previoustitle lasttitle
+pagesize data-sizelist 
 pagetext pageoftext pagesizetext summarytext itemoftext
 ">
 	<template>
@@ -149,16 +112,15 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 					<th>
 						<input type="checkbox" 
 							on-change="{{ selectall }}"
-							title="{{ selectalltitle }}"
+							title="select all"
 							class="{{ selectable ? '' : 'hide'}}"/>
 						<div
-							title="{{searchtitle}}"
+							title="search"
 							class="filterrow {{ searchable ? 'search' : 'nosearch'}}"
 							on-click="{{ toggleFilters }}"></div>
 					</th>
 					<th template 
 						repeat="{{ column in meta }}"
-						title="{{ columntitle }}"
 						class="{{ column.sortable ? 'sortable' : ''}} aha-{{column.name}}-th">
 						<span class="
 							{{ sortedColumn == column.name ? 'sorting ' : 'hide'}}
@@ -166,7 +128,7 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 						</span>
 						<span 
 							class="column-head" 
-							title="{{sorttitle}}"
+							title="sort"
 							on-click="{{ sort }}">{{ column.label ? column.label : column.name | capitalize }}</span>
 						<span 
 							class="{{ column.hint ? 'hint' : 'hide' }}" 
@@ -208,18 +170,18 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 					">
 					<td>
 						<input type="checkbox" 
-						 	title="{{ selecttitle }}"
+						 	title="select"
 						 	class="{{ selectable ? '' : 'hide'}}" 
 							on-change="{{ select }}" 
 							checked?="{{ row._selected }}"/>
 						<a class="copy-er {{ copyable ? '' : 'hide' }}" 
 							on-click="{{copy}}" 
-							title="{{ copytitle }}">
+							title="copy">
 							<i></i>
 						</a>
 						<a class="remove-er {{ removable ? '' : 'hide' }}" 
 							on-click="{{remove}}" 
-							title="{{ removetitle }}">
+							title="delete">
 							<i></i>
 						</a>
 					</td>
@@ -227,7 +189,7 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 						repeat="{{ column in meta }}" 
 						on-dblclick="{{ dbclick }}" 
 						on-click="{{ click }}" 
-						title="{{ column.editable ? edittitle: '' }}" 
+						title="edit" 
 						class="aha-td aha-{{column.name}}-td">
 						<div class="{{ column.editable && row._editing ? '' : 'hide'}}">
 							<select 
@@ -284,11 +246,11 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 						<div class="pagination">
 						<span class="paging">
 							<button
-								title="{{firsttitle}}"
+								title="first page"
 								class='first {{currentpage === 1 ? "disabled" : "available"}} '
 								on-click="{{firstPage}}">{{first}}</button>
 							<button
-								title="{{previoustitle}}"
+								title="previous page"
 								class='previous {{currentpage === 1 ? "disabled" : "available"}}'
 								on-click="{{prevPage}}">{{previous}}</button>
 							<span class="pager">
@@ -298,11 +260,11 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 								{{pageCount}}
 							</span>
 							<button
-								title="{{nexttitle}}"
+								title="next page"
 								class='next {{pageCount <= 0 || currentpage === pageCount? "disabled" : "available"}}'
 								on-click="{{nextPage}}">{{next}}</button>
 							<button
-								title="{{lasttitle}}"
+								title="last page"
 								class='last {{pageCount <= 0 || currentpage === pageCount? "disabled" : "available"}}'
 								on-click="{{lastPage}}">{{last}}</button>
 						</span>
@@ -349,7 +311,7 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 		removable: false,
 		//searchable: if table row is searchable
 		searchable: false,
-		// text displayed in first column of search row.
+		/* text displayed in first column of search row.
 		searchtitle: "",
 		// text displayed as title of select checkbox.
 		selecttitle: "",
@@ -364,7 +326,7 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 		// text displayed as title of remove checkbox..
 		removetitle: "",
 		// text displayed as title of editable cell.
-		edittitle: "",
+		edittitle: "",*/
 		//sortedColumn: sorted column name
 		sortedColumn: "",
 		//editingRow: current editing row
@@ -398,10 +360,10 @@ pagetext pageoftext pagesizetext summarytext itemoftext
 		first: "<<",
 		//last: label for the Last page button
 		last: ">>",
-		//pagesizetitle: label for page size box
+		/*pagesizetitle: label for page size box
 		pagesizetitle: "",
 		//summarytitle: label for table summary area
-		summarytitle: "",
+		summarytitle: "",*/
 
 		ready: function() {
 			var children = this.children || this.impl.children;

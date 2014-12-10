@@ -1,0 +1,33 @@
+<!--
+//http://webcomponents.github.io/articles/web-components-best-practices/
+-->
+<!--
+/**
+ * @module loo-dropdown
+ *
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="loo-dropdown" attributes="">
+	<template>
+		<style>
+		</style>
+		<select id="level" unresolved="">
+      <option name="1">1</option>
+      <option name="2">3</option>
+    </select>
+	</template>
+	<script>
+	Polymer('loo-dropdown', {
+		//data: instance of the model data
+		data: [],
+		ready: function() {
+      log("ready");
+		},
+    dataChanged: function() {
+      log(this.data);
+    }
+  });
+	</script>
+</polymer-element>
