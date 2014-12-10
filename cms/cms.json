@@ -1,7 +1,10 @@
 [
     {
         "file": "looopingLargeBright.svg",
-        "folder": "img"
+        "folder": "img",
+        "tags": "loooping",
+        "status": "w",
+        "rating": 5
     },
     {
         "file": "equationtest.html",
