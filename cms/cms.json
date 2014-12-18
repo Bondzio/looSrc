@@ -3,7 +3,7 @@
         "file": "looopingLargeBright.svg",
         "folder": "img",
         "tags": "loooping",
-        "status": "<a href='hi'>zum Link</a>",
+        "status": "<a href='hi'>zum Link<\/a>",
         "rating": 5
     },
     {
@@ -28,6 +28,10 @@
     },
     {
         "file": "looopingLarge.svg",
+        "folder": "img"
+    },
+    {
+        "file": "uploads2014-08-20 19.11.53.jpg",
         "folder": "img"
     }
 ]

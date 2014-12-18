@@ -1,0 +1,26 @@
+[
+  ["Physik", [
+    ["Mechanik", [
+      ["Kinematik", []],
+      ["Dynamik", []],
+      ["Kreisbewegung", []],
+      ["Energie", []]
+    ]],
+    ["Temperatur und Wärme", [
+      ["Thermische Ausdehnung", []],
+      ["Schmelzen und Verdampfen", []],
+      ["Gasgesetze", []],
+      ["Thermodynamik", []],
+      ["Wärmetransport", []]
+    ]],
+    ["Elektromagnetismus", [
+      ["Elektrizität", [
+        ["Elektrostatik", []],
+        ["Stromkreise", []]
+      ]],
+      ["Magnetismus", [
+
+      ]]
+    ]]
+  ]]
+]

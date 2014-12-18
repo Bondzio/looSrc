@@ -1,0 +1,85 @@
+// A generic onclick callback function.
+function uploadImage(info, tab) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', info.srcUrl, true);
+  var filename = info.srcUrl.slice(info.srcUrl.lastIndexOf("/")+1);
+  xhr.responseType = 'blob';
+  xhr.onload = function(e) {
+      if (xhr.status == 200) {
+          sendToServer(xhr.response, filename);
+      }
+  };
+  xhr.send();
+}
+
+function sendToServer(blob, filename) {
+  var xhr = new XMLHttpRequest();
+  var fd = new FormData();
+  fd.append('server-method', 'upload');
+  fd.append('file', blob, filename);
+  xhr.open('POST', 'http://loooping.ch/php/uploadImage.php', true);
+  // Transmit the form to the server
+    xhr.onload = function(e) {
+        console.log(e.target.response);
+    };
+  xhr.send(fd);
+};
+
+chrome.contextMenus.create({"title": "Bild hochladen", "contexts":["image"], "onclick": uploadImage});
+
+//// Create one test item for each context type.
+//var contexts = ["page","selection","link","editable","image","video","audio"];
+//for (var i = 0; i < contexts.length; i++) {
+//  var context = contexts[i];
+//  var title = "Dies ist ein " + context + "!";
+//  var id = chrome.contextMenus.create({"title": title, "contexts":[context], "onclick": genericOnClick});
+//  console.log("'" + context + "' item:" + id);
+//}
+
+//
+//// Create a parent item and two children.
+//var parent = chrome.contextMenus.create({"title": "Test parent item"});
+//var child1 = chrome.contextMenus.create(
+//  {"title": "Child 1", "parentId": parent, "onclick": genericOnClick});
+//var child2 = chrome.contextMenus.create(
+//  {"title": "Child 2", "parentId": parent, "onclick": genericOnClick});
+//console.log("parent:" + parent + " child1:" + child1 + " child2:" + child2);
+//
+//
+//// Create some radio items.
+//function radioOnClick(info, tab) {
+//  console.log("radio item " + info.menuItemId +
+//              " was clicked (previous checked state was "  +
+//              info.wasChecked + ")");
+//}
+//var radio1 = chrome.contextMenus.create({"title": "Radio 1", "type": "radio",
+//                                         "onclick":radioOnClick});
+//var radio2 = chrome.contextMenus.create({"title": "Radio 2", "type": "radio",
+//                                         "onclick":radioOnClick});
+//console.log("radio1:" + radio1 + " radio2:" + radio2);
+//
+//
+//// Create some checkbox items.
+//function checkboxOnClick(info, tab) {
+//  console.log(JSON.stringify(info));
+//  console.log("checkbox item " + info.menuItemId +
+//              " was clicked, state is now: " + info.checked +
+//              "(previous state was " + info.wasChecked + ")");
+//
+//}
+//var checkbox1 = chrome.contextMenus.create(
+//  {"title": "Checkbox1", "type": "checkbox", "onclick":checkboxOnClick});
+//var checkbox2 = chrome.contextMenus.create(
+//  {"title": "Checkbox2", "type": "checkbox", "onclick":checkboxOnClick});
+//console.log("checkbox1:" + checkbox1 + " checkbox2:" + checkbox2);
+//
+//
+//// Intentionally create an invalid item, to show off error checking in the
+//// create callback.
+//console.log("About to try creating an invalid item - an error about " +
+//            "item 999 should show up");
+//chrome.contextMenus.create({"title": "Oops", "parentId":999}, function() {
+//  if (chrome.extension.lastError) {
+//    console.log("Got expected error: " + chrome.extension.lastError.message);
+//  }
+//});

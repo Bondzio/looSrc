@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+        <title>Loooping</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <style type="text/css">
+          #boxA, #boxB {
+             float:left;padding:10px;margin:10px;-moz-user-select:none;
+          }
+          #boxA { background-color: #6633FF; width:75px; height:75px;  }
+          #boxB { background-color: #FF6699; width:150px; height:150px; }
+        </style>
+    </head>
+    <body>
+      <div id="paste" style = "background-color: #7788DD; height: 15em;">
+        Empty Experiment
+      </div>
+      <div id="boxA" draggable="true" ondragstart="return dragStart(event)">
+          <p>Drag Me</p>
+       </div>
+       <div id="boxB" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" 
+            ondragover="return dragOver(event)">Dustbin
+       </div>
+        <script>
+          target = document.getElementById("paste");
+            
+          target.ondragenter = function(e) {
+            console.log(e);
+            e.preventDefault();
+            return true;
+          };
+          //dragover, dragend
+          
+          target.ondragover = function () { this.className = 'hover'; return false; };
+          target.ondragend = function () { this.className = ''; return false; };
+          
+          target.ondrop = function(e) {
+             console.log(e);
+//             e.preventDefault();
+//             
+//              var file = e.dataTransfer.files[0],
+//              reader = new FileReader();
+//              reader.onload = function (event) {
+//                console.log(event.target);
+//                target.style.background = 'url(' + event.target.result + ') no-repeat center';
+//              };
+//              console.log(file);
+//              reader.readAsDataURL(file);
+//
+//              return false;
+             
+//             var src = ev.dataTransfer.getData("Text");
+//             ev.target.appendChild(document.getElementById(src));
+//             ev.stopPropagation();
+//             return false;
+          };
+          
+          //falls mit jQuery: e.originalEvent verwenden
+          
+          function dragStart(ev) {
+            console.log(ev);
+             ev.dataTransfer.effectAllowed='move';
+             ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+             ev.dataTransfer.setDragImage(ev.target,0,0);
+             return true;
+          }
+          function dragEnter(ev) {
+             event.preventDefault();
+             return true;
+          }
+          function dragOver(ev) {
+              return false;
+          }
+          function dragDrop(ev) {
+             var src = ev.dataTransfer.getData("Text");
+             ev.target.appendChild(document.getElementById(src));
+             ev.stopPropagation();
+             return false;
+          }
+        </script>
+    </body>
+</html>

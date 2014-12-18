@@ -1,4 +1,5 @@
 <?php
+header('content-type: text/html; charset=utf-8');
 include 'start.inc.php';
 
 if(md5($_POST["code"]) !== "dec27e1fdd14887609b268b72f547b5c") {
@@ -25,7 +26,10 @@ copy("../$path", "../archiv/auto/$dirname/$filename-$now.$extension");
 if(substr($task, 0, 4) === "JSON") {
   $json = json_decode(file_get_contents("../$path"));
   
-  if(substr($task, 4) === "insert") {
+  if(substr($task, 4) === "replace") {
+    $json = json_decode($content);
+  }
+  else if(substr($task, 4) === "insert") {
     $json[] = $content;
   }
   else {

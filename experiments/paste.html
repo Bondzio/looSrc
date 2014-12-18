@@ -16,7 +16,7 @@
         </style>
     </head>
     <body>
-      <div id="paste" style = "background-color: #7788DD; height: 15em;">
+      <div id="paste" contenteditable="true" style = "background-color: #7788DD; height: 15em;">
         Empty Experiment
       </div>
       <div id="boxA" draggable="true" ondragstart="return dragStart(event)">
@@ -29,7 +29,7 @@
           target = document.getElementById("paste");
             
           target.ondragenter = function(e) {
-            console.log(e);
+            console.log("enter");
             e.preventDefault();
             return true;
           };
@@ -39,29 +39,63 @@
           target.ondragend = function () { this.className = ''; return false; };
           
           target.ondrop = function(e) {
-             console.log(e);
-//             e.preventDefault();
-//             
+             console.log("drop");
+             if(e.dataTransfer.getData("URL")){
+              adresse = e.dataTransfer.getData("URL")
+              console.log(adresse);
+              target.style.background = "url('"+adresse+"')"
+            }
+            if(e.dataTransfer.files.length) {
+              console.log(e.dataTransfer.files[0]);
+              var file = e.dataTransfer.files[0],
+              reader = new FileReader();
+              reader.onload = function (event) {
+                //console.log(event.target);
+                target.style.background = 'url(' + event.target.result + ') no-repeat center';
+              };
+              //console.log(file);
+              reader.readAsDataURL(file);
+            }
+            //var src = e.dataTransfer.getData("Text");
+             //e.target.appendChild(document.getElementById(src));
+             e.stopPropagation();
+             return false;
+          };
+          
+          target.onpaste = function(e) {
+            
+            console.log(e.clipboardData.items[1]);
+            if(e.clipboardData.items[1]){
+              var file = e.clipboardData.items[1].getAsFile();
+              reader = new FileReader();
+              reader.onload = function (event) {
+                //console.log(event.target);
+                target.style.background = 'url(' + event.target.result + ') no-repeat center';
+              };
+              //console.log(file);
+              reader.readAsDataURL(file);
+            }
+//            if(e.dataTransfer.files.length) {
+//              console.log(e.dataTransfer.files[0]);
 //              var file = e.dataTransfer.files[0],
 //              reader = new FileReader();
 //              reader.onload = function (event) {
-//                console.log(event.target);
+//                //console.log(event.target);
 //                target.style.background = 'url(' + event.target.result + ') no-repeat center';
 //              };
-//              console.log(file);
+//              //console.log(file);
 //              reader.readAsDataURL(file);
-//
-//              return false;
-             
-//             var src = ev.dataTransfer.getData("Text");
-//             ev.target.appendChild(document.getElementById(src));
-//             ev.stopPropagation();
-//             return false;
+//            }
+            //var src = e.dataTransfer.getData("Text");
+             //e.target.appendChild(document.getElementById(src));
+             e.stopPropagation();
+             return false;
           };
           
           //falls mit jQuery: e.originalEvent verwenden
           
           function dragStart(ev) {
+            console.log(ev);
              ev.dataTransfer.effectAllowed='move';
              ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
              ev.dataTransfer.setDragImage(ev.target,0,0);
@@ -74,12 +108,12 @@
           function dragOver(ev) {
               return false;
           }
-//          function dragDrop(ev) {
-//             var src = ev.dataTransfer.getData("Text");
-//             ev.target.appendChild(document.getElementById(src));
-//             ev.stopPropagation();
-//             return false;
-//          }
+          function dragDrop(ev) {
+             var src = ev.dataTransfer.getData("Text");
+             ev.target.appendChild(document.getElementById(src));
+             ev.stopPropagation();
+             return false;
+          }
         </script>
     </body>
 </html>
