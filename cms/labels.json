@@ -3,50 +3,100 @@
         "Physik",
         [
             [
+                "Optik",
+                [
+                    [
+                        "Brechung",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
                 "Mechanik",
                 [
+                    [
+                        "Hydrostatik",
+                        [
+
+                        ]
+                    ],
                     [
                         "Kinematik",
                         [
                             [
-                                "Schiefer Wurf",
+                                "Freier Fall",
                                 [
 
                                 ]
+                            ],
+                            [
+                                "Bremsen und Anhalten",
+                                [
+
+                                ]
+                            ],
+                            [
+                                "Schiefer Wurf",
+                                [
+
+                                ],
+                                false
                             ]
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "Dynamik",
                         [
 
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "Energie",
                         [
 
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "Impuls",
                         [
 
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "Kreisbewegung",
                         [
 
+                        ],
+                        false
+                    ],
+                    [
+                        "Gravitation",
+                        [
+
                         ]
                     ]
-                ]
+                ],
+                true
             ],
             [
                 "Temperatur und W\u00e4rme",
                 [
                     [
-                        "Gasgesetze",
+                        "Thermische Ausdehnung",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "W\u00e4rmekapazit\u00e4t",
                         [
 
                         ]
@@ -55,27 +105,32 @@
                         "Schmelzen und Verdampfen",
                         [
 
-                        ]
+                        ],
+                        false
+                    ],
+                    [
+                        "Gasgesetze",
+                        [
+
+                        ],
+                        false
                     ],
                     [
                         "Thermodynamik",
                         [
 
-                        ]
-                    ],
-                    [
-                        "Thermische Ausdehnung",
-                        [
-
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "W\u00e4rmetransport",
                         [
 
-                        ]
+                        ],
+                        false
                     ]
-                ]
+                ],
+                false
             ],
             [
                 "Elektromagnetismus",
@@ -90,17 +145,27 @@
                                         "Elektrisches Feld",
                                         [
 
-                                        ]
+                                        ],
+                                        false
                                     ]
-                                ]
+                                ],
+                                false
                             ],
                             [
                                 "Stromkreise",
                                 [
 
+                                ],
+                                false
+                            ],
+                            [
+                                "Wechselstrom",
+                                [
+
                                 ]
                             ]
-                        ]
+                        ],
+                        false
                     ],
                     [
                         "Magnetismus",
@@ -109,12 +174,88 @@
                                 "Induktion",
                                 [
 
-                                ]
+                                ],
+                                false
                             ]
+                        ],
+                        false
+                    ]
+                ],
+                false
+            ],
+            [
+                "Schwingungen und Wellen",
+                [
+                    [
+                        "Schwingungen",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Wellen",
+                        [
+
                         ]
                     ]
-                ]
+                ],
+                true
+            ],
+            [
+                "Kernphysik",
+                [
+                    [
+                        "Zerfallsgesetz",
+                        [
+
+                        ]
+                    ]
+                ],
+                false
+            ],
+            [
+                "Moderne Physik",
+                [
+                    [
+                        "Relativit\u00e4tstheorie",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Quanten",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Nanotechnologie",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
+                "Diverses",
+                [
+                    [
+                        "Astronomie",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Loooping",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
             ]
-        ]
+        ],
+        false
     ]
 ]

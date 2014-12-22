@@ -1,0 +1,249 @@
+[
+    [
+        "Physik",
+        [
+            [
+                "Optik",
+                [
+                    [
+                        "Brechung",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
+                "Mechanik",
+                [
+                    [
+                        "Hydrostatik",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Kinematik",
+                        [
+                            [
+                                "Freier Fall",
+                                [
+
+                                ]
+                            ],
+                            [
+                                "Bremsen und Anhalten",
+                                [
+
+                                ]
+                            ],
+                            [
+                                "Schiefer Wurf",
+                                [
+
+                                ],
+                                false
+                            ]
+                        ],
+                        false
+                    ],
+                    [
+                        "Dynamik",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Energie",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Impuls",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Kreisbewegung",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Gravitation",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
+                "Temperatur und W\u00e4rme",
+                [
+                    [
+                        "Thermische Ausdehnung",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Schmelzen und Verdampfen",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Gasgesetze",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "Thermodynamik",
+                        [
+
+                        ],
+                        false
+                    ],
+                    [
+                        "W\u00e4rmetransport",
+                        [
+
+                        ],
+                        false
+                    ]
+                ],
+                true
+            ],
+            [
+                "Elektromagnetismus",
+                [
+                    [
+                        "Elektrizit\u00e4t",
+                        [
+                            [
+                                "Elektrostatik",
+                                [
+                                    [
+                                        "Elektrisches Feld",
+                                        [
+
+                                        ],
+                                        false
+                                    ]
+                                ],
+                                false
+                            ],
+                            [
+                                "Stromkreise",
+                                [
+
+                                ],
+                                false
+                            ]
+                        ],
+                        false
+                    ],
+                    [
+                        "Magnetismus",
+                        [
+                            [
+                                "Induktion",
+                                [
+
+                                ],
+                                false
+                            ]
+                        ],
+                        false
+                    ]
+                ],
+                true
+            ],
+            [
+                "Schwingungen und Wellen",
+                [
+                    [
+                        "Schwingungen",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Wellen",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
+                "Kernphysik",
+                [
+                    [
+                        "Zerfallsgesetz",
+                        [
+
+                        ]
+                    ]
+                ],
+                true
+            ],
+            [
+                "Moderne Physik",
+                [
+                    [
+                        "Quanten",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Relativit\u00e4tstheorie",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Nanotechnologie",
+                        [
+
+                        ]
+                    ]
+                ],
+                false
+            ],
+            [
+                "Diverses",
+                [
+                    [
+                        "Astronomie",
+                        [
+
+                        ]
+                    ],
+                    [
+                        "Loooping",
+                        [
+
+                        ]
+                    ]
+                ],
+                false
+            ]
+        ],
+        false
+    ]
+]

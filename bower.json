@@ -24,5 +24,6 @@
     "mathjs": "~1.1.1",
     "polymer": "Polymer/Polymer#~0.5.1",
     "underscore": "~1.7.0",
+    "jquery.tablesorter": "~2.18.3"
   }
 }

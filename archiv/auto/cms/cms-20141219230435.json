@@ -1,0 +1,51 @@
+[
+    {
+        "file": "looopingLargeBright.svg",
+        "folder": "img",
+        "tags": "Loooping",
+        "status": "<a href='hi'>zum Link<\/a>",
+        "rating": 5
+    },
+    {
+        "file": "equationtest.html",
+        "folder": "html"
+    },
+    {
+        "file": "fernbedieunung.html",
+        "folder": "html"
+    },
+    {
+        "file": "svgtest.html",
+        "folder": "html"
+    },
+    {
+        "file": "loooping.svg",
+        "folder": "img",
+        "tags": [
+            "Loooping"
+        ]
+    },
+    {
+        "file": "looopingBright.svg",
+        "folder": "img",
+        "tags": [
+            "Loooping"
+        ]
+    },
+    {
+        "file": "looopingLarge.svg",
+        "folder": "img",
+        "tags": [
+            "Diverses",
+            "Loooping"
+        ]
+    },
+    {
+        "file": "uploads2014-08-20 19.11.53.jpg",
+        "folder": "img",
+        "tags": [
+            "Optik",
+            "Quanten"
+        ]
+    }
+]

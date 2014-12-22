@@ -19,16 +19,18 @@ var floor   = Math.floor;
 var max     = Math.max;
 var min     = Math.min;
 
-var sign    = Math.sign || function(x) {if(typeof x !== "number") {return NaN}; return x>0?1:x<0?-1:0};
+var sign    = Math.sign || function(x) {if(typeof x !== "number") {return Math.NaN;} return x>0?1:x<0?-1:0;};
 
 var rand    = Math.random;
 
-var hypot   = Math.hypot || function(a,b) {return sqrt(a*a+b*b)};
-var cath    = function(c,b) {return sqrt(c*c-b*b)};
+var hypot   = Math.hypot || function(a,b) {return sqrt(a*a+b*b);};
+var cath    = function(c,b) {return sqrt(c*c-b*b);};
 
 //CONSTANT NUMBERS
-PI      = Math.PI
-E       = Math.E
-SQRT1_2 = Math.SQRT1_2;
-SQRT2   = Math.SQRT2
-LN2     = Math.LN2;
+var PI      = Math.PI;
+var E       = Math.E;
+var SQRT1_2 = Math.SQRT1_2;
+var SQRT2   = Math.SQRT2;
+var LN2     = Math.LN2;
+
+var cblog = function(msg) {return function(data) {log(msg, data);};};

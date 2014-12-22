@@ -16,27 +16,13 @@
         <link rel="stylesheet" href="../css/initialize.css">
         <link rel="stylesheet" href="../css/loooping.css">
         <link rel="stylesheet" href="../css/icons.css">
+        <link rel="stylesheet" href="../bower_components/jquery.tablesorter/css/theme.dropbox.css">
+        <link rel="stylesheet" href="../bower_components/jquery.tablesorter/css/filter.formatter.css">
         <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <link rel="import" href="../elements/loo-tree.html">
         <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-        <?php  $entries = scandir("../js/helpers");
-                foreach($entries as $index=>$file){
-                  if(stripos($file, ".js")>0) { echo "<script src='../js/helpers/$file'></script>";}
-                }
-              ?>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script-->
-    </head>
-    <body>
-        <!--[if lt IE 9]>
-            <p style="{margin: 0.2em 0; background: #ccc; padding: 0.2em 0;}">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <script type="text/javascript" src="../bower_components/jquery.tablesorter/js/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="../bower_components/jquery.tablesorter/js/jquery.tablesorter.widgets.min.js"></script>

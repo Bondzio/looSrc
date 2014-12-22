@@ -28,8 +28,10 @@ function getErrorHandler($errno,$errmsg,$filename,$linenum) {
   else {
     $_SESSION["errorcount"] = 0;
   }
-  
-  $response->add("error", $error);
+  header('HTTP/1.1 500 Internal Server Error');
+  header('Content-Type: application/json; charset=UTF-8');
+  die(json_encode(array('message' => $error, 'code' => $errno)));
+  //$response->add("error", $error);
 }
 
 set_error_handler("getErrorHandler");

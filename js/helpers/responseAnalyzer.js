@@ -27,4 +27,9 @@ function responseAnalyzer(responseArray) {
     setTimeout(function() {(window[fnc]).apply(this, answer.callbackWithArgs[i].slice(1));} , 1);
   }
   if (answer.returnvalue) return answer.returnvalue[answer.returnvalue.length-1];
-} 
+}
+
+$(document).ajaxError(function(e, data) {
+  if(!data.responseJSON) return;
+  log(data.responseJSON.message, data.responseJSON.code);
+});
