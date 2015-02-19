@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="element-test" attributes="a b c d e f">
+	<template>
+		<style>
+      
+		</style>
+    <div>
+      <h1>{{h1}}</h1>
+    </div>
+	</template>
+	<script>
+	Polymer('element-test', {
+    h1: "hi",
+    a: "anna",
+
+    publish: {
+      e: {value: false, reflect: true},
+      f: {value: "ff", reflect: true}
+    },
+    
+    b: 3,
+    cChanged: function(oldVal, newVal) {
+      log("new c: ", oldVal, newVal);
+    },
+    created: function() {},
+    domReady: function() {},    // Fires when the element’s initial set of children and siblings are guaranteed to exist
+    ready: function() {}, // Fires when the "<polymer-element>" has been fully prepared
+    attached: function() {}, // Fires when the element was inserted into the document
+    detached: function() {}, // Fires when the element was removed from the document
+    attributeChanged: function(attr, oldVal, newVal) {
+      log("any Change", attr, oldVal, newVal);
+    }
+  });
+	</script>
+</polymer-element>

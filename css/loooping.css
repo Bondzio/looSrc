@@ -1195,23 +1195,16 @@ section {
   background-color: #9cb8e2; }
 
 html {
-  font-size: 1.5vw;
   line-height: 1.4;
-  font-family: Open Sans, Helvetica, Helvetica Neue, Arial; }
+  /* font-family: Open Sans, Helvetica, Helvetica Neue, Arial; */ }
 
 .wrapper {
   width: 90%;
   margin: 0 5%; }
 
-@media (max-width: 1024px) {
-  html {
-    font-size: 2vw; } }
-@media (max-width: 640px) {
-  html {
-    font-size: 2.4vw; } }
-@media (max-width: 320px) {
-  html {
-    font-size: 3.6vw; } }
+/*@include breakpoint(tablet)      {html { font-size: 2vw; }}
+@include breakpoint(mobile)      {html { font-size: 2.4vw; }}
+@include breakpoint(mobileS)     {html { font-size: 3.6vw; }}*/
 @media (min-width: 1600px) {
   html {
     font-size: 24px; }

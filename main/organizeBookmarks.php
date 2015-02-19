@@ -1,17 +1,34 @@
 <?php include '../php/header.inc.php';?>
 <style>
-  .fileTable td, .fileTable th{padding-right: 1em;}
+  .filetable {font-size: 0.75em; }
+  .fileTable td, .fileTable th{padding-right: 1em;line-height: 1.5em;}
   .fileTable tr {border-bottom: 0.5em solid white;}
-  .fileTable .tags {font-size: 0.8em;}
-  .fileTable .tags button {display:none;}
-  .fileTable .tags.edit button {display:inline-block;}
-  .fileTable .tags.edit .showTags {display:none;}
+  .fileTable .labels {font-size: 0.8em;}
+  .fileTable .labels button {display:none;}
+  .fileTable .labels.edit button {display:inline-block;}
+  .fileTable .labels.edit .showLabels {display:none;}
   .fileTable .label {background-color: #ccddff; border-radius: 2px; margin-right: 0.5em; padding: 0 0.3em; }
   .fileTable .sorter-false i:not(.icon) {display:none;}
+  .fileTable .modified {min-width: 7em; font-size: 0.8em;}
   .tablesorter-dropbox .tablesorter-filter {margin: 0px; width: 100%;}
   .tablesorter-dropbox .tablesorter-filter-row td {padding: 0px;}
+  .editchecked {font-size: 0.7em;}
+  button+span.editChecked{display: none;}
+  button.edit+span.editChecked{display: inline-block;}
 </style>
-<?php include '../php/postheader.inc.php';?>
+<?php include '../php/postheader.inc.php';
+
+$tree = filter_input(INPUT_GET, "tree", FILTER_SANITIZE_STRING);
+if($tree === "web") {
+  $srcTree = "../cms/weblabels.json";
+  $bookmarks = "../cms/webbookmarks.json";
+}
+//else if($tree === "physics") {}
+else {
+  $srcTree = "../cms/labels.json";
+  $bookmarks = "../cms/bookmarks.json";
+}
+?>
 <!--<form action="../php/uploadImage.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
@@ -26,19 +43,27 @@
     <div class="main wrapper clearfix">
         <div>
             <header>
-              <h2>Organizer</h2>
+              <h2>Bookmarks Organizer</h2>
             </header>
+          
+          <div class="editchecked">Markierte (<span class="checkCount">0</span>): 
+            <button class="deleteChecked">löschen</button>
+            <button class="addLabelsToChecked"     >Labels hinzufügen</button> <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="removeLabelsFromChecked">Labels entfernen</button>  <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="addStatusToChecked"     >Status hinzufügen</button> <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="removeStatusFromChecked">Status entfernen</button>  <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+          </div>
 
           <table class="fileTable">
             <thead><tr>
               <th class="sorter-false" style="width:4em"></th>
               <th class="sorter-false" style="width:1.6em"><input class="checkAll" type='checkbox'></th>
-              <th class="filter-select" style="width:6em">Folder</th><th>File</th>
-              <th class="sorter-false" style="width:4em">Info</th>
-              <th style="width:5em">kB</th><th>Modified</th>
-              <th class="sorter-false" style="width:2em">Sync</th>
-              <th style="width:4em"><i class="icon icon-clipboard2"></i></th>
-              <th class="labelheader tags sorter-false filter-match"><i class="icon icon-label"></i>&nbsp;&nbsp;<button class='ok'>ok</button><button class='cancel'>cancel</button></th>
+              <th>Title</th>
+              <th>Details</th>
+              <th>Link</th>
+              <th class="modified">Mod</th><!--th>Add</th-->
+              <th class="filter-select" style="width:4em"><i class="icon icon-clipboard2"></i></th>
+              <th class="labelheader labels sorter-false filter-match"><i class="icon icon-label"></i>&nbsp;&nbsp;<button class='ok'>ok</button><button class='cancel'>cancel</button></th>
             </tr></thead>
             <tbody></tbody>
           </table>
@@ -48,56 +73,96 @@
 <?php include '../php/prefooterscripts.inc.php';?>
 <script>
   var looD = {};
-  reset();
-  
-  function reset() {
-    $.getJSON("../cms/bookmarks.json")
+  var bookmarksfile = "<?=$bookmarks?>"
+  var bookmarkspath = bookmarksfile.slice(3); //ohne ../
+  loadBookmarks();
+  function loadBookmarks() {
+    $.getJSON(bookmarksfile)
     .done(function(bookmarksJson) {
       looD.bookmarks = bookmarksJson;
-      looD.newBookmarks = [];
-      log(bookmarksJson);
-      rearrangeBookmarks(looD.bookmarks, "Physik");
-      log(looD.newBookmarks);
-      $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/bookmarks1.json", task: "save", content: JSON.stringify(looD.newBookmarks)}, responseAnalyzer);
+      createFileTable();
     });
   }
   
-  function rearrangeBookmarks(b, labelsToApply) {
-    var n;
-    for(var i = 0; i < b.links.length; i++) {
-      if(b.links[i].links) {
-        rearrangeBookmarks(b.links[i], labelsToApply + "," + b.links[i].group);
-      }
-      else {
-        n = $.extend({}, b.links[i]);
-        n.labels = labelsToApply;
-        looD.newBookmarks.push(n);
-      }
-    }
+  function getIconPath(b) {
+    //log(b, b.href.slice(b.href.indexOf('://') + 3, b.href.indexOf('/', b.href.indexOf('://') + 5)) + "'");
+    return ("http://www.google.com/s2/favicons?domain=" + b.href.slice(b.href.indexOf('://') + 3, b.href.indexOf('/', b.href.indexOf('://') + 5)));
+    //    if(bookmark.iconpath === "") return "../img/favicons/questionmark.png";
+    //    var filename = bookmark.href;
+    //    if(filename.indexOf("//")>0) filename = filename.slice(filename.indexOf("//")+2);
+    //    if(filename.indexOf("www.")>=0) filename = filename.slice(filename.indexOf("www.")+4);
+    //    if(filename.indexOf("/")>=0) filename = filename.slice(0, filename.indexOf("/"));
+    //    return "../img/favicons/" + filename + ".png"
   }
+//  
+//  function verify() {
+//    rows = $("tbody").find("tr");
+//    errors=[];
+//    for(var i=0; i<rows.length; i++) {
+//      t = rows.eq(i).data("title");
+//      orig = _.findWhere(looD.bookmarks, {title: t});
+//      if(!orig) {errors.push({t: t, o: looD.bookmarks[i].title})}
+//    }
+//    log(JSON.stringify(errors));
+//  }
+//  
+//  importBookmarks();
+//  
+//  function importBookmarks() {
+//    $.getJSON("../cms/bookmarksImport_1.json")
+//    .done(function(bookmarksJson) {
+//      looD.bookmarks = bookmarksJson;
+//      looD.newBookmarks = [];
+//      log(bookmarksJson);
+//      rearrangeBookmarks(looD.bookmarks, "Web");
+//      log(looD.newBookmarks);
+//      $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: bookmarkspath, task: "save", content: JSON.stringify(looD.newBookmarks)}, responseAnalyzer);
+//    });
+//  }
+//  
+//  function rearrangeBookmarks(b, labelsToApply) {
+//    var n;
+//    for(var i = 0; i < b.links.length; i++) {
+//      if(b.links[i].links) {
+//        rearrangeBookmarks(b.links[i], labelsToApply + "," + b.links[i].group);
+//      }
+//      else {
+//        n = $.extend({}, b.links[i]);
+//        n.labels = labelsToApply;
+//        n.mod = n.add;
+//        looD.newBookmarks.push(n);
+//      }
+//    }
+//  }
 
   function createFileTable() {
      _.templateSettings = {interpolate: /\{\{(.+?)\}\}/g}; // {{test}}
-    var rowTemplate = _.template("<tr data-file='{{f.file}}' data-folder='{{f.folder}}'><td class='preview'>{{preview}}</td><td class='boxes'><input class='checkMe' type='checkbox'></td><td class='folder'>{{f.folder}}</td><td class='file'>{{f.file}}</td>"+
-      "<td class='info'>{{info}}</td><td>{{round(f.stats.size/1000)}}</td><td>{{f.stats.modified}}</td><td class='sync'>{{notInInfos}}</td><td>{{f.status||'-'}}</td><td class='tags' data-tags='{{f.tags}}'>{{tags}}</td></tr>");
+    var rowTemplate = _.template("<tr data-title='{{_.escape(b.title)}}'>"+
+    "<td class='preview'><img src='{{getIconPath(b)}}' style='width:16px; height:16px;'></td>"+
+    "<td class='boxes'><input class='checkMe' type='checkbox'></td>"+
+    "<td class='title' title='{{b.title}}'>{{b.title.slice(0,40)+(b.title.length>40?'...':'')}}</td>"+
+    "<td class='details' title='{{b.details}}'>{{b.details?b.details.slice(0,10)+'...':''}}</td>"+
+    "<td class='url'><a href='{{b.href}}'>{{b.href.slice(b.href.indexOf('://') + 3, b.href.indexOf('/', b.href.indexOf('://') + 5))}}</a></td>"+
+    "<td class='modified'>{{getDateFromDOb(new Date(b.mod*1000))}}</td>" + // "<td>{{getDateFromDOb(new Date(b.add*1000))}}</td>" +
+    "<td class='status'>{{b.status?b.status.split(','):'-'}}</td>"+
+    "<td class='labels' data-labels='{{b.labels}}'>{{labels}}</td>"+
+    "</tr>");
     var $fileTable = $(".fileTable");
     var $fileTableBody = $fileTable.find("tbody").empty();
-    var f, notInInfos, preview, src, tags, info;
-    for(var i in looD.merge) {
-      f = looD.merge[i];
-      //log(f);
-      notInInfos = (_.contains(looD.notInInfos, looD.merge[i].file)?"<button class='updateCms'>in Infos eintragen</button>":"ok");
-      src = "../" + f.folder + "/" + f.file;
-      preview = f.folder == "img"?"<img width=50 height=30 src='"+src+"'>":"<iframe width=50 height=30 src='"+src+"'></iframe>";
-      info = f.folder == "img"?"imgsize...":"";
-      tags = (f.tags?f.tags.split(",").reduce(function(old,el,i){return old + "<span class='label'>"+el+"</span>";}, ""):"") + "<span class='showTags'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
-      $fileTableBody.append(rowTemplate({f: f, notInInfos: notInInfos, info: info, preview: preview, tags: tags}))
+    var b, notInInfos, preview, labels;
+    for(var i = 0; i< looD.bookmarks.length; i++) {
+      b = looD.bookmarks[i];
+      //preview = f.folder == "img"?"<img width=50 height=30 src='"+src+"'>":"<iframe width=50 height=30 src='"+src+"'></iframe>";
+      //info = f.folder == "img"?"imgsize...":"";
+      labels = (b.labels?b.labels.split(",").reduce(function(old,el,i){return old + "<span class='label'>"+el+"</span>";}, ""):"") + "<span class='showLabels'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
+      $fileTableBody.append(rowTemplate({b: b, labels: labels}))
     }
     $fileTable.off("click.updateCms").on("click.updateCms", ".updateCms", updateCms);
-    $fileTable.off("click.tags").on("click.tags", ".showTags", chooseLabel);
+    $fileTable.off("click.labels").on("click.labels", ".showLabels", chooseLabel);
     $fileTable.off("click.rename").on("click.rename", ".folder:not(.edit), .file:not(.edit)", renameDialog);
-    $fileTable.off("change.checkAll").on("change.checkAll", ".checkAll", function() {$fileTable.find(".checkMe").prop("checked", $(this).prop("checked"));});
+    $fileTable.off("change.checkAll").on("change.checkAll", ".checkAll", function() {$fileTable.find("tr:not(.filtered)").find(".checkMe").prop("checked", $(this).prop("checked")); countChecked();});
     $fileTable.off("click.labelChoice").on("click.labelChoice", ".labelheader:not(.edit)", filterLabel);
+    $fileTable.off("click.changeCheck").on("click.changeCheck", ".checkMe", countChecked);
     setTimeout(function() {$(".info").each(function(){
         if($(this).text().indexOf("imgsize")>=0) {
           var w = $(this).closest("tr").find("img")[0].naturalWidth;
@@ -131,7 +196,7 @@
   
   function filterLabel(e) {
     var $cell = $(this).addClass("edit");
-    var $tree = $("<loo-tree src='../cms/labels.json' type='applyTree' checklist='"+looD.checkedLabels+"'></loo-tree>").appendTo($cell);
+    var $tree = $("<loo-tree src='<?=$srcTree?>' checklist='"+looD.checkedLabels+"'></loo-tree>").appendTo($cell);
     $cell.find(".ok").off("click.ok").on("click.ok", filterLabels.bind(this, $tree[0]));
     $cell.find(".cancel").off("clickCancel").on("click.cancel", closeLabel.bind(this));
   }
@@ -146,7 +211,7 @@
   
   function chooseLabel() {
     var $cell = $(this).closest("td").addClass("edit");
-    var $tree = $("<loo-tree src='../cms/labels.json' type='applyTree' checklist='"+$cell.data('tags')+"'></loo-tree>").appendTo($cell);
+    var $tree = $("<loo-tree src='<?=$srcTree?>' type='applyTree' checklist='"+$cell.data('labels')+"'></loo-tree>").appendTo($cell);
     $cell.find(".ok").on("click", updateLabel.bind(this));
     $cell.find(".cancel").on("click", closeLabel.bind(this));
     //$tree[0].addEventListener("recheck", updateLabel.bind(this));  
@@ -156,7 +221,7 @@
     var $cell = $(this).closest("td");
     var file = $(this).closest("tr").data("file");
     var content = _.findWhere(looD.cms, {file: file});
-    content.tags = $cell.find("loo-tree").attr("checklist")
+    content.labels = $cell.find("loo-tree").attr("checklist")
     $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/cms.json", task: "JSONupdate", key:"file", value: file, content: content}, responseAnalyzer);
     closeLabel.call(this);
   }
@@ -195,8 +260,93 @@
     
   }
   
+// Markierte
+$("div.editchecked>button").on("click", function(){$(this).addClass("edit");})
 
+$("div.editchecked").find("button.cancel, button.ok").on("click", function(){
+  $(this).closest("span").prevAll("button.edit").removeClass("edit");
+  $(this).closest("span").find(".temp").remove();
+});
   
+
+
+
+function countChecked() {
+  $(".checkCount").text($("tr:not(.filtered)").find(".checkMe:checked").length);
+}
+
+$(".deleteChecked").on("click", deleteChecked);
+function deleteChecked() {
+  var checked = getChecked();
+  for(var i=0; i<checked.length; i++) {
+    for(var j=looD.bookmarks.length-1; j>=0; j--) {
+      if(checked[i].title === looD.bookmarks[j].title) {looD.bookmarks.splice(j, 1);}
+    }
+  }
+  saveBookmarks();
+}
+
+$(".removeLabelsFromChecked").on("click", {prop: "labels"}, removePropertyFromChecked);
+$(".removeStatusFromChecked").on("click", {prop: "status"}, removePropertyFromChecked);
+function removePropertyFromChecked(e) {
+  var prop = e.data.prop;
+  var $editspan = $(this).next("span");
+  var $propertyInput = $("<input class='temp'></>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var removeProp = $propertyInput.val();
+    for(var i=0; i<checked.length; i++) {
+      checked[i][prop] = checked[i][prop].split(",");
+      if(checked[i][prop].indexOf(removeProp)>=0) {checked[i][prop].splice(checked[i][prop].indexOf(removeProp), 1);}
+      checked[i][prop] = checked[i][prop].join(",");
+     }
+    saveBookmarks();
+  });
+}
+
+$(".addStatusToChecked").on("click", {prop: "status"}, addPropertyToChecked);
+function addPropertyToChecked(e) {
+  var prop = e.data.prop;
+  var $editspan = $(this).next("span");
+  var $propertyInput = $("<input class='temp'></>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var changeProp = $propertyInput.val();
+    for(var i=0; i<checked.length; i++) {
+      checked[i][prop] = checked[i][prop]?checked[i][prop].split(","):[];
+      if(checked[i][prop].indexOf(changeProp)<0) {checked[i][prop].push(changeProp);}
+      checked[i][prop] = checked[i][prop].join(",");
+      //log(checked[i]);
+     }
+    saveBookmarks();
+  });
+}
+
+$(".addLabelsToChecked").on("click", addLabelsToChecked)
+function addLabelsToChecked() {
+  var $editspan = $(this).next("span");
+  var $tree = $("<loo-tree class='temp' src='<?=$srcTree?>'></loo-tree>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var newLabels = $tree[0].tree.getChecked();
+    for(var i=0; i<checked.length; i++) {
+      var bookmarkObj = checked[i];
+      bookmarkObj.labels = bookmarkObj.labels.split(",");
+      newLabels.forEach(function(label) {if(bookmarkObj.labels.indexOf(label)<0) {bookmarkObj.labels.push(label);}});
+      bookmarkObj.labels = bookmarkObj.labels.join(",");
+    }
+    saveBookmarks();
+  });
+}
+
+function getChecked() {
+  return $("tr:not(.filtered)").find(".checkMe:checked").get().map(function(el) {return _.findWhere(looD.bookmarks, {title: $(el).closest("tr").data("title")});});
+}
+
+function saveBookmarks() {
+  //log(looD.bookmarks);
+  $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, task: "save", path: bookmarkspath, content: JSON.stringify(looD.bookmarks)}, createFileTable);
+}
 
 </script>
 <?php include '../php/footer.inc.php';?>

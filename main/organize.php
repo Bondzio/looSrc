@@ -2,14 +2,17 @@
 <style>
   .fileTable td, .fileTable th{padding-right: 1em;}
   .fileTable tr {border-bottom: 0.5em solid white;}
-  .fileTable .tags {font-size: 0.8em;}
-  .fileTable .tags button {display:none;}
-  .fileTable .tags.edit button {display:inline-block;}
-  .fileTable .tags.edit .showTags {display:none;}
+  .fileTable .labels {font-size: 0.8em;}
+  .fileTable .labels button {display:none;}
+  .fileTable .labels.edit button {display:inline-block;}
+  .fileTable .labels.edit .showLabels {display:none;}
   .fileTable .label {background-color: #ccddff; border-radius: 2px; margin-right: 0.5em; padding: 0 0.3em; }
   .fileTable .sorter-false i:not(.icon) {display:none;}
   .tablesorter-dropbox .tablesorter-filter {margin: 0px; width: 100%;}
   .tablesorter-dropbox .tablesorter-filter-row td {padding: 0px;}
+  .editchecked {font-size: 0.7em;}
+  button+span.editChecked{display: none;}
+  button.edit+span.editChecked{display: inline-block;}
 </style>
 <?php include '../php/postheader.inc.php';?>
 <!--<form action="../php/uploadImage.php" method="post" enctype="multipart/form-data">
@@ -28,6 +31,14 @@
             <header>
               <h2>Organizer</h2>
             </header>
+          
+          <div class="editchecked">Markierte (<span class="checkCount">0</span>): 
+            <button class="deleteChecked">löschen</button>
+            <button class="addLabelsToChecked"     >Labels hinzufügen</button> <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="removeLabelsFromChecked">Labels entfernen</button>  <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="addStatusToChecked"     >Status hinzufügen</button> <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+            <button class="removeStatusFromChecked">Status entfernen</button>  <span class="editChecked"><button class="ok">OK</button><button class="cancel">Cancel</button></span>
+          </div>
 
           <table class="fileTable">
             <thead><tr>
@@ -38,7 +49,7 @@
               <th style="width:5em">kB</th><th>Modified</th>
               <th class="sorter-false" style="width:2em">Sync</th>
               <th style="width:4em"><i class="icon icon-clipboard2"></i></th>
-              <th class="labelheader tags sorter-false filter-match"><i class="icon icon-label"></i>&nbsp;&nbsp;<button class='ok'>ok</button><button class='cancel'>cancel</button></th>
+              <th class="labelheader labels sorter-false filter-match"><i class="icon icon-label"></i>&nbsp;&nbsp;<button class='ok'>ok</button><button class='cancel'>cancel</button></th>
             </tr></thead>
             <tbody></tbody>
           </table>
@@ -62,10 +73,10 @@
   function createFileTable() {
      _.templateSettings = {interpolate: /\{\{(.+?)\}\}/g}; // {{test}}
     var rowTemplate = _.template("<tr data-file='{{f.file}}' data-folder='{{f.folder}}'><td class='preview'>{{preview}}</td><td class='boxes'><input class='checkMe' type='checkbox'></td><td class='folder'>{{f.folder}}</td><td class='file'>{{f.file}}</td>"+
-      "<td class='info'>{{info}}</td><td>{{round(f.stats.size/1000)}}</td><td>{{f.stats.modified}}</td><td class='sync'>{{notInInfos}}</td><td>{{f.status||'-'}}</td><td class='tags' data-tags='{{f.tags}}'>{{tags}}</td></tr>");
+      "<td class='info'>{{info}}</td><td>{{round(f.stats.size/1000)}}</td><td>{{f.stats.modified}}</td><td class='sync'>{{notInInfos}}</td><td>{{f.status||'-'}}</td><td class='labels' data-labels='{{f.labels}}'>{{labels}}</td></tr>");
     var $fileTable = $(".fileTable");
     var $fileTableBody = $fileTable.find("tbody").empty();
-    var f, notInInfos, preview, src, tags, info;
+    var f, notInInfos, preview, src, labels, info;
     for(var i in looD.merge) {
       f = looD.merge[i];
       //log(f);
@@ -73,14 +84,15 @@
       src = "../" + f.folder + "/" + f.file;
       preview = f.folder == "img"?"<img width=50 height=30 src='"+src+"'>":"<iframe width=50 height=30 src='"+src+"'></iframe>";
       info = f.folder == "img"?"imgsize...":"";
-      tags = (f.tags?f.tags.split(",").reduce(function(old,el,i){return old + "<span class='label'>"+el+"</span>";}, ""):"") + "<span class='showTags'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
-      $fileTableBody.append(rowTemplate({f: f, notInInfos: notInInfos, info: info, preview: preview, tags: tags}))
+      labels = (f.labels?f.labels.split(",").reduce(function(old,el,i){return old + "<span class='label'>"+el+"</span>";}, ""):"") + "<span class='showLabels'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
+      $fileTableBody.append(rowTemplate({f: f, notInInfos: notInInfos, info: info, preview: preview, labels: labels}))
     }
     $fileTable.off("click.updateCms").on("click.updateCms", ".updateCms", updateCms);
-    $fileTable.off("click.tags").on("click.tags", ".showTags", chooseLabel);
+    $fileTable.off("click.labels").on("click.labels", ".showLabels", chooseLabel);
     $fileTable.off("click.rename").on("click.rename", ".folder:not(.edit), .file:not(.edit)", renameDialog);
-    $fileTable.off("change.checkAll").on("change.checkAll", ".checkAll", function() {$fileTable.find(".checkMe").prop("checked", $(this).prop("checked"));});
+    $fileTable.off("change.checkAll").on("change.checkAll", ".checkAll", function() {$fileTable.find("tr:not(.filtered)").find(".checkMe").prop("checked", $(this).prop("checked")); countChecked();});
     $fileTable.off("click.labelChoice").on("click.labelChoice", ".labelheader:not(.edit)", filterLabel);
+    $fileTable.off("click.changeCheck").on("click.changeCheck", ".checkMe", countChecked);
     setTimeout(function() {$(".info").each(function(){
         if($(this).text().indexOf("imgsize")>=0) {
           var w = $(this).closest("tr").find("img")[0].naturalWidth;
@@ -129,7 +141,7 @@
   
   function chooseLabel() {
     var $cell = $(this).closest("td").addClass("edit");
-    var $tree = $("<loo-tree src='../cms/labels.json' type='applyTree' checklist='"+$cell.data('tags')+"'></loo-tree>").appendTo($cell);
+    var $tree = $("<loo-tree src='../cms/labels.json' type='applyTree' checklist='"+$cell.data('labels')+"'></loo-tree>").appendTo($cell);
     $cell.find(".ok").on("click", updateLabel.bind(this));
     $cell.find(".cancel").on("click", closeLabel.bind(this));
     //$tree[0].addEventListener("recheck", updateLabel.bind(this));  
@@ -139,7 +151,7 @@
     var $cell = $(this).closest("td");
     var file = $(this).closest("tr").data("file");
     var content = _.findWhere(looD.cms, {file: file});
-    content.tags = $cell.find("loo-tree").attr("checklist")
+    content.labels = $cell.find("loo-tree").attr("checklist")
     $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/cms.json", task: "JSONupdate", key:"file", value: file, content: content}, responseAnalyzer);
     closeLabel.call(this);
   }
@@ -178,7 +190,90 @@
     
   }
   
+// Markierte
+$("div.editchecked>button").on("click", function(){$(this).addClass("edit");})
 
+$("div.editchecked").find("button.cancel, button.ok").on("click", function(){
+  $(this).closest("span").prevAll("button.edit").removeClass("edit");
+  $(this).closest("span").find(".temp").remove();
+});
+  
+function countChecked() {
+  $(".checkCount").text($("tr:not(.filtered)").find(".checkMe:checked").length);
+}
+
+$(".deleteChecked").on("click", deleteChecked);
+function deleteChecked() {
+  var checked = getChecked();
+  for(var i=0; i<checked.length; i++) {
+    for(var j=looD.cms.length-1; j>=0; j--) {
+      if(checked[i].file === looD.cms[j].file) {looD.cms.splice(j, 1);}
+    }
+    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, task: "delete", path: checked[i].folder + "/" + checked[i].file});
+  }
+  saveCms();
+}
+
+$(".removeLabelsFromChecked").on("click", {prop: "labels"}, removePropertyFromChecked);
+$(".removeStatusFromChecked").on("click", {prop: "status"}, removePropertyFromChecked);
+function removePropertyFromChecked(e) {
+  var prop = e.data.prop;
+  var $editspan = $(this).next("span");
+  var $propertyInput = $("<input class='temp'></>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var removeProp = $propertyInput.val();
+    for(var i=0; i<checked.length; i++) {
+      checked[i][prop] = checked[i][prop].split(",");
+      if(checked[i][prop].indexOf(removeProp)>=0) {checked[i][prop].splice(checked[i][prop].indexOf(removeProp), 1);}
+      checked[i][prop] = checked[i][prop].join(",");
+     }
+    saveCms();
+  });
+}
+
+$(".addStatusToChecked").on("click", {prop: "status"}, addPropertyToChecked);
+function addPropertyToChecked(e) {
+  var prop = e.data.prop;
+  var $editspan = $(this).next("span");
+  var $propertyInput = $("<input class='temp'></>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var changeProp = $propertyInput.val();
+    for(var i=0; i<checked.length; i++) {
+      checked[i][prop] = checked[i][prop]?checked[i][prop].split(","):[];
+      if(checked[i][prop].indexOf(changeProp)<0) {checked[i][prop].push(changeProp);}
+      checked[i][prop] = checked[i][prop].join(",");
+      log(checked[i]);
+     }
+    saveCms();
+  });
+}
+
+$(".addLabelsToChecked").on("click", addLabelsToChecked)
+function addLabelsToChecked() {
+  var $editspan = $(this).next("span");
+  var $tree = $("<loo-tree class='temp' src='../cms/labels.json' type='applyTree'></loo-tree>").appendTo($editspan);
+  $editspan.find(".ok").off("click.save").on("click.save", function() {
+    var checked = getChecked();
+    var newLabels = $tree[0].tree.getChecked();
+    for(var i=0; i<checked.length; i++) {
+      var obj = checked[i];
+      obj.labels = obj.labels?obj.labels.split(","):[];
+      newLabels.forEach(function(label) {if(obj.labels.indexOf(label)<0) {obj.labels.push(label);}});
+      obj.labels = obj.labels.join(",");
+    }
+    saveCms();
+  });
+}
+
+function getChecked() {
+  return $("tr:not(.filtered)").find(".checkMe:checked").get().map(function(el) {return _.findWhere(looD.cms, {file: $(el).closest("tr").data("file")});});
+}
+
+function saveCms() {
+  $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, task: "save", path: "cms/cms.json", content: JSON.stringify(looD.cms)}, reset);
+}
   
 
 </script>

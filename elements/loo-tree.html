@@ -15,24 +15,25 @@
     <link rel="stylesheet" href="../css/loooping.css">
     <link rel="stylesheet" href="../css/icons.css">
 		<style>
-      #tree {position: absolute; background-color: #fff; width: 100%;}
+      #tree {position: absolute; background-color: #fff; width: 100%; max-width: 30em;}
       ul {margin:0;padding:0;}
       li ul {padding: 0 0 0 1.2em;}
       i {margin: 0 0.3em; display: inline-block; width: 1em;}
-      i.move {display: none;}
+      i.move {display: none; float: right;}
       i.add {display: none;}
-      span {background-color: #ddeeff;}
-      span:hover>i.move {display: inline-block;}
-      span:hover>i.add {display: inline-block;}
-      span {display: block;}
-      span:hover {background-color: #99aabb;}    
-      span.draghover {background-color: #99aabb !important;}
-      .pasteBefore span {background-color: #fff; font-size:0.4em}
+      .itemrow {background-color: #ddeeff;}
+      .itemrow:hover>i.move {display: inline-block;}
+      .itemrow {display: block;}
+      .itemrow:hover {background-color: #99aabb;}    
+      .itemrow.draghover {background-color: #99aabb !important;}
+      .pasteBefore:hover i.add {display: inline-block;}
+      .pasteBefore {font-size:30%; height: 2em; background-color: #fff;}
       .pasteBefore input {display: none;}
       .pasteBefore button {display: none;}
-      .pasteBefore.add {font-size: 2em;}
+      .pasteBefore.add {font-size: 1em;}
       .pasteBefore.add input {display: inline-block;}
       .pasteBefore.add button {display: inline-block;}
+      .pasteBefore.add i.add {display: inline-block;}
       .expanded>span>.icon-plus2 {display:none;}
       .collapsed>span>.icon-minus {display:none;}
       .hasKids>span>.icon-primitive-dot {display:none;}
@@ -40,7 +41,7 @@
       .noKids>span>.icon-minus {display:none;}
 		</style>
 		<ul id="tree" unresolved="">
-      <li>hi</li>
+      <li>tree is loading...</li>
     </ul>
 	</template>
 	<script>
@@ -48,10 +49,10 @@
     var that = this;
     this.path = jsonPath;
     this.$ul = $ul;  
-    this.type = type || "manageTree" ;
+    this.type = type || "manageTree applyTree" ;
     this.looTree =  looTree;
 
-    if(this.type === "manageTree") {
+    if(this.type.indexOf("manageTree") > -1) {
 
       this.$ul.on("dragover", "li", this.allowDrop.bind(this));
       this.$ul.on("drop", "li", this.onDrop.bind(this));
@@ -104,12 +105,13 @@
     $ul.empty();
     for(var i=0; i<tree.length; i++){
       var item = tree[i];
-      if(this.type === "manageTree") {
-        var $liBefore = $("<li class='pasteBefore' data-name='"+ item[this.NAME]+"'><span><i class='icon add icon-plus22'></i>&nbsp;<input name='newItem'><button class='ok'>ok</button><button class='cancel'>cancel</button></span></li>").appendTo($ul);
-        var $li= $("<li class='label" + (item[this.COLLAPSED]?" collapsed":" expanded") + (item[this.SUBTREE].length?" hasKids":" noKids") + "' draggable='true' data-name='"+ item[this.NAME]+"'><span><i class='icon icon-plus2'></i><i class='icon icon-minus'></i><i class='icon icon-primitive-dot'></i>"+item[this.NAME]+ " <i class='icon move icon-triangle-left'></i><i class='icon move icon-triangle-right'></i><i class='icon move icon-triangle-up'></i><i class='icon move icon-triangle-down'></i></span></li>").appendTo($ul);
+      var $li= $("<li class='label" + (item[this.COLLAPSED]?" collapsed":" expanded") + (item[this.SUBTREE].length?" hasKids":" noKids") + "' data-name='"+ item[this.NAME]+"'><span class='itemrow'><i class='icon icon-plus2'></i><i class='icon icon-minus'></i><i class='icon icon-primitive-dot'></i><span class='itemname'>"+item[this.NAME]+"</span></span></li>").appendTo($ul);
+      if(this.type.indexOf("manageTree") > -1) {
+        var $liBefore = $("<li class='pasteBefore' data-name='"+ item[this.NAME]+"'><span><i class='icon add icon-plus22'></i>&nbsp;<input name='newItem'><button class='ok'>ok</button><button class='cancel'>cancel</button></span></li>").insertBefore($li);
+        $li.attr("draggable", "true").find(".itemrow").append("<i class='icon edit icon-delete'></i><i class='icon move icon-triangle-left'></i><i class='icon move icon-triangle-right'></i><i class='icon move icon-triangle-up'></i><i class='icon move icon-triangle-down'></i>");
       }
-      if(this.type === "applyTree") {
-        var $li= $("<li class='label" + (item[this.COLLAPSED]?" collapsed":" expanded") + (item[this.SUBTREE].length?" hasKids":" noKids") + "' data-name='"+ item[this.NAME]+"'><span><i class='icon icon-plus2'></i><i class='icon icon-minus'></i><i class='icon icon-primitive-dot'></i><label><input type='checkbox' name='"+item[this.NAME]+"' "+(this.checklist.indexOf(item[this.NAME])>=0?"checked":"")+"> "+item[this.NAME]+"</label></span></li>").appendTo($ul);
+      if(this.type.indexOf("applyTree") > -1) {
+        $li.find(".itemname").replaceWith("<label><input type='checkbox' name='"+item[this.NAME]+"' "+(this.checklist.indexOf(item[this.NAME])>=0?"checked":"")+"><span class='itemname'> "+item[this.NAME]+"</span></label>");
       }
       var $ulSub = $("<ul></ul>").appendTo($li);
       if(item[this.COLLAPSED]){$ulSub.hide();}
@@ -304,7 +306,7 @@
 
   Tree.prototype.update = function() {
     this.renderTree();
-    this.save().then(function(data){log(data);});
+    this.save();
   }
 
   Tree.prototype.add = function(e) {
@@ -312,20 +314,23 @@
     var a = el.closest(".pasteBefore").find("input").val();
     var before = true;
     var path = this.getNumericPathOfElement(el.closest(".pasteBefore").data("name"));
-    this.pasteElementAtPath([a, []], path, before);
-    this.update();
+    if(a) {
+      this.pasteElementAtPath([a, []], path, before);
+      this.update();
+    }
+    else log("kein leeres Label einfügen");
   }
 
   Tree.prototype.collapse = function(e) {
     var name = $(e.currentTarget).closest("li").data("name");
     this.getItemObjFromName(name)[this.COLLAPSED] = true;
-    this.renderTree();
+    this.update();
   }
 
   Tree.prototype.expand = function(e) {
     var name = $(e.currentTarget).closest("li").data("name");
     this.getItemObjFromName(name)[this.COLLAPSED] = false;
-    this.renderTree();
+    this.update();
   }
   
   Tree.prototype.getChecked = function(includeParents, includeKids) {
@@ -336,7 +341,7 @@
     this.doWithEach(function(item){
       if(includeP  && that.$ul.find("li[data-name='"+item[that.NAME]+"']").find("input:checked").length) {checklist.push(item[that.NAME]);}
       if(!includeP && that.$ul.find("li[data-name='"+item[that.NAME]+"']>span>label>input:checked").length) {checklist.push(item[that.NAME]);}
-      if(includeK && that.$ul.find("li[data-name='"+item[that.NAME]+"']").parents("li").children("span").find("label>input:checked").length) {checklist.push(item[that.NAME]);}
+      if(includeK && that.$ul.find("li[data-name='"+item[that.NAME]+"']").parents("li").children(".itemrow").find("label>input:checked").length) {checklist.push(item[that.NAME]);}
     });
     this.checklist = checklist;
     this.looTree.setAttribute("checklist", checklist.join(","));
@@ -348,7 +353,7 @@
 		data: [],
     tree: {},
 		ready: function() {
-      this.tree = new Tree(this.src||"../cms/labels.json", $(this.$.tree), this.type||"manageTree", this);
+      this.tree = new Tree(this.src||"../cms/labels.json", $(this.$.tree), this.type||"manageTree applyTree", this);
 		},
     dataChanged: function() {
       log(this.data);

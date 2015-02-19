@@ -109,7 +109,7 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif; }
+  /* font-family: sans-serif; */ }
 
 body {
   margin: 0; }

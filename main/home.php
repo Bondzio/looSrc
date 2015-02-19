@@ -1,4 +1,5 @@
 <?php include '../php/header.inc.php';?>
+<?php include '../php/postheader.inc.php';?>
 <div class="header-container ">
   <header class="wrapper menu clearfix">
     <span class="title"><img src="../img/looopingBright.svg" style="width:2em;"></span>
@@ -89,6 +90,7 @@
                 <h3>loooping.ch</h3>
             </footer>
         </div>-->
+<?php include '../php/prefooterscripts.inc.php';?>
 <script>
   //$(document).on("mousemove", function(e) {if(e.clientY < 100) {$(".header-container").show();} else {$(".header-container").hide();} })
 </script>

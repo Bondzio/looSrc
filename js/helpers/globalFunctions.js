@@ -11,6 +11,7 @@ var exp     = Math.exp;
 var ln      = Math.log;
 var pow     = Math.pow;
 var sqrt    = Math.sqrt;
+var cbrt    = Math.cbrt;
 
 var abs     = Math.abs;
 var round   = Math.round;

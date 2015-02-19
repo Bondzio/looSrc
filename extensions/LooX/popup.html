@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Save Bookmark to target Server</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+  </head>
+  <body>
+  <h3>Save Bookmark</h3>
+  <div id="currentLink">
+    <canvas id="favicon" width="16" height="16"></canvas>
+    <table>
+    <tr><td>Title:   </td><td><input name="title"></td></tr>
+    <tr><td>Details: </td><td><input name="details"></td></tr>
+    <tr><td>URL:     </td><td><input name="href"></td></tr>
+    <tr><td>Status:  </td><td><input name="status" value="y"></td></tr>
+    <tr><td>Labels:  </td><td><input name="labels"></td></tr>
+    <tr><td>Icon:    </td><td><input name="icon"></td></tr>
+    </table>
+    <button id="save">Save</button>
+    <div id="myDiv"></div>
+  </div>
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
+

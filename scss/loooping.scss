@@ -20,7 +20,7 @@ $opp:  hsl(45,80,72);
 }
 
 html {
-    font-size: 1.5vw;
+    //font-size: 1.5vw;
     line-height: 1.4;
     font-family: Open Sans, Helvetica, Helvetica Neue, Arial;
 }
@@ -30,9 +30,9 @@ html {
     margin: 0 5%;
 }
 
-@include breakpoint(tablet)      {html { font-size: 2vw; }}
+/*@include breakpoint(tablet)      {html { font-size: 2vw; }}
 @include breakpoint(mobile)      {html { font-size: 2.4vw; }}
-@include breakpoint(mobileS)     {html { font-size: 3.6vw; }}
+@include breakpoint(mobileS)     {html { font-size: 3.6vw; }}*/
 
 @include breakpoint(large)       {
   html { font-size: 24px; }

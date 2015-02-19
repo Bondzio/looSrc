@@ -33,6 +33,13 @@ Function.prototype.apply.call(console.log, console, arguments);
 }
 })();
 
-function logError(err) {console.error(err);}
+function logError(err) {
+  //console.error(err);
+  if(window.innerWidth< window.innerHeight||true) {
+    document.body.innerHtml += "<p>"+err+"</p>";
+  }
+}
+
+window.onerror = logError;
 
 function assert(a, b) {console.assert(a, b);}

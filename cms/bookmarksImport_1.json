@@ -1,0 +1,1272 @@
+{"group": "HTML CSS PHP Javascript", "links": [
+    {"href": "http://learningwebgl.com/blog/", "add":1419952100, "title": "Learning WebGL"},
+    {"href": "http://stackoverflow.com/questions/5412435/what-does-write-failed-no-space-left-on-device-mean", "add":1423684479, "title": "php - What does 'write failed: No space left on device' mean? - Stack Overflow"},
+    {"href": "https://gist.github.com/ericelliott/d576f72441fc1b27dace?utm_source=javascriptweekly&utm_medium=email", "add":1423665591, "title": "Essential JavaScript Links"},
+    {"href": "http://rubaxa.github.io/Sortable/?utm_source=javascriptweekly&utm_medium=email", "add":1423300401, "title": "Sortable. No jQuery."},
+    {"href": "http://www.wijngaard.org/hardening-access-to-your-synology-diskstation-and-prepare/", "add":1422382648, "title": "Q&D Website | Hardening access to your Synology Diskstation, be prepared"},
+    {"href": "http://blog.gospodarets.com/fetch_in_action/?utm_source=html5weekly&utm_medium=email", "add":1421869313, "title": "Fetch API in action"},
+    {"href": "http://www.smashingmagazine.com/2015/01/07/designing-for-print-with-css/?utm_source=html5weekly&utm_medium=email", "add":1421363411, "title": "Designing For Print With CSS - Smashing Magazine"},
+    {"href": "http://www.pixijs.com/examples/", "add":1410163666, "title": "Examples - PixiJS"},
+    {"href": "https://www.khanacademy.org/computing/cs/programming-natural-simulations/intro-natural-simulations/v/welcome-natural-simulations", "add":1412099083, "title": "Welcome to Natural Simulations | Intro to Natural Simulations | Khan Academy"},
+    {"href": "http://facebook.github.io/flux/docs/overview.html#content", "add":1413706088, "title": "Flux | Application Architecture for Building User Interfaces"},
+    {"href": "http://www.yearofmoo.com/2014/09/taming-forms-in-angularjs-1-3.html", "add":1416383629, "title": "Taming Forms in AngularJS 1.3 - yearofmoo.com"},
+    {"group": "History & Routing", "links": [
+        {"href": "https://github.com/aknuds1/staterouter.js", "add":1422717993, "title": "aknuds1/staterouter.js"},
+        {"href": "http://www.creapptives.com/post/71046410960/writing-a-70-line-js-router", "add":1423044232, "title": "Writing a 70 line JS Router - Ecstortive"},
+        {"href": "https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history", "add":1422718158, "title": "Manipulating the browser history - Web developer guide | MDN"},
+        {"href": "https://github.com/browserstate/history.js/wiki/Intelligent-State-Handling", "add":1422718150, "title": "Intelligent State Handling · browserstate/history.js Wiki"},
+        {"href": "http://diveintohtml5.info/history.html", "add":1422718015, "title": "History API - Dive Into HTML5"}
+]},
+    {"group": "Webcomponents", "links": [
+        {"href": "http://www.html5rocks.com/en/tutorials/webcomponents/customelements/#typeextension", "add":1417281741, "title": "Custom Elements: defining new elements in HTML - HTML5 Rocks"},
+        {"href": "http://www.stevesouders.com/blog/2013/11/26/performance-and-custom-elements/", "add":1417278456, "title": "Performance and Custom Elements | High Performance Web Sites"},
+        {"group": "x", "links": [
+            {"href": "http://www.broken-links.com/2015/01/27/best-practice-creating-custom-elements/?utm_source=html5weekly&utm_medium=email", "add":1422479658, "title": "Best Practice for Creating Custom Elements - Broken Links"},
+            {"href": "http://www.polymer-project.org/", "add":1409060009, "title": "Welcome - Polymer"},
+            {"href": "http://blog.teamtreehouse.com/create-custom-html-elements-2", "add":1417278449, "title": "How to Create Custom HTML Elements | Treehouse Blog"},
+            {"href": "http://www.smashingmagazine.com/2014/03/04/introduction-to-custom-elements/", "add":1417278462, "title": "A Detailed Introduction To Custom Elements - Smashing Magazine"},
+            {"href": "https://erikringsmuth.github.io/app-router/", "add":1417423813, "title": "app-router"},
+            {"href": "http://component.kitchen/?utm_source=html5weekly&utm_medium=email", "add":1409060905, "title": "Web Components Catalog - Component Kitchen"},
+            {"href": "http://webcomponents.org/articles/web-components-best-practices/", "add":1417278666, "title": "Web Components Best Practices — WebComponents.org"},
+            {"href": "https://github.com/kof/jss?utm_source=javascriptweekly&utm_medium=email", "add":1417174620, "title": "kof/jss · GitHub"},
+            {"href": "https://www.polymer-project.org/docs/polymer/styling.html", "add":1418199441, "title": "Styling elements - Polymer"},
+            {"href": "http://customelements.io/", "add":1417379538, "title": "Custom Elements - A Web Components Gallery for Modern Web Apps"}
+]}
+]},
+    {"group": "xan project", "links": [
+        {"href": "http://semu.github.io/timesheet.js/?utm_source=html5weekly&utm_medium=email", "add":1409159425, "title": "Timesheet.js - Open time tables with HTML, JavaScript and CSS …"}
+]},
+    {"group": "my Future Editor", "links": [
+        {"href": "https://khan.github.io/KaTeX/?utm_source=html5weekly&utm_medium=email", "add":1411116345, "title": "KaTeX – The fastest math typesetting library for the web"},
+        {"href": "https://github.com/mathiasbynens/math-tex", "add":1416862061, "title": "mathiasbynens/math-tex · GitHub"},
+        {"href": "http://www.homodigital.net/2014/04/instala-owncloud-en-un-web-hosting-grautito.html#.VF1JcvmG98F", "add":1415399952, "title": "Homo - Digital: Instala ownCloud en un Web Hosting gratuito."},
+        {"href": "https://demosthenes.info/blog/949/Merging-Responsive-Page-Elements-with-JavaScript?utm_source=javascriptweekly&utm_medium=email", "add":1415379493, "title": "demosthenes.info – Merging Responsive Page Elements with JavaScript"},
+        {"href": "http://rodolphe-vaillant.fr/?e=41", "add":1415311875, "title": "Contour lines - Rodolphe Vaillant's homepage"},
+        {"href": "http://www.ableitungsrechner.net/", "add":1415307941, "title": "Online-Ableitungsrechner • Mit Rechenweg!"},
+        {"href": "http://jdkanani.com/smalleditor/?utm_source=html5weekly&utm_medium=email#", "add":1410012380, "title": "Smalleditor"},
+        {"href": "http://www.thepetedesign.com/demos/onepage_scroll_demo.html?utm_source=html5weekly&utm_medium=email", "add":1409159388, "title": "jQuery One Page Scroll by Pete R. | The Pete Design"},
+        {"href": "http://www.wacomeng.com/web/TestFBCanvasScribble.html", "add":1398444730, "title": "Wacom Webplugin Canvas Paint Demo"},
+        {"href": "http://www.wacomeng.com/web/index.html", "add":1398444725, "title": "Web Plugins"},
+        {"href": "http://www.fontsquirrel.com/fonts/DejaVu-Serif", "add":1398439154, "title": "Free Font DejaVu Serif by DejaVu Fonts | Font Squirrel"},
+        {"href": "http://www.mathjax.org/", "add":1361051266, "title": "http://www.mathjax.org/"},
+        {"href": "http://mathjs.org/?utm_source=javascriptweekly&utm_medium=email", "add":1388774930, "title": "math.js | an extensive math library for JavaScript and Node.js"},
+        {"href": "http://sniperwolf.github.io/taggingJS/?utm_source=javascriptweekly&utm_medium=email", "add":1397929765, "title": "taggingJS"},
+        {"href": "https://github.com/benzap/flyer.js?utm_source=html5weekly&utm_medium=email", "add":1412235446, "title": "benzap/flyer.js · GitHub"},
+        {"group": "lustige Ideen", "links": [
+            {"href": "http://www.bigpicture.bi/demo", "add":1418403046, "title": "BigPicture (infite scrolling like prezi)"},
+            {"href": "http://codepen.io/collection/DgYaMj/?utm_source=html5weekly&utm_medium=email", "add":1423729325, "title": "my sliders - a Collection by Ana Tudor on CodePen"}
+]},
+        {"group": "ES6", "links": [
+        ]},
+        {"group": "gutes design", "links": [
+            {"href": "http://brickisland.net/cs177/?paged=2", "add":1415312285, "title": "CS 177 (Fall 2011)"},
+            {"href": "https://playcanvas.com/", "add":1416580493, "title": "PlayCanvas | 3D HTML5 & WebGL Game Engine"},
+            {"href": "http://mathinsight.org/nondifferentiable_discontinuous_partial_derivatives", "add":1416047744, "title": "Non-differentiable functions must have discontinuous partial derivatives - Math Insight"}
+]}
+]},
+    {"group": "alternativen zu jquery UI", "links": [
+        {"href": "http://blog.raventools.com/create-a-modal-dialog-using-css-and-javascript/", "add":1395256566, "title": "Create a Modal Dialog Using CSS and Javascript | Marketing Blog"},
+        {"href": "http://www.ericmmartin.com/projects/simplemodal/", "add":1395256349, "title": "SimpleModal / Eric Martin / ericmmartin.com"},
+        {"href": "http://www.idangero.us/sliders/swiper/", "add":1395231205, "title": "iDangero.us Swiper - Mobile Touch Slider And Framework With Hardware Accelerated Transitions"},
+        {"href": "http://codecanyon.net/item/melonhtml5-royal-tab/full_screen_preview/4116092?ref=hkeyjun", "add":1395231004, "title": "MelonHTML5 - Royal Tab Preview - CodeCanyon"},
+        {"href": "http://os.alfajango.com/easytabs/#browser-compatibility", "add":1395228518, "title": "jQuery EasyTabs Plugin"}
+]},
+    {"group": "Micro Template", "links": [
+        {"href": "http://www.jsviews.com/#jsrapi", "add":1399198302, "title": "http://www.jsviews.com/#jsrapi"},
+        {"href": "https://github.com/trix/nano", "add":1390407821, "title": "trix/nano · GitHub"},
+        {"href": "https://github.com/tmpvar/weld", "add":1390407727, "title": "tmpvar/weld · GitHub"},
+        {"href": "http://ejohn.org/blog/javascript-micro-templating/#postcomment", "add":1390407713, "title": "John Resig - JavaScript Micro-Templating"},
+        {"group": "x", "links": [
+            {"href": "http://handlebarsjs.com/", "add":1360758456, "title": "Handlebars.js: Minimal Templating on Steroids"},
+            {"href": "http://yuilibrary.com/yui/docs/template/", "add":1390407721, "title": "Template - YUI Library"},
+            {"href": "https://developer.mozilla.org/en-US/docs/JavaScript_templates", "add":1390407733, "title": "JavaScript templates | MDN"},
+            {"href": "http://weblog.west-wind.com/posts/2008/Oct/13/Client-Templating-with-jQuery", "add":1390407805, "title": "Client Templating with jQuery - Rick Strahl's Web Log"},
+            {"href": "https://npmjs.org/package/micro-template", "add":1390407699, "title": "micro-template"},
+            {"href": "https://github.com/BorisMoore/jquery-tmpl", "add":1390407810, "title": "BorisMoore/jquery-tmpl · GitHub"},
+            {"href": "http://forum.jquery.com/topic/templating-syntax", "add":1390407816, "title": "Templating Syntax - jQuery Forum"}
+]}
+]},
+    {"group": "Editoren", "links": [
+        {"href": "https://codio.com/?utm_source=html5weekly&utm_medium=email", "add":1394728572, "title": "The World's Most Powerful Browser-Based IDE - Codio"},
+        {"href": "http://www.office-loesung.de/ftopic456452_0_0_asc.php", "add":1385818375, "title": "Word-Text als puristischstes säuberlichstes HTML entnehmen Office-Loesung.de"},
+        {"href": "https://blogs.oracle.com/geertjan/entry/integrated_angularjs_development", "add":1412450799, "title": "Integrated AngularJS Development (Geertjan's Blog)"},
+        {"href": "https://blogs.oracle.com/geertjan/entry/grunting_in_netbeans_ide", "add":1417805020, "title": "Grunting in NetBeans IDE (Geertjan's Blog)"},
+        {"group": "z direct editable editor", "links": [
+            {"href": "https://github.com/IMD-Business-School/Quink?utm_source=html5weekly&utm_medium=email", "add":1393444208, "title": "Quink Wisiwyg in Browser"},
+            {"href": "http://raphaelcruzeiro.github.io/jquery-notebook/?utm_source=javascriptweekly&utm_medium=email", "add":1392471833, "title": "jQuery Notebook Demo"}
+]},
+        {"group": "Live Editing", "links": [
+            {"href": "http://codecondo.com/16-online-javascript-editors-for-web-developers/?utm_source=javascriptweekly&utm_medium=email", "add":1395415833, "title": "16 Online JavaScript Editors for Web Developers | CodeCondo"},
+            {"href": "http://www.html5canvastutorials.com/tutorials/html5-canvas-quadratic-curves/", "add":1364394862, "title": "Gutes Codemirrorbeispiel"},
+            {"href": "http://www.codeavengers.com/web#1.5", "add":1352655854, "title": "Code Avengers, HTML5 and CSS3 lessons"},
+            {"href": "http://codepen.io/", "add":1358367745, "title": "Pens picked by the Editors of CodePen"},
+            {"href": "http://codepen.io/philipwalton/pen/ksBaI", "add":1358367717, "title": "Stacking Order (problem) - CodePen"},
+            {"href": "http://www.html5canvastutorials.com/tutorials/html5-canvas-image-loader/", "add":1353366681, "title": "1.7.4 HTML5 Canvas Image Loader Tutorial"},
+            {"href": "http://stackoverflow.com/questions/6659559/ace-editor-in-php-web-app", "add":1352662528, "title": "javascript - Ace Editor in PHP Web App - Stack Overflow"},
+            {"href": "http://notes.jetienne.com/2011/04/15/jquery.acewidget-a-jquery-plugin-to-easily-embed-ace.html", "add":1352661488, "title": "jquery.acewidget - a jQuery plugin to easily embed ace on Jerome Etienne blog"},
+            {"href": "http://jsfiddle.net/", "add":1351612857, "title": "Create a new Fiddle - jsFiddle"},
+            {"href": "http://www.jetbrains.com/editors/javascript_editor.jsp?ide=idea", "add":1351455468, "title": "Smart JavaScript editor, code-centric, focused on your productivity, with refactorings, DOM-based and browser-aware code completion and JavaScript Debugger. Part of WebStorm, PhpStorm, RubyMine, PyCharm and IntelliJ IDEA."},
+            {"href": "http://htmlivecode.com/canvas-animation-playground/", "add":1351433162, "title": "HTML5 Canvas Animation Playground - ruckelbeispiel"},
+            {"href": "http://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors", "add":1347404858, "title": "Comparison of JavaScript-based source code editors - Wikipedia, the free encyclopedia"},
+            {"href": "https://c9.io/site/pricing/", "add":1347403954, "title": "Sign up for Standard or Premium! | Cloud9 IDE | Online IDE – Your code anywhere, anytime"},
+            {"href": "http://ace.ajax.org/", "add":1347403736, "title": "ACE - Ajax.org Cloud9 Editor"},
+            {"href": "http://codemirror.net/", "add":1347402430, "title": "CodeMirror"},
+            {"href": "http://billmill.org/static/canvastutorial/index.html", "add":1346788311, "title": "Canvas Tutorial - Introduction"},
+            {"href": "http://battlehorse.github.com/LJE/editor.html", "add":1346165582, "title": "Live Javascript Editor"},
+            {"href": "http://jsbin.com/emabuv/1/edit", "add":1346165424, "title": "JS Bin - Collaborative JavaScript Debugging"},
+            {"group": "ACE Tools (der beste)", "links": [
+                {"href": "http://plnkr.co/edit/", "add":1350053581, "title": "Plunker"},
+                {"href": "http://wordpress.org/extend/plugins/ace-edit/installation/", "add":1350052478, "title": "WordPress › Ace Edit « WordPress Plugins"}
+]}
+]},
+        {"group": "xw my Favorite Editors", "links": [
+            {"href": "http://brackets.io/index_de.html", "add":1371078368, "title": "Brackets"},
+            {"href": "http://netbeans.org/community/news/show/1582.html?utm_source=html5weekly&utm_medium=email", "add":1361988496, "title": "NetBeans Community News"}
+]},
+        {"group": "x kostenpflichtige", "links": [
+            {"href": "http://www.coffeecup.com/", "add":1351442642, "title": "COFFEECUP - HTML Editor, Website & Web Design Software | CoffeeCup Software"},
+            {"href": "http://www.jetbrains.com/webstorm/buy/buy.jsp#classroom", "add":1351455427, "title": "WebStorm :: Licensing"},
+            {"href": "http://www.sublimetext.com/", "add":1351455609, "title": "Sublime Text: The text editor you'll fall in love with"}
+]},
+        {"group": "xz weitere Editoren", "links": [
+            {"href": "http://www.w3.org/Amaya/Press.html", "add":1351430860, "title": "Amaya"},
+            {"href": "http://www.pspad.com/de/", "add":1351430897, "title": "editor PSPad"}
+]},
+        {"group": "xz WYSIWYG", "links": [
+            {"href": "http://kompozer.net/index.php", "add":1351430939, "title": "KompoZer - Easy web authoring"},
+            {"href": "http://www.aloha-editor.org/Content.Node/index.html", "add":1416815474, "title": "Aloha Editor"},
+            {"href": "http://www.wix.com/blog/2012/03/wix-unveils-html5-website-builder/", "add":1370466521, "title": "Wix Unveils HTML5 Website Builder!"},
+            {"href": "https://www.google.com/webdesigner/?utm_source=html5weekly&utm_medium=email", "add":1380993040, "title": "Google Web Designer"},
+            {"href": "http://maqetta.org/", "add":1330724921, "title": "Maqetta"}
+]}
+]},
+    {"group": "Webhosting", "links": [
+        {"href": "http://www.hosttech.ch/shared-hosting/easy/100/easy-100.html", "add":1351620391, "title": "eigene Homepage, eigene Webseite mit dem günstigen Einsteiger shared Webhosting von hosttech Schweiz"},
+        {"href": "http://www.servertown.ch/webhosting-hosting-easy", "add":1350025608, "title": "Hosting, Webhosting, Windows Webhost und Linux Hosting Web"},
+        {"href": "http://de.html.net/forums/viewtopic.php?f=13&t=5447", "add":1351710306, "title": "Webhosting UND Domain kostenlos? - HTML.net"},
+        {"href": "http://droppages.com/", "add":1384344028, "title": "Home | DropPages.com"}
+]},
+    {"group": "zum Stöbern", "links": [
+        {"href": "http://zreference.com/raphael-tutorials/", "add":1403338459, "title": "zReference » Raphael Tutorials"},
+        {"href": "http://blog.wax-o.com/", "add":1418252575, "title": "WAXO | Code, design, new technologies and random stuff"},
+        {"href": "http://gruntjs.com/", "add":1392214984, "title": "Grunt: The JavaScript Task Runner"},
+        {"href": "http://www.inserthtml.com/", "add":1382101793, "title": "InsertHTML"},
+        {"href": "http://webmagazin.de/", "add":1374040256, "title": "webmagazin | Shaping Your Digital Experiences"},
+        {"href": "http://addyosmani.com/resources/essentialjsdesignpatterns/book/", "add":1370074362, "title": "Learning JavaScript Design Patterns"},
+        {"href": "http://smashinghub.com/category/web-development-2", "add":1369242821, "title": "Web Development | Free Online Resources For Developers, Designers and Photographers @Smashing Hub"},
+        {"href": "http://iam.colum.edu/Jon.Petto/classes/ewt/?utm_source=html5weekly&utm_medium=email", "add":1367517575, "title": "Emergent Web Technologies"},
+        {"href": "http://www.agiledesigners.com/", "add":1363357366, "title": "Agile Designers : Best online resources for Web designers, Graphic Designers"},
+        {"href": "http://www.drweb.de/magazin/", "add":1321104020, "title": "Das Magazin für Seitenbetreiber | Dr. Web Magazin"},
+        {"href": "http://code.google.com/intl/de/edu/submissions/html-css-javascript/", "add":1351610137, "title": "Google: HTML, CSS, and Javascript from the Ground Up - Google Code University - Google Code"},
+        {"href": "http://jspro.com/", "add":1361220860, "title": "JSPro - Only JavaScript ... Always JavaScript"},
+        {"href": "http://jsbooks.revolunet.com/", "add":1359813134, "title": "JSbooks - free javascript books"},
+        {"href": "http://jendryschik.de/wsdev/einfuehrung/", "add":1356350648, "title": "Buch - Artikel und Einführungstexte zu Webstandards und Interaktionsdesign"},
+        {"href": "http://www.good-tutorials.com/tutorials/html", "add":1359758655, "title": "Good-Tutorials - HTML Tutorials"},
+        {"href": "http://www.impressivewebs.com/", "add":1359749599, "title": "Impressive Webs, Toronto | Web Design Articles & Tutorials"},
+        {"href": "http://www.remotesynthesis.com/post.cfm/html-css-javascript-and-mobile-on-the-adc-in-2012?utm_source=html5weekly&utm_medium=email", "add":1358366847, "title": "HTML, CSS, JavaScript and Mobile on the ADC in 2012 : Remote Synthesis"},
+        {"href": "http://www.reddit.com/r/html5games", "add":1357592487, "title": "HTML5 Games"},
+        {"href": "http://www.yuiblog.com/crockford/", "add":1351612888, "title": "Crockford on JavaScript: A Public Lecture Series at Yahoo!"},
+        {"href": "http://www.html5rocks.com/en/", "add":1338489208, "title": "HTML5 Rocks - A resource for open web HTML5 developers"},
+        {"href": "http://staticfloat.com/", "add":1349610707, "title": "Moderne Webentwicklung mit PHP, Javascript, HTML5 und CSS3."},
+        {"href": "http://karpathy.github.io/neuralnets/?utm_source=javascriptweekly&utm_medium=email", "add":1415379218, "title": "Hacker's guide to Neural Networks"},
+        {"group": "Fortgeschrittenes", "links": [
+            {"href": "https://www.youtube.com/playlist?list=PLS3jzvALRSe6uP9gVfXLCG6nWo7M0hAJY#grigorik", "add":1376598894, "title": "Web Performance Crash Course - Fluent 2013 - YouTube"},
+            {"href": "http://iam.colum.edu/Jon.Petto/classes/ewt/week2/", "add":1367517269, "title": "GIT"},
+            {"href": "http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript", "add":1359812921, "title": "Learning JavaScript Design Patterns"}
+]}
+]},
+    {"group": "Code Snippets", "links": [
+        {"href": "http://www.simpl.info/", "add":1404326257, "title": "simpl.info"},
+        {"href": "http://experiments.wemakesites.net/x-upload-html5-web-component.html", "add":1417021985, "title": "Extended File Upload Input HTML5 Web Component - HTML5, CSS3 & JS Experiments by Martin Ivanov (@wemakesitesnet)"},
+        {"href": "http://csshexagon.com/?utm_source=html5weekly&utm_medium=email", "add":1399495287, "title": "CSS Hexagon Generator"},
+        {"href": "http://westciv.com/tools/transforms/index.html", "add":1385324870, "title": "CSS Helper Tools (Transforms & Gradients)"},
+        {"href": "http://codepen.io/collection/KuDsH", "add":1373741992, "title": "Form Designs - a collection by Chris Coyier - CodePen"},
+        {"href": "http://inserthtml.com/demo/shredder/", "add":1372965744, "title": "The CSS Shredder!"},
+        {"href": "http://codepen.io/kindofone/pen/slnGx?utm_source=html5weekly&utm_medium=email", "add":1371748999, "title": "A Circular Form - CodePen"},
+        {"href": "http://nicolasgallagher.com/css-drop-shadows-without-images/demo/", "add":1358368354, "title": "Demo: CSS drop-shadows without images – Nicolas Gallagher"},
+        {"href": "http://daneden.me/animate/?utm_source=html5weekly&utm_medium=email", "add":1357744136, "title": "Animate.css - a bunch of plug-and-play CSS animations"},
+        {"href": "http://thecodeplayer.com/walkthrough/single-element-pure-css3-double-fold-ribbon", "add":1358966241, "title": "Single Element Pure CSS3 Double Fold Ribbon"},
+        {"href": "https://github.com/sakabako/scrollMonitor?utm_source=html5weekly&utm_medium=email", "add":1358366828, "title": "sakabako/scrollMonitor · GitHub"},
+        {"href": "http://www.colorzilla.com/gradient-editor/", "add":1361970298, "title": "Ultimate CSS Gradient Generator - ColorZilla.com"},
+        {"href": "http://www.css3maker.com/index.html", "add":1361970204, "title": "CSS3.0 Maker | CSS3.0 Generator | CSS 3.0 Generator | css3 generator"},
+        {"href": "http://snipplr.com/popular/language/css/", "add":1361969015, "title": "Popular CSS Snippets"},
+        {"href": "http://css-tricks.com/snippets/", "add":1361969005, "title": "Code Snippets | CSS-Tricks"},
+        {"href": "http://www.dynamicdrive.com/", "add":1360920896, "title": "Dynamic Drive DHTML(dynamic html) & JavaScript code library"},
+        {"href": "http://www.javascriptsource.com/", "add":1360920960, "title": "JavaScriptSource.com - Free JavaScripts, Tutorials, Example Code, Reference, Resources, And Help"},
+        {"href": "http://www.hotscripts.com/category/scripts/javascript/scripts-programs/", "add":1360921213, "title": "JavaScript Scripts & Programs | Search & Download Software Free"},
+        {"href": "http://flippinawesome.org/2014/03/10/a-dom-manipulation-class-in-100-lines-of-javascript/?utm_source=javascriptweekly&utm_medium=email", "add":1394905487, "title": "A DOM Manipulation Class in 100 Lines of JavaScript | Flippin' Awesome"},
+        {"href": "http://www.rgagnon.com/topics/js-language.html", "add":1360921072, "title": "Javascript Language - Real's HowTo"},
+        {"href": "http://www.javascriptkit.com/cutpastejava.shtml", "add":1360921301, "title": "JavaScript Kit Free JavaScripts!"},
+        {"group": "x angeschaut", "links": [
+        ]}
+]},
+    {"group": "Connection", "links": [
+        {"href": "http://www.synology-wiki.de/index.php/Generierung_eines_eigenen_SSL-Zertifikats", "add":1373891806, "title": "Generierung eines eigenen SSL-Zertifikats – Synology Wiki"},
+        {"href": "http://www.html5rocks.com/en/tutorials/eventsource/basics/", "add":1423076725, "title": "Stream Updates with Server-Sent Events - HTML5 Rocks"},
+        {"href": "http://www.html5rocks.com/en/mobile/workingoffthegrid/", "add":1415910673, "title": "Working Off the Grid with HTML5 Offline - HTML5 Rocks"},
+        {"href": "http://www.html5rocks.com/en/features/file_access", "add":1353430678, "title": "File Access - HTML5 Rocks"},
+        {"group": "WebRTC", "links": [
+            {"href": "http://blog.carbonfive.com/2014/10/16/webrtc-made-simple/?utm_source=gamedevjsweekly&utm_medium=email", "add":1414182065, "title": "WebRTC Made Simple | The Carbon Emitter"},
+            {"href": "http://pusher.com/tutorials/webrtc_chat?utm_source=html5weekly&utm_medium=email", "add":1406805718, "title": "WebRTC Signaling Chat How-to | Pusher"},
+            {"href": "http://blog.carbonfive.com/2014/10/16/webrtc-made-simple/?utm_source=html5weekly&utm_medium=email", "add":1413995956, "title": "WebRTC Made Simple | The Carbon Emitter"}
+]},
+        {"group": "OpenID", "links": [
+            {"href": "https://developers.google.com/accounts/docs/OAuth2Login?hl=ja", "add":1402323413, "title": "Using OAuth 2.0 for Login (OpenID Connect) - Google Accounts Authentication and Authorization — Google Developers"},
+            {"href": "https://developers.google.com/accounts/docs/OAuth2WebServer?hl=de", "add":1402314500, "title": "Using OAuth 2.0 for Web Server Applications - Google Accounts Authentication and Authorization — Google Developers"},
+            {"href": "https://developers.google.com/accounts/docs/OAuth2Login?hl=de", "add":1402093799, "title": "Using OAuth 2.0 for Login (OpenID Connect) - Google Accounts Authentication and Authorization — Google Developers"},
+            {"href": "https://developers.google.com/drive/web/delegation", "add":1400248433, "title": "Google Drive SDK — Google Developers"},
+            {"href": "https://support.google.com/a/answer/61017?hl=de", "add":1400247732, "title": "Übersicht über OAuth - Google Apps Administrator-Hilfe"},
+            {"href": "http://jeremiahlee.com/blog/2009/09/28/how-to-setup-openid-with-google-apps/", "add":1362172035, "title": "How to Setup OpenID with Google Apps"},
+            {"href": "http://stackoverflow.com/questions/8877985/google-apps-openid-url", "add":1362172054, "title": "Google Apps OpenID url - Stack Overflow"},
+            {"href": "http://openid-demo.appspot.com/", "add":1362313141, "title": "OpenID Demo"},
+            {"href": "http://jvance.com/pages/JQueryOpenIDPlugin.xhtml", "add":1362313681, "title": "jQuery OpenID Plug-in"},
+            {"href": "https://developers.google.com/accounts/docs/GettingStarted", "add":1362170466, "title": "Choosing an Auth Mechanism - Google Accounts Authentication and Authorization — Google Developers"},
+            {"href": "https://developers.google.com/accounts/docs/OpenID", "add":1366357708, "title": "Federated Login for Google Account Users - Google Accounts Authentication and Authorization — Google Developers"},
+            {"href": "https://developers.google.com/google-apps/sso/openid_reference_implementation", "add":1362171470, "title": "OpenID Federated Login Service for Google Apps - Google Apps Platform (Hinweis im Kasten)"}
+]},
+        {"group": "WebSockets", "links": [
+            {"href": "http://www.html5rocks.com/en/tutorials/websockets/basics/", "add":1353430551, "title": "Introducing WebSockets: Bringing Sockets to the Web - HTML5 Rocks"},
+            {"href": "http://developer.mbed.org/users/samux/notebook/websocket/", "add":1415980366, "title": "Websocket | mbed"},
+            {"href": "http://sockets.mbed.org/", "add":1415980138, "title": "Websocket server by Mbed"},
+            {"href": "http://www.websocket.org/echo.html", "add":1353430392, "title": "WebSocket.org | Echo Test"},
+            {"href": "http://html5demos.com/web-socket", "add":1353430383, "title": "HTML5 Demo: Web Socket"},
+            {"href": "http://buildnewgames.com/websockets/?utm_source=html5weekly&utm_medium=email", "add":1358966803, "title": "WebSockets: A Guide - Build New Games"}
+]},
+        {"group": "cache-manifest", "links": [
+            {"href": "http://www.gameclosure.com/blog/2013/03/add-offline-documentation-in-15-minutes?utm_source=html5weekly&utm_medium=email", "add":1365020080, "title": "Add Offline Documentation in 15 Minutes | Game Closure"},
+            {"href": "http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?utm_source=html5weekly&utm_medium=email", "add":1415917287, "title": "Installable Web Apps with the WebApp Manifest in Chrome for Android"}
+]},
+        {"group": "localStorage", "links": [
+            {"href": "https://hacks.mozilla.org/2014/02/localforage-offline-storage-improved/?utm_source=javascriptweekly&utm_medium=email", "add":1392470957, "title": "localForage: Offline Storage, Improved ✩ Mozilla Hacks – the Web developer blog"},
+            {"href": "http://ponyfoo.com/articles/cross-tab-communication?utm_source=html5weekly&utm_medium=email", "add":1421363532, "title": "Cross-tab Communication"},
+            {"href": "https://github.com/jarednova/jquery-total-storage", "add":1386438262, "title": "jarednova/jquery-total-storage · GitHub"},
+            {"href": "http://tech.pro/blog/1486/client-side-storage-options?utm_source=html5weekly&utm_medium=email", "add":1376598911, "title": "Client-Side Storage Options - Tech.Pro"},
+            {"href": "http://simonsmith.io/speeding-things-up-with-sessionstorage/?utm_source=html5weekly&utm_medium=email", "add":1371747217, "title": "Speeding things up with sessionStorage | simonsmith.io - Portfolio and blog of a London based front-end web developer"},
+            {"href": "http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/", "add":1354697836, "title": "Storing Data the Simple HTML5 Way (and a few tricks you might not have known) | HTML5 Doctor"},
+            {"href": "http://viralpatel.net/blogs/introduction-html5-domstorage-api-example/", "add":1352816223, "title": "Introduction to HTML5 DOMStorage API with Example"}
+]},
+        {"group": "Save files to server", "links": [
+            {"href": "http://www.codingforums.com/archive/index.php/t-775.html", "add":1352654345, "title": "how to save iFrame content (page) ? [Archive] - CodingForums.com"},
+            {"href": "http://www.hotscripts.com/forums/javascript/57788-save-contents-textarea-file-upload.html", "add":1355858442, "title": "[SOLVED] Save contents of textarea to file and upload - Hot Scripts Forums"}
+]},
+        {"group": "Ajax", "links": [
+            {"group": "x", "links": [
+                {"href": "http://tech.pro/blog/1635/6-tips-for-creating-ajax-heavy-websites?utm_source=javascriptweekly&utm_medium=email", "add":1382133970, "title": "6 Tips for Creating AJAX-Heavy Websites - Tech.Pro"}
+]}
+]}
+]},
+    {"group": "Server Solutions", "links": [
+        {"href": "http://flippinawesome.org/2014/02/10/build-desktop-apps-with-javascript-and-node-webkit/?utm_source=nodeweekly&utm_medium=email", "add":1392471180, "title": "Build Desktop Apps with JavaScript and Node WebKit | Flippin' Awesome"},
+        {"href": "http://davidwalsh.name/html5-boilerplate-htaccess?utm_source=html5weekly&utm_medium=email", "add":1387479692, "title": "5 .htaccess Snippets to Borrow from HTML5 Boilerplate"},
+        {"href": "https://developers.google.com/cloud-sql/docs/introduction", "add":1385055504, "title": "About Google Cloud SQL - Google Cloud SQL — Google Developers"},
+        {"href": "https://cloud.google.com/products/app-engine", "add":1385055497, "title": "Google App Engine — Google Cloud Platform"},
+        {"href": "http://www.howtogeek.com/howto/windows-vista/how-to-install-iis-on-windows-vista/", "add":1384345008, "title": "How to Install IIS on Windows 7 or Vista"},
+        {"group": "Minify and Uglify", "links": [
+            {"href": "http://code.google.com/p/minify/", "add":1396042661, "title": "minify - Combines, minifies, and caches JavaScript and CSS files on demand to speed up page loads. - Google Project Hosting"}
+]}
+]},
+    {"group": "JS Debugging", "links": [
+        {"href": "https://hacks.mozilla.org/2014/03/introducing-the-canvas-debugger-in-firefox-developer-tools/", "add":1410707782, "title": "Introducing the Canvas Debugger in Firefox Developer Tools ✩ Mozilla Hacks – the Web developer blog"},
+        {"href": "https://www.youtube.com/watch?v=4Tys-VuBPgo", "add":1398435022, "title": "▶ MountainWest JavaScript 2014 - Traces of Errors: Getting Better JavaScript Stacktraces - YouTube"},
+        {"href": "http://fabien-d.github.io/alertify.js/?utm_source=html5weekly&utm_medium=email", "add":1372966460, "title": "alertify.js - browser dialogs never looked so good"},
+        {"href": "https://developer.mozilla.org/en-US/docs/Venkman", "add":1351455500, "title": "Venkman | MDN"},
+        {"href": "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.worldunions.de%2Fworldunions%2Findex.php&charset=%28detect+automatically%29&doctype=Inline&group=0&user-agent=W3C_Validator%2F1.606", "add":1338407390, "title": "Validation Results - W3C Markup Validator"},
+        {"href": "http://www.jshint.com/", "add":1345834146, "title": "JSHint, A JavaScript Code Quality Tool"},
+        {"href": "http://toolness.github.com/slowmo-js/?code=for%20(var%20i%20%3D%200%3B%20i%20%3C%203%3B%20i%2B%2B)%20%7B%0A%20%20print(%22hey%20%22%20%2B%20i)%3B%0A%7D&filterrange=0-0", "add":1362915954, "title": "SlowmoJS"},
+        {"href": "http://squizlabs.github.com/HTML_CodeSniffer/", "add":1361967603, "title": "HTML_CodeSniffer"},
+        {"href": "http://www.jslint.com/", "add":1346153039, "title": "JSLint,The JavaScript Code Quality Tool"},
+        {"group": "Minifiers", "links": [
+            {"href": "https://github.com/mishoo/UglifyJS", "add":1392214895, "title": "mishoo/UglifyJS · GitHub"},
+            {"href": "http://closure-compiler.appspot.com/home", "add":1395700756, "title": "Closure Compiler Service"}
+]},
+        {"group": "x Anleitungen Debugging Tools", "links": [
+            {"href": "http://juliepagano.com/blog/2014/05/18/javascript-debugging-for-beginners/?utm_source=javascriptweekly&utm_medium=email", "add":1409062133, "title": "Julie Pagano - JavaScript Debugging for Beginners"},
+            {"href": "https://github.com/ebobby/tracing.js", "add":1369400854, "title": "ebobby/tracing.js · GitHub"},
+            {"href": "http://amasad.me/2014/03/09/lesser-known-javascript-debugging-techniques/?utm_source=javascriptweekly&utm_medium=email", "add":1394905057, "title": "Lesser-Known JavaScript Debugging Techniques"},
+            {"href": "https://developers.google.com/chrome-developer-tools/docs/commandline-api", "add":1394905073, "title": "Command Line API Reference - Chrome DevTools — Google Developers"},
+            {"href": "http://www.hydrantlabs.org/Security/Google/Chrome/?utm_source=html5weekly&utm_medium=email", "add":1394142680, "title": "Google Chrome Universal XSS | Hydrant Labs"},
+            {"href": "https://github.com/omphalos/earhorn?utm_source=javascriptweekly&utm_medium=email", "add":1388775086, "title": "omphalos/earhorn · GitHub"},
+            {"href": "http://www.2ality.com/2013/10/console-api.html?utm_source=javascriptweekly&utm_medium=email", "add":1381495144, "title": "The JavaScript console API"},
+            {"href": "https://developers.google.com/chrome-developer-tools/docs/javascript-memory-profiling?utm_source=javascriptweekly&utm_medium=email", "add":1381057068, "title": "Chrome DevTools — Google Developers"},
+            {"href": "http://discover-devtools.codeschool.com/chapters/1/challenges/3", "add":1385304613, "title": "discover-devtools.codeschool tutorial"},
+            {"href": "http://devtoolsecrets.com/?utm_source=html5weekly&utm_medium=email", "add":1371237116, "title": "Secrets of the Browser Developer Tools - Secrets"}
+]},
+        {"group": "xz zu kompliziert", "links": [
+            {"href": "http://visionmedia.github.com/mocha/", "add":1359813089, "title": "Mocha - the fun, simple, flexible JavaScript test framework"},
+            {"href": "http://theintern.io/?utm_source=javascriptweekly&utm_medium=email", "add":1367588528, "title": "Intern: A next-generation JavaScript testing stack"}
+]},
+        {"group": "z Unit Tests", "links": [
+            {"href": "https://github.com/pivotal/jasmine/wiki/Background", "add":1395496514, "title": "Background · pivotal/jasmine Wiki · GitHub"},
+            {"href": "http://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229", "add":1395426289, "title": "Testing Your JavaScript with Jasmine - Tuts+ Code Tutorial"}
+]},
+        {"group": "x kostenpflichtig", "links": [
+            {"href": "https://trace.gl/?utm_source=html5weekly&utm_medium=email", "add":1366814532, "title": "traceGL"}
+]}
+]},
+    {"group": "x gelesene Anleitungen", "links": [
+        {"group": "CSS", "links": [
+            {"href": "http://cssguidelin.es/#naming-conventions", "add":1422654867, "title": "CSS Guidelines (2.2.2) – High-level advice and guidelines for writing sane, manageable, scalable CSS"},
+            {"href": "http://sass-guidelin.es/?utm_source=html5weekly&utm_medium=email", "add":1420669165, "title": "Sass Guidelines"},
+            {"href": "http://css-tricks.com/scroll-fix-content/?utm_source=html5weekly&utm_medium=email", "add":1411761361, "title": "Scroll-Then-Fix Content | CSS-Tricks"},
+            {"href": "http://learnlayout.com/?utm_source=html5weekly&utm_medium=email", "add":1398893917, "title": "Learn CSS Layout"},
+            {"href": "http://flippinawesome.org/2013/08/12/writing-better-css/?utm_source=html5weekly&utm_medium=email", "add":1376599219, "title": "Writing Better CSS | Flippin' Awesome"},
+            {"href": "http://www.mademyday.de/css-height-equals-width-with-pure-css.html?utm_source=html5weekly&utm_medium=email", "add":1372966376, "title": "Height equals width with pure CSS"},
+            {"href": "http://phrogz.net/css/vertical-align/index.html", "add":1358787525, "title": "Understanding vertical-align, or 'How (Not) To Vertically Center Content'"},
+            {"href": "http://css.talky.de/scrollbar.php", "add":1354989739, "title": "CSS - Farbige Scrollbalken"},
+            {"href": "http://www.dustindiaz.com/css-shorthand/", "add":1351680255, "title": "CSS Shorthand Guide"}
+]},
+        {"group": "Javascript", "links": [
+            {"href": "http://www.sitepoint.com/new-html5-attributes-hyperlinks-download-media-ping/?utm_source=html5weekly&utm_medium=email", "add":1397670241, "title": "New HTML5 Attributes for Hyperlinks: download, media, and ping"},
+            {"href": "http://html5demos.com/file-api#view-source", "add":1416052728, "title": "HTML5 Demo: File API"},
+            {"href": "https://github.com/qrohlf/trianglify/", "add":1397670007, "title": "qrohlf/trianglify · GitHub"},
+            {"href": "http://www.ixedit.com/samples/", "add":1351455578, "title": "IxEdit | Samples"},
+            {"href": "http://dublintech.blogspot.ch/2012/04/javascript-language-z-cheat-sheet.html", "add":1351685694, "title": "Dublin Tech: JavaScript language a- z cheat sheet"},
+            {"href": "http://webstandardssherpa.com/reviews/dissecting-gmails-email-attachments/?utm_source=html5weekly&utm_medium=email", "add":1360778665, "title": "Dissecting Gmail’s Email Attachments - Web Standards Sherpa"},
+            {"href": "http://javascript-reference.info/", "add":1351611941, "title": "JavaScript Reference - gute cheatsheets"},
+            {"group": "chrome Extensions", "links": [
+                {"href": "https://support.google.com/chrome/a/answer/2714278?hl=de", "add":1418595528, "title": "Anleitung: Chrome-App erstellen - Chrome for Business and Education-Hilfe"},
+                {"href": "https://developer.chrome.com/extensions/getstarted", "add":1418485644, "title": "Getting Started: Building a Chrome Extension - Google Chrome"},
+                {"href": "http://stackoverflow.com/questions/4093722/upload-a-file-in-a-google-chrome-extension", "add":1418595596, "title": "Upload a File in a Google Chrome Extension - Stack Overflow"},
+                {"href": "https://developer.chrome.com/extensions/samples#contextMenus", "add":1418595536, "title": "Sample Extensions - Google Chrome"}
+]},
+            {"group": "Performance Tips", "links": [
+                {"href": "http://rauchg.com/2014/7-principles-of-rich-web-applications/?utm_source=javascriptweekly&utm_medium=email", "add":1415381650, "title": "7 Principles of Rich Web Applications |"},
+                {"href": "https://speakerdeck.com/addyosmani/javascript-memory-management-masterclass?utm_source=javascriptweekly&utm_medium=email", "add":1410001995, "title": "JavaScript Memory Management Masterclass // Speaker Deck"},
+                {"href": "http://flippinawesome.org/2014/03/10/is-jquery-too-big-for-mobile/?utm_source=javascriptweekly&utm_medium=email", "add":1394905420, "title": "Is jQuery Too Big For Mobile? | Flippin' Awesome"},
+                {"href": "http://www.sitepoint.com/introduction-resource-timing-api/?utm_source=html5weekly&utm_medium=email", "add":1410464719, "title": "Introduction to the Resource Timing API"},
+                {"href": "http://www.html5rocks.com/en/tutorials/webperformance/usertiming/", "add":1392198815, "title": "User Timing API: Understanding your Web App - HTML5 Rocks"},
+                {"href": "https://mail.google.com/mail/u/0/?shva=1#inbox/1439fe5bdace386f", "add":1389999133, "title": "This Week's JavaScript News – Issue 164 - adrian.luethi@gmail.com - Gmail"},
+                {"href": "http://www.2ality.com/2013/02/asm-js.html", "add":1389206604, "title": "asm.js: closing the gap between JavaScript and native"},
+                {"href": "https://blog.mozilla.org/javascript/2013/11/07/efficient-float32-arithmetic-in-javascript/?utm_source=javascriptweekly&utm_medium=email", "add":1383921181, "title": "Efficient float32 arithmetic in JavaScript | JavaScript"},
+                {"href": "http://www.html5rocks.com/en/tutorials/memory/effectivemanagement/", "add":1371236956, "title": "Effectively managing memory at Gmail scale - HTML5 Rocks"},
+                {"href": "http://www.htmlgoodies.com/html5/client/using-web-workers-to-improve-performance-of-image-manipulation.html?utm_source=html5weekly&utm_medium=email#fbid=BdYp0bbeSKu", "add":1371749404, "title": "Using Web Workers to improve performance of image manipulation"}
+]},
+            {"group": "JS Tutorials", "links": [
+                {"href": "http://javascript.info/root", "add":1410729448, "title": "Tutorial | JavaScript Tutorial"},
+                {"href": "http://www.20thingsilearned.com/en-US/credits", "add":1404326990, "title": "20 Things I Learned About Browsers and the Web"},
+                {"href": "http://blog.sourcing.io/mvc-style-guide?utm_source=javascriptweekly&utm_medium=email", "add":1395415531, "title": "JavaScript MVC Style Guide"},
+                {"href": "http://codecombat.com/?utm_source=javascriptweekly&utm_medium=email#", "add":1383344707, "title": "CodeCombat"},
+                {"href": "http://flippinawesome.org/2013/10/07/javascript-fundamentals/", "add":1381494866, "title": "JavaScript Fundamentals | Flippin' Awesome"},
+                {"href": "http://www.2ality.com/2013/06/basic-javascript.html?utm_source=javascriptweekly&utm_medium=email", "add":1373664198, "title": "Basic JavaScript: an introduction to the language"},
+                {"href": "http://javascript-workshop.de/buch/index.html", "add":1367782849, "title": "JavaScript-Workshop online"},
+                {"href": "https://www.udacity.com/course/viewer#!/c-cs255/l-66584787/m-66516811", "add":1360581342, "title": "Introduction - Canvas - HTML5 Game Development - Udacity"}
+]},
+            {"group": "JS Tips And Caveats", "links": [
+                {"href": "http://eloquentjavascript.net/?utm_source=javascriptweekly&utm_medium=email", "add":1406967546, "title": "Eloquent JavaScript"},
+                {"href": "http://infinitemonkeys.influitive.com/extraordinary-functions-learning-to-write-well-structured-javascript/?utm_source=javascriptweekly&utm_medium=email", "add":1400443751, "title": "Extraordinary Functions ~ Learning to Write Well Structured JavaScript"},
+                {"href": "http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752", "add":1400533134, "title": "JavaScript Patterns: Stoyan Stefanov: 9780596806750: Amazon.com: Books"},
+                {"href": "http://tech.pro/tutorial/2010/functional-javascript-part-3-apply-call-and-the-arguments-object?utm_source=javascriptweekly&utm_medium=email", "add":1398435593, "title": "Functional JavaScript, Part 3: .apply(), .call(), and the arguments object - Tech.Pro"},
+                {"href": "http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/?utm_source=javascriptweekly&utm_medium=email", "add":1397929494, "title": "Seven JavaScript Quirks I Wish I’d Known About | Telerik Developer Network"},
+                {"href": "http://www.thinkful.com/learn/javascript-best-practices-2/", "add":1389207826, "title": "JavaScript Best Practices Part 2 | Thinkful Programming Guides"},
+                {"href": "http://flippinawesome.org/2013/12/23/45-useful-javascript-tips-tricks-and-best-practices/?utm_source=javascriptweekly&utm_medium=email", "add":1388774873, "title": "45 Useful JavaScript Tips, Tricks and Best Practices | Flippin' Awesome"},
+                {"href": "http://coding.smashingmagazine.com/2013/11/12/an-introduction-to-dom-events/?utm_source=html5weekly&utm_medium=email", "add":1384983053, "title": "An Introduction To DOM Events | Smashing Coding"},
+                {"href": "http://tech.pro/tutorial/1453/7-javascript-basics-many-developers-aren-t-using-properly?utm_source=javascriptweekly&utm_medium=email", "add":1376208043, "title": "7 JavaScript Basics Many Developers Aren't Using (Properly) - Tech.Pro"},
+                {"href": "http://tech.pro/tutorial/1383/javascript-one-language-to-rule-them-all?utm_source=html5weekly&utm_medium=email", "add":1372965604, "title": "JavaScript: One Language To Rule Them All - Tech.Pro"},
+                {"href": "http://www.2ality.com/2013/07/meta-style-guide.html?utm_source=javascriptweekly&utm_medium=email", "add":1376208119, "title": "A meta style guide for JavaScript"},
+                {"href": "http://blog.ponyfoo.com/2013/06/10/uncovering-the-native-dom-api", "add":1371637618, "title": "Uncovering the Native DOM API - Pony Foo"},
+                {"href": "http://flippinawesome.org/2013/05/20/fluent-apis-and-method-chaining/?utm_source=javascriptweekly&utm_medium=email", "add":1369400270, "title": "Fluent APIs and Method Chaining | Flippin' Awesome"},
+                {"href": "http://www.kendoui.com/blogs/teamblog/posts/13-03-28/what-is-the-point-of-promises.aspx?utm_source=javascriptweekly&utm_medium=email", "add":1364640179, "title": "What's The Point Of Promises?"},
+                {"href": "http://www.2ality.com/2013/01/fallgruben.html", "add":1365779458, "title": "JavaScripts 12 größte Fallgruben"},
+                {"href": "http://typedarray.org/javascript-refresh/?utm_source=javascriptweekly&utm_medium=email", "add":1363972118, "title": "A JavaScript refresh | TypedArray.org"},
+                {"href": "http://jstherightway.com/#site-header", "add":1359813794, "title": "JS: The Right Way"},
+                {"href": "http://buildnewgames.com/blog/categories/javascript/", "add":1357591292, "title": "Articles about JavaScript - Build New Games"},
+                {"href": "http://wildermuth.com/2013/8/3/JavaScript_Promises?utm_source=javascriptweekly&utm_medium=email", "add":1376208105, "title": "JavaScript Promises"},
+                {"href": "http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml", "add":1359806688, "title": "Google JavaScript Style Guide"},
+                {"href": "http://buildnewgames.com/dom-sprites/#comment-721864082", "add":1357591978, "title": "DOM Sprites: a Viable Alternative to Canvas - Build New Games"},
+                {"href": "http://javascript.info/tutorial/bubbling-and-capturing", "add":1357478605, "title": "Bubbling and capturing | JavaScript Tutorial"},
+                {"href": "http://luke.breuer.com/tutorial/javascript-drag-and-drop-tutorial.aspx", "add":1321104022, "title": "JavaScript Drag and Drop Tutorial"},
+                {"href": "http://www.walterzorn.de/dragdrop/dragdrop.htm", "add":1353441237, "title": "JavaScript: DHTML API, Drag & Drop für Bilder und Layer"},
+                {"href": "http://shop.oreilly.com/product/9780596517748.do", "add":1351609332, "title": "JavaScript: The Good Parts - O'Reilly Media"},
+                {"href": "http://www.sitepoint.com/javascript-from-scratch/", "add":1351610895, "title": "Script Smarter: Quality JavaScript from Scratch - SitePoint"},
+                {"href": "http://www.javascripttoolbox.com/bestpractices/", "add":1351612926, "title": "Javascript Best Practices"},
+                {"href": "http://jibbering.com/faq/notes/closures/", "add":1351624321, "title": "Javascript Closures"},
+                {"href": "http://www.sitepoint.com/rough-guide-dom/", "add":1351610912, "title": "Rough Guide to the DOM - SitePoint"},
+                {"href": "http://www.heise.de/developer/artikel/Entwickeln-in-JavaScript-1318509.html", "add":1346153161, "title": "Entwickeln in JavaScript | heise Developer"},
+                {"href": "http://eloquentjavascript.net/", "add":1345834194, "title": "Eloquent JavaScript: A Modern Introduction to Programming"},
+                {"href": "https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript?redirectlocale=en-US&redirectslug=A_re-introduction_to_JavaScript", "add":1346243026, "title": "A re-introduction to JavaScript (JS Tutorial) | Mozilla Developer Network"},
+                {"href": "http://www.heise.de/developer/artikel/Scriptease-js-Ueber-den-Umgang-mit-Funktionen-1485235.html?artikelseite=2", "add":1346182911, "title": "Funktionen | heise Developer"},
+                {"href": "http://matthiasschuetz.com/flash-javascript-und-html5-gegenwart-und-zukunft", "add":1346165354, "title": "Flash, JavaScript und HTML5: Gegenwart und Zukunft - Matthias Schütz"},
+                {"href": "http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference", "add":1346239975, "title": "The Complete Javascript Number Reference"},
+                {"href": "http://www.heise.de/developer/artikel/Scriptease-js-Umgang-von-JavaScript-mit-Variablen-1417232.html?artikelseite=2", "add":1346166473, "title": "var-Schlüsselwort | heise Developer"},
+                {"href": "http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization", "add":1357917078, "title": "JavaScript (ES6) Has Tail Call Optimization - A Passion for Breaking Things - Brandon Benvie does JavaScript"}
+]},
+            {"group": "Debugging", "links": [
+                {"href": "https://github.com/addyosmani/timing.js?utm_source=html5weekly&utm_medium=email", "add":1411761247, "title": "addyosmani/timing.js · GitHub"},
+                {"href": "https://docs.google.com/presentation/d/1DNljLkRpe9LIDfcqcpHzdLvEOyuVH4d1y9dtAJBr1I8/preview#slide=id.gbba09f01_087", "add":1379178971, "title": "DevTools can do THAT? - Google Drive"},
+                {"href": "http://open.blogs.nytimes.com/2013/08/27/the-young-developers-guide-to-debugging-javascript/?_r=1", "add":1379178985, "title": "The Young Developer's Guide to Debugging JavaScript - NYTimes.com"},
+                {"href": "http://www.youtube.com/watch?feature=player_embedded&v=XAqIpGU8ZZk", "add":1363786557, "title": "GDC 2012: From Console to Chrome - YouTube"}
+]},
+            {"group": "Connection", "links": [
+                {"href": "http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript?utm_source=javascriptweekly&utm_medium=email", "add":1373666740, "title": "Five Patterns to Help You Tame Asynchronous JavaScript - Tech.Pro"},
+                {"href": "http://colinbookman.com/2014/03/23/micio/?utm_source=html5weekly&utm_medium=email", "add":1395935903, "title": "MicIO.js"}
+]},
+            {"group": "Objekte Vererbung", "links": [
+                {"group": "xz OOP gelesen und gut", "links": [
+                    {"href": "http://hangar.runway7.net/javascript-guide-to-objects-functions-scope-prototpyes-closures", "add":1351382198, "title": "x The Javascript Guide to Objects, Functions, Closures and Scope"},
+                    {"href": "http://designpepper.com/blog/drips/function-functions?utm_source=javascriptweekly&utm_medium=email", "add":1371629327, "title": "Function functions"},
+                    {"href": "http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/?utm_source=javascriptweekly&utm_medium=email", "add":1363972248, "title": "OOP In JavaScript: What You NEED to Know | JavaScript is Sexy"}
+]},
+                {"group": "x", "links": [
+                    {"href": "http://raganwald.com/2014/06/15/immutable-structs.html?utm_source=javascriptweekly&utm_medium=email", "add":1403339733, "title": "Structs and ImmutableStructs"},
+                    {"href": "http://www.crockford.com/javascript/inheritance.html", "add":1346165915, "title": "Classical Inheritance in JavaScript"},
+                    {"href": "http://ajaxpatterns.org/Javascript_Inheritance", "add":1346165970, "title": "Javascript Inheritance - Ajax Patterns"},
+                    {"href": "http://www.heise.de/developer/artikel/Fortgeschrittene-OO-Programmierung-in-Javascript-227076.html", "add":1346166037, "title": "Fortgeschrittene OO-Programmierung in Javascript | heise Developer"},
+                    {"href": "https://developer.mozilla.org/en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript", "add":1346241594, "title": "Introduction to Object-Oriented JavaScript | Mozilla Developer Network"},
+                    {"href": "http://www.objectplayground.com/?utm_source=javascriptweekly&utm_medium=email", "add":1375173650, "title": "Object Playground: The Definitive Guide to Object-Oriented JavaScript"}
+]}
+]},
+            {"group": "JQuery", "links": [
+                {"href": "http://quickleft.com/blog/18-surprises-from-reading-jquery-s-source-code?utm_source=javascriptweekly&utm_medium=email", "add":1410452817, "title": "18 Surprises From Reading jQuery's Source Code - Quick Left Boulder Colorado"},
+                {"href": "http://lab.abhinayrathore.com/jquery-standards/?utm_source=javascriptweekly&utm_medium=email", "add":1394905469, "title": "jQuery Coding Standards and Best Practices"},
+                {"href": "http://webpop.github.io/jquery.pin/?utm_source=javascriptweekly&utm_medium=email", "add":1366305885, "title": "jQuery Pin"},
+                {"href": "http://www.very-clever.com/jquery-tutorial.php", "add":1331072070, "title": "jQuery Tutorial - Die Grundlagen"},
+                {"href": "http://jqfundamentals.com/chapter/events", "add":1359813626, "title": "jQuery Fundamentals :: Events and Event Delegation"},
+                {"href": "https://tutsplus.com/course/30-days-to-learn-jquery/", "add":1360756631, "title": "Tuts+ Premium Course: 30 Days to Learn jQuery"}
+]},
+            {"group": "Libraries", "links": [
+                {"href": "http://yepnopejs.com/", "add":1390040272, "title": "yepnope.js | A Conditional Loader For Your Polyfills!"},
+                {"href": "http://www.responsivejavascript.com/?utm_source=javascriptweekly&utm_medium=email", "add":1389999248, "title": "Responsive Javascript"},
+                {"href": "https://github.com/rwldrn/idiomatic.js/", "add":1359810473, "title": "rwldrn/idiomatic.js · GitHub"}
+]},
+            {"group": "Physics And Games", "links": [
+                {"href": "http://www.adityaravishankar.com/category/programming/game-programming/", "add":1359804255, "title": "Game Programming | Aditya Ravi Shankar"},
+                {"href": "http://buildnewgames.com/simulating-natural-systems/", "add":1389216036, "title": "Simulating Natural Systems in a Web Browser - Build New Games"},
+                {"href": "http://buildnewgames.com/gamephysics/", "add":1357592166, "title": "How Physics Engines Work - Build New Games"},
+                {"href": "https://github.com/DaRaFF/jsgamewiki", "add":1346498473, "title": "DaRaFF/jsgamewiki · GitHub"},
+                {"href": "http://labs.skookum.com/demos/barcampclt_physics/", "add":1346757187, "title": "Game Physics"},
+                {"href": "http://www.html5rocks.com/en/tutorials/canvas/notearsgame/", "add":1357591297, "title": "No Tears Guide to HTML5 Games - HTML5 Rocks"},
+                {"href": "http://de.slideshare.net/KukoljGregory/10-tips-to-get-started-with-html5-games", "add":1346498810, "title": "10 tips to get started with html5 games"},
+                {"href": "http://de.slideshare.net/ernesto.jimenez/5-tips-for-your-html5-games", "add":1346498780, "title": "5 tips for your HTML5 games"},
+                {"href": "http://experilous.com/1/blog/post/procedural-planet-generation?utm_source=gamedevjsweekly&utm_medium=email", "add":1412931232, "title": "Experilous: Procedural Planet Generation"}
+]},
+            {"group": "PIXI.js", "links": [
+                {"href": "http://www.creativebloq.com/netmag/get-started-pixijs-81412778?utm_source=gamedevjsweekly&utm_medium=email", "add":1410006957, "title": "Get started with Pixi.js | Web design | Creative Bloq"},
+                {"href": "http://learnjs.io/blog/2014/08/05/introduction-to-pixijs/?utm_source=javascriptweekly&utm_medium=email", "add":1407530390, "title": "Introduction to pixi.js"},
+                {"href": "http://flippinawesome.org/2013/11/04/building-a-parallax-scrolling-game-with-pixi-js/", "add":1383921796, "title": "Building a Parallax Scrolling Game with Pixi.js | Flippin' Awesome"},
+                {"href": "http://www.yeahbutisitflash.com/?p=5666#more-5666", "add":1384346561, "title": "Building a Parallax Scroller with Pixi.js: Part 2"}
+]},
+            {"group": "RegEx", "links": [
+                {"href": "http://regexone.com/lesson/16", "add":1386775539, "title": "RegexOne - Learn Regular Expressions - Lesson X: Infinity and beyond!"},
+                {"href": "http://bjorn.tipling.com/state-and-regular-expressions-in-javascript?utm_source=javascriptweekly&utm_medium=email", "add":1408879193, "title": "What you should know about JavaScript regular expressions"}
+]},
+            {"group": "Observers RX / Promises", "links": [
+                {"href": "http://baconjs.github.io/", "add":1410727182, "title": "Bacon.js - Functional Reactive Programming library for JavaScript"},
+                {"href": "https://gist.github.com/staltz/868e7e9bc2a7b8c1f754?utm_source=javascriptweekly&utm_medium=email", "add":1410453350, "title": "The introduction to Reactive Programming you've been missing"},
+                {"href": "https://github.com/ReactiveX/RxJava/wiki/Creating-Observables", "add":1410726780, "title": "Creating Observables · ReactiveX/RxJava Wiki · GitHub"},
+                {"href": "http://davidwalsh.name/write-javascript-promises?utm_source=javascriptweekly&utm_medium=email", "add":1397856358, "title": "Write Better JavaScript with Promises"},
+                {"href": "http://davidwalsh.name/jquery-ajax-callback?utm_source=javascriptweekly&utm_medium=email", "add":1397856320, "title": "jQuery AJAX Callback"},
+                {"href": "http://mattgreer.org/articles/promises-in-wicked-detail/?utm_source=javascriptweekly&utm_medium=email", "add":1392471567, "title": "JavaScript Promises ... In Wicked Detail - Matt Greer"}
+]},
+            {"group": "WebWorkers", "links": [
+                {"href": "http://qnimate.com/multithreading-in-html5-using-web-workers/?utm_source=gamedevjsweekly&utm_medium=email", "add":1403336969, "title": "QNimate – Multithreading In HTML5 Using Web Workers"}
+]},
+            {"group": "ES6", "links": [
+                {"href": "http://tagtree.io/courses/expert-es6/do?utm_source=javascriptweekly&utm_medium=email", "add":1423300444, "title": "Tagtree course: Expert ES6 | active"},
+                {"href": "http://davidwalsh.name/es6-generators?utm_source=javascriptweekly&utm_medium=email", "add":1411808285, "title": "The Basics Of ES6 Generators"},
+                {"href": "http://raganwald.com/2015/02/02/destructuring.html?utm_source=javascriptweekly&utm_medium=email", "add":1423300427, "title": "Destructuring and Recursion in ES6"},
+                {"href": "http://www.2ality.com/2015/01/es6-strings.html?utm_source=javascriptweekly&utm_medium=email", "add":1422831739, "title": "New string features in ECMAScript 6"},
+                {"href": "http://chrisbuttery.com/articles/synchronous-asynchronous-javascript-with-es6-generators/?utm_source=javascriptweekly&utm_medium=email", "add":1423300408, "title": "Synchronous asynchronous JavaScript with ES6 Generators | Chris Buttery"},
+                {"href": "http://www.2ality.com/2015/01/es6-destructuring.html?utm_source=javascriptweekly&utm_medium=email", "add":1422831756, "title": "Destructuring and parameter handling in ECMAScript 6"},
+                {"href": "http://updates.html5rocks.com/2015/01/ES6-Template-Strings?utm_source=javascriptweekly&utm_medium=email", "add":1422210973, "title": "Getting Literal With ES6 Template Strings"},
+                {"href": "http://www.2ality.com/2014/12/es6-oop.html?utm_source=javascriptweekly&utm_medium=email", "add":1420276864, "title": "ECMAScript 6: new OOP features besides classes"},
+                {"href": "https://leanpub.com/understandinges6/read?utm_source=javascriptweekly&utm_medium=email", "add":1417205120, "title": "Read Understanding ECMAScript 6 | Leanpub"},
+                {"href": "http://javascriptplayground.com/blog/2014/07/introduction-to-es6-classes-tutorial/?utm_source=javascriptweekly&utm_medium=email", "add":1411807791, "title": "An introduction to ES6 classes."},
+                {"href": "http://es6rocks.com/2014/08/what-you-need-to-know-about-block-scope-let/?utm_source=javascriptweekly&utm_medium=email", "add":1410025238, "title": "What you need to know about block scope - let - ES6 Rocks"},
+                {"href": "https://speakerdeck.com/rauschma/ecmascript-6-whats-next-for-javascript-august-2014?utm_source=javascriptweekly&utm_medium=email", "add":1410003198, "title": "ECMAScript 6: what’s next for JavaScript? (August 2014) // Speaker Deck"}
+]},
+            {"group": "Drag Drop Paste", "links": [
+                {"href": "http://decafbad.com/2009/07/drag-and-drop/api-demos.html#delegated", "add":1418814798, "title": "Drag and Drop in Firefox 3.5"},
+                {"href": "http://blogs.telerik.com/aspnet-ajax/posts/13-06-26/making-a-better-editor-experience-pasting-images-into-chrome", "add":1416055053, "title": "Making a Better Editor Experience: Pasting Images into Chrome"},
+                {"href": "http://www.codersgrid.com/2014/02/26/paste-js-retrieve-the-data-from-clipboard-in-javascript/", "add":1416090964, "title": "Paste.js, Retrieve the Data from Clipboard in JavaScript"}
+]}
+]},
+        {"group": "HTML", "links": [
+            {"href": "http://coding.smashingmagazine.com/2014/03/04/introduction-to-custom-elements/?utm_source=html5weekly&utm_medium=email", "add":1394140668, "title": "A Detailed Introduction To Custom Elements | Smashing Coding"},
+            {"href": "http://davidwalsh.name/8-html-elements?utm_source=html5weekly&utm_medium=email", "add":1385585828, "title": "8 HTML Elements You're Not Using (and Should Be)"},
+            {"href": "http://diveintohtml5.info/", "add":1354285826, "title": "Dive Into HTML5"},
+            {"href": "http://www.html5rocks.com/en/tutorials/casestudies/entanglement/", "add":1353427027, "title": "Hexagonal with Canvas"},
+            {"href": "http://www.html5rocks.com/en/tutorials/games/assetmanager/", "add":1353426326, "title": "Simple Asset Management for HTML5 Games - HTML5 Rocks"},
+            {"href": "http://de.html.net/tutorials/html/", "add":1348261599, "title": "HTML Tutorial - Inhaltsverzeichnis - HTML.net"},
+            {"href": "http://www.philophax.de/html-grundlage-tutorial.htm", "add":1351435173, "title": "HTML - wie fange ich an, eine Website zu erstellen - ein Grundlagen-Tutorial"},
+            {"href": "http://html5snippets.com/", "add":1357593304, "title": "HTML5 Snippets"}
+]},
+        {"group": "WebDev allgemein", "links": [
+            {"href": "http://www.whatbrowser.org/", "add":1404327019, "title": "Welcher Browser? – Google"},
+            {"href": "http://www.thinkful.com/learn/a-guide-to-using-github-pages/", "add":1389207804, "title": "A Guide To Using Github Pages | Thinkful Programming Guides"},
+            {"href": "http://www.youtube.com/watch?v=x6qe_kVaBpg", "add":1379178963, "title": "Google I/O 2013 - Chrome DevTools Revolutions 2013 - YouTube"},
+            {"href": "http://www.html-seminar.de/", "add":1368002116, "title": "HTML lernen und die eigene Website erstellen - HTML Kurs / Seminar"},
+            {"href": "http://www.htmldog.com/guides/", "add":1361368856, "title": "Tutorials | HTML Dog"},
+            {"href": "http://beta.theexpressiveweb.com/#!/html5-audio", "add":1361969729, "title": "HTML5 audio player and element - Adobe - The Expressive Web - Beta"},
+            {"href": "http://www.codecademy.com/de/tracks/javascript", "add":1349962803, "title": "JavaScript Fundamentals | Codecademy"},
+            {"href": "http://codeflow.org/entries/2013/feb/02/why-you-should-use-webgl/?utm_source=html5weekly&utm_medium=email", "add":1360430766, "title": "Why you should use WebGL - Codeflow"},
+            {"href": "http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/", "add":1360429358, "title": "Why moving elements with translate() is better than pos:abs top/left « Paul Irish"},
+            {"href": "http://jlongster.github.com/writing-webapps/", "add":1360430029, "title": "http://jlongster.github.com/writing-webapps/"},
+            {"href": "http://calendar.perfplanet.com/2012/snow-in-canvas-land/", "add":1360429591, "title": "Performance Calendar » Snow in canvas land"},
+            {"href": "http://christianheilmann.com/2013/01/25/five-things-you-can-do-to-make-html5-perform-better/?utm_source=html5weekly&utm_medium=email", "add":1360429334, "title": "Five things you can do to make HTML5 perform better | Christian Heilmann"},
+            {"href": "http://antjanus.com/blog/web-design-tips/how-start-being-a-web-developer/", "add":1358956962, "title": "How To Start Being A Web Developer (Quickly)"},
+            {"href": "http://www.tripwiremagazine.com/2011/11/cheat-sheet-collection.html", "add":1351678105, "title": "60 Useful Web Developer Cheat Sheet Collection"},
+            {"href": "http://spyrestudios.com/mega-collection-of-cheatsheets-for-designer-developers/", "add":1351671929, "title": "Mega Collection Of Cheatsheets for Designers And Developers | SpyreStudios"},
+            {"href": "http://html5example.net/entry/tutorial/cheat-sheets-collection", "add":1351671541, "title": "Cheat Sheets Collection - HTML5 Example"},
+            {"href": "http://html5example.net/tag/CheatSheet/2", "add":1351671368, "title": "CheatSheet - page 2"},
+            {"href": "http://w3fools.com/", "add":1351610112, "title": "W3Fools – A W3Schools Intervention"},
+            {"href": "http://de.slideshare.net/robhawkes/ny-html5-game-development-with-html5-javascript", "add":1346498825, "title": "NY HTML5 - Game Development with HTML5 & JavaScript"},
+            {"href": "https://www.squarefree.com/bookmarklets/webdevel.html", "add":1346163272, "title": "Web Development Bookmarklets"},
+            {"href": "http://www.techzilo.com/bookmarklets-web-designers-developers/", "add":1346163166, "title": "Useful bookmarklets for web designers and developers"},
+            {"group": "Build", "links": [
+                {"href": "http://brunch.io/?utm_source=html5weekly&utm_medium=email", "add":1411762904, "title": "Brunch | ultra-fast HTML5 build tool"},
+                {"href": "http://browserify.org/articles.html", "add":1411766381, "title": "Browserify"},
+                {"href": "http://aexmachina.info/intro-to-broccoli/?utm_source=javascriptweekly&utm_medium=email", "add":1411765604, "title": "Anima Ex Machina"}
+]}
+]},
+        {"group": "node.js", "links": [
+            {"href": "http://www.nodebeginner.org/", "add":1395338863, "title": "The Node Beginner Book » A comprehensive Node.js tutorial"}
+]},
+        {"group": "PHP", "links": [
+            {"href": "http://www.strassenprogrammierer.de/PHP-kw.html", "add":1395095993, "title": "PHP"},
+            {"href": "http://www.strassenprogrammierer.de/mysql-datenbank-administrieren-und-pflegen_tipp_384.html", "add":1395096112, "title": "MySQL-Datenbank administrieren und pflegen"},
+            {"href": "http://www.vlmedia.de/325/php-login-system-einfach", "add":1366735460, "title": "Einfaches Login-System in PHP » vlmedia"},
+            {"href": "http://tut.php-quake.net/de/", "add":1356512728, "title": "Quakenet/#php Tutorial - de - Einleitung"},
+            {"href": "http://www.tizag.com/phpT/filewrite.php", "add":1356606943, "title": "PHP Tutorial - File Write"},
+            {"href": "http://www.richnetapps.com/the-right-way-to-handle-file-downloads-in-php/", "add":1366200044, "title": "The “right way” to handle file downloads in PHP"},
+            {"href": "http://www.onlamp.com/pub/ct/29", "add":1374052178, "title": "PHP Foundations"}
+]},
+        {"group": "mySQL", "links": [
+            {"href": "http://stackoverflow.com/questions/11310564/php-to-easyphp-mysql-server-1-second-connection-delay", "add":1397598624, "title": "mysqli - PHP to EasyPHP MySQL server 1 second connection delay - Stack Overflow"},
+            {"href": "http://nicolasruh.wikispaces.com/Datenbanken", "add":1395773964, "title": "nicolasruh - Datenbanken"}
+]}
+]},
+    {"group": "Grafik", "links": [
+        {"href": "http://css-tricks.com/centering-css-complete-guide/?utm_source=html5weekly&utm_medium=email", "add":1410011601, "title": "Centering in CSS: A Complete Guide | CSS-Tricks"},
+        {"href": "http://modernweb.com/2014/07/30/5-things-wont-believe-built-css/?utm_source=html5weekly&utm_medium=email", "add":1407401117, "title": "5 things you won't believe are only built with CSS - Modern WebModern Web"},
+        {"href": "http://bseth99.github.io/projects/jquery-ui/9-tooltip-comparison.html#", "add":1389044176, "title": "A Comparison of Different jQuery Tooltip Plugin Libraries"},
+        {"href": "https://speakerdeck.com/adilu/spf-physik-themen/edit", "add":1386948712, "title": "New Presentation // Speaker Deck"},
+        {"href": "http://codepen.io/shshaw/full/gEiDt#Fixed", "add":1376598927, "title": "Absolute Centering - CodePen"},
+        {"href": "http://css.maxdesign.com.au/", "add":1352762056, "title": "css.maxdesign.com.au - CSS resources and tutorials for web designers and web developers"},
+        {"href": "http://www.html5rocks.com/de/tutorials/dnd/basics/", "add":1335201693, "title": "Natives Drag & Drop in HTML5 - HTML5 Rocks"},
+        {"href": "http://html5example.net/static/html/HTML5_CSS3%20Cheatsheet.html", "add":1351670866, "title": "HTML5 Examples and Demos | HTML5/CSS3 Cheatsheet"},
+        {"href": "http://blueblots.com/development/css3-generator/", "add":1351678748, "title": "15 Great Examples of CSS3 Generator | blueblots.com"},
+        {"href": "http://processingjs.org/", "add":1351429658, "title": "Processing.js"},
+        {"href": "http://cow.neondragon.net/stuff/reflection/", "add":1351429952, "title": "Reflection.js"},
+        {"href": "http://bonsaijs.org/", "add":1351434728, "title": "BonsaiJS - A Graphics Library"},
+        {"href": "http://blog.gopherwoodstudios.com/2011/04/making-html5-games-match-your-screen.html", "add":1346498528, "title": "Gopherwood Studios Blog: Making HTML5 Games Match Your Screen"},
+        {"href": "http://www.html5canvastutorials.com/webgl/part-3-html5-canvas-webgl-with-three-js/", "add":1346242418, "title": "Part 4: HTML5 Canvas WebGL Tutorials Introduction with Three.js"},
+        {"href": "http://www.w3.org/TR/SVG/paths.html#PathData", "add":1346187013, "title": "Paths – SVG 1.1 (Second Edition)"},
+        {"group": "Icons", "links": [
+            {"href": "http://opengameart.org/", "add":1393444428, "title": "OpenGameArt.org"},
+            {"href": "http://ajaxload.info/", "add":1375990447, "title": "Ajaxload - Ajax loading gif generator"},
+            {"href": "http://www.iconfinder.com/search/?q=arrow", "add":1372872034, "title": "Arrow icons | 1 | Iconfinder"},
+            {"href": "http://www.agiledesigners.com/resources/icons/350-pixel-perfect-icons", "add":1359804572, "title": "Agile Designers : Best online resources for Web designers, Graphic Designers"}
+]},
+        {"group": "CSS Template sets", "links": [
+            {"href": "https://kuler.adobe.com/de/create/color-wheel/", "add":1407234748, "title": "Farbrad | Farbschemata - Adobe Kuler"},
+            {"href": "http://one-div.com/", "add":1419694349, "title": "One div - The single element HTML/CSS icon database"},
+            {"href": "http://davidwalsh.name/uncss?utm_source=html5weekly&utm_medium=email", "add":1397667366, "title": "uncss: Find Unused CSS"},
+            {"href": "http://flippinawesome.org/2014/04/14/organizing-your-css-code-for-preprocessors/?utm_source=html5weekly&utm_medium=email", "add":1397667209, "title": "Organizing Your CSS Code for Preprocessors | Flippin' Awesome"},
+            {"href": "http://lesscss.org/", "add":1392214930, "title": "Getting started | Less.js"},
+            {"href": "https://github.com/hakimel/Ladda?utm_source=html5weekly&utm_medium=email", "add":1371235023, "title": "hakimel/Ladda · GitHub"},
+            {"href": "http://groundwork.sidereel.com/?url=home", "add":1361368536, "title": "Groundwork CSS ♥ A Responsive HTML5, CSS & Javascript Framework"},
+            {"href": "http://kaylarose.github.com/Glowform/", "add":1350056562, "title": "Glowform :: Image-less CSS3 Glowing Form Implementation"},
+            {"href": "http://tympanus.net/Tutorials/3DHoverEffects/index2.html", "add":1351709624, "title": "3D Thumbnail Hover Effects"}
+]},
+        {"group": "Animations", "links": [
+            {"href": "http://blog.keithclark.co.uk/pure-css-parallax-websites/?utm_source=html5weekly&utm_medium=email", "add":1408649772, "title": "Pure CSS parallax scrolling websites | Keith Clark"},
+            {"href": "http://robots.thoughtbot.com/css-animation-for-beginners?utm_source=html5weekly&utm_medium=email", "add":1420668475, "title": "CSS Animation for Beginners"},
+            {"href": "http://blog.pexels.com/css-only-loaders/?utm_source=gamedevjsweekly&utm_medium=email", "add":1418464079, "title": "CSS-Only Loaders and Spinners"},
+            {"href": "http://www.justinaguilar.com/animations/?utm_source=html5weekly&utm_medium=email#", "add":1417021515, "title": "CSS3 Animation Cheat Sheet - Justin Aguilar"},
+            {"href": "http://flippinawesome.org/2014/05/20/frame-by-frame-animation-with-html-and-javascript/?utm_source=html5weekly&utm_medium=email", "add":1400703874, "title": "Frame-by-frame animation with HTML and JavaScript | Flippin' Awesome"},
+            {"href": "http://julian.com/research/velocity/?utm_source=html5weekly&utm_medium=email", "add":1398894154, "title": "Velocity.js"},
+            {"href": "http://www.greensock.com/get-started-js/", "add":1392913537, "title": "Getting Started with the JavaScript Version of the GreenSock Animation Platform (GSAP) « GreenSock"},
+            {"href": "http://css-tricks.com/css-animation-tricks/?utm_source=html5weekly&utm_medium=email", "add":1392197963, "title": "CSS Animation Tricks: State Jumping, Negative Delays, Animating Origin, and More | CSS-Tricks"},
+            {"href": "http://mynameismatthieu.com/WOW/?utm_source=html5weekly&utm_medium=email", "add":1391866661, "title": "WOW.js - Reveal Animations When You Scroll. Very Animate.css Friend."},
+            {"href": "http://ianlunn.github.io/Hover/?utm_source=html5weekly&utm_medium=email", "add":1389207928, "title": "Hover.css - A collection of CSS3 powered hover effects"},
+            {"href": "http://easings.net/de", "add":1380997999, "title": "Easings Cheat Sheet"},
+            {"href": "http://css-tricks.com/controlling-css-animations-transitions-javascript/?utm_source=html5weekly&utm_medium=email", "add":1380992099, "title": "Controlling CSS Animations and Transitions with JavaScript | CSS-Tricks"},
+            {"href": "http://flippinawesome.org/2013/08/12/introduction-to-animating-in-html/?utm_source=html5weekly&utm_medium=email", "add":1377194155, "title": "Introduction to Animating in HTML | Flippin' Awesome"},
+            {"href": "http://leaverou.github.io/animatable/?utm_source=html5weekly&utm_medium=email", "add":1375952033, "title": "Animatable: One property, two values, endless possiblities"},
+            {"href": "http://ricostacruz.com/jquery.transit/?utm_source=html5weekly&utm_medium=email", "add":1375457322, "title": "Transit - CSS transitions and transformations for jQuery"},
+            {"href": "http://blog.sarasoueidan.com/windows8-animations/demo/index.html", "add":1366215166, "title": "Windows 8 Animations"},
+            {"href": "http://blog.crocodoc.com/post/46369766700/3d-ifying-documents-using-css-transforms?utm_source=html5weekly&utm_medium=email", "add":1365020148, "title": "Crocodoc"},
+            {"href": "http://pineapple.io/resources/animatable", "add":1363785897, "title": "javascript · Animatable · Pineapple"},
+            {"href": "http://bartaz.github.com/impress.js/#/big", "add":1361967086, "title": "impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz"},
+            {"href": "http://lvivski.github.com/anima/?utm_source=html5weekly&utm_medium=email", "add":1361368341, "title": "Anima — CSS animations with a soul"},
+            {"href": "http://learn.shayhowe.com/advanced-html-css/transitions-animations?utm_source=html5weekly&utm_medium=email", "add":1361368274, "title": "Transitions & Animations - An Advanced Guide to HTML & CSS"},
+            {"href": "https://github.com/jquery/jquery-color", "add":1360788376, "title": "jquery/jquery-color · GitHub"},
+            {"href": "https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations?redirectlocale=en-US&redirectslug=CSS%2FUsing_CSS_animations", "add":1360430802, "title": "Using CSS animations - CSS | MDN"},
+            {"href": "http://daneden.me/animate/", "add":1359760641, "title": "Animate.css - a bunch of plug-and-play CSS animations"},
+            {"href": "https://github.com/jlongster/css-animations.js", "add":1360430096, "title": "jlongster/css-animations.js · GitHub"},
+            {"href": "http://darsa.in/motio/#!minigame", "add":1357307920, "title": "Motio - jQuery plugin"},
+            {"href": "http://www.html5rocks.com/en/tutorials/speed/animations/", "add":1346850190, "title": "Leaner, Meaner, Faster Animations with requestAnimationFrame - HTML5 Rocks"},
+            {"href": "http://html5center.sourceforge.net/Build-Awesome-Apps-with-CSS3-Animations", "add":1346846890, "title": "CSS3 Animations | the HTML5 Center"},
+            {"href": "https://sites.google.com/site/canvimationhelp/introduction", "add":1353366540, "title": "Canvimation Help (Version 2)"},
+            {"href": "http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/RequestAnimationFrame/Overview.html", "add":1351689705, "title": "Timing control for script-based animations"},
+            {"href": "http://gsgd.co.uk/sandbox/jquery/easing/", "add":1352326121, "title": "jQuery Easing Plugin"},
+            {"href": "http://www.kirupa.com/html5/animating_with_requestAnimationFrame.htm", "add":1351695211, "title": "kirupa.com - Animating with requestAnimationFrame"},
+            {"href": "http://ie.microsoft.com/testdrive/Graphics/RequestAnimationFrame/Default.html#", "add":1351692066, "title": "requestAnimationFrame API"},
+            {"href": "http://www.nczonline.net/blog/2011/05/03/better-javascript-animations-with-requestanimationframe/", "add":1351691911, "title": "Better JavaScript animations with requestAnimationFrame | NCZOnline"},
+            {"href": "http://creativejs.com/resources/requestanimationframe/", "add":1351689762, "title": "requestAnimationFrame | CreativeJS"},
+            {"group": "z kompliziertere Umgebungen", "links": [
+                {"href": "http://animatron.com/?utm_source=html5weekly&utm_medium=email", "add":1395262513, "title": "Animatron"},
+                {"href": "https://mail.google.com/mail/u/0/?shva=1#inbox/14a344c134eba6a1", "add":1418227115, "title": "This Week's HTML5 and Browser Technology News (Issue 167) - adrian.luethi@gmail.com - Gmail"}
+]}
+]},
+        {"group": "Edit Sprites an Images", "links": [
+            {"href": "https://github.com/jnordberg/gif.js?utm_source=javascriptweekly&utm_medium=email", "add":1408259599, "title": "jnordberg/gif.js · GitHub"},
+            {"href": "http://www.danielx.net/pixel-editor/docs/download?utm_source=html5weekly&utm_medium=email", "add":1403804782, "title": "download"},
+            {"href": "http://christianheilmann.com/2013/06/15/image-masking-with-html5-canvas/?utm_source=html5weekly&utm_medium=email", "add":1371745802, "title": "Image masking with HTML5 Canvas | Christian Heilmann"},
+            {"href": "http://labs.hyperandroid.com/static/texture/spriter.html", "add":1369241517, "title": "The Online CSS Spriter"},
+            {"href": "http://mudcu.be/sketchpad/", "add":1369240823, "title": "Sketchpad - Online Paint/Drawing application"},
+            {"href": "http://www.nihilogic.dk/labs/canvas2image/", "add":1369233274, "title": "Canvas2Image : Saving Canvas data to image file"},
+            {"href": "http://www.pixastic.com/lib/", "add":1369221812, "title": "Pixastic: JavaScript Image Processing Library"},
+            {"href": "http://www.colorschemedesigner.com/#", "add":1366802658, "title": "Color Scheme Designer 3"},
+            {"href": "http://www.storminthecastle.com/projects/imagefilters1/", "add":1365628678, "title": "Image Filters!"},
+            {"href": "http://www.html5rocks.com/en/tutorials/masking/adobe/", "add":1365628631, "title": "CSS Masking - HTML5 Rocks"},
+            {"href": "http://twistedoakstudios.com/blog/Post3138_mouse-path-smoothing-for-jack-lumber?utm_source=html5weekly&utm_medium=email", "add":1365020023, "title": "Twisted Oak Studios | Unity3D Consulting | Technical Magic"},
+            {"href": "http://spritepad.wearekiss.com/", "add":1361970547, "title": "SpritePad - Create and edit css sprites"},
+            {"href": "http://www.freepik.com/popular-vectors", "add":1361969271, "title": "Popular Vectors - EPS, AI and SVG Vectors for free"},
+            {"href": "http://iconbench.com/", "add":1361967709, "title": "Style, hand pick & download icons of your choice."},
+            {"href": "http://www.rw-designer.com/online-cursor-editor", "add":1361101624, "title": "Online Cursor Maker - create your own cursors online"},
+            {"href": "http://www.kickstarter.com/projects/539087245/spriter/", "add":1357593196, "title": "Spriter by edgar muniz — Kickstarter"},
+            {"href": "http://www.iconfinder.com/", "add":1357593114, "title": "Icon Search Engine | Iconfinder"},
+            {"href": "http://buildnewgames.com/taming-the-svg-beast/", "add":1357592260, "title": "Taming the SVG Beast - Build New Games"},
+            {"href": "http://www.mobilefish.com/services/image2svg/image2svg.php", "add":1353432258, "title": "Mobilefish.com - Online image to SVG converter"},
+            {"href": "http://www.professorcloud.com/svg-to-canvas/", "add":1353357540, "title": "Professor Cloud"},
+            {"href": "http://www.omnisoftsystems.com/?returnUrl=/iTrax/Home/svg2Canvas/0", "add":1353432143, "title": "OSSiWeb"},
+            {"href": "http://www.online-convert.com/result/a5b4d59d94097476685371da4e8f218c", "add":1348048724, "title": "Converting your file (to svg)"},
+            {"href": "http://patternizer.com/j4p5", "add":1353357451, "title": "Patternizer - Stripe Pattern Generator Tool"},
+            {"href": "http://www.spritebox.net/", "add":1353357249, "title": "Spritebox - Create CSS from Sprite Images"},
+            {"href": "http://sarasoueidan.com/blog/compositing-and-blending-in-css/?utm_source=html5weekly&utm_medium=email", "add":1422480150, "title": "Compositing And Blending In CSS"}
+]},
+        {"group": "Fonts und Typo", "links": [
+            {"href": "http://blogs.adobe.com/webplatform/2014/08/13/one-weird-trick-to-baseline-align-text/?utm_source=html5weekly&utm_medium=email", "add":1410011810, "title": "One Weird Trick to Baseline-Align Text | Web Platform Team Blog"},
+            {"href": "http://www.princexml.com/", "add":1422481065, "title": "Prince: Convert HTML to PDF with CSS"},
+            {"href": "https://typekit.com/", "add":1415918792, "title": "Typekit"},
+            {"href": "http://www.pluminjs.com/?utm_source=javascriptweekly&utm_medium=email", "add":1423905679, "title": "Plumin.js | Create and manipulate fonts using javascript"},
+            {"href": "http://glyphrstudio.com/?utm_source=html5weekly&utm_medium=email", "add":1394138803, "title": "Glyphr Studio, the free HTML5 based font editor"},
+            {"href": "http://antimatter15.github.io/ocrad.js/demo.html", "add":1388775324, "title": "Ocrad.js - Optical Character Recognition in Javascript"},
+            {"href": "http://bohemianalps.com/tools/grid/", "add":1385554711, "title": "The Heads-Up Grid"},
+            {"href": "http://endtwist.github.io/kerning.js/", "add":1385554646, "title": "Kerning.js"},
+            {"href": "http://letteringjs.com/", "add":1385554519, "title": "Lettering.js - A jQuery plugin for radical web typography."},
+            {"href": "http://www.heydonworks.com/article/font-hacking?utm_source=html5weekly&utm_medium=email", "add":1371746818, "title": "Font Hacking"},
+            {"href": "http://fontello.com/", "add":1361969198, "title": "Fontello - icon fonts generator"},
+            {"href": "http://www.bypeople.com/", "add":1354040647, "title": "ByPeople: A huge free bundle for web professionals, 500mb of free files in one single download."},
+            {"href": "http://www.google.com/webfonts#UsePlace:use/Collection:Signika", "add":1351368497, "title": "Google Web Fonts"},
+            {"group": "Math Typesetting", "links": [
+                {"href": "http://unicodelookup.com/#math", "add":1423584300, "title": "Unicode Lookup: convert special characters"},
+                {"href": "http://jsfiddle.net/twQWU/", "add":1423584315, "title": "Edit fiddle - JSFiddle"},
+                {"href": "http://www.cs.tut.fi/~jkorpela/math/#normal", "add":1423584680, "title": "x Math in HTML (and CSS) - presenting mathematical expressions on Web pages"}
+]}
+]},
+        {"group": "Fullscreen", "links": [
+            {"href": "http://generatedcontent.org/post/70347573294/is-your-fullscreen-api-code-up-to-date-find-out-how-to?utm_source=html5weekly&utm_medium=email", "add":1389205870, "title": "Is your Fullscreen API code up to date? Find out how to make it work the same in modern browsers - Generated Content by David Storey"},
+            {"href": "http://www.drweb.de/magazin/html5-javascripts-fullscreen-api-einfach-verwenden-mit-bigscreen-js-34581/", "add":1346846400, "title": "HTML5: Javascripts Fullscreen API einfach verwenden mit (und ohne) BigScreen.js - Dr. Web Magazin"},
+            {"href": "http://www.html5rocks.com/en/tutorials/casestudies/gopherwoord-studios-resizing-html5-games/", "add":1353426705, "title": "Case Study: Auto-Resizing HTML5 Games - HTML5 Rocks"},
+            {"href": "http://updates.html5rocks.com/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API", "add":1353426582, "title": "Let Your Content Do the Talking: Fullscreen API - HTML5Rocks Updates"},
+            {"href": "http://html5-demos.appspot.com/static/fullscreen.html", "add":1353426568, "title": "Fullscreen API"}
+]},
+        {"group": "Performance Test", "links": [
+            {"href": "http://www.html5rocks.com/en/tutorials/games/abouttracing/", "add":1353427181, "title": "Profiling your WebGL Game with the about:tracing flag - HTML5 Rocks"},
+            {"href": "http://jsperf.com/", "add":1353426087, "title": "jsPerf: JavaScript performance playground"}
+]},
+        {"group": "Graphen, Bildbearbeitung, zeichnen", "links": [
+            {"href": "https://software.intel.com/en-us/html5/articles/touch-drawing-app-using-html5-canvas?utm_source=html5weekly&utm_medium=email", "add":1399493921, "title": "Touch Drawing App using HTML5 Canvas | Intel® Developer Zone"},
+            {"href": "http://davidwalsh.name/css-filters", "add":1399484351, "title": "CSS Filters"},
+            {"href": "http://fooplot.com/#W3sidHlwZSI6MCwiZXEiOiJ4XjIiLCJjb2xvciI6IiMwMDAwMDAifSx7InR5cGUiOjEwMDB9XQ--", "add":1398369368, "title": "FooPlot | Online-Funktionsplotter"},
+            {"href": "http://perfectionkills.com/exploring-canvas-drawing-techniques/?utm_source=html5weekly&utm_medium=email", "add":1386266437, "title": "Perfection kills » Exploring canvas drawing techniques"},
+            {"href": "http://leimi.github.io/drawingboard.js/?utm_source=javascriptweekly&utm_medium=email", "add":1380992833, "title": "Drawingboard.js: a simple canvas based drawing app that you can integrate easily on your website."},
+            {"href": "http://rvlasveld.github.io/blog/2013/07/02/creating-interactive-graphs-with-svg-part-1/?utm_source=javascriptweekly&utm_medium=email", "add":1374565151, "title": "Creating interactive graphs with SVG, Part 1 - Roemer's blog"},
+            {"href": "https://github.com/jnordberg/gif.js", "add":1369398695, "title": "jnordberg/gif.js · GitHub"},
+            {"href": "http://muro.deviantart.com/", "add":1369242954, "title": "deviantART muro"},
+            {"href": "http://www.benjoffe.com/code/tools/functions3d", "add":1368192488, "title": "Ben Joffe | Functions 3D"},
+            {"href": "http://www.chartjs.org/?utm_source=html5weekly&utm_medium=email", "add":1363801226, "title": "Chart.js | HTML5 Charts for your website."},
+            {"href": "http://www.gartic.net/", "add":1353364878, "title": "Gartic - Web-based drawing game"},
+            {"href": "http://www.drweb.de/magazin/rgraph-diagramme-mit-html5-und-javascript/", "add":1361967301, "title": "RGraph baut schicke Diagramme mit HTML5 und JavaScript - Dr. Web Magazin"},
+            {"href": "http://www.drweb.de/magazin/animierte-messanzeigen-per-jquery-plugin-33975/", "add":1361966635, "title": "Webdesign: JustGage bereitet trockene Zahlenwerte grafisch ansprechend auf - Dr. Web Magazin"},
+            {"href": "http://www.imagemagick.org/script/montage.php", "add":1359804182, "title": "ImageMagick: Command-line Tools: Montage"},
+            {"href": "http://techslides.com/50-javascript-charting-and-graphics-libraries/", "add":1358529870, "title": "50 JavaScript Libraries for Charts and Graphs | TechSlides"},
+            {"href": "http://www.dashingd3js.com/", "add":1357307676, "title": "D3.js Tutorials, Screencasts and a Newsletter | DashingD3js.com"},
+            {"href": "http://www.walterzorn.de/grapher/grapher.htm", "add":1353432781, "title": "Funktionsgraphen online"},
+            {"href": "http://www.highcharts.com/", "add":1351434715, "title": "Highcharts - Interactive JavaScript charts for your webpage"},
+            {"href": "http://matthiasschuetz.com/harmony-prozedurales-zeichnen-mit-javascript", "add":1346167426, "title": "Harmony: Prozedurales Zeichnen mit JavaScript - Matthias Schütz"},
+            {"href": "http://stackoverflow.com/questions/968642/rotate-image-clockwise-or-anticlockwise-inside-a-div-using-javascript", "add":1346165616, "title": "Rotate image clockwise or anticlockwise inside a div using javascript - Stack Overflow"},
+            {"href": "http://www.nihilogic.dk/labs/imagefx/", "add":1345563571, "title": "Nihilogic : Javascript Image Effects"},
+            {"href": "http://www.pixastic.com/", "add":1351429942, "title": "Pixastic: JavaScript Image Processing"},
+            {"href": "http://paintwith.me/#/painting/view/a", "add":1353430342, "title": "Paint With Me"},
+            {"href": "http://devfiles.myopera.com/articles/1161/histogram.html", "add":1353425914, "title": "HTML 5 Canvas-based image histogram example"},
+            {"href": "http://evanw.github.io/glfx.js/docs/", "add":1395937045, "title": "glfx.js"}
+]},
+        {"group": "3D", "links": [
+            {"href": "http://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/?utm_source=html5weekly&utm_medium=email", "add":1411114497, "title": "Computing CSS matrix3d transforms | Franklin Ta"},
+            {"href": "http://www.emanueleferonato.com/2014/12/10/html5-webgl-360-degrees-panorama-viewer-with-three-js/?utm_source=gamedevjsweekly&utm_medium=email", "add":1418988168, "title": "360 degrees panorama viewer with Three.js"},
+            {"href": "http://buildnewgames.com/webgl-threejs/", "add":1395775096, "title": "Creating a 3D game with Three.js and WebGL - Build New Games"},
+            {"href": "http://archive3d.net/?category=29", "add":1394648989, "title": "Free 35 000+ 3D models. Download without registration - Archive 3D"},
+            {"href": "http://blog.teamtreehouse.com/the-beginners-guide-to-three-js?utm_source=javascriptweekly&utm_medium=email", "add":1379165035, "title": "The Beginner's Guide to three.js - Treehouse Blog"},
+            {"href": "http://exocortex.com/blog/introducing_claraio?utm_source=html5weekly&utm_medium=email", "add":1374089976, "title": "Exocortex | Clara.io: Next-generation web-based 3D creation."},
+            {"href": "http://aerotwist.com/tutorials/getting-started-with-three-js/?utm_source=javascriptweekly&utm_medium=email", "add":1373664282, "title": "Getting Started with Three.js | Aerotwist"},
+            {"href": "http://blogs.msdn.com/b/eternalcoding/archive/2013/06/27/babylon-js-a-complete-javascript-framework-for-building-3d-games-with-html-5-and-webgl.aspx?utm_source=html5weekly&utm_medium=email", "add":1372965861, "title": "Babylon.js: a complete JavaScript framework for building 3D games with HTML 5 and WebGL - Eternal Coding - HTML5 / Windows / Kinect / 3D development - Site Home - MSDN Blogs"},
+            {"href": "http://www.kevs3d.co.uk/dev/phoria/?utm_source=javascriptweekly&utm_medium=email", "add":1372080156, "title": "Phoria 3D"},
+            {"href": "http://blogs.msdn.com/b/davrous/archive/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript.aspx?utm_source=javascriptweekly&utm_medium=email", "add":1372080143, "title": "Tutorial series: learning how to write a 3D soft engine from scratch in C#, TypeScript or JavaScript - David Rousset - sharing about HTML5, Windows 8 & Gaming - Site Home - MSDN Blogs"},
+            {"href": "http://dev.opera.com/articles/view/understanding-3d-transforms/?utm_source=html5weekly&utm_medium=email", "add":1371746957, "title": "Understanding 3D Transforms - Dev.Opera"},
+            {"href": "http://www.nihilogic.dk/labs/particles/", "add":1369236961, "title": "Nihilogic : 3D Javascript Particle Generator"},
+            {"href": "http://www.nihilogic.dk/labs/canvas3d/", "add":1351670795, "title": "Nihilogic : JavaScript Canvas 3D renderer"},
+            {"href": "https://github.com/mrdoob/three.js", "add":1346167626, "title": "mrdoob/three.js · GitHub"},
+            {"href": "http://www.html5rocks.com/en/tutorials/three/intro/", "add":1353426752, "title": "Getting Started with Three.js - HTML5 Rocks"}
+]},
+        {"group": "Canvas", "links": [
+            {"href": "http://www.html5canvastutorials.com/", "add":1395586674, "title": "HTML5 Canvas Tutorials, Labs, and Articles"},
+            {"href": "https://hacks.mozilla.org/2015/01/canvas-2d-new-docs-path2d-hit-regions/?utm_source=html5weekly&utm_medium=email", "add":1422478838, "title": "Canvas 2D: New docs, Path2D objects, hit regions ✩ Mozilla Hacks – the Web developer blog"},
+            {"href": "http://www.canvasdemos.com/type/tutorials/", "add":1325433367, "title": "Tutorials - Canvas Demos"},
+            {"href": "http://jspro.com/raw-javascript/basic-animation-with-canvas-and-javascript/?utm_source=html5weekly&utm_medium=email", "add":1360430727, "title": "Basic Canvas Animation Using JavaScript"},
+            {"href": "http://creativejs.com/2011/08/31-days-of-canvas-tutorials/", "add":1353365725, "title": "31 days of Canvas tutorials | CreativeJS"},
+            {"href": "http://canvas.quaese.de/index.php?nav=1&doc_id=0", "add":1346786169, "title": "<canvas> - Allgemeines"},
+            {"href": "http://www.canvasdemos.com/", "add":1346786150, "title": "Applications, games, tools and tutorials using HTML5 canvas and JavaScript - Canvas Demos"},
+            {"group": "w gelesen und gut", "links": [
+                {"href": "http://www.html5rocks.com/de/tutorials/canvas/performance/", "add":1396989643, "title": "Leistungsverbesserung des HTML5-Canvas - HTML5 Rocks"},
+                {"href": "https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial/Basic_animations", "add":1361221170, "title": "Basic animations - HTML | MDN"},
+                {"href": "https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial/Optimizing_canvas", "add":1361220932, "title": "Optimizing canvas - HTML | MDN"},
+                {"href": "http://beej.us/blog/data/html5s-canvas-2-pixel/", "add":1361216685, "title": "HTML5's canvas Part II: Pixel Manipulation"},
+                {"href": "http://dev.opera.com/articles/view/svg-or-canvas-choosing-between-the-two/", "add":1353425797, "title": "SVG or Canvas? Сhoosing between the two - Dev.Opera"},
+                {"href": "http://dev.opera.com/articles/view/html-5-canvas-the-basics/", "add":1353424802, "title": "HTML5 canvas - the basics - Dev.Opera"},
+                {"href": "http://diveintohtml5.info/canvas.html", "add":1353424637, "title": "Canvas - Dive Into HTML5"},
+                {"href": "http://www.html5rocks.com/en/tutorials/canvas/performance/", "add":1353423664, "title": "Improving HTML5 Canvas Performance - HTML5 Rocks"},
+                {"href": "https://developer.mozilla.org/en-US/docs/Canvas_tutorial", "add":1346786192, "title": "Canvas tutorial | Mozilla Developer Network"}
+]},
+            {"group": "z Canvas Libraries", "links": [
+                {"href": "http://vladakilov.github.io/imagine/?utm_source=html5weekly&utm_medium=email", "add":1399495330, "title": "imagine.js by Vlad Akilov"},
+                {"href": "http://cutjs.org/?utm_source=html5weekly&utm_medium=email", "add":1399495235, "title": "CutJS"},
+                {"href": "https://github.com/rezoner/CanvasQuery/", "add":1359731669, "title": "rezoner/CanvasQuery · GitHub"}
+]}
+]},
+        {"group": "svg", "links": [
+            {"href": "http://stackoverflow.com/questions/11419896/drawing-an-ellipse-in-three-js", "add":1424153316, "title": "Drawing an ellipse in THREE.js - Stack Overflow"},
+            {"href": "http://css-tricks.com/using-svg/", "add":1423302885, "title": "Xw Using SVG (Img Embed Object Background)"},
+            {"href": "http://designmodo.com/svg-patterns/?utm_source=html5weekly&utm_medium=email", "add":1409061035, "title": "xz How to Use SVG Patterns - Designmodo"},
+            {"href": "https://jakearchibald.github.io/svgomg/?utm_source=gamedevjsweekly&utm_medium=email", "add":1423221247, "title": "SVGOMG"},
+            {"href": "http://www.vanseodesign.com/web-design/svg-paths-curve-commands/?utm_source=html5weekly&utm_medium=email", "add":1423084619, "title": "SVG Basics—Creating Paths With Curve Commands - Vanseo Design"},
+            {"href": "http://www.vanseodesign.com/web-design/svg-shapes-lines/", "add":1422480339, "title": "SVG Basics—How To Create Simple Shapes And Lines - Vanseo Design"},
+            {"href": "http://www.vanseodesign.com/web-design/svg-paths-line-commands/?utm_source=html5weekly&utm_medium=email", "add":1422480328, "title": "SVG Basics—Creating Paths With Line Commands - Vanseo Design"},
+            {"href": "http://www.princeton.edu/~crmarsh/svg-performance/?utm_source=html5weekly&utm_medium=email", "add":1418227926, "title": "Goodbye, Layout Invalidation: Animating SVGs With CSS Transforms | Charlie Marsh"},
+            {"href": "http://css-tricks.com/gotchas-on-getting-svg-into-production/?utm_source=html5weekly&utm_medium=email", "add":1416430100, "title": "5 Gotchas You're Gonna Face Getting Inline SVG Into Production | CSS-Tricks"},
+            {"href": "https://github.com/andreaferretti/paths-js?utm_source=javascriptweekly&utm_medium=email", "add":1414506899, "title": "andreaferretti/paths-js · GitHub"},
+            {"href": "http://flippinawesome.org/2014/06/03/animating-inline-svg-icons/?utm_source=html5weekly&utm_medium=email", "add":1402692826, "title": "Animating Inline SVG Icons | Flippin' Awesome"},
+            {"href": "https://www.youtube.com/watch?v=a2K_pOp2ydQ&noredirect=1", "add":1397665267, "title": "▶ Fluent Conf 2014 - Whirlwind Tour of Scalable Vector Graphics by Marc Grabanski - YouTube"},
+            {"href": "http://maxwellito.github.io/vivus/?utm_source=html5weekly&utm_medium=email", "add":1417022061, "title": "vivus.js - svg animation"},
+            {"href": "http://product.voxmedia.com/post/68085482982/polygon-feature-design-svg-animations-for-fun-and", "add":1392912644, "title": "Polygon feature design: SVG animations for fun and profit | Vox Product"},
+            {"href": "http://svgmagic.bitlabs.nl/?utm_source=html5weekly&utm_medium=email", "add":1392215135, "title": "SVGMagic - Great jQuery SVG fallback plugin"},
+            {"href": "http://flippinawesome.org/2014/02/03/learning-svg/?utm_source=html5weekly&utm_medium=email", "add":1391870730, "title": "Learning SVG | Flippin' Awesome"},
+            {"href": "http://petercollingridge.appspot.com/svg-optimiser", "add":1386166604, "title": "SVG-Optimiser"},
+            {"href": "http://www.youtube.com/watch?v=7xUmAHOkYaY", "add":1385834470, "title": "Cocos2d + Box2d + SVG + InkScape - YouTube"},
+            {"href": "http://christopheviau.com/d3_tutorial/d3_inkscape/", "add":1385827934, "title": "D3-Inkscscape tutorial"},
+            {"href": "http://tympanus.net/Development/ElasticSVGElements/dropdown.html", "add":1420668232, "title": "Elastic SVG Elements | Dropdown"},
+            {"group": "my Path", "links": [
+                {"href": "http://scaledinnovation.com/analytics/splines/aboutSplines.html", "add":1424206282, "title": "About Spline Interpolation"},
+                {"href": "http://stackoverflow.com/questions/7054272/how-to-draw-smooth-curve-through-n-points-using-javascript-html5-canvas", "add":1424206296, "title": "how to draw smooth curve through N points using javascript HTML5 canvas? - Stack Overflow"}
+]},
+            {"group": "svg Libraries", "links": [
+                {"href": "http://flippinawesome.org/2013/06/10/drawing-and-animating-with-two-js-and-illustrator/?utm_source=html5weekly&utm_medium=email", "add":1371237098, "title": "Drawing and Animating with Two.js and Illustrator | Flippin' Awesome"},
+                {"href": "http://lazylinepainter.info/?utm_source=html5weekly&utm_medium=email", "add":1360430484, "title": "Lazy Line Painter"},
+                {"href": "http://alexk111.github.io/SVG-Morpheus/?utm_source=javascriptweekly&utm_medium=email", "add":1417174502, "title": "SVG Morpheus - Morph SVG icons"},
+                {"href": "https://github.com/gabelerner/canvg?utm_source=javascriptweekly&utm_medium=email", "add":1422208470, "title": "cavg: svg to canvas"},
+                {"href": "http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/?utm_source=html5weekly&utm_medium=email", "add":1383773059, "title": "Animated SVG Icons with Snap.svg | Codrops"},
+                {"href": "http://www.svgjs.com/?utm_source=html5weekly&utm_medium=email", "add":1361988368, "title": "svg.js - A lightweight JavaScript library for manipulating and animating svg"},
+                {"href": "http://snapsvg.io/", "add":1382698803, "title": "Snap.svg - Home"}
+]},
+            {"group": "x svg", "links": [
+                {"href": "http://coding.smashingmagazine.com/2014/03/05/rethinking-responsive-svg/?utm_source=html5weekly&utm_medium=email", "add":1397114355, "title": "Rethinking Responsive SVG | Smashing Coding"},
+                {"href": "http://www.inserthtml.com/2013/01/svg-guide-part-1/?utm_source=html5weekly&utm_medium=email", "add":1358966838, "title": "What is SVG? [Guide to SVG Part 1] | InsertHTML"},
+                {"href": "http://www.drweb.de/magazin/svg-grafiken-einbetten-und-mit-css-und-javascript-manipulieren/", "add":1361967319, "title": "HTML5: SVG-Grafiken einbetten und mit CSS und JavaScript manipulieren - Dr. Web Magazin"},
+                {"href": "http://css-tricks.com/using-svg/?utm_source=html5weekly&utm_medium=email", "add":1363353610, "title": "Using SVG | CSS-Tricks"},
+                {"href": "http://msdn.microsoft.com/en-us/magazine/jj944950.aspx?utm_source=html5weekly&utm_medium=email", "add":1365020204, "title": "Script Junkie | Surviving the Zombie Apocalypse with HTML5 and SVG, Part 2: Text, Paths and Basic Animation"},
+                {"href": "https://github.com/GianlucaGuarini/vague.js?utm_source=html5weekly&utm_medium=email", "add":1360430506, "title": "GianlucaGuarini/vague.js · GitHub"},
+                {"href": "http://jakearchibald.com/2013/animated-line-drawing-svg/?utm_source=html5weekly&utm_medium=email", "add":1375951598, "title": "Animated line drawing in SVG - JakeArchibald.com"}
+]}
+]},
+        {"group": "Video", "links": [
+            {"href": "http://flowplayer.org/", "add":1363185518, "title": "The video player for Web · Flowplayer"}
+]},
+        {"group": "WebGL", "links": [
+            {"href": "http://net.tutsplus.com/tutorials/javascript-ajax/webgl-with-three-js-basics/?utm_source=javascriptweekly&utm_medium=email", "add":1385755563, "title": "WebGL With Three.js: Basics | Nettuts+"},
+            {"href": "https://www.shadertoy.com/", "add":1413118900, "title": "Shadertoy BETA"},
+            {"href": "http://net.tutsplus.com/tutorials/javascript-ajax/webgl-with-three-js-basics/?utm_source=html5weekly&utm_medium=email", "add":1385585629, "title": "WebGL With Three.js: Basics | Nettuts+"},
+            {"href": "https://hacks.mozilla.org/2013/04/the-concepts-of-webgl/?utm_source=html5weekly&utm_medium=email", "add":1366815129, "title": "The concepts of WebGL ✩ Mozilla Hacks – the Web developer blog"},
+            {"href": "http://www.wastedpotential.com/pixi-js-html5-for-flash-developers/?utm_source=rss&utm_medium=rss&utm_campaign=pixi-js-html5-for-flash-developers", "add":1364121433, "title": "Pixi.js - HTML5 for Flash developers | wasted potential"},
+            {"href": "https://github.com/GoodBoyDigital/pixi.js?utm_source=html5weekly&utm_medium=email", "add":1363353723, "title": "GoodBoyDigital/pixi.js · GitHub"},
+            {"href": "http://www.netmagazine.com/tutorials/get-started-webgl-draw-square", "add":1354285790, "title": "Get started with WebGL: draw a square | Tutorial | .net magazine"},
+            {"href": "https://github.com/pyalot/webgl-heatmap", "add":1360492570, "title": "pyalot/webgl-heatmap · GitHub"},
+            {"href": "http://webglplayground.net/", "add":1351363177, "title": "WebGL playground [beta]"},
+            {"href": "http://html5example.net/static/images/cheatsheets/WebGL_Cheat_Sheet.htm", "add":1351669736, "title": "WebGL Cheat Sheet"},
+            {"href": "http://learningwebgl.com/blog/?page_id=1217", "add":1347395507, "title": "The Lessons | Learning WebGL"},
+            {"href": "https://developer.mozilla.org/en-US/docs/WebGL", "add":1347395471, "title": "WebGL | MDN"},
+            {"group": "x", "links": [
+            ]}
+]},
+        {"group": "x", "links": [
+            {"href": "http://www.walterzorn.de/tooltip/tooltip.htm", "add":1353441436, "title": "Tooltips per JavaScript / DHTML"},
+            {"href": "http://devmag.org.za/2011/04/05/bzier-curves-a-tutorial/", "add":1383328838, "title": "Bézier Curves: An Excellent Tutorial | devmag.org.za"},
+            {"href": "http://morning.am/tutorials/how-to-style-google-forms/", "add":1366276528, "title": "How to style Google Forms | Morning AM"},
+            {"href": "https://notex.ch/editor/home/", "add":1351363117, "title": "NoTex: A reStructuredText editor plus a PDF, LaTex and HTML converter."},
+            {"href": "http://gifctrl.com/h", "add":1353426198, "title": "GIFCTRL: Next Level Gif Control"},
+            {"group": "x CSS Flexbox", "links": [
+                {"href": "http://www.sketchingwithcss.com/samplechapter/?utm_source=html5weekly&utm_medium=email", "add":1372965584, "title": "Mastering CSS Layout with Flexbox"}
+]}
+]},
+        {"group": "Image Loading", "links": [
+            {"href": "http://www.barrelny.com/blog/taking-control-of-imageloading/", "add":1376730426, "title": "BARREL | Taking Control of Image Loading"}
+]},
+        {"group": "Print", "links": [
+            {"href": "http://parall.ax/products/jspdf?utm_source=html5weekly&utm_medium=email", "add":1377726128, "title": "jsPDF - HTML5 PDF Generator | Parallax"},
+            {"group": "mPDF fPDF", "links": [
+                {"href": "http://mpdf.bpm1.com/", "add":1389372103, "title": "mPDF"},
+                {"href": "http://mpdf1.com/manual/index.php?tid=286", "add":1390514882, "title": "mPDF Manual"},
+                {"href": "http://www.setasign.com/products/fpdi/about/#p-526", "add":1389371837, "title": "Import existing PDF documents into FPDF - FPDI is a free and open source PHP class | Setasign"},
+                {"href": "http://www.fpdf.org/", "add":1389371425, "title": "FPDF"}
+]}
+]},
+        {"group": "Math", "links": [
+            {"href": "http://latex2html5.com/?utm_source=html5weekly&utm_medium=email", "add":1382702144, "title": "http://latex2html5.com/?utm_source=html5weekly&utm_medium=email"}
+]},
+        {"group": "Layout flexbox", "links": [
+            {"href": "http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback", "add":1410729986, "title": "Flexbox Based Responsive Equal Height Blocks With JavaScript Fallback — Osvaldas Valutis"},
+            {"href": "http://chriswrightdesign.com/experiments/flexbox-adventures/?utm_source=html5weekly&utm_medium=email", "add":1421869451, "title": "Chris Wright - Experiment: Flexbox Adventures"},
+            {"href": "http://philipwalton.github.io/solved-by-flexbox/demos/grids/", "add":1415913144, "title": "Better, Simpler Grid Systems — Solved By Flexbox — Cleaner, hack-free CSS"},
+            {"href": "http://www.smashingmagazine.com/2014/05/14/responsive-images-done-right-guide-picture-srcset/?utm_source=html5weekly&utm_medium=email", "add":1400704535, "title": "Responsive Images Done Right: A Guide To <picture> And srcset | Smashing Magazine"},
+            {"href": "http://css-tricks.com/snippets/css/a-guide-to-flexbox/?utm_source=html5weekly&utm_medium=email", "add":1400162914, "title": "A Complete Guide to Flexbox | CSS-Tricks"}
+]},
+        {"group": "x less vs sass", "links": [
+            {"href": "http://cssguidelin.es/?utm_source=html5weekly&utm_medium=email", "add":1409160422, "title": "CSS Guidelines (2.0.16) – High-level advice and guidelines for writing sane, manageable, scalable CSS"},
+            {"href": "http://compass-style.org/help/documentation/sass-based-configuration-options/", "add":1420496326, "title": "Sass-based Configuration Options | Compass Documentation"},
+            {"href": "http://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320", "add":1406541356, "title": "Sass vs. LESS vs. Stylus: Preprocessor Shootout - Tuts+ Code Tutorial"},
+            {"href": "http://www.udemy.com/blog/less-vs-sass/", "add":1406541354, "title": "Less vs. Sass - Which CSS Preprocessor is Best For You?"},
+            {"href": "http://stackoverflow.com/questions/8411066/less-vs-sass-vs", "add":1406541351, "title": "css - LESS vs Sass vs? - Stack Overflow"},
+            {"href": "http://www.hongkiat.com/blog/sass-vs-less/", "add":1406541348, "title": "CSS Preprocessors Compared: Sass vs. LESS"},
+            {"href": "http://www.zingdesign.com/less-vs-sass-its-time-to-switch-to-sass/", "add":1406541342, "title": "Less vs Sass? It’s time to swtich to Sass | Zing Design"},
+            {"href": "http://css-tricks.com/sass-vs-less/", "add":1406541340, "title": "Sass vs. LESS | CSS-Tricks"}
+]}
+]},
+    {"group": "Gute Beispiele", "links": [
+        {"href": "http://datavisualization.ch/showcases/interactively-explore-the-yolo-flip/", "add":1407700812, "title": "Interactively Explore the YOLO Flip on Datavisualization.ch"},
+        {"href": "http://tympanus.net/codrops/2014/05/12/morphing-buttons-concept/", "add":1400165214, "title": "Morphing Buttons Concept | Codrops"},
+        {"href": "http://matheguru.com/stochastik/normalverteilung.html", "add":1393798477, "title": "Normalverteilung - MatheGuru.com"},
+        {"href": "http://homepage.ntlworld.com/keir.clarke/web/blurrd.htm", "add":1393678945, "title": "Blurrd"},
+        {"href": "http://thecodeplayer.com/walkthrough/custom-animated-checkbox-inputs-using-css-iconfonts?utm_source=html5weekly&utm_medium=email", "add":1380998242, "title": "Custom animated checkbox inputs using CSS and iconfonts"},
+        {"href": "http://acko.net/", "add":1377726954, "title": "Hackery, Math & Design — Acko.net"},
+        {"href": "http://tympanus.net/Development/CreativeButtons/", "add":1376599884, "title": "Creative Button Styles"},
+        {"href": "http://glecollinet.github.io/webgl-demo/", "add":1376587679, "title": "demo3d"},
+        {"href": "http://earth-api-samples.googlecode.com/svn/trunk/demos/kmlplayground/index.html#", "add":1373738372, "title": "http://earth-api-samples.googlecode.com/svn/trunk/demos/kmlplayground/index.html#"},
+        {"href": "http://earth-api-samples.googlecode.com/svn/trunk/demos/geowhiz/index.html", "add":1373738016, "title": "Are you a GEO WHIZ?"},
+        {"href": "http://earth-api-samples.googlecode.com/svn/trunk/demos/milktruck/index.html", "add":1373737799, "title": "Monster Milktruck!"},
+        {"href": "http://www.mrdoob.com/#/117/fire", "add":1368564876, "title": "Mr.doob | Fire"},
+        {"href": "http://www.mrdoob.com/lab/javascript/webgl/clouds/", "add":1368564737, "title": "Clouds"},
+        {"href": "http://www.mrdoob.com/#/137/voxels_liquid", "add":1368564535, "title": "Mr.doob | Voxels liquid"},
+        {"href": "http://www.mrspeaker.net/dev/parcycle/", "add":1368564288, "title": "Mr Speaker presents: Parcycle. A HTML5 Canvas Particle System"},
+        {"href": "https://developer.mozilla.org/de/demos/detail/the-planetarium/launch", "add":1361958591, "title": "The Planetarium | Demo Studio | MDN"},
+        {"href": "http://10k.aneventapart.com/2/Uploads/586/", "add":1368136031, "title": "FishFlock 1.0"},
+        {"href": "http://www.selfhtml5.org/2010-html5-features/canvas-mit-bezier-curve/", "add":1324411313, "title": "Canvas mit Bezier Curve - Vorlage fuer Lissajous"},
+        {"href": "http://canvasrider.com/", "add":1368121574, "title": "Canvas Rider"},
+        {"href": "http://amanita-design.net/games.html", "add":1396034133, "title": "Games – Amanita Design"},
+        {"group": "Structures (Cloth, Tree, Bridge, Verlet)", "links": [
+            {"href": "http://codepen.io/stuffit/pen/KrAwx?utm_source=html5weekly&utm_medium=email", "add":1364570795, "title": "1A Vorhang, Bridgebuilder, BälleAufKurven"},
+            {"href": "http://fhtr.blogspot.ch/2008/12/drawing-tree-with-haskell-and-cairo.html", "add":1410388969, "title": "rthf: Drawing trees with Haskell and Cairo"},
+            {"href": "http://subprotocol.com/system/introducing-verlet-js.html", "add":1410385108, "title": "Introducing Verlet-JS - Sub Protocol"},
+            {"href": "http://andrew-hoyer.com/experiments/cloth/", "add":1346168344, "title": "Andrew Hoyer | The Cloth Simulation"}
+]},
+        {"group": "z bei Bedarf aufsuchen", "links": [
+            {"href": "http://planetaryjs.com/?utm_source=javascriptweekly&utm_medium=email", "add":1388775002, "title": "Planetary.js: Awesome interactive globes for the web"},
+            {"href": "http://codeflow.org/entries/2013/feb/04/high-performance-js-heatmaps/#live-version", "add":1363790020, "title": "High Performance JS heatmaps - Codeflow"}
+]},
+        {"group": "x", "links": [
+            {"href": "http://www.blobsallad.se/", "add":1353365115, "title": "Blob Sallad"},
+            {"href": "http://www.weavesilk.com/", "add":1346498209, "title": "Silk"},
+            {"href": "http://rinesh.in/lab/airhockeywebgl/", "add":1351671030, "title": "Air hockey"},
+            {"href": "http://www.dhteumeuleu.com/index", "add":1368025609, "title": "dhteumeuleu (v.a. 3D)"},
+            {"group": "Gallerien", "links": [
+                {"href": "http://www.nihilogic.dk/labs/", "add":1351670283, "title": "Nihilogic : The Labs - Experiments in JavaScript, Canvas and DHTML"},
+                {"href": "http://www.benjoffe.com/code", "add":1357592427, "title": "Ben Joffe | JavaScript Apps"},
+                {"href": "http://www.mrdoob.com/#/148/aaronetrope", "add":1368564417, "title": "Mr.doob | Aaronetrope"},
+                {"href": "http://10k.aneventapart.com/", "add":1357592795, "title": "10K Apart - An Event Apart + Mix Online"},
+                {"href": "http://js1k.com/", "add":1357592832, "title": "js1k.com"}
+]}
+]}
+]},
+    {"group": "Physics", "links": [
+        {"href": "http://www.playfuljs.com/a-first-person-engine-in-265-lines/?utm_source=javascriptweekly&utm_medium=email", "add":1402061708, "title": "A first-person engine in 265 lines"},
+        {"href": "http://rednuht.org/genetic_cars_2/", "add":1399494886, "title": "HTML5 Genetic Algorithm 2D Car Thingy - Chrome recommended"},
+        {"href": "http://box2d-js.sourceforge.net/index2.html", "add":1325435691, "title": "Box2DJS - Physics Engine for JavaScript"},
+        {"href": "http://thinkingonthinking.com/Getting-Started-With-D3/?utm_source=javascriptweekly&utm_medium=email", "add":1392471614, "title": "Getting Started with D3"},
+        {"href": "https://github.com/schteppe/cannon.js?utm_source=html5weekly&utm_medium=email", "add":1361988288, "title": "schteppe/cannon.js · GitHub"},
+        {"href": "http://jonobr1.github.com/Physics/", "add":1350053757, "title": "Physics for JavaScript"},
+        {"href": "http://buildnewgames.com/physics-engines-comparison/", "add":1357592178, "title": "JavaScript Physics Engines Comparison - Build New Games"},
+        {"href": "http://burakkanber.com/blog/physics-in-javascript-rigid-bodies-part-1-pendulum-clock/", "add":1389215904, "title": "Physics in Javascript: Rigid Bodies -- Part 1 (Pendulum Clock) | Burak Kanber's Blog"},
+        {"group": "xz Terrain and Landscape", "links": [
+        ]},
+        {"group": "x Physics Engine", "links": [
+            {"href": "https://github.com/subprotocol/verlet-js/blob/master/js/verlet-1.0.0.js", "add":1395528529, "title": "verlet-js/js/verlet-1.0.0.js at master · subprotocol/verlet-js · GitHub"}
+]},
+        {"group": "Collision Detection", "links": [
+            {"href": "http://www.playmycode.com/blog/2011/08/javascript-per-pixel-html5-canvas-image-collision-detection/", "add":1346786985, "title": "JavaScript Per-Pixel HTML5 Canvas Image Collision Detection | Play My Code Blog"},
+            {"href": "http://en.wikipedia.org/wiki/Collision_detection", "add":1346787751, "title": "Collision detection - Wikipedia, the free encyclopedia"},
+            {"href": "http://ramkulkarni.com/blog/collision-detection-in-html5-2d-game/", "add":1346788363, "title": "Collision Detection in HTML5 2D Games | Ram's Blog"},
+            {"href": "http://stackoverflow.com/questions/9392687/jquery-collision", "add":1346849414, "title": "jQuery Collision - Stack Overflow"},
+            {"href": "http://buildnewgames.com/broad-phase-collision-detection/", "add":1357928743, "title": "Broad Phase Collision Detection Using Spatial Partitioning - Build New Games"},
+            {"href": "http://en.wikipedia.org/wiki/Hyperplane_separation_theorem", "add":1357928799, "title": "Hyperplane separation theorem - Wikipedia, the free encyclopedia"},
+            {"href": "http://en.wikipedia.org/wiki/Gilbert%E2%80%93Johnson%E2%80%93Keerthi_distance_algorithm", "add":1357929427, "title": "Gilbert–Johnson–Keerthi distance algorithm - Wikipedia, the free encyclopedia"},
+            {"href": "https://mollyrocket.com/849", "add":1357929529, "title": "mollyrocket.com - Implementing GJK"}
+]}
+]},
+    {"group": "Javascript Taschenrechner", "links": [
+        {"href": "https://www.mathway.com/", "add":1407234347, "title": "Mathway | Math Problem Solver"},
+        {"href": "http://martinkeefe.com/math/mathjax1", "add":1417357437, "title": "Martin's MathJax Guide - Introduction"},
+        {"href": "http://mathjs.org/download.html", "add":1417348045, "title": "math.js | an extensive math library for JavaScript and Node.js"},
+        {"href": "http://jsep.from.so/annotated_source/jsep.html", "add":1417348034, "title": "jsep.js"},
+        {"href": "https://github.com/soney/jsep", "add":1417347952, "title": "soney/jsep · GitHub"},
+        {"href": "http://blog.teamleadnet.com/2012/12/calcjs-evaluating-complex-math.html", "add":1417347882, "title": "CalcJS: Evaluating complex math expressions in JavaScript in 120 lines"},
+        {"href": "http://www.numberempire.com/", "add":1403894803, "title": "Number Empire - Math Tools"},
+        {"href": "http://silentmatt.com/javascript-expression-evaluator/", "add":1417347912, "title": "Silent Matt » JavaScript Expression Evaluator"},
+        {"href": "http://jsfromhell.com/classes/math-parser", "add":1417347901, "title": "Classes.Math Parser - JSFromHell.com: JavaScript Repository"},
+        {"href": "http://www.numberempire.com/derivativecalculator.php", "add":1403894793, "title": "Derivative Calculator with Steps"},
+        {"href": "http://web2.0rechner.de/", "add":1355172505, "title": "Web 2.0 Taschenrechner"},
+        {"href": "http://www.anaesthetist.com/mnm/javascript/calc.htm", "add":1321104017, "title": "A simple JavaScript calculator"},
+        {"href": "http://chimera.labs.oreilly.com/books/1234000000770/ch04.html#presentation_mathml", "add":1396428416, "title": "HTML5 for Publishers"}
+]},
+    {"group": "Sammlungen und Nachschlagewerke", "links": [
+        {"href": "http://html5weekly.com/issues", "add":1387477704, "title": "HTML5 Weekly Archives"},
+        {"href": "http://jex.im/regulex/?utm_source=javascriptweekly&utm_medium=email", "add":1417174762, "title": "Regulex：JavaScript Regular Expression Visualizer."},
+        {"href": "http://devdocs.io/?utm_source=javascriptweekly&utm_medium=email", "add":1373746127, "title": "DevDocs"},
+        {"href": "https://developer.mozilla.org/de/", "add":1351626434, "title": "Mozilla Developer Network"},
+        {"href": "http://dev.w3.org/html5/html-author/charref?utm_source=html5weekly&utm_medium=email", "add":1361368807, "title": "Character Entity Reference Chart"},
+        {"href": "http://diveintohtml5.info/peeks-pokes-and-pointers.html", "add":1361352302, "title": "HTML5 Peeks, Pokes and Pointers"},
+        {"href": "http://docs.oracle.com/cd/E19957-01/816-6408-10/contents.htm", "add":1360921376, "title": "Client-Side JavaScript Reference"},
+        {"href": "http://docs.emmet.io/", "add":1359760151, "title": "Emmet Documentation"},
+        {"href": "http://help.dottoro.com/", "add":1357389935, "title": "Dottoro Web Reference"},
+        {"href": "http://webkompetenz.wikidot.com/search:site/q/onshow", "add":1354698853, "title": "Webkompetenz"},
+        {"href": "https://developer.mozilla.org/en-US/docs/JavaScript/Reference", "add":1350594941, "title": "JavaScript Reference - JavaScript | MDN"},
+        {"href": "http://www.javascripter.net/faq/index.htm", "add":1347368802, "title": "JavaScript FAQ - Home Page"},
+        {"href": "http://www.w3schools.com/js/default.asp", "add":1321104019, "title": "JavaScript Tutorial"},
+        {"href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html", "add":1353426007, "title": "4.8.11 The canvas element — HTML Standard"},
+        {"href": "http://www.webplatform.org/", "add":1351610129, "title": "WebPlatform.org — Your Web, documented"},
+        {"href": "http://htmldog.com/reference/htmltags/", "add":1351688941, "title": "HTML Tags | HTML Dog"},
+        {"href": "http://www.aptana.com/reference/html/api/HTML.index.html", "add":1351687031, "title": "Aptana - HTML Reference Index"},
+        {"href": "http://devguru.com/", "add":1351610554, "title": "DevGuru Home"},
+        {"href": "http://dochub.io/#html/", "add":1351678948, "title": "DocHub | Instant Documentation Search GUT!"},
+        {"href": "http://www.w3.org/2009/cheatsheet/#inf,html,a,global%20HTML%20attributes", "add":1351676890, "title": "W3C cheatsheet"},
+        {"href": "http://jqapi.com/", "add":1351612790, "title": "jQAPI - Alternative jQuery Documentation"},
+        {"href": "http://www.futurecolors.ru/jquery/", "add":1351674019, "title": "jQuery 1.7 Cheatsheet by Future Colors"},
+        {"href": "http://oscarotero.com/jquery/", "add":1351679306, "title": "jQuery Cheatsheet"},
+        {"href": "http://www.cheatography.com/davechild/cheat-sheets/html-character-entities/", "add":1351672534, "title": "HTML Character Entities Cheat Sheet by DaveChild - Cheatography.com"},
+        {"href": "http://kangax.github.com/es5-compat-table/", "add":1351610644, "title": "ECMAScript 5 compatibility table"},
+        {"href": "http://kangax.github.com/es5-compat-table/es6/", "add":1351637690, "title": "ECMAScript compatibility table"},
+        {"href": "http://www.w3.org/wiki/HTML/Elements", "add":1351610161, "title": "HTML/Elements - W3C Wiki"},
+        {"href": "http://developers.whatwg.org/", "add":1357593294, "title": "HTML: The Living Standard - Edition for Web Developers"},
+        {"href": "http://www.gotapi.com/html", "add":1351610482, "title": "gotAPI/HTML - Instant search in HTML and other developer documentation"},
+        {"href": "http://www.javascriptkit.com/jsref/", "add":1351610630, "title": "JavaScript Kit- JavaScript Reference"},
+        {"href": "http://unicode.e-workers.de/index.php", "add":1351435302, "title": "Unicode, HTML-Entites, Sonderzeichen"},
+        {"href": "http://matthiasschuetz.com/werkzeugkoffer/", "add":1351430749, "title": "Werkzeugkoffer - Ressourcen für Webdesigner und Entwickler"},
+        {"group": "w CSS", "links": [
+            {"href": "http://www.cssportal.com/css-properties/", "add":1355317767, "title": "CSS Properties - CSS Portal"},
+            {"href": "http://www.webdevout.net/browser-support-css", "add":1355315948, "title": "Web Browser CSS Support"},
+            {"href": "http://reference.sitepoint.com/css", "add":1351610151, "title": "SitePoint CSS Reference » Learn CSS3 | Cheat Sheet | CSS Tutorial | Selectors | Properties"}
+]},
+        {"group": "HTML", "links": [
+            {"href": "https://developer.mozilla.org/de/docs/HTML/Element", "add":1361959173, "title": "Element - HTML | MDN"}
+]}
+]},
+    {"group": "Video", "links": [
+        {"href": "https://hacks.mozilla.org/2014/08/building-interactive-html5-videos/?utm_source=html5weekly&utm_medium=email", "add":1409159503, "title": "Building Interactive HTML5 Videos ✩ Mozilla Hacks – the Web developer blog"},
+        {"href": "https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video?utm_source=html5weekly&utm_medium=email", "add":1403338773, "title": "Adding captions and subtitles to HTML5 video - App Center | MDN"},
+        {"href": "http://plugincc.fabiobiondi.com/?cerchez-project=videogl", "add":1397667427, "title": "VideoGL jQuery plugin : 3D HTML5 videos with postprocessing filters — PluginCC"},
+        {"href": "http://bgrins.github.io/videoconverter.js/?utm_source=javascriptweekly&utm_medium=email", "add":1389999229, "title": "videoconverter.js - Convert Videos In Your Web Browser"},
+        {"href": "https://github.com/bgrins/videoconverter.js?utm_source=javascriptweekly&utm_medium=email", "add":1384620702, "title": "bgrins/videoconverter.js · GitHub"}
+]},
+    {"group": "Audio", "links": [
+        {"href": "https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Web_Audio_API_cross_browser", "add":1411806799, "title": "Writing Web Audio API code that works in every browser - App Center | MDN"},
+        {"href": "http://jonathan.bergknoff.com/journal/making-a-guitar-tuner-html5?utm_source=html5weekly&utm_medium=email", "add":1415226598, "title": "Jonathan Bergknoff: Making a Guitar Tuner with HTML5"},
+        {"href": "http://stuartmemo.com/wavy-jones/", "add":1414507770, "title": "Wavy Jones — an oscilloscope for web audio projects"},
+        {"href": "http://techslides.com/html5-web-audio-api-demos-and-libraries/", "add":1414507829, "title": "HTML5 Web Audio API Demos and Libraries | TechSlides"},
+        {"href": "http://www.sitepoint.com/using-fourier-transforms-web-audio-api/?utm_source=javascriptweekly&utm_medium=email", "add":1410641029, "title": "Using Fourier Transforms with the Web Audio API"},
+        {"href": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API?utm_source=html5weekly&utm_medium=email", "add":1410464234, "title": "Web Audio API - Web API Interfaces | MDN"},
+        {"href": "http://webaudiodemos.appspot.com/", "add":1414507782, "title": "Web Audio Demos"},
+        {"href": "http://tech.beatport.com/2014/web-audio/beat-detection-using-web-audio/?utm_source=html5weekly&utm_medium=email", "add":1407401384, "title": "Beat Detection Using JavaScript and the Web Audio API | Beatport Engineering"},
+        {"href": "http://updates.html5rocks.com/2014/07/Web-Audio-Changes-in-m36", "add":1406806059, "title": "Web Audio Changes in m36 - HTML5Rocks Updates"},
+        {"href": "http://blog.groupbuddies.com/posts/39-tutorial-html-audio-capture-streaming-to-node-js-no-browser-extensions?utm_source=html5weekly&utm_medium=email", "add":1404328461, "title": "Tutorial: HTML Audio Capture streaming to Node.js (no browser extensions), by Gabriel Poça of Group Buddies"},
+        {"href": "http://www.sitepoint.com/5-libraries-html5-audio-api/?utm_source=html5weekly&utm_medium=email", "add":1404327051, "title": "5 Libraries and APIs for Manipulating HTML5 Audio"},
+        {"href": "http://kodogames.com/web-audio-api-tutorial/?utm_source=gamedevjsweekly&utm_medium=email", "add":1403893816, "title": "Web Audio API Tutorial | Kodo Games"},
+        {"href": "https://hacks.mozilla.org/2014/06/introducing-the-web-audio-editor-in-firefox-developer-tools/?utm_source=html5weekly&utm_medium=email", "add":1403338716, "title": "Introducing the Web Audio Editor in Firefox Developer Tools ✩ Mozilla Hacks – the Web developer blog"},
+        {"href": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API", "add":1414507800, "title": "Visualizations with Web Audio API - Web API Interfaces | MDN"},
+        {"href": "https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/?utm_source=html5weekly&utm_medium=email", "add":1402691261, "title": "Easy audio capture with the MediaRecorder API ✩ Mozilla Hacks – the Web developer blog"},
+        {"href": "https://catarak.github.io/blog/2014/12/02/web-audio-timing-tutorial/?utm_source=html5weekly&utm_medium=email", "add":1420278034, "title": "Web Audio Timing Tutorial - Ear to the Bits"},
+        {"href": "http://chimera.labs.oreilly.com/books/1234000001552/ch04.html#s04_3", "add":1394147767, "title": "Web Audio API"},
+        {"href": "http://vallandingham.me/visualizing_bird_songs.html?utm_source=html5weekly&utm_medium=email", "add":1395262493, "title": "Visualizing Bird Songs with Web Audio - Jim Vallandingham"},
+        {"href": "https://github.com/kittykatattack/soundForGames?utm_source=gamedevjsweekly&utm_medium=email", "add":1416598115, "title": "kittykatattack/soundForGames · GitHub"},
+        {"href": "http://fourthof5.com/audio-visualisation-with-the-web-audio-api?utm_source=html5weekly&utm_medium=email", "add":1423084479, "title": "Audio Visualisation with the Web Audio API"},
+        {"href": "http://stuartmemo.com/wavy-jones/", "add":1394147727, "title": "Wavy Jones — an oscilloscope for web audio projects"},
+        {"href": "http://www.bfxr.net/", "add":1393444391, "title": "Bfxr. Make sound effects for your games."},
+        {"href": "http://audiocrawl.co/", "add":1424078736, "title": "AudioCrawl, showcasing the best in web audio"},
+        {"href": "http://blog.jetienne.com/blog/2014/02/18/webaudiox-a-dry-library-for-webaudio-api/?utm_source=html5weekly&utm_medium=email", "add":1393444247, "title": "WebAudiox.js - a DRY library for Web Audio API - Jerome Etienne.js Blog"},
+        {"href": "http://www.freetuner.co/?utm_source=html5weekly&utm_medium=email", "add":1393442309, "title": "Free Online Guitar Tuner by Tom Hoddes"},
+        {"href": "http://chinpen.net/webaudiofftperf/", "add":1424079082, "title": "WebAudio FFT Performance"},
+        {"href": "http://alxgbsn.co.uk/wavepad/", "add":1384463550, "title": "Wave-PD1 - An experimental synthesizer built using the Web Audio API."},
+        {"href": "http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/?utm_source=html5weekly&utm_medium=email", "add":1382700891, "title": "Making Audio Reactive Visuals — Airtight Interactive"},
+        {"href": "http://typedarray.org/from-microphone-to-wav-with-getusermedia-and-web-audio/?utm_source=html5weekly&utm_medium=email", "add":1375171268, "title": "From microphone to .WAV with: getUserMedia and Web Audio | TypedArray.org"},
+        {"href": "https://wiki.mozilla.org/Audio_Data_API", "add":1358341324, "title": "Audio Data API - MozillaWiki"},
+        {"href": "http://www.gamedev.net/blog/43/entry-2260411-html5-audio-for-games-made-easy/?utm_source=html5weekly&utm_medium=email", "add":1413996275, "title": "HTML5 audio for games made easy - GameDev.net"},
+        {"group": "x", "links": [
+            {"href": "http://www.samdutton.com/pageVisibility/", "add":1384973391, "title": "29 second(s)"},
+            {"href": "http://www.html5rocks.com/en/tutorials/webaudio/intro/", "add":1353427240, "title": "Getting Started with Web Audio API - HTML5 Rocks"},
+            {"href": "http://www.html5rocks.com/en/tutorials/audio/scheduling/", "add":1358366681, "title": "A Tale of Two Clocks - Scheduling Web Audio with Precision - HTML5 Rocks"},
+            {"href": "http://www.html5rocks.com/en/tutorials/webaudio/games/", "add":1353427229, "title": "Developing Game Audio with the Web Audio API - HTML5 Rocks"},
+            {"href": "http://flippinawesome.org/2013/10/28/audio-synthesis-in-javascript/?utm_source=javascriptweekly&utm_medium=email", "add":1383344532, "title": "Audio Synthesis in JavaScript | great Tutorial"},
+            {"href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext", "add":1384963056, "title": "AudioContext - Web API interfaces | MDN"},
+            {"href": "http://middleearmedia.com/channelstrip/", "add":1384962980, "title": "Web Audio with equalizer (use Chrome)"},
+            {"href": "http://middleearmedia.com/warmachine/", "add":1384954134, "title": "War Machine - A Web Audio experiment by Middle Ear Media."},
+            {"href": "http://middleearmedia.com/web-audio-api-bufferloader/", "add":1384953724, "title": "Web Audio API BufferLoader | Middle Ear Media"},
+            {"href": "http://middleearmedia.com/web-audio-api-audio-buffer/", "add":1384953551, "title": "Web Audio API Audio Buffer | Middle Ear Media"},
+            {"href": "http://middleearmedia.com/web-audio-api-basics/", "add":1384947252, "title": "Web Audio API Basics | Middle Ear Media"},
+            {"href": "http://middleearmedia.com/web-audio-api-oscillators/", "add":1384945733, "title": "Web Audio API Oscillators | Middle Ear Media"}
+]},
+        {"group": "Demos", "links": [
+            {"href": "http://wavepot.com/?utm_source=gamedevjsweekly&utm_medium=email", "add":1403338043, "title": "wavepot"},
+            {"href": "https://github.com/citronneur/onlinetuner.co?utm_source=html5weekly&utm_medium=email", "add":1421869621, "title": "citronneur/onlinetuner.co"},
+            {"href": "http://box.cloudymedia.com/?utm_source=html5weekly&utm_medium=email#notSaved", "add":1384981933, "title": "(♭)ox - a drumbox made with HTML5"},
+            {"href": "http://labs.dinahmoe.com/ToneCraft/", "add":1384972170, "title": "ToneCraft by Dinahmoe"},
+            {"href": "http://audiojedit.herokuapp.com/", "add":1384972005, "title": "AudioJedit"},
+            {"href": "http://labs.dinahmoe.com/plink/", "add":1353430409, "title": "Plink by DinahMoe"},
+            {"href": "http://keithwhor.com/music/?utm_source=javascriptweekly&utm_medium=email", "add":1382729331, "title": "Musical Keyboard - JS Dynamic Audio Synth"},
+            {"href": "http://middleearmedia.com/kalimba/", "add":1384953753, "title": "Virtual Kalimba - A Web Audio experiment by Middle Ear Media."},
+            {"href": "http://chromium.googlecode.com/svn/trunk/samples/audio/shiny-drum-machine.html", "add":1384967677, "title": "WebAudio Drum Machine"},
+            {"href": "http://cappel-nord.de/webaudio/acid-defender/#", "add":1384967666, "title": "Web Audio API Prototype I — Acid Defender"}
+]},
+        {"group": "Free Sound Libraries", "links": [
+            {"href": "http://blog.jetienne.com/blog/2014/02/18/webaudiox-a-dry-library-for-webaudio-api/?utm_source=javascriptweekly&utm_medium=email", "add":1393017188, "title": "WebAudiox.js - a DRY library for Web Audio API - Jerome Etienne.js Blog"},
+            {"href": "http://www.freesound.org/", "add":1357593249, "title": "Freesound.org - Freesound.org"},
+            {"href": "http://soundbible.com/", "add":1357593280, "title": "Free Sound Clips | SoundBible.com"},
+            {"href": "http://www.grsites.com/archive/sounds/", "add":1357593263, "title": "Free Sound Effects FX Library, Free Download - GRSites"}
+]},
+        {"group": "Tools", "links": [
+            {"href": "http://areweplayingyet.org/", "add":1384974190, "title": "AreWePlayingYet? — A pragmatic HTML5 Audio test suite"},
+            {"href": "http://westciv.com/tools/audio/", "add":1353357507, "title": "HTML5 Audio element maker"},
+            {"href": "http://media.io/", "add":1357593221, "title": "Online Audio Converter (MP3, WAV, Ogg, WMA, M4A, AAC) – media.io"}
+]}
+]},
+    {"group": "Mobile", "links": [
+        {"href": "http://blog.chromium.org/2014/09/responsive-web-design-with-devtools.html?utm_source=html5weekly&utm_medium=email", "add":1410369231, "title": "Chromium Blog: Responsive Web Design with DevTools' Device Mode"},
+        {"href": "http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging/?utm_source=html5weekly&utm_medium=email", "add":1410369219, "title": "Testing Mobile: Emulators, Simulators And Remote Debugging | Smashing Magazine"},
+        {"href": "http://www.html5rocks.com/en/mobile/fullscreen/#disqus_thread", "add":1403620396, "title": "Building an amazing fullscreen mobile experience - HTML5 Rocks"},
+        {"href": "http://phonegap.com/blog/2013/07/19/adobe-phonegap-3.0-released/?utm_source=html5weekly&utm_medium=email", "add":1375171204, "title": "PhoneGap | Adobe PhoneGap 3.0 Released"},
+        {"href": "http://docs.phonegap.com/en/2.1.0/cordova_accelerometer_accelerometer.md.html#Accelerometer", "add":1362320213, "title": "PhoneGap API Documentation"},
+        {"href": "http://blog.playcanvas.com/intel-gives-html5-some-love-at-the-buzz-workshop/?utm_source=gamedevjsweekly&utm_medium=email", "add":1412932377, "title": "Intel gives HTML5 some love at the Buzz Workshop | PlayCanvas"},
+        {"href": "http://www.htmlgoodies.com/html5/client/ten-tips-for-designing-implementing-and-packaging-apps-for-mobile-devices.html#fbid=MhDpDj1HdSt", "add":1412957010, "title": "Ten Tips for Designing, Implementing and Packaging Apps for Mobile Devices"},
+        {"group": "Web App (add to Homescreen)", "links": [
+            {"href": "http://html5doctor.com/web-manifest-specification/?utm_source=html5weekly&utm_medium=email", "add":1406805399, "title": "The Web Manifest specification | HTML5 Doctor"},
+            {"href": "http://cubiq.org/add-to-home-screen", "add":1390255323, "title": "Add to home screen"}
+]},
+        {"group": "Responsive Design", "links": [
+            {"href": "http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/", "add":1351442550, "title": "Responsive Web Design: What It Is and How To Use It | Smashing Coding"},
+            {"href": "http://www.webmasterpro.de/coding/article/css-responsive-webdesign-media-queries-fuer-iphone-ipad-und-smartphones.html", "add":1371502139, "title": "Responsive Webdesign Tutorial - Media Queries - Teil1 - CSS - Tutorials, Tipps und Tricks für Webmaster auf Webmasterpro.de"},
+            {"href": "http://www.responsinator.com/?url=cubestation.gymburgdorf.ch%2Fkb2", "add":1389206793, "title": "Responsinator - cubestation.gymburgdorf.ch/kb2"},
+            {"href": "http://www.adamkaplan.me/grid/?utm_source=html5weekly&utm_medium=email", "add":1394139220, "title": "Grid"},
+            {"group": "x Responsive Design", "links": [
+                {"href": "http://www.dieproduktmacher.com/in-5-schritten-von-der-aktuellen-website-zum-responsive-design/", "add":1395783099, "title": "In 5 Schritten: Von der aktuellen Website zum Responsive Webdesign - DieProduktMacher | DieProduktMacher"}
+]}
+]},
+        {"group": "Mobile API (Vibrate, orientation, ...)", "links": [
+            {"href": "http://www.sitepoint.com/5-javascript-apis-empower-mobile-web-pages/?utm_source=javascriptweekly&utm_medium=email", "add":1406967588, "title": "5 Javascript Apis to Empower Your Mobile Web Pages"},
+            {"href": "http://www.sitepoint.com/3-new-javascript-apis-may-want-follow/?utm_source=html5weekly&utm_medium=email", "add":1406806088, "title": "3 New JavaScript APIs You May Want to Follow"},
+            {"href": "http://flippinawesome.org/2014/05/27/introduction-to-the-ambient-light-api/?utm_source=html5weekly&utm_medium=email", "add":1401733481, "title": "Introduction to the Ambient Light API | Flippin' Awesome"},
+            {"href": "http://www.sitepoint.com/using-device-orientation-html5/?utm_source=html5weekly&utm_medium=email", "add":1399493782, "title": "Using Device Orientation in HTML5"},
+            {"href": "http://www.illyism.com/journal/vibration-api?utm_source=html5weekly&utm_medium=email", "add":1393444312, "title": "Vibration API • Journal • Illyism • Ilias Ismanalijev"},
+            {"href": "http://t3n.de/news/device-orientation-neigung-position-mobilgeraten-343285/", "add":1345564799, "title": "Device Orientation: Neigung und Position von Mobilgeräten in JavaScript nutzen » t3n News"},
+            {"href": "http://www.html5rocks.com/en/mobile/touchandmouse/", "add":1363803408, "title": "Touch And Mouse: Together Again For The First Time - HTML5 Rocks"},
+            {"href": "http://www.html5rocks.com/en/mobile/touch/", "add":1363803399, "title": "Developing for Multi-Touch Web Browsers - HTML5 Rocks"},
+            {"href": "http://gonzalo123.com/2013/10/28/taking-photos-with-a-phonegapcordova-application-and-uploading-them-to-the-server/?utm_source=javascriptweekly&utm_medium=email", "add":1383344639, "title": "Taking photos with a phonegap/cordova application and uploading them to the server. | Gonzalo Ayuso | Web Architect"},
+            {"href": "http://daker.me/2013/06/5-html5-javascript-apis-to-keep-an-eye-on.html?utm_source=html5weekly&utm_medium=email", "add":1370466381, "title": "5 HTML5 Javascript APIs to keep an eye on — Adnane Belmadiaf's Blog"},
+            {"href": "https://hacks.mozilla.org/2013/06/the-proximity-api/?utm_source=html5weekly&utm_medium=email", "add":1371074676, "title": "The Proximity API ✩ Mozilla Hacks – the Web developer blog"}
+]},
+        {"group": "xz Mobile Frameworks", "links": [
+            {"href": "https://mail.google.com/mail/u/0/?shva=1#inbox/145f2811fadaa55e", "add":1399984144, "title": "Faster Phonegap Apps, finally! - adrian.luethi@gmail.com - Gmail"},
+            {"href": "https://www.ludei.com/cocoonjs/", "add":1396086965, "title": "cocoon.js (Canvas als App exportieren!)"},
+            {"href": "http://www.gajotres.net/jquery-mobile-vs-kendo-ui/", "add":1391932903, "title": "jQuery Mobile vs Kendo UI | Gajotres.net"},
+            {"href": "http://www.badrit.com/blog/2013/7/16/sencha-touch-vs-phonegap", "add":1391933228, "title": "PhoneGap Vs Sencha Touch"},
+            {"href": "http://moduscreate.com/5-best-mobile-web-app-frameworks-sencha-touch/?utm_source=javascriptweekly&utm_medium=email", "add":1394269387, "title": "5 Best Mobile Web App Frameworks: Sencha Touch | Modus Create"},
+            {"group": "Sencha", "links": [
+                {"href": "http://docs.sencha.com/touch/2.3.1/#!/guide/data", "add":1391899126, "title": "Data Package Overview - Touch - Sencha Docs"}
+]}
+]},
+        {"group": "xz Mobile Debugging", "links": [
+            {"href": "https://vilimpoc.org/blog/2013/09/02/chrome-usb-web-debugging-is-awesome/", "add":1389779072, "title": "Chrome USB Web Debugging Is Awesome | vilimblog"},
+            {"href": "http://forums.udacity.com/questions/100142278/not-able-to-see-discover-usb-devices-on-chromeinspect-page#cs256", "add":1389778969, "title": "Not able to see discover USB devices on Chrome://inspect page - Udacity Forums"},
+            {"href": "https://www.udacity.com/course/viewer#!/c-cs256/l-423388858/m-422278778", "add":1389778876, "title": "The right tools - Lesson 2 - Mobile Developer Tools - Mobile Web Development - Udacity"}
+]},
+        {"group": "w Mobile Helpers (Resoultion, media Queries)", "links": [
+            {"href": "http://viewportsizes.com/?filter=", "add":1395256180, "title": "Viewport Sizes"},
+            {"href": "http://mqtest.io/?utm_source=html5weekly&utm_medium=email", "add":1371748727, "title": "MQtest.io — A simple tool to help identify which media queries your device responds to."},
+            {"href": "http://www.raymondcamden.com/index.cfm/2013/5/20/Capturing-camerapicture-data-without-PhoneGap?utm_source=javascriptweekly&utm_medium=email", "add":1369398295, "title": "Capturing camera/picture data without PhoneGap"}
+]}
+]},
+    {"group": "Frameworks to evaluate", "links": [
+        {"href": "http://underscorejs.org/#changelog", "add":1410003254, "title": "Underscore.js"},
+        {"href": "http://brunch.io/", "add":1399495155, "title": "Brunch | ultra-fast HTML5 build tool"},
+        {"href": "http://sproutcore.com/", "add":1399495111, "title": "SproutCore"},
+        {"href": "http://montagestudio.com/blog/2014/01/22/build-3d-applications-with-montagejs/", "add":1399495017, "title": "Build 3D applications with the WebGL-based MontageJS 3D component | Montage Studio Blog"},
+        {"href": "http://ionicframework.com/docs/", "add":1399494970, "title": "Ionic Documentation - Ionic Framework"},
+        {"href": "http://demos.kendoui.com/web/editor/index.html", "add":1375951776, "title": "Demo for jQuery WYSIWYG editor in Kendo UI Web framework"},
+        {"href": "http://www.taccgl.org/", "add":1369251372, "title": "HTML5 Canvas 3D (WebGL) and 2D Accelerated javascript Animation Library - taccgl"},
+        {"href": "http://labs.hyperandroid.com/static/caat/", "add":1369242497, "title": "CAAT"},
+        {"href": "http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source?utm_source=html5weekly&utm_medium=email", "add":1368034591, "title": "Turbulenz Engine Goes Open Source"},
+        {"href": "http://zinoui.com/", "add":1363357651, "title": "ZinoUI - jQuery UI components library, HTML5 framework"},
+        {"href": "http://jindo.dev.naver.com/collie/", "add":1361989144, "title": "Collie - High Performance Animation Library for Javascript"},
+        {"href": "http://gwennaelbuchet.github.com/cgSceneGraph/", "add":1361989099, "title": "cgSceneGraph"},
+        {"href": "http://www.conditionizr.com/?utm_source=html5weekly&utm_medium=email", "add":1360430708, "title": "Conditionizr: the conditional free legacy, retina, script and style loader"},
+        {"href": "http://kushagragour.in/lab/hint/?utm_source=html5weekly&utm_medium=email", "add":1360430631, "title": "hint.css - A tooltip library in CSS"},
+        {"href": "https://github.com/jlongster/css-animations.js?utm_source=html5weekly&utm_medium=email", "add":1359737295, "title": "jlongster/css-animations.js · GitHub"},
+        {"href": "http://jquery-jkit.com/commands/gallery.html", "add":1357308001, "title": "jKit - jQuery based UI Toolkit - Command"},
+        {"href": "http://www.kineticjs.com/", "add":1346243040, "title": "KineticJS - HTML5 Canvas JavaScript Library Framework"},
+        {"href": "http://paperjs.org/examples/future-splash/", "add":1351363256, "title": "Paper.js — Future Splash"},
+        {"href": "https://github.com/mozilla/mortar-layouts", "add":1360430109, "title": "mozilla/mortar-layouts · GitHub"},
+        {"href": "https://github.com/unconed/MathBox.js?utm_source=html5weekly&utm_medium=email", "add":1358966521, "title": "unconed/MathBox.js · GitHub"},
+        {"href": "http://www.reddit.com/r/javascript/comments/f094j/list_of_js_game_engines_community_effort/", "add":1351669486, "title": "List of JS Game Engines (community effort) : javascript"},
+        {"href": "http://sylvester.jcoglan.com/", "add":1345563580, "title": "Sylvester - Vector and Marix Library"},
+        {"href": "http://gamejs.org/", "add":1351430203, "title": "home - Wiki"},
+        {"href": "http://dojotoolkit.org/", "add":1351380750, "title": "Unbeatable JavaScript Tools - The Dojo Toolkit"},
+        {"href": "http://mochi.github.com/mochikit/", "add":1351380730, "title": "MochiKit - A lightweight Javascript library"},
+        {"href": "http://mootools.net/", "add":1351380703, "title": "MooTools - a compact javascript framework"},
+        {"href": "http://script.aculo.us/", "add":1350056167, "title": "script.aculo.us - web 2.0 javascript"},
+        {"href": "http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage", "add":1350053933, "title": "dat.GUI"},
+        {"href": "http://workshop.chromeexperiments.com/", "add":1350053895, "title": "Workshop / Chrome Experiments"},
+        {"href": "http://www.prototypejs.org/", "add":1346854851, "title": "Prototype (fast wie jQuery, +class Implemetation)"},
+        {"href": "http://www.createjs.com/#!/EaselJS", "add":1346847228, "title": "EaselJS | A Javascript library that makes working with the HTML5 Canvas element easy."},
+        {"href": "http://craftyjs.com/", "add":1346756213, "title": "Crafty - JavaScript Game Engine, HTML5 Game Engine"},
+        {"href": "http://ejohn.org/blog/processingjs/", "add":1345563623, "title": "John Resig - Processing.js"},
+        {"href": "http://fx.inetcat.com/", "add":1345562907, "title": "$fx - JavaScript animation library"},
+        {"href": "http://raphaeljs.com/", "add":1345563340, "title": "Raphaël—JavaScript Library"},
+        {"group": "Angular JS (client site DOM-Verwlatung)", "links": [
+            {"href": "https://thinkster.io/angulartutorial/mean-stack-tutorial/", "add":1414012434, "title": "Umgang mit $http und service"},
+            {"href": "https://github.com/a8m/angular-filter", "add":1412448236, "title": "a8m/angular-filter · GitHub"},
+            {"href": "https://www.exratione.com/2013/12/considering-speed-and-slowness-in-angularjs/", "add":1415812328, "title": "Considering Speed and Slowness in AngularJS"},
+            {"group": "x", "links": [
+                {"href": "http://angular-tips.com/", "add":1415119025, "title": "Angular Tips"},
+                {"href": "https://www.airpair.com/angularjs/posts/angularjs-performance-large-applications?utm_source=javascriptweekly&utm_medium=email", "add":1418402922, "title": "AngularJS Performance in Large Applications"},
+                {"href": "http://toddmotto.com/rethinking-angular-js-controllers/", "add":1412241433, "title": "Rethinking AngularJS Controllers"},
+                {"href": "http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html", "add":1412099067, "title": "How to get started (Part 1 of the AngularJS - from beginner to expert in 7 steps series) | ng-newsletter"},
+                {"href": "http://www.sitepoint.com/introduction-mean-stack/?utm_source=javascriptweekly&utm_medium=email", "add":1397929599, "title": "An Introduction to the MEAN Stack"},
+                {"href": "http://blog.artlogic.com/2013/03/06/angularjs-for-jquery-developers/?utm_source=javascriptweekly&utm_medium=email", "add":1363355567, "title": "AngularJS for jQuery Developers | Art & Logic Blog"},
+                {"href": "http://www.artandlogic.com/blog/2013/05/ive-been-doing-it-wrong-part-1-of-3/", "add":1412068124, "title": "AngularJS Best Practices: I’ve Been Doing It Wrong! Part 1 of 3 |"},
+                {"href": "http://www.artandlogic.com/blog/2013/03/angularjs-for-jquery-developers/?utm_source=javascriptweekly&utm_medium=email", "add":1412077821, "title": "AngularJS for jQuery Developers |"},
+                {"href": "http://thenittygritty.co/angularjs-pitfalls-using-scopes", "add":1412078908, "title": "AngularJS: 6 Common Pitfalls Using Scopes – TNG - The Nitty Gritty"},
+                {"href": "http://glennstovall.com/blog/2013/06/27/angularjs-an-overview/?utm_source=javascriptweekly&utm_medium=email", "add":1373664226, "title": "AngularJS: an Overview - Glenn Stovall"},
+                {"href": "http://ngmodules.org/", "add":1412080727, "title": "Popular Modules - AngularJS Modules, Plugins and Directives"},
+                {"href": "http://www.sitepoint.com/series/a-practical-guide-to-angularjs-directives/", "add":1412114840, "title": "A Practical Guide to AngularJS Directives Archives - SitePoint"},
+                {"href": "https://docs.angularjs.org/api/ng/service/$compile", "add":1412238124, "title": "AngularJS: directive options"},
+                {"href": "http://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make?utm_source=javascriptweekly&utm_medium=email", "add":1412939269, "title": "10 Top Mistakes Angular.js Developers Make"},
+                {"href": "http://stackoverflow.com/questions/14994391/how-do-i-think-in-angularjs-if-i-have-a-jquery-background", "add":1413377364, "title": "javascript - How do I 'think in AngularJS' if I have a jQuery background? - Stack Overflow"},
+                {"href": "http://tutorials.jenkov.com/angularjs/custom-directives.html", "add":1412251501, "title": "AngularJS Custom Directives"},
+                {"href": "http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/", "add":1412240269, "title": "Opinionated AngularJS styleguide for teams"},
+                {"href": "http://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/?utm_source=javascriptweekly&utm_medium=email", "add":1381053981, "title": "Ultimate guide to learning AngularJS in one day"},
+                {"href": "https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/", "add":1414012467, "title": "A Better Way to Learn AngularJS - Thinkster"},
+                {"href": "http://www.airpair.com/angularjs?utm_source=javascriptweekly&utm_medium=email", "add":1412362808, "title": "AngularJS Tutorial: a comprehensive 10,000 word guide"},
+                {"href": "http://toddmotto.com/everything-about-custom-filters-in-angular-js/", "add":1412250347, "title": "Everything about custom filters in AngularJS"},
+                {"href": "http://vesparny.github.io/angular-kickstart/#/?utm_source=javascriptweekly&utm_medium=email", "add":1414852789, "title": "angular-kickstart"},
+                {"href": "http://tech.small-improvements.com/2013/11/28/analysing-performance-of-angularjs-screens/", "add":1415052029, "title": "Analysing Performance of AngularJS Screens | Small Improvements"},
+                {"href": "http://tech.small-improvements.com/2013/11/28/analysing-performance-of-angularjs-screens/", "add":1414962510, "title": "Analysing Performance of AngularJS Screens | Small Improvements"},
+                {"href": "http://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/", "add":1414852690, "title": "AngularJS Tutorial | Learn Angular by Building a Gmail Clone"},
+                {"href": "http://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135", "add":1416007151, "title": "Speeding up AngularJS apps with simple optimizations - Tutorial - Binpress"},
+                {"href": "http://www.williambrownstreet.net/blog/2014/04/faster-angularjs-rendering-angularjs-and-reactjs/", "add":1415053767, "title": "Faster AngularJS Rendering (AngularJS and ReactJS) | thierry.nicola"}
+]},
+            {"group": "y", "links": [
+                {"href": "http://toddmotto.com/all-about-angulars-emit-broadcast-on-publish-subscribing/", "add":1412251853, "title": "Understanding Angular’s $scope and $rootScope event system $emit, $broadcast and $on"},
+                {"href": "https://www.airpair.com/angularjs/posts/testing-angular-with-karma?utm_source=javascriptweekly&utm_medium=email", "add":1416644799, "title": "Testing Angular with Karma"},
+                {"href": "https://docs.angularjs.org/api/ng/function/angular.copy", "add":1414012097, "title": "AngularJS: API: angular.copy"}
+]}
+]},
+        {"group": "Bootstrap", "links": [
+            {"href": "http://angular-ui.github.io/bootstrap/", "add":1412079773, "title": "Angular directives for Bootstrap"},
+            {"href": "https://fezvrasta.github.io/bootstrap-material-design/?utm_source=html5weekly&utm_medium=email", "add":1412235431, "title": "Bootstrap Material"}
+]},
+        {"group": "React", "links": [
+            {"href": "http://wiredcraft.com/posts/2014/08/20/why-we-may-ditch-angularjs-for-react.html", "add":1415054044, "title": "Why We May Ditch AngularJS For React | Wiredcraft"},
+            {"href": "http://scotch.io/tutorials/javascript/getting-to-know-flux-the-react-js-architecture?utm_source=javascriptweekly&utm_medium=email", "add":1415379951, "title": "Getting To Know Flux, the React.js Architecture ♥ Scotch"},
+            {"href": "http://facebook.github.io/react/docs/tutorial.html", "add":1415054740, "title": "Tutorial | React"},
+            {"href": "http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look", "add":1415054415, "title": "(1) Facebook's React vs AngularJS: A Closer Look - Posts - Quora"}
+]},
+        {"group": "RxJS", "links": [
+            {"href": "https://github.com/staltz/mvi-example/blob/master/src/intents/items.js", "add":1415382079, "title": "mvi-example/items.js at master · staltz/mvi-example · GitHub"},
+            {"href": "https://github.com/Reactive-Extensions/RxJS#getting-started", "add":1415382145, "title": "Reactive-Extensions/RxJS · GitHub"},
+            {"href": "http://staltz.com/mvi-example/", "add":1415382102, "title": "MVI Example"}
+]},
+        {"group": "x eher zu hochstehende Frameworks", "links": [
+            {"href": "https://www.dartlang.org/", "add":1402403526, "title": "Dart: Structured web apps"},
+            {"href": "http://cjs.from.so/?utm_source=javascriptweekly&utm_medium=email", "add":1410454205, "title": "ConstraintJS"},
+            {"href": "http://docs.meteor.com/", "add":1396034844, "title": "Documentation - Meteor"},
+            {"group": "Ampersand", "links": [
+                {"href": "http://read.humanjavascript.com/ch00-foreword.html", "add":1412242162, "title": "Foreword by Jan Lehnardt | Human JavaScript"},
+                {"href": "http://ampersandjs.com/", "add":1413013561, "title": "Ampersand.js - Home"}
+]},
+            {"group": "Backbone", "links": [
+                {"href": "http://backbonejs.org/", "add":1359731242, "title": "Backbone.js (MVC focus)"},
+                {"href": "http://www.korenlc.com/backbone-js-tutorial-getting-started-with-backbone/?utm_source=javascriptweekly&utm_medium=email", "add":1412363596, "title": "Backbone.js Tutorial: Getting Started with Backbone | Koren Leslie Cohen"}
+]},
+            {"group": "Ember", "links": [
+                {"href": "http://landongn.com/ember/things-i-wish-someone-had-told-me-when-i-was-learning-ember-js/?utm_source=javascriptweekly&utm_medium=email", "add":1399039281, "title": "Things I wish someone had told me when I was learning Ember.js | Landon Noss"}
+]},
+            {"group": "nodeJS (macht ganzen Server asynchron)", "links": [
+                {"href": "http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs?utm_source=javascriptweekly&utm_medium=email", "add":1403896126, "title": "Full Stack JavaScript: Backbone, Node, Express & More | Toptal"},
+                {"href": "http://nodejs.org/", "add":1350053846, "title": "node.js"},
+                {"href": "http://stackoverflow.com/questions/1884724/what-is-node-js#6782438?utm_source=javascriptweekly&utm_medium=email", "add":1381494498, "title": "javascript - What is Node.js? - Stack Overflow"},
+                {"group": "x", "links": [
+                    {"href": "http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/?utm_source=javascriptweekly&utm_medium=email", "add":1379165008, "title": "Tutorial - Getting Started With Node.js, Express, MongoDB | Christopher Buecheler - Web, Writing, Cocktails and More"}
+]}
+]},
+            {"group": "YUI (riesig, zu umfassend)", "links": [
+                {"href": "http://yuilibrary.com/", "add":1351380783, "title": "YUI Library"}
+]}
+]},
+        {"group": "xz zu umfangreiche Physics/Game Engines", "links": [
+            {"href": "http://developer.playcanvas.com/engine/api/stable/", "add":1401991432, "title": "PlayCanvas Developers - API Reference"},
+            {"href": "https://hacks.mozilla.org/2014/06/playcanvas-goes-open-source/?utm_source=html5weekly&utm_medium=email", "add":1401918616, "title": "PlayCanvas Goes Open Source ✩ Mozilla Hacks – the Web developer blog"},
+            {"href": "http://phaser.io/?utm_source=html5weekly&utm_medium=email#", "add":1379607455, "title": "Phaser (Desktop and Mobile HTML5 game framework using PIXI.js)"},
+            {"href": "http://www.cocos2d-x.org/features#cross-platform", "add":1386167660, "title": "Cocos2d-x (game engine)"},
+            {"href": "http://unity3d.com/unity", "add":1395689790, "title": "Unity (Game Development Ecosystem)"}
+]},
+        {"group": "x ungeeignete Frameworks", "links": [
+            {"href": "http://lib.ivank.net/?p=projects", "add":1369246537, "title": "IvanK Lib - 2D graphics for HTML5"},
+            {"href": "https://larukedi.github.io/laroux.js/?utm_source=javascriptweekly&utm_medium=email", "add":1416644432, "title": "laroux.js - Demos"},
+            {"href": "http://montagestudio.com/montagejs/", "add":1415919030, "title": "MontageJS - HTML5 Framework"}
+]},
+        {"group": "zum Nachschlagen (Listen von Libraries)", "links": [
+            {"href": "http://html5gameengine.com/", "add":1411131484, "title": "HTML5 Game Engines - Find Which is Right For You"},
+            {"href": "https://docs.google.com/spreadsheet/ccc?key=0Aqj_mVmuz3Y8dHNhUVFDYlRaaXlyX0xYSTVnalV5ZlE#gid=0", "add":1360430691, "title": "Javascript 2D Canvas Libraries"},
+            {"href": "http://www.javascriptoo.com/", "add":1392199906, "title": "JavascriptOO"},
+            {"href": "http://jstherightway.org/?utm_source=javascriptweekly&utm_medium=email", "add":1390651368, "title": "JS: The Right Way"},
+            {"href": "http://www.jsdb.io/?sort=trending", "add":1371629314, "title": "JSDB.io - The Database of JavaScript Libraries"},
+            {"href": "https://github.com/bebraw/jswiki/wiki/Game-Engines", "add":1369252128, "title": "Game Engines · bebraw/jswiki Wiki · GitHub"},
+            {"href": "http://jster.net/category/canvas-wrappers", "add":1369244636, "title": "Javascript Canvas Wrappers - JSter Javascript Catalog"},
+            {"href": "http://pineapple.io/tags/html5-canvas?type=assets", "add":1369244567, "title": "html5 canvas · Assets · Pineapple"},
+            {"href": "http://www.softr.li/blog/2012/06/20/which-html5-canvas-javascript-library-should-i-use", "add":1369242475, "title": "Which HTML5 Canvas Javascript library should I use? - softr.li"},
+            {"href": "http://blog.insicdesigns.com/2010/04/most-promising-javascript-animation-library-and-plugin/", "add":1346166896, "title": "Most Promising JavaScript Animation Library and Plugin | Insic Designs"},
+            {"href": "http://www.mediaevent.de/javascript/libraries.html", "add":1351433655, "title": "Javascript Libraries: Code-Bibliotheken für effiziente Programmierung"},
+            {"href": "http://coding.smashingmagazine.com/2009/03/02/40-stand-alone-javascript-libraries-for-specific-purposes/", "add":1351429447, "title": "40 Useful JavaScript Libraries | Smashing Coding"}
+]},
+        {"group": "Browser extensions", "links": [
+            {"href": "http://www.penguinhustle.com/blog/how-to-write-your-first-chrome-extension/?utm_source=html5weekly&utm_medium=email", "add":1397667343, "title": "How to Write Your First Chrome Extension - Justin Yek"}
+]}
+]},
+    {"group": "PHP", "links": [
+        {"href": "http://devzone.zend.com/6/php-101-php-for-the-absolute-beginner/", "add":1359760664, "title": "DevZone » PHP 101: PHP For the Absolute Beginner"},
+        {"href": "http://www.php-einfach.de/php-tutorial/php-dateien.php", "add":1356607568, "title": "PHP-Einfach.de - PHP Tutorial - Datei erstellen"},
+        {"href": "http://www.php.net/manual/de/", "add":1338407864, "title": "PHP: PHP-Handbuch - Manual"}
+]},
+    {"group": "Templates", "links": [
+        {"href": "http://sixrevisions.com/html5/html5-template/?utm_source=html5weekly&utm_medium=email", "add":1409060237, "title": "A Generic HTML5 Template"},
+        {"href": "https://developers.google.com/web/starter-kit/?utm_source=html5weekly&utm_medium=email", "add":1403804606, "title": "Web Starter Kit"},
+        {"href": "http://www.initializr.com/", "add":1353449123, "title": "Initializr - Start an HTML5 Boilerplate project in 15 seconds!"},
+        {"href": "http://de.html5boilerplate.com/", "add":1343733156, "title": "HTML5 Boilerplate - Ein grundsolides Standard template für HTML5"},
+        {"href": "http://joshdmiller.github.io/ng-boilerplate/#/home", "add":1412079313, "title": "Home | ngBoilerplate"},
+        {"group": "x", "links": [
+            {"href": "http://www.1stwebdesigner.com/design/snippets-html5-boilerplate/", "add":1415798728, "title": "20 Snippets You should be using from Html5 Boilerplate"}
+]}
+]},
+    {"group": "Games", "links": [
+        {"href": "http://games.jessefreeman.com/?utm_source=html5weekly&utm_medium=email", "add":1399495356, "title": "Free HTML5 Games | Created By Jesse Freeman"},
+        {"href": "http://www.pandajs.net/tutorials/", "add":1392914083, "title": "Panda.js - Tutorials"},
+        {"href": "https://turbulenz.com/games/save-the-day/play", "add":1368133430, "title": "Turbulenz - super powered social games"},
+        {"href": "http://doc.gameclosure.com/", "add":1361024657, "title": "Game Closure DevKit Documentation"}
+]}
+]}

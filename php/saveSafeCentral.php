@@ -14,13 +14,15 @@ $content = isset($_POST["content"])?$_POST["content"]:"";
 
 
 //backup
-$pathinfo = pathinfo($path);
-$dirname = $pathinfo["dirname"];
-$filename = $pathinfo["filename"];
-$extension = $pathinfo["extension"];
-$now = date("YmdHis");
-$response->add("log", $pathinfo);
-copy("../$path", "../archiv/auto/$dirname/$filename-$now.$extension");
+if($task !== "create" && $task !== "createImage" ) {
+  $pathinfo = pathinfo($path);
+  $dirname = $pathinfo["dirname"];
+  $filename = $pathinfo["filename"];
+  $extension = $pathinfo["extension"];
+  $now = date("YmdHis");
+  $response->add("log", $pathinfo);
+  copy("../$path", "../archiv/auto/$dirname/$filename-$now.$extension");
+}
 
 //JSONinsert, JSONupdate, JSONdelete
 if(substr($task, 0, 4) === "JSON") {
@@ -47,11 +49,14 @@ if(substr($task, 0, 4) === "JSON") {
       }
     }
   }
-  file_put_contents("../$path", json_encode($json, JSON_PRETTY_PRINT));
+  file_put_contents("../$path", json_encode($json));
   $response->add($filename, $json);
 }
 //
 else if ($task == "save") {
+  file_put_contents("../$path", $content);
+}
+else if ($task == "create") {
   file_put_contents("../$path", $content);
 }
 
@@ -60,6 +65,16 @@ else if ($task == "rename") {
   $newpath = $_POST["newpath"];
   rename("../$path", "../$newpath");
   //unlink("../$path");
+}
+else if ($task == "delete") {
+  rename("../$path", "../archiv/auto/$path");
+  //unlink("../$path");
+}
+else if ($task == "createImage") {
+	$content = str_replace('data:image/png;base64,', '', $content);
+	$content = str_replace(' ', '+', $content);
+	$data = base64_decode($content);
+	$success = file_put_contents("../$path", $data);
 }
 
 $response->send();
