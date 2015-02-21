@@ -1,8 +1,7 @@
 <?php include '../php/header.inc.php';?>
 <style>
   .filetable {font-size: 0.75em; }
-  .fileTable td, .fileTable th{padding-right: 1em;line-height: 1.5em;}
-  .fileTable tr {border-bottom: 0.5em solid white;}
+  .fileTable td, .fileTable th{padding: 0; padding-right: 1em;line-height: 1.5em;}
   .fileTable .labels {font-size: 0.8em;}
   .fileTable .labels button {display:none;}
   .fileTable .labels.edit button {display:inline-block;}
@@ -29,21 +28,11 @@ else {
   $bookmarks = "../cms/bookmarks.json";
 }
 ?>
-<!--<form action="../php/uploadImage.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>-->
-<div class="header-container ">
-  <header class="wrapper menu clearfix">
-    <span class="title"><img src="../img/looopingBright.svg" style="width:2em;"></span>
-  </header>  
-</div>
 <div class="main-container">
     <div class="main wrapper clearfix">
         <div>
             <header>
-              <h2>Bookmarks Organizer</h2>
+              <h2><img src="../img/loooping.svg" style="width:1.6em; margin-right: 0.4em;">Bookmarks Organizer</h2>
             </header>
           
           <div class="editchecked">Markierte (<span class="checkCount">0</span>): 
@@ -62,7 +51,7 @@ else {
               <th>Details</th>
               <th>Link</th>
               <th class="modified">Mod</th><!--th>Add</th-->
-              <th class="filter-select" style="width:4em"><i class="icon icon-clipboard2"></i></th>
+              <th class="filter-match" style="width:4em"><i class="icon icon-clipboard2"></i></th>
               <th class="labelheader labels sorter-false filter-match"><i class="icon icon-label"></i>&nbsp;&nbsp;<button class='ok'>ok</button><button class='cancel'>cancel</button></th>
             </tr></thead>
             <tbody></tbody>
@@ -140,10 +129,10 @@ else {
     var rowTemplate = _.template("<tr data-title='{{_.escape(b.title)}}'>"+
     "<td class='preview'><img src='{{getIconPath(b)}}' style='width:16px; height:16px;'></td>"+
     "<td class='boxes'><input class='checkMe' type='checkbox'></td>"+
-    "<td class='title' title='{{b.title}}'>{{b.title.slice(0,40)+(b.title.length>40?'...':'')}}</td>"+
-    "<td class='details' title='{{b.details}}'>{{b.details?b.details.slice(0,10)+'...':''}}</td>"+
-    "<td class='url'><a href='{{b.href}}'>{{b.href.slice(b.href.indexOf('://') + 3, b.href.indexOf('/', b.href.indexOf('://') + 5))}}</a></td>"+
-    "<td class='modified'>{{getDateFromDOb(new Date(b.mod*1000))}}</td>" + // "<td>{{getDateFromDOb(new Date(b.add*1000))}}</td>" +
+    "<td data-type='title' class='title' title='{{b.title}}'>{{b.title.slice(0,40)+(b.title.length>40?'...':'')}}</td>"+
+    "<td data-type='details' class='details' title='{{b.details}}'>{{b.details?b.details.slice(0,10)+'...':''}}</td>"+
+    "<td data-type='href' class='href'><a href='{{b.href}}'>{{b.href.slice(b.href.indexOf('://') + 3, b.href.indexOf('/', b.href.indexOf('://') + 5))}}</a></td>"+
+    "<td class='modified'>{{getDateFromDOb(new Date(b.mod*1000)).slice(0,10)}}</td>" + // "<td>{{getDateFromDOb(new Date(b.add*1000))}}</td>" +
     "<td class='status'>{{b.status?b.status.split(','):'-'}}</td>"+
     "<td class='labels' data-labels='{{b.labels}}'>{{labels}}</td>"+
     "</tr>");
@@ -154,12 +143,13 @@ else {
       b = looD.bookmarks[i];
       //preview = f.folder == "img"?"<img width=50 height=30 src='"+src+"'>":"<iframe width=50 height=30 src='"+src+"'></iframe>";
       //info = f.folder == "img"?"imgsize...":"";
-      labels = (b.labels?b.labels.split(",").reduce(function(old,el,i){return old + "<span class='label'>"+el+"</span>";}, ""):"") + "<span class='showLabels'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
+      labels = (b.labels?b.labels.split(",").reduce(function(old,el,i){return old + "<span class='label' data-label='"+el+"'>"+el+"&nbsp;<i class='removeLabel icon-x'></i></span>";}, ""):"") + "<span class='showLabels'>+++</span><button class='ok'>ok</button><button class='cancel'>cancel</button>";
       $fileTableBody.append(rowTemplate({b: b, labels: labels}))
     }
-    $fileTable.off("click.updateCms").on("click.updateCms", ".updateCms", updateCms);
+    //$fileTable.off("click.updateCms").on("click.updateCms", ".updateCms", updateCms);
     $fileTable.off("click.labels").on("click.labels", ".showLabels", chooseLabel);
-    $fileTable.off("click.rename").on("click.rename", ".folder:not(.edit), .file:not(.edit)", renameDialog);
+    $fileTable.off("click.removeLabel").on("click.removeLabel", ".removeLabel", removeLabel);
+    $fileTable.off("click.rename").on("click.rename", ".title:not(.edit), .details:not(.edit), .href:not(.edit)", renameDialog);
     $fileTable.off("change.checkAll").on("change.checkAll", ".checkAll", function() {$fileTable.find("tr:not(.filtered)").find(".checkMe").prop("checked", $(this).prop("checked")); countChecked();});
     $fileTable.off("click.labelChoice").on("click.labelChoice", ".labelheader:not(.edit)", filterLabel);
     $fileTable.off("click.changeCheck").on("click.changeCheck", ".checkMe", countChecked);
@@ -174,25 +164,25 @@ else {
     $.tablesorter.setFilters( $('.fileTable') , looD.appliedFilters, true);
   }
 
-  function updateCms(e) {
-    var content = {
-      file: $(this).closest("tr").data("file"),
-      folder: $(this).closest("tr").data("folder")
-    }
-    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/cms.json", task: "JSONinsert", content: content}, responseAnalyzer);
-  }
+//  function updateCms(e) {
+//    var content = {
+//      file: $(this).closest("tr").data("file"),
+//      folder: $(this).closest("tr").data("folder")
+//    }
+//    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/cms.json", task: "JSONinsert", content: content}, responseAnalyzer);
+//  }
 
-  $.subscribe("response.cms", checkFiles);
+  //$.subscribe("response.cms", checkFiles);
 
-  function checkFiles() {
-    looD.filelist = _.map(looD.files, function(obj){return obj.file;});
-    looD.infolist = _.map(looD.cms, function(obj){return obj.file;});
-    looD.merge = looD.files.map(function(f){return _.extend(f, _.findWhere(looD.cms, {file: f.file}) || {notininfos: true});});
-    looD.notInInfos = _.difference(looD.filelist, looD.infolist);
-    looD.notInFiles = _.difference(looD.infolist, looD.filelist);
-    if(looD.notInInfos.length!==0) {log("not all Files are in sync");}
-    createFileTable();
-  }
+//  function checkFiles() {
+//    looD.filelist = _.map(looD.files, function(obj){return obj.file;});
+//    looD.infolist = _.map(looD.cms, function(obj){return obj.file;});
+//    looD.merge = looD.files.map(function(f){return _.extend(f, _.findWhere(looD.cms, {file: f.file}) || {notininfos: true});});
+//    looD.notInInfos = _.difference(looD.filelist, looD.infolist);
+//    looD.notInFiles = _.difference(looD.infolist, looD.filelist);
+//    if(looD.notInInfos.length!==0) {log("not all Files are in sync");}
+//    createFileTable();
+//  }
   
   function filterLabel(e) {
     var $cell = $(this).addClass("edit");
@@ -211,7 +201,7 @@ else {
   
   function chooseLabel() {
     var $cell = $(this).closest("td").addClass("edit");
-    var $tree = $("<loo-tree src='<?=$srcTree?>' type='applyTree' checklist='"+$cell.data('labels')+"'></loo-tree>").appendTo($cell);
+    var $tree = $("<loo-tree src='<?=$srcTree?>' type='manageTree applyTree' checklist='"+$cell.data('labels')+"'></loo-tree>").appendTo($cell);
     $cell.find(".ok").on("click", updateLabel.bind(this));
     $cell.find(".cancel").on("click", closeLabel.bind(this));
     //$tree[0].addEventListener("recheck", updateLabel.bind(this));  
@@ -219,11 +209,22 @@ else {
   
   function updateLabel(e) {
     var $cell = $(this).closest("td");
-    var file = $(this).closest("tr").data("file");
-    var content = _.findWhere(looD.cms, {file: file});
-    content.labels = $cell.find("loo-tree").attr("checklist")
-    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: "cms/cms.json", task: "JSONupdate", key:"file", value: file, content: content}, responseAnalyzer);
+    var title = $(this).closest("tr").data("title");
+    var content = _.findWhere(looD.bookmarks, {title: title});
+    content.labels = $cell.find("loo-tree").attr("checklist");
+    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: bookmarkspath, task: "JSONupdate", key:"title", value: title, content: content}, responseAnalyzer).then(createFileTable);
     closeLabel.call(this);
+  }
+  
+  function removeLabel(e) {
+    var $cell = $(this).closest("td");
+    var title = $(this).closest("tr").data("title");
+    var content = _.findWhere(looD.bookmarks, {title: title});
+    var labelarray = content.labels.split(",");
+    labelarray.splice(labelarray.indexOf($(this).closest(".label").data("label")), 1);
+    content.labels = labelarray.join(",");
+    log(content.labels);
+    $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: bookmarkspath, task: "JSONupdate", key:"title", value: title, content: content}, responseAnalyzer).then(createFileTable);
   }
   
   function closeLabel(e) {
@@ -233,31 +234,19 @@ else {
   }
   
   function renameDialog() {
+    var title = $(this).closest("tr").data("title");
     var $cell=$(this).addClass("edit");
-    var oldname=$cell.text();
-    var $input = $("<input value='"+oldname+"'>").appendTo($cell.empty());
+    var oldval=$cell.text();
+    var type = $(this).data("type");
+    var $input = $("<input value='"+oldval+"'>").appendTo($cell.empty());
     var $ok = $("<button>OK</button>").appendTo($cell);
     var $cancel = $("<button>cancel</button>").appendTo($cell);
-    $cancel.on("click", function() {$cell.empty().text(oldname).removeClass("edit")});
+    $cancel.on("click", function() {$cell.empty().text(oldval).removeClass("edit")});
     $ok.on("click", function() {
-      var oldfolder = $cell.closest("tr").data("folder");
-      var oldfile   = $cell.closest("tr").data("file");
-      var newfolder = $cell.hasClass("folder") ? $input.val() : oldfolder;
-      var newfile   = $cell.hasClass("file")   ? $input.val() : oldfile;
-      //$cell.empty().text($input.val()).removeClass("edit");
-      var oldpath = oldfolder + "/" + oldfile;
-      var newpath = newfolder + "/" + newfile;
-      var content = _.findWhere(looD.cms, {file: oldfile});
-      content.folder = newfolder;  
-      content.file = newfile;
-      log("oldfile: " + oldfile + " content: ", content);
-      $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, task: "rename", path: oldpath, newpath: newpath})
-      .fail(function(data) {log("failed", data.responseJSON.message);})
-      .done(function() {
-        $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, task: "JSONupdate", path: "cms/cms.json", key:"file", value: oldfile, content: content}, reset);
-      });
+      var content = _.findWhere(looD.bookmarks, {title: title});
+      content[type] = $input.val();  
+      $.post("../php/saveSafeCentral.php", {code: localStorage.looopCode, path: bookmarkspath, task: "JSONupdate", key:"title", value: title, content: content}, responseAnalyzer).then(createFileTable);
     });
-    
   }
   
 // Markierte

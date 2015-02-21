@@ -1,6 +1,6 @@
 <?php include '../php/header.inc.php';?>
 <link rel="import" href="../elements/element-test.html">
-
+<script type="text/javascript" src="../js/libs/fontChecker.js"></script>
 <style>
   body {padding:1em; 
         font-family: Calibri;
@@ -8,6 +8,7 @@
         font-family: "Latin Modern Roman 10";
         font-family: Asana;
         font-family: Open Sans;
+        font-family: Droid Serif;
         font-family: Cambria;
         }
   
@@ -24,6 +25,7 @@
   .term svg {position:relative;}
   
   .operator__sign {margin: 0 0.2em;}
+  .operator__sign.multiplyImplicit {margin: 0 0.05em;}
   
   .enumerator {vertical-align: text-bottom;}
   .denominator {vertical-align: text-top;}
@@ -32,10 +34,12 @@
   .enumerator>.closepar:last-child {display:none;}
   .denominator>.openpar:first-child {display:none;}
   .denominator>.closepar:last-child {display:none;}
+  .exponent>.openpar:first-child {display:none;}
+  .exponent>.closepar:last-child {display:none;}
   
   .exponent {vertical-align: text-bottom;}
   
-  .identifier {font-style: italic; /*padding-right: 0.15em; margin-right: 0;*/ }
+  .symbol {font-style: italic; /*padding-right: 0.15em; margin-right: 0;*/ }
   
 </style>
 
@@ -64,16 +68,24 @@ label><input type="range" value=50 min=0 max=200 data-scale=0.01 data-for="parse
 <label><input type="range" value=0 min=-100 max=100 data-scale=0.001 data-for="parser.renderingOptions.fracBarOffset"/>fracBarOffset = <span>12</span></label><br>-->
 <br>
 <div id="output"></div>
-<span class="term"></span> = <span class="result"></span><br>
+<span class="term term1"></span> = <span class="result1"></span> This is result number one<br>This is result number one<br>
+<span class="term term2"></span> = <span class="result2"></span><br><br>
 <?php include '../php/prefooterscripts.inc.php';?>
-<script>
+<script type="text/javascript">
   
-  var parser = new Parser("1/(x^2+y^2)", $(".term"), $(".result"));
+  var parser1 = new Parser("1/8", $(".term1"), $(".result1"));
+  var parser2 = new Parser("1/(y^2+v_vec^2)", $(".term2"), $(".result2"));
+  
+  var fd = new Detector()
+  log("Arial", fd.detect("Arial"))
+  log("Cambria", fd.detect("Cambria"))
+  log("uijiurr", fd.detect("kndrjnbrg"))
+  log("Latin Modern Roman 10", fd.detect("Latin Modern Roman 10"))
   
   //log(parser.output);
   //setTimeout(function() {parser.parse("7/5"); parser.render($(".term"));}, 100);
-  $("#ok").on("click", function() {parser.update({termstring: $("#eq").val()});});
-  $("input[type=range]").on("change", function() {parser.update();});
+  $("#ok").on("click", function() {parser1.update({termstring: $("#eq").val()});});
+  $("input[type=range]").on("change", function() {parser1.update();});
 //  $(document).ready( function() {
 ////    var parsed2 = math.parse('sqrt(x^2 + x/4 + 3*sin(60))');
 ////    //logNodes(parsed2);
@@ -128,7 +140,5 @@ label><input type="range" value=50 min=0 max=200 data-scale=0.01 data-for="parse
 //      log("Other Nodetype: " + node.type);
 //    }
 //  }
-  
-
 </script>
 <?php include '../php/footer.inc.php';?>

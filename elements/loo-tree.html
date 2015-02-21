@@ -19,10 +19,10 @@
       ul {margin:0;padding:0;}
       li ul {padding: 0 0 0 1.2em;}
       i {margin: 0 0.3em; display: inline-block; width: 1em;}
-      i.move {display: none; float: right;}
+      i.edit {display: none; float: right;}
       i.add {display: none;}
       .itemrow {background-color: #ddeeff;}
-      .itemrow:hover>i.move {display: inline-block;}
+      .itemrow:hover>i.edit {display: inline-block;}
       .itemrow {display: block;}
       .itemrow:hover {background-color: #99aabb;}    
       .itemrow.draghover {background-color: #99aabb !important;}
@@ -64,6 +64,7 @@
       this.$ul.on("click", ".icon-triangle-down", function() {that.moveDown( $(this).closest('li').data('name')); that.update();});
       this.$ul.on("click", ".icon-triangle-left", function() {that.moveLeft( $(this).closest('li').data('name')); that.update();});
       this.$ul.on("click", ".icon-triangle-right",function() {that.moveRight($(this).closest('li').data('name')); that.update();});
+      this.$ul.on("click", ".icon-x",             function() {that.spliceElement($(this).closest('li').data('name')); that.update();});
 
       this.$ul.on("click", ".pasteBefore", function() {$(this).addClass("add").parents().attr("draggable", false);});
       this.$ul.on("click", ".pasteBefore.add button.ok", this.add.bind(this));
@@ -108,7 +109,7 @@
       var $li= $("<li class='label" + (item[this.COLLAPSED]?" collapsed":" expanded") + (item[this.SUBTREE].length?" hasKids":" noKids") + "' data-name='"+ item[this.NAME]+"'><span class='itemrow'><i class='icon icon-plus2'></i><i class='icon icon-minus'></i><i class='icon icon-primitive-dot'></i><span class='itemname'>"+item[this.NAME]+"</span></span></li>").appendTo($ul);
       if(this.type.indexOf("manageTree") > -1) {
         var $liBefore = $("<li class='pasteBefore' data-name='"+ item[this.NAME]+"'><span><i class='icon add icon-plus22'></i>&nbsp;<input name='newItem'><button class='ok'>ok</button><button class='cancel'>cancel</button></span></li>").insertBefore($li);
-        $li.attr("draggable", "true").find(".itemrow").append("<i class='icon edit icon-delete'></i><i class='icon move icon-triangle-left'></i><i class='icon move icon-triangle-right'></i><i class='icon move icon-triangle-up'></i><i class='icon move icon-triangle-down'></i>");
+        $li.attr("draggable", "true").find(".itemrow").append("<i class='icon edit icon-x'></i><i class='icon edit move icon-triangle-left'></i><i class='icon edit move icon-triangle-right'></i><i class='icon move edit icon-triangle-up'></i><i class='icon move edit icon-triangle-down'></i>");
       }
       if(this.type.indexOf("applyTree") > -1) {
         $li.find(".itemname").replaceWith("<label><input type='checkbox' name='"+item[this.NAME]+"' "+(this.checklist.indexOf(item[this.NAME])>=0?"checked":"")+"><span class='itemname'> "+item[this.NAME]+"</span></label>");

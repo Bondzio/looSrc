@@ -10,11 +10,11 @@
 $tree = filter_input(INPUT_GET, "tree", FILTER_SANITIZE_STRING);
 if($tree === "physics") {
   $srcTree = "../cms/labels.json";
-  $bookmarks = "../cms/bookmarks.json";
+  $bookmarkspath = "cms/bookmarks.json";
 }
 if($tree === "web") {
   $srcTree = "../cms/weblabels.json";
-  $bookmarks = "../cms/webbookmarks.json";
+  $bookmarkspath = "cms/webbookmarks.json";
 }
 
 
@@ -59,7 +59,7 @@ if($tree === "web") {
       //iconurl: tab.favIconUrl,
     }
     
-    var data = {code: localStorage.looopCode, task: "JSONinsert", path: "<?=$bookmarks?>", content: newBookmark}
+    var data = {code: localStorage.looopCode, task: "JSONinsert", path: "<?=$bookmarkspath?>", content: newBookmark}
     $.post("../php/saveSafeCentral.php", data, function(resp) {
       document.getElementById("myDiv").innerHTML = "Bookmark saved!";
       //setTimeout(function() {window.close();}, 500)
