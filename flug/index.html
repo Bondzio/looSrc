@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>Mein Flugsimulator</title>
+<!-- Google API laden -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+google.load("earth", "1");
+</script>
+<script src="jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<h1>Mein Flugsimulator</h1>
+<form name="destination" >
+Wählen sie ihre Destionation aus:
+<select id="destination" name="destination">
+	<!--<option value="select">Select Destination</option> -->
+	<option value="AktuelleAnsicht">Aktuelle Ansicht</option>
+	<option selected="selected" value="Gymer">Gymnasium Burgdorf</option>
+	<option value="Samedan">Samedan</option>
+	<option value="Zuerich">Zuerich</option> 
+	<option value="LasVegas">Las Vegas</option>
+	<option value="SanFrancisco">San Francisco</option>
+</select>
+</form>
+	
+<form name="menu" action="flug.html" method="get">
+<div>
+<input type="text" id="Latitude" name="Latitude" value="47.0567"> <!--Breitengrad-->
+<input type="text" name="Longitude" value="7.62039"> <!--Längengrad-->
+<input type="text" name="Altitude" value="580"> <!--Höhe über Meer-->
+<input type="text" name="Tilt" value="90"> <!--Höhenruder-->
+<input type="text" name="Roll" value="0"> <!--Querruder-->
+<input type="text" name="Heading" value="0"> <!--Blickrichtung-->
+<select name="Modell">
+  <option value="jet">Jet</option> 
+  <option value="adler">Adler</option>
+  <option value="none">Nichts</option>
+</select>
+</div>
+<p>
+
+</p>
+<button id="losfliegen">Losfliegen</button>
+</form>
+
+
+<div id="map3d" style="width:1200px; height:800px;">
+</div>
+
+
+<script>
+
+$("#destination").on("change", function() {
+console.log($("#destination").val());
+	if  ($("#destination").val()=="Zuerich") {
+		document.forms["menu"].elements["Latitude"].value = 47.44545;
+		document.forms["menu"].elements["Longitude"].value = 8.55679;
+		document.forms["menu"].elements["Altitude"].value = 430;
+		document.forms["menu"].elements["Tilt"].value = 90;
+		document.forms["menu"].elements["Roll"].value = 0;
+		document.forms["menu"].elements["Heading"].value = -25;
+	}
+        if  ($("#destination").val()=="AktuelleAnsicht") {
+		camera = ge.getView().copyAsCamera(ge.ALTITUDE_ABSOLUTE);
+		document.forms["menu"].elements["Latitude"].value = camera.getLatitude();
+		document.forms["menu"].elements["Longitude"].value = camera.getLongitude();
+		document.forms["menu"].elements["Altitude"].value = camera.getAltitude();
+		document.forms["menu"].elements["Tilt"].value = camera.getTilt();
+		document.forms["menu"].elements["Roll"].value = camera.getRoll();
+		document.forms["menu"].elements["Heading"].value = camera.getHeading();
+	}
+	if  ($("#destination").val()=="Samedan") {
+		document.forms["menu"].elements["Latitude"].value = 46.52722;
+		document.forms["menu"].elements["Longitude"].value = 9.87825;
+		document.forms["menu"].elements["Altitude"].value = 1715;
+		document.forms["menu"].elements["Tilt"].value = 90;
+		document.forms["menu"].elements["Roll"].value = 0;
+		document.forms["menu"].elements["Heading"].value = 29;
+	}
+	if  ($("#destination").val()=="LasVegas") {
+		document.forms["menu"].elements["Latitude"].value = 36.07595;
+		document.forms["menu"].elements["Longitude"].value = -115.17;
+		document.forms["menu"].elements["Altitude"].value = 670;
+		document.forms["menu"].elements["Tilt"].value = 90;
+		document.forms["menu"].elements["Roll"].value = 0;
+		document.forms["menu"].elements["Heading"].value = 25;
+	}
+        if  ($("#destination").val()=="SanFrancisco") {
+		document.forms["menu"].elements["Latitude"].value = 37.6075;
+		document.forms["menu"].elements["Longitude"].value = -122.38028;
+		document.forms["menu"].elements["Altitude"].value = 10;
+		document.forms["menu"].elements["Tilt"].value = 90;
+		document.forms["menu"].elements["Roll"].value = 0;
+		document.forms["menu"].elements["Heading"].value = 27.7;
+	}
+	if  ($("#destination").val()=="Gymer") {
+		document.forms["menu"].elements["Latitude"].value = 47.0567;
+		document.forms["menu"].elements["Longitude"].value = 7.62039;
+		document.forms["menu"].elements["Altitude"].value = 576;
+		document.forms["menu"].elements["Tilt"].value = 90;
+		document.forms["menu"].elements["Roll"].value = 0;
+		document.forms["menu"].elements["Heading"].value = -170;
+	}
+        setCam();
+});
+
+function setCam() {
+  camera = ge.getView().copyAsCamera(ge.ALTITUDE_ABSOLUTE);
+  camera.setLatitude(+document.forms["menu"].elements["Latitude"].value);
+  camera.setLongitude(+document.forms["menu"].elements["Longitude"].value);
+  camera.setAltitude(+document.forms["menu"].elements["Altitude"].value);
+  camera.setTilt(90);
+  camera.setRoll(0);
+  camera.setHeading(+document.forms["menu"].elements["Heading"].value);
+  ge.getView().setAbstractView(camera);
+}
+
+
+</script>
+<script>
+ function init() {
+      google.earth.createInstance('map3d', initCB, failureCB);
+    }
+function initCB(instance) {
+   ge = instance;
+   ge.getWindow().setVisibility(true);
+   setCam();
+}
+function failureCB(errorCode) {}
+google.setOnLoadCallback(init);
+</script>
+</body>
+</html>

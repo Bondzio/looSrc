@@ -19,6 +19,13 @@ $opp:  hsl(45,80,72);
   @include selection($mainShine);
 }
 
+a {text-decoration: none; color: inherit;}
+
+:focus {
+  //@include transition-property(outline-width);
+  outline: $main 2px solid;
+}
+
 html {
     //font-size: 1.5vw;
     line-height: 1.4;
@@ -84,6 +91,9 @@ html {
 .title {
     color: white;
 }
+
+.template {display:none;}
+
 /*
  ==============
     MOBILE: Menu

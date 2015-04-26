@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stuctures</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <canvas id="c" width =1200 height=800></canvas>
+    <script>
+
+  // settings
+
+var physics_accuracy  = 5,
+    mouse_influence_sqr   = 100,
+    mouse_cut_sqr         = 100,
+    gravity           = 1000,
+    cloth_height      = 15,
+    cloth_width       = 40,
+    start_y           = 20,
+    spacing           = 15,
+    tear_distance     = 60;
+    stiffness         = 0.8,
+    maxStress         = 1000;
+    angStiffness      = 0.05,
+    stiff             = true,
+    lineWidth         = 5,
+    t = 0;
+
+var canvas,
+    ctx,
+    cloth,
+    points = [],
+    constraints = [],
+    angulars = [],
+    boundsx,
+    boundsy,
+    mouse = {
+        down: false,
+        button: 1,
+        x: 0,
+        y: 0,
+        px: 0,
+        py: 0
+    };
+
+window.requestAnimFrame =
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function (callback) {
+        window.setTimeout(callback, 16.6);
+};
+
+
+var Point = function (x, y) {
+    this.x      = x;
+    this.y      = y;
+    this.px     = x;
+    this.py     = y;
+    this.nx     = 0;
+    this.ny     = 0;
+    this.pin_x  = null;
+    this.pin_y  = null;
+    this.constraints = [];
+    this.angulars = [];
+};
+
+Point.prototype.update = function (delta) {
+    if (mouse.down) {
+        var diff_x = this.x - mouse.x,
+            diff_y = this.y - mouse.y,
+            distsqr = diff_x * diff_x + diff_y * diff_y;
+        if (mouse.button == 1) {
+            if (distsqr < mouse_influence_sqr) {
+                this.px = this.x - (mouse.x - mouse.px) * 1.8;
+                this.py = this.y - (mouse.y - mouse.py) * 1.8;
+            }
+        } else if (distsqr < mouse_cut_sqr) {
+          for(var i = this.constraints.length-1; i>=0; i--) {
+            this.constraints[i].remove();
+          }
+        }
+    }
+
+    //Verlet Step
+    this.nx = this.x + ((this.x - this.px) * .99);
+    this.ny = this.y + ((this.y - this.py) * .99) + 0.5 * gravity  * delta * delta;
+
+    this.px = this.x;
+    this.py = this.y;
+
+    this.x = this.nx;
+    this.y = this.ny;
+};
+
+Point.prototype.draw = function () {
+  /* Reserve Punkte zeichnen
+    if(0) { //Reserve
+      ctx.beginPath();
+      ctx.arc(this.x,this.y, 2, 0, 6.283);
+      ctx.stroke();
+    } */
+};
+
+Point.prototype.resolve_constraints = function () {
+    if (this.pin_x !== null && this.pin_y !== null) {
+        this.x = this.pin_x;
+        this.y = this.pin_y;
+        return;
+    }
+
+    var i = this.constraints.length;
+    while (i--) this.constraints[i].resolve();
+    
+    //Blocken an linkem und rechtem Rand
+    this.x > boundsx ? this.x = 2 * boundsx - this.x : 1 > this.x && (this.x = 2 - this.x);
+    //Fällt unten nicht raus
+    this.y < 1 ? this.y = 2 - this.y : this.y > boundsy && (this.y = 2 * boundsy - this.y);
+};
+
+Point.prototype.attach = function (point) {
+
+  //add Contraints
+  constraints.push(new Constraint(this, point));
+  this.constraints.push(constraints[constraints.length - 1]);
+  point.constraints.push(constraints[constraints.length - 1]);
+  
+  //addAngularContraints 
+  var thirdpoint;
+  var myC = this.constraints.length-1;
+  while(myC--) {
+    thirdpoint = (this.constraints[myC].p1 === this)?this.constraints[myC].p2:this.constraints[myC].p1;
+    angulars.push(new AngularConstraint(point, this, thirdpoint));
+    this.angulars.push(angulars[angulars.length - 1]);
+  }
+  var oC = point.constraints.length-1;
+  while(oC--) {
+    thirdpoint = (point.constraints[oC].p1 === point)?point.constraints[oC].p2:point.constraints[oC].p1;
+    angulars.push(new AngularConstraint(this, point, thirdpoint));
+    point.angulars.push(angulars[angulars.length - 1]);
+  }
+};
+
+Point.prototype.pin = function (pinx, piny) {
+    this.pin_x = pinx;
+    this.pin_y = piny;
+};
+
+var Constraint = function (p1, p2) {
+    this.p1     = p1;
+    this.p2     = p2;
+    this.length = spacing;
+    this.stress = 0;
+    //cloth.constraints.push(this);
+};
+
+Constraint.prototype.resolve = function () {
+    var dx  = this.p1.x - this.p2.x,
+        dy  = this.p1.y - this.p2.y;
+        dsquare = dx*dx + dy*dy;
+        
+    var rquadrat = this.length * this.length;
+    this.stress += Math.abs(dsquare - rquadrat);
+    //if (Math.abs(this.stress)>rekord) {console.log(this.stress); rekord = Math.abs(this.stress);}
+    if (this.stress > maxStress) {this.remove();}
+   
+    if(stiff || rquadrat < dsquare){
+    this.p1.x += stiffness * dx * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p1.y += stiffness * dy * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p2.x -= stiffness * dx * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p2.y -= stiffness * dy * (-0.5 + rquadrat/(rquadrat + dsquare));
+    }
+};
+
+Constraint.prototype.remove = function () {
+    var p1 = this.p1;
+    var p2 = this.p2;
+    var angs, ang;
+    angs = p1.angulars.length;
+    while(angs--) {
+      ang = p1.angulars[angs];
+      if(ang.a === p2 || ang.c === p2) {
+        p1.angulars.splice(p1.angulars.indexOf(ang), 1);
+        angulars.splice(angulars.indexOf(ang), 1);
+      }
+    }
+    angs = p2.angulars.length;
+    while(angs--) {
+      ang = p2.angulars[angs];
+      if(ang.a == p1 || ang.c == p1) {
+        p2.angulars.splice(p2.angulars.indexOf(ang), 1);
+        angulars.splice(angulars.indexOf(ang), 1);
+      }
+    }
+    p2.constraints.splice(p2.constraints.indexOf(this), 1);
+    p1.constraints.splice(p1.constraints.indexOf(this), 1);
+    constraints.splice(constraints.indexOf(this), 1);
+    //if(p1.constraints.length === 0) remove_point
+};
+
+Constraint.prototype.draw = function () {
+  //console.log(this.stress);
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(" + Math.round(30*Math.log(1+Math.abs(this.stress))) + ",0, 0)";
+    ctx.moveTo(this.p1.x, this.p1.y);
+    ctx.lineTo(this.p2.x, this.p2.y);
+    ctx.stroke();
+    this.stress = 0;
+};
+
+var AngularConstraint = function(a, b, c){ //b is middle
+  this.a = a;
+  this.b = b;
+  this.c = c;
+  this.angle = findAngle(a, b, c);
+  this.stiffness = angStiffness;
+};
+
+function findAngle(p1, mid, p2) {
+    var dir1 = Math.atan2(mid.y-p1.y, mid.x-p1.x),
+        dir2 = Math.atan2(p2.y-mid.y, p2.x-mid.x),
+        angle = dir2-dir1;
+        if(angle > Math.PI) {angle -= 2*Math.PI;}
+        if(angle < -Math.PI) {angle += 2*Math.PI;}
+    return angle;
+}
+
+AngularConstraint.prototype.relax = function() {
+
+	var angle = findAngle(this.a, this.b, this.c);
+
+	var diff = angle - this.angle;
+
+	if (diff <= -Math.PI)
+		diff += 2*Math.PI;
+	else if (diff >= Math.PI)
+		diff -= 2*Math.PI;
+
+	diff *= this.stiffness;
+/*
+	this.a.pos = this.a.pos.rotate(this.b.pos, diff);
+	this.c.pos = this.c.pos.rotate(this.b.pos, -diff);
+	this.b.pos = this.b.pos.rotate(this.a.pos, diff);
+	this.b.pos = this.b.pos.rotate(this.c.pos, -diff);*/
+    
+  rotate(this.a, this.b, diff);
+  rotate(this.c, this.b, -diff);
+  rotate(this.b, this.a, diff);
+  rotate(this.b, this.c, -diff);  
+/*
+  this.a.x = (this.a.x-this.b.x) * Math.cos(diff) - (this.a.y-this.b.y) *Math.sin(diff) + this.b.x;
+  this.a.y = (this.a.x-this.b.x) * Math.sin(diff) + (this.a.y-this.b.y) *Math.cos(diff) + this.b.y;
+  this.c.x = (this.c.x-this.b.x) * Math.cos(-diff) - (this.c.y-this.b.y) *Math.sin(-diff) + this.b.x;
+  this.c.y = (this.c.x-this.b.x) * Math.sin(-diff) + (this.c.y-this.b.y) *Math.cos(-diff) + this.b.y;
+  this.b.x = (this.b.x-this.a.x) * Math.cos(diff) - (this.b.y-this.a.y) *Math.sin(diff) + this.a.x;
+  this.b.y = (this.b.x-this.a.x) * Math.sin(diff) + (this.b.y-this.a.y) *Math.cos(diff) + this.a.y;
+  this.b.x = (this.b.x-this.c.x) * Math.cos(-diff) - (this.b.y-this.c.y) *Math.sin(-diff) + this.c.x;
+  this.b.y = (this.b.x-this.c.x) * Math.sin(-diff) + (this.b.y-this.c.y) *Math.cos(-diff) + this.c.y;*/
+};
+
+function rotate(point, origin, angle) {
+  point.x =  (point.x-origin.x) * Math.cos(angle) - (point.y-origin.y) *Math.sin(angle) + origin.x;
+  point.y = (point.x-origin.x) * Math.sin(angle) + (point.y-origin.y) *Math.cos(angle) + origin.y;
+  return true;
+}
+
+
+var Cloth = function () {
+
+    this.points = [];
+    this.constraints = [];
+
+    var start_x = canvas.width / 2 - cloth_width * spacing / 2;
+
+    for (var y = 0; y <= cloth_height; y++) {
+
+        for (var x = 0; x <= cloth_width; x++) {
+
+            var p = new Point(start_x + x * spacing, start_y + y * spacing);
+            p.name = "(" + x + ";" + y + ")";
+            x != 0 && p.attach(this.points[this.points.length - 1]); //linken Nachbar anheften
+            if(y == cloth_height) p.pin(p.x, p.y);
+            y != 0 && p.attach(this.points[x + (y - 1) * (cloth_width + 1)]); //oberen Nachbar anheften
+            this.points.push(p);
+        }
+    }
+    //for(var pu = this.points.length-1; pu>=0; pu--) {p =  this.points[pu]; console.log(p.name, p.angulars.length);}
+};
+
+Cloth.prototype.update = function () {
+
+    var i = physics_accuracy;
+
+    while (i--) {
+        var a = angulars.length;
+        while (a--) angulars[a].relax();
+        
+      var p = this.points.length;
+        while (p--) this.points[p].resolve_constraints();
+        
+
+    }
+
+    i = this.points.length;
+    while (i--) this.points[i].update(.016);
+};
+
+Cloth.prototype.draw = function () {
+
+    
+
+    var i = constraints.length;
+    while (i--) constraints[i].draw();
+    //ctx.stroke();
+    
+    var p = this.points.length;
+    while (p--) this.points[p].draw();
+
+
+};
+
+function update() {
+    t+=1;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    cloth.update();
+    cloth.draw();
+    requestAnimFrame(update);
+}
+
+function start() {
+
+    canvas.onmousedown = function (e) {
+        mouse.button  = e.which;
+        mouse.px      = mouse.x;
+        mouse.py      = mouse.y;
+        var rect      = canvas.getBoundingClientRect();
+        mouse.x       = e.clientX - rect.left,
+        mouse.y       = e.clientY - rect.top,
+        mouse.down    = true;
+        e.preventDefault();
+    };
+
+    canvas.onmouseup = function (e) {
+        mouse.down = false;
+        e.preventDefault();
+    };
+
+    canvas.onmousemove = function (e) {
+        mouse.px  = mouse.x;
+        mouse.py  = mouse.y;
+        var rect  = canvas.getBoundingClientRect();
+        mouse.x   = e.clientX - rect.left,
+        mouse.y   = e.clientY - rect.top,
+        e.preventDefault();
+    };
+
+    canvas.oncontextmenu = function (e) {
+        e.preventDefault();
+    };
+
+    boundsx = canvas.width - 1;
+    boundsy = canvas.height - 1;
+
+    //ctx.strokeStyle = '#888';
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = "round"
+  
+    cloth = new Cloth();
+  
+    update();
+    
+}
+
+window.onload = function () {
+
+    canvas  = document.getElementById('c');
+    ctx     = canvas.getContext('2d');
+    start();
+};
+
+
+    </script>
+  </body>
+</html>

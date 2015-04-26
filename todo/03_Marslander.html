@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/simall.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/pixi.js"></script>
+    <script src="../js/pixi-helpers.js"></script>
+    <script src="../js/myJS.js"></script>
+    <script src="../js/simHelpers.js"></script>    <title>Mars Lander</title>
+    <style>
+      body {
+/*        background: #000 url(../img/europa.jpg) no-repeat;
+        background-size: 100%;*/
+      }
+      
+    </style>
+  </head>
+<body>
+<div class="watchlist">
+</div><script>
+  
+var world = new World({
+  hUnits: 170,
+  coords: {step: 20, onlyY: true},
+  unit: "m",
+  minUnits: {x: 0, y:-10},
+  bgColor: 0x662200,
+  fontColor: "#ffdddd"
+});
+
+var mars = new PassiveSprite({img: "../img/marsbackground.png", hUnits: 160, x: 0, y: 0, anchor: {x:0, y:1}, background: true});
+
+var lander = new Actor({img: "../img/marsmobil120.png", anchor: {x: 0.5, y: 1}, autorotate: false, wUnits: 14});
+
+// SPARKS
+var sparks = [];
+var sparkimage = new PIXI.Texture.fromImage("../img/spark1.png");
+
+function createSpark(offset) {
+  var randomOffset = (Math.random() - 0.5);
+  var spark = new Actor({
+    texture: sparkimage,
+    x: lander.x + offset.x + 0.8*randomOffset,
+    y: lander.y + offset.y,
+    vx: 2*randomOffset,
+    vy: lander.vy - 10 + Math.abs(15*randomOffset),
+  });
+  spark.age = 0;
+  return spark;
+}
+
+function sparkle() {
+  if(schub) {
+    for(i=0; i<3; i++) {
+      sparks[sparks.length] = createSpark({x:-6.1, y:18}); //offset in Meter
+      sparks[sparks.length] = createSpark({x: 6.1, y:18}); //offset in Meter 
+    }
+  }
+  var i = 0;
+  while(i<sparks.length) {
+    sparks[i].age += 1;
+    sparks[i].sprite.alpha -= 0.04;
+    sparks[i].x += sparks[i].vx * dt;
+    sparks[i].y += sparks[i].vy * dt;
+    
+    if (sparks[i].age >= 25) {
+      sparks[i].destroy();
+      sparks.splice(i,1);
+    }
+    else i++;
+  }
+}
+
+//SIM
+function setup() {
+  dt = 2 * 0.016;
+  g = -3.7; // Fallbeschleunigung in m/s2
+  
+  schub = 0; // ob die Rakte beschleunigt oder nicht
+  F = 12000; // Schubkraft in Newton
+  m = 1800; // Masse in kg
+  x = 40;
+  y = 140; // Anfangshöhe in m
+  vy = 0; // Anfangsgeschwindigkeit in m/s
+  
+  window.addEventListener("keydown", function(event) {
+    if(event.which == 32){schub = 1;}
+  });
+
+  window.addEventListener("keyup", function(event) {
+    if(event.which == 32){schub = 0;}
+  });
+}
+
+
+function loop() {
+
+  if(y > 0) {
+    ay = g;
+
+    if(schub==1){
+      //wie gross ist die Beschleunigung der Rakete nun?
+    }
+
+    vy += ay * dt;
+    y += vy * dt;
+    
+    world.update();
+    //t = t + dt;
+  }
+  else {
+    $(".watchlist").html("Aufprallgeschwindigkeit: " + vy.toFixed(2) + " m/s");
+  }
+}
+
+/***************************************
+ * Aufgabe:
+ * 
+ * 1. Die Schubkraft (Leertaste drücken)
+ *    soll eine Bremsung bewirken.
+ * 
+ * 2. Versuchen sie die Rakete mit weniger als
+ *    2 m/s zu landen.
+ *    
+ ***************************************/
+
+
+
+//ENDSIM
+
+setup();
+loopStart();
+
+loopExtension = function() {
+  mapPropsToActor(["x", "y", "vx", "vy"], lander);
+  sparkle();
+  if(y>0) {
+    $(".watchlist").html("v = " + vy.toFixed(1) + " m/s");
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html style="padding:0px;">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mein Flugsimulator</title>
+  <!-- Google API laden -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.load("earth", "1");
+  </script>
+  
+</head>
+
+<body>
+
+<h1>Mein Flugsimulator</h1>
+
+<form action='index.html' method='post'>
+  <button>Back</button>
+</form>
+
+<div style='overflow: hidden; height:600px;'><!-- Diese umhüllende div schneidet die Google Earth Infos ab, kann man auch weglassen-->
+  <div id="map3d" style="width:800px; height:664px; background-color: orange;"></div>
+</div>
+
+<div id="Anzeige" style="width:800px; background-color:#ccd; font-size:200%">
+  <span id="kompass" style="display:inline-block; width:200px; margin-left:10px;">N</span>
+  <span id="v" style="display:inline-block; width:200px; ">0</span>
+  <span id="h" style="display:inline-block; width:200px;">0</span>
+</div>
+
+
+
+
+<script>
+
+//Benötigte Variabeln
+var v = 50;
+var a = 0; // nicht wirklich die Beschleunigung, nur ob beschleunigt wird (a=1) oder nicht (a=0)
+var h = 5; // Höhe ab Boden, Bei den Flugplatz Koordinaten 5m über der Meerehöhe des Flugplatzes eingeben
+var t = (new Date()).getTime();
+var t_alt = t;
+var dt = 0.016; // Sekunden pro Zeitschritt, wird unten neu berechnet
+var ziehen = 0;
+var stossen = 0;
+var links = 0;
+var rechts = 0;
+var steuerung = links - rechts;
+var hoehenruder = ziehen - stossen;
+var flugi;
+var stepCount = 0;
+var flugihistory = [];
+for(var i =0; i<=1000; i++){flugihistory[i] = {lat:47, lon: 10, alt: 10000, head: 0, tilt: 90, roll: 0};}
+
+var model = getURLParameter("Modell");
+
+
+//Benötigte Funktionen
+var sin = function(deg) {return Math.sin(deg*Math.PI/180);};
+var cos = function(deg) {return Math.cos(deg*Math.PI/180);};
+//var beimNaechstenBild = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+//var beimNaechstenBild = function(t){setTimeout(t,1e3/60);};
+ 
+function init() {
+  google.earth.createInstance('map3d', initCB, failureCB);
+}
+
+function initCB(instance) {
+  ge = instance;
+  ge.getWindow().setVisibility(true);
+  
+  ge.getOptions().setFlyToSpeed(ge.SPEED_TELEPORT);
+  ge.getOptions().setMouseNavigationEnabled(false);
+  //ge.getOptions().setFlyToSpeed(100);  // don't filter camera motion
+  
+  //Mögliche Einstellungen
+  ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS, true);
+  //ge.getSun().setVisibility(true);
+  ge.getOptions().setAtmosphereVisibility(true);
+  //ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS_LOW_RESOLUTION, true);
+  //ge.getLayerRoot().enableLayerById(ge.LAYER_TREES, true);
+  //ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
+  //ge.getSun().setVisibility(true);
+  //ge.getOptions().setAtmosphereVisibility(true);
+  //ge.getOptions().setStatusBarVisibility(true);
+  //ge.getOptions().setTerrainExaggeration(2.0);
+    
+  // Get the current view.
+  flugi = ge.getView().copyAsCamera(ge.ALTITUDE_ABSOLUTE);
+  // Koordinaten aus URL übernehmen
+  flugi.setLatitude(+getURLParameter("Latitude")); //Breitengrad
+  flugi.setLongitude(+getURLParameter("Longitude")); //Längengrad
+  flugi.setAltitude(+getURLParameter("Altitude")); // Höhe über dem Boden
+  flugi.setTilt(+getURLParameter("Tilt")); // Höhenruder
+  flugi.setRoll(+getURLParameter("Roll")); // Querruder
+  flugi.setHeading(+getURLParameter("Heading")); // In welche Richtung geschaut wird
+  ge.getView().setAbstractView(flugi);
+  
+
+  if(model !== "none") insertModel();
+  naechstesBild();
+  google.earth.addEventListener(ge, "frameend", function() {naechstesBild();});
+  
+    // Make sure keyboard focus starts out on the page.
+  ge.getWindow().blur();
+  // If the user clicks on the Earth window, try to restore keyboard
+  // focus back to the page.
+  google.earth.addEventListener(ge.getWindow(), "mouseup", function(event) {
+      ge.getWindow().blur();
+    });
+  
+}
+
+function failureCB(errorCode) {
+}
+
+window.addEventListener(
+  "keydown",
+  function(e) {
+    if (e.which == 17){a = 1;}
+    if (e.which == 37) {links = 1;}
+    if (e.which == 40) {ziehen = 1;}
+    if (e.which == 39) {rechts = 1;}
+    if (e.which == 38) {stossen = 1;}
+    e.preventDefault();
+  },
+  0);
+
+window.addEventListener(
+  "keyup",
+  function(e) {
+    if (e.which == 17) {a = 0;}
+    if (e.which == 37) {links = 0;}
+    if (e.which == 40) {ziehen = 0;}
+    if (e.which == 39) {rechts = 0;}
+    if (e.which == 38) {stossen = 0;}
+    e.preventDefault();
+  },
+  0);
+
+
+//Teleport model
+function teleport(lat, lon, heading) {
+  me.model.getLocation().setLatitude(lat);
+  me.model.getLocation().setLongitude(lon);
+  me.model.getLocation().setAltitude(flugi.getAltitude());
+  me.orientation.setHeading(flugi.getHeading());
+  me.orientation.setTilt(90-flugi.getTilt());
+  me.orientation.setRoll(flugi.getRoll());
+  me.model.setOrientation( me.orientation);
+};
+  
+//Modell einfügen http://loooping.ch/flug/flugis3d/milktruck.kmz
+var me = {};
+function insertModel(){
+  google.earth.fetchKml(ge, "http://loooping.ch/flug/flugis3d/hawk.kmz", function(kml) {
+    
+    me.placemark = kml.getFeatures().getChildNodes().item(1);
+    me.model = me.placemark.getGeometry();
+    me.orientation = me.model.getOrientation();
+    me.location = me.model.getLocation();
+  
+    me.model.setAltitudeMode(ge.ALTITUDE_ABSOLUTE);
+    me.orientation.setHeading(90);
+    me.model.setOrientation(me.orientation);
+    
+    ge.getFeatures().appendChild(me.placemark);
+      
+    teleport(flugi.getLatitude() +  20 * cos(flugi.getHeading()) * 360/40000000, flugi.getLongitude() + 20 * sin(flugi.getHeading()) * 360/(40000000*cos(flugi.getLatitude())), flugi.getHeading());
+    
+    /*
+    me.balloon = ge.createHtmlStringBalloon('okok');
+    me.balloon.setFeature(me.placemark);
+    me.balloon.setMaxWidth(200);
+    me.balloon.setForegroundColor("#ffffff");
+    me.balloon.setBackgroundColor("#000000");
+    me.balloon.setContentString("<h1>message</h1>");
+    ge.setBalloon(me.balloon);
+    */
+    
+    // Create the GroundOverlay
+    me.shadow = ge.createGroundOverlay('');
+    var icon = ge.createIcon('');
+    icon.setHref("http://loooping.ch/flug/flugis3d/hawkshadow.png");
+    me.shadow.setIcon(icon);
+    var latLonBox  = ge.createLatLonBox('');
+    console.log(flugi.getLatitude()+0.00005, flugi.getLatitude()-0.00005, flugi.getLongitude()+0.00005, flugi.getLongitude()-0.00005, flugi.getHeading());
+    latLonBox.setBox(flugi.getLatitude()+0.000005, flugi.getLatitude()-0.000005, flugi.getLongitude()+0.000005, flugi.getLongitude()-0.000005, 180-flugi.getHeading());
+    me.shadow.setLatLonBox(latLonBox);
+    ge.getFeatures().appendChild(me.shadow);
+    
+    loaded = true;
+    
+    // Make sure keyboard focus starts out on the page.
+    ge.getWindow().blur();
+    // If the user clicks on the Earth window, try to restore keyboard
+    // focus back to the page.
+    google.earth.addEventListener(ge.getWindow(), "mouseup", function(event) {
+        ge.getWindow().blur();
+    });
+  });
+}
+
+loaded = false;
+
+function switchModel(which){
+  me.model.getLink().setHref("http://loooping.ch/flug/flugis3d/" + which);
+  /*google.earth.fetchKml(ge, "http://loooping.ch/flug/flugis3d/" + which, function(kml) {
+    var old = me.placemark;
+    me.placemark = kml.getFeatures().getChildNodes().item(1);
+    me.model = me.placemark.getGeometry();
+    me.model.setAltitudeMode(ge.ALTITUDE_ABSOLUTE);
+    me.orientation.setHeading(90);
+    me.model.setOrientation(me.orientation);
+    teleport(flugi.getLatitude() +  20 * cos(flugi.getHeading()) * 360/40000000, flugi.getLongitude() + 20 * sin(flugi.getHeading()) * 360/(40000000*cos(flugi.getLatitude())), flugi.getHeading());
+    ge.getFeatures().appendChild(me.placemark);
+    ge.getFeatures().removeChild(old);
+      });*/
+}
+
+function naechstesBild() {
+
+  t = (new Date()).getTime();
+  dt = (t - t_alt)*0.001;
+  t_alt = t;
+  stepCount += 1;
+  
+  if(model == "adler"){
+    if(stepCount%30 == 0) switchModel("adlerUp00.dae");
+    if(stepCount%30 == 5) switchModel("adlerUp01.dae");
+    if(stepCount%30 == 10) switchModel("adlerUp02.dae");
+    if(stepCount%30 == 15) switchModel("adlerUp03.dae");
+    if(stepCount%30 == 20) switchModel("adlerUp02.dae");
+    if(stepCount%30 == 25) switchModel("adlerUp01.dae");
+  }
+  
+  v += a;
+  v = v - Math.min(0.001 * v * v / (h+50), 0.5 * v);
+    
+  steuerung = 0.97 * steuerung + (links- rechts);
+  hoehenruder = 0.97 * hoehenruder + (ziehen - stossen);
+  
+  flugi.setLatitude(flugi.getLatitude() +  v * dt * cos(flugi.getHeading()) * 360/40000000 );
+  flugi.setLongitude(flugi.getLongitude() + v * dt * sin(flugi.getHeading()) * 360/(40000000*cos(flugi.getLatitude())));
+  flugi.setAltitude(flugi.getAltitude() + v * dt * sin(flugi.getTilt()-90) * cos(flugi.getRoll()));
+  flugi.setTilt(flugi.getTilt() + cos(flugi.getRoll()) * 0.02 * (hoehenruder));
+  flugi.setRoll(flugi.getRoll() + 0.04 * steuerung);
+  flugi.setHeading(flugi.getHeading() - (0.4 + 0.04*(hoehenruder)) * sin(flugi.getRoll()) );
+  
+  if(flugi.getHeading() > 180) {flugi.setHeading(flugi.getHeading()-360);}
+  if(flugi.getHeading() < -180) {flugi.setHeading(flugi.getHeading()+360);}
+  if(flugi.getRoll() >= 180) {flugi.setRoll(flugi.getRoll()-359.999);}
+  if(flugi.getRoll() <= -180) {flugi.setRoll(flugi.getRoll()+359.999);}
+  if(flugi.getTilt() >= 180) {
+    flugi.setRoll(flugi.getRoll()-179.999);
+    flugi.setHeading(flugi.getHeading()+179.999);
+  }
+  if(flugi.getTilt() <= 0) {
+    flugi.setRoll(flugi.getRoll()+179.999);
+    flugi.setHeading(flugi.getHeading()+179.999);
+  }
+   
+  if(loaded){
+    me.model.getLocation().setLatitude(flugi.getLatitude());
+    me.model.getLocation().setLongitude(flugi.getLongitude());
+    me.model.getLocation().setAltitude(flugi.getAltitude());
+    me.orientation.setHeading(flugi.getHeading());
+    me.orientation.setTilt(90-flugi.getTilt());
+    me.orientation.setRoll(flugi.getRoll());
+    me.model.setOrientation(me.orientation);
+    
+    //Schatten
+    var latLonBox = me.shadow.getLatLonBox();
+    var radius = 0.00010;
+    latLonBox.setNorth(flugi.getLatitude() + radius * (0.2+ 0.8*cos(90-flugi.getTilt())));
+    latLonBox.setSouth(flugi.getLatitude() - radius * (0.2+ 0.8*cos(90-flugi.getTilt())));
+    latLonBox.setEast(flugi.getLongitude() - radius * (0.2+ 0.8*cos(flugi.getRoll())));
+    latLonBox.setWest(flugi.getLongitude() + radius * (0.2+ 0.8*cos(flugi.getRoll())));
+    latLonBox.setRotation(-flugi.getHeading());
+    
+
+  }
+  
+  var c = flugihistory[(stepCount)%5];
+  
+  /*
+  
+  var cam = ge.createCamera('');
+  cam.setAltitudeMode(ge.ALTITUDE_ABSOLUTE);
+  cam.setLatitude(c.lat);
+  cam.setLongitude(c.lon);
+  cam.setAltitude(c.alt);
+  //cam.setRange(35.0); //default is 0.0
+  cam.setTilt(c.tilt); //default is 0.0
+  cam.setHeading(c.head); //default is 0.0
+  cam.setRoll(c.roll); //default is 0.0
+  */
+  /*
+  var lookAt = ge.createLookAt('');
+  lookAt.setAltitudeMode(ge.ALTITUDE_ABSOLUTE);
+  lookAt.setLatitude(flugi.getLatitude());
+  lookAt.setLongitude(flugi.getLongitude());
+  lookAt.setAltitude(flugi.getAltitude());
+  lookAt.setRange(20.0); //default is 0.0
+  lookAt.setTilt(90); //default is 0.0
+  lookAt.setHeading(flugi.getHeading()); //default is 0.0
+    
+  ge.getView().setAbstractView(lookAt);  */
+  
+  var cam = ge.getView().copyAsCamera(ge.ALTITUDE_ABSOLUTE);
+  //cam.setHeading(c.head);
+  var tiltOffset = (flugi.getTilt()-90)/1.5 -5;
+  cam.setLatitude(flugi.getLatitude() - 50 * cos(flugi.getHeading()) * 360/40000000 );
+  cam.setLongitude(flugi.getLongitude() - 50 * sin(flugi.getHeading()) * 360/(40000000*cos(flugi.getLatitude())));
+  cam.setHeading(flugi.getHeading());  
+  cam.setTilt(tiltOffset + 90);
+  cam.setAltitude(flugi.getAltitude() + 5 - 20*sin(tiltOffset));
+  cam.setRoll(c.roll/2);
+   
+  ge.getView().setAbstractView(cam);  
+  //ge.getView().setAbstractView(flugi);
+  
+  flugihistory[stepCount%5] = {head: flugi.getHeading(), tilt: flugi.getTilt(), roll: flugi.getRoll()};
+ 
+
+  
+  h = flugi.getAltitude() - ge.getGlobe().getGroundAltitude(flugi.getLatitude(), flugi.getLongitude())
+
+  
+  if ((-22 <= flugi.getHeading()) && (flugi.getHeading() < 22 )){kompass = "N";}
+  if (( 22 <= flugi.getHeading()) && (flugi.getHeading() < 68 )){kompass = "NO";}
+  if (( 68 <= flugi.getHeading()) && (flugi.getHeading() < 113 )){kompass = "O";}
+  if (( 113 <= flugi.getHeading()) && (flugi.getHeading() < 158 )){kompass = "SO";}
+  if ((-181 <= flugi.getHeading()) && (flugi.getHeading() <-158 )){kompass = "S";}
+  if (( 158 <= flugi.getHeading()) && (flugi.getHeading() < 181 )){kompass = "S";}
+  if ((-68 <= flugi.getHeading()) && (flugi.getHeading() <-22 )){kompass = "NW";}
+  if ((-113 <= flugi.getHeading()) && (flugi.getHeading() <-68 )){kompass = "W";}
+  if ((-158 <= flugi.getHeading()) && (flugi.getHeading() <-113 )){kompass = "SW";} 
+  
+  document.getElementById("kompass").textContent = kompass;
+  document.getElementById("v").textContent = Math.round(v) + " m/s";
+  document.getElementById("h").textContent = Math.round(h) + " m";
+  
+  //beimNaechstenBild(naechstesBild);
+}
+
+function getURLParameter(name) {
+    return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+}
+
+google.setOnLoadCallback(init);
+
+</script>
+
+</body>
+</html>

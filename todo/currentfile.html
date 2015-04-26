@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/simall.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/pixi.js"></script>
+    <script src="../js/pixi-helpers.js"></script>
+    <script src="../js/myJS.js"></script>
+    <script src="../js/simHelpers.js"></script>    <title>Europa</title>
+    <style>
+      body {
+/*        background: #000 url(../img/europa.jpg) no-repeat;
+        background-size: 100%;*/
+      }
+      
+    </style>
+  </head>
+<body>
+<div class="watchlist">
+</div><script>
+  
+var world = new World({
+  hUnits: 170,
+  coords: {step: 20, onlyY: true},
+  unit: "m",
+  minUnits: {x: 0, y:-10},
+  bgColor: 0x662200,
+  fontColor: "#ffdddd"
+});
+
+var mars = new PassiveSprite({img: "../img/marsbackground.png", hUnits: 160, x: 0, y: 0, anchor: {x:0, y:1}, background: true});
+
+var lander = new Actor({img: "../img/marsmobil120.png", anchor: {x: 0.5, y: 1}, autorotate: false, wUnits: 14});
+
+// SPARKS
+var sparks = [];
+var sparkimage = new PIXI.Texture.fromImage("../img/spark1.png");
+
+function createSpark(offset) {
+  var randomOffset = (Math.random() - 0.5);
+  var spark = new Actor({
+    texture: sparkimage,
+    x: lander.x + offset.x + 0.8*randomOffset,
+    y: lander.y + offset.y,
+    vx: 2*randomOffset,
+    vy: lander.vy - 10 + Math.abs(15*randomOffset),
+  });
+  spark.age = 0;
+  return spark;
+}
+
+function sparkle() {
+  if(schub) {
+    for(i=0; i<3; i++) {
+      sparks[sparks.length] = createSpark({x:-6.1, y:18}); //offset in Meter
+      sparks[sparks.length] = createSpark({x: 6.1, y:18}); //offset in Meter 
+    }
+  }
+  var i = 0;
+  while(i<sparks.length) {
+    sparks[i].age += 1;
+    sparks[i].sprite.alpha -= 0.04;
+    sparks[i].x += sparks[i].vx * dt;
+    sparks[i].y += sparks[i].vy * dt;
+    
+    if (sparks[i].age >= 25) {
+      sparks[i].destroy();
+      sparks.splice(i,1);
+    }
+    else i++;
+  }
+}
+//
+//// Meldung
+//function meldung(text) {
+//  var textfeld = new PIXI.Graphics();
+//  textfeld.position.x = 100;
+//  textfeld.position.y = 20;
+//  textfeld.beginFill(0xddaa77);
+//  var textwidth = Math.min(window.innerWidth - 200, 800);
+//  textfeld.drawRect(0, 0, textwidth, 35 + 25*Math.ceil(12*text.length/textwidth));
+//  textfeld.endFill();
+//  var message = new PIXI.Text(text, {font: "bold 20px Tahoma", wordWrap: true, wordWrapWidth : textwidth-10});
+//  stage.addChild(textfeld);
+//  textfeld.addChild(message);
+//  message.position.x = 5;
+//  message.position.y = 5;
+//  window.addEventListener("keydown", function(key){
+//    if(key.which == "13") {
+//            stage.removeChild(textfeld);
+//            renderer.render(stage);
+//            this.removeEventListener("keydown", arguments.callee, false);
+//    }
+//  });
+//  renderer.render(stage);
+//}
+//
+
+
+//
+//simulate();
+//
+//function simulate() {
+//    y = y + v * dt;
+//    sparkle();
+//    nextStep(simulate);
+//    draw();
+//}
+//
+//function draw() {
+//  marslander.position.x = x*massstab;
+//  marslander.position.y = maxHeight - y*massstab;
+//  renderer.render(stage);
+//}
+//
+//koordinatenachse(massstab, 20);
+//
+//
+//
+//
+//
+
+
+
+//SIM
+function setup() {
+  dt = 2 * 0.016;
+  g = -3.2; // Fallbeschleunigung in m/s2
+  
+  schub = 0; // ob die Rakte beschleunigt oder nicht
+  F = 12000; // Schubkraft in Newton
+  m = 1800; // Masse in kg
+  x = 40; // x in Meter; bleibt konstant, da 1-dimensionale Bewegung
+  y = 140; // Anfangshöhe in m
+  vy = 0; // Anfangsgeschwindigkeit in m/s
+  
+  window.addEventListener("keydown", function(event) {
+    if(event.which == 32){schub = 1;}
+  });
+
+  window.addEventListener("keyup", function(event) {
+    if(event.which == 32){schub = 0;}
+  });
+}
+
+//Die Funktion Loop wird bei jedem Bild ausgeführt.
+
+function loop() {
+  ay = g;
+  if(schub==1){
+    ay  = ay  + F / m;
+  }
+  vy += ay * dt;
+  y += vy * dt;
+
+  //t = t + dt;
+
+  if(y <= 0) {
+    //meldung("Aufprallgeschwindigkeit: " + v.toFixed(2) + " m/s");
+  }
+  world.update();
+}
+
+/***************************************
+ * Aufgabe:
+ * 
+ * 1. Die Bewegung des Balles soll
+ *    ein freier Fall sein.
+ * 
+ * 2. Bei Berührung des Bodens soll der
+ *    Ball seine Richtung umkehren.
+ *    
+ * 3. Der Aufprall soll nicht ganz
+ *    elastisch sein: Multiplizieren 
+ *    Sie v etwa mit 0.80
+ *
+ ***************************************/
+
+
+
+//ENDSIM
+
+setup();
+loopStart();
+
+loopExtension = function() {
+    
+  mapPropsToActor(["x", "y", "vx", "vy"], lander);
+  
+  sparkle();
+  $(".watchlist").html("y = " + " m");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schwingung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      body {background-color: #246; overflow: hidden;}
+      #legende {
+        position:absolute;
+        font-family: Trebuchet MS, sans-serif;
+        left: 15px;
+      }
+    </style>
+  </head>
+<body>
+
+  <div id="legende">
+    <h1>Pendumlum<br>Simulation</h1>
+    <p id="log">OK!</p>
+  </div>
+
+<canvas id="myCanvas" style="position:absolute; background-color:transparent" width="800" height="600"></canvas>  
+<script src="../js/pixi.js"></script>
+
+<script>
+
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight-30;
+var maxWidth = window.innerWidth-30;
+var renderer = new PIXI.autoDetectRenderer(maxWidth, maxHeight);
+var stage = new PIXI.Stage(0x7799cc);
+document.body.appendChild(renderer.view);
+
+//Pendel erstellen
+function Pendulum(x,y) {
+  this.texture = new PIXI.Texture.fromImage("../img/ball.png");
+  this.sprite = new PIXI.Sprite(this.texture);
+  stage.addChild(this.sprite);
+  this.sprite.anchor = {x: 0.5, y: 0};
+  this.x = x;
+  this.y = y;
+  this.D = 20;
+  this.m = 10;
+  this.y0 = 2;
+  this.v = 0.8;
+  this.a = 0;
+  this.F = 0;
+  this.sprite.position = toScreen(this);
+  console.log(toScreen(this));
+  this.federtexture = new PIXI.Texture.fromImage("../img/feder.png");
+  this.feder = new PIXI.Sprite(this.federtexture);
+  this.feder.anchor = {x: 0.5, y: 0};
+  this.feder.position.x = toScreen(this).x;
+  this.feder.position.y = 0;
+  stage.addChild(this.feder);
+  renderer.render(stage);
+}
+
+function toScreen(obj) {
+	var x = obj.x || x;
+	var y = obj.y || y;
+	return {x: obj.x * pixPerMeter, y: maxHeight - obj.y * pixPerMeter }
+}
+
+Pendulum.prototype.draw = function() {
+  //console.log(toScreen(this));
+  this.sprite.position = toScreen(this);
+	this.feder.scale.y = toScreen(this).y/249;
+}
+
+function draw() {
+  for(i =0; i<arguments.length; i++){
+    arguments[i].draw(arguments[i]);
+  }
+  renderer.render(stage);
+}
+
+//SIM
+var t=0,
+    dt = 0.016, //Zeitschritt der Simulation
+    pixPerMeter = 200; // Pixel pro Meter
+    
+pendulum = new Pendulum(2, 2);
+
+//Anfangsbedingungen
+with (pendulum) {
+  D = 80;
+  m = 10;
+  y0 = 2;
+  y = 2;
+  v = 0.8;
+  a = 0;
+  F = 0;
+}
+
+function simulate() {
+
+  with (pendulum) { 
+    }
+  
+  draw(pendulum);
+  
+  document.getElementById("log").innerHTML = (pendulum.y-pendulum.y0).toPrecision(2) + " m";
+
+
+  nextStep(simulate);
+}
+
+simulate();
+
+
+
+
+//ENDSIM
+
+</script>
+</body>
+</html>

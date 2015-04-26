@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="l-eq" attributes="">
+	<template>
+		<style>
+		</style>
+    <content></content>
+	</template>
+	<script>
+	Polymer('l-eq', {
+    // Fires when an instance of the element is created
+    created: function() {},
+    // Fires when the element’s initial set of children and siblings are guaranteed to exist
+    domReady: function() {},
+    // Fires when the "<polymer-element>" has been fully prepared
+    ready: function() {
+      var eq = this;
+      var string = this.textContent;
+      this.variable = string.split("=")[0].trim();
+      $for = $("<span class='term eq__for'>");
+      $render = $("<span class='term eq__render'>");
+      $eval = $("<span class='term eq__eval'>");
+      $result = $("<span class='term eq__result'>");
+      $(this).empty().append($for).append("<span> = </span>").append($render).append("<span> = </span>").append($eval).append("<span> = </span>").append($result);
+      if($(this).closest("l-ex")[0].gotAllData) {
+        this.termfor = new Term(string.split("=")[0].trim(), $for);  
+        this.term = new Term(string.split("=")[1].trim(), $render, $result);
+      }
+      else {
+        $(this).closest("l-ex").on("gotAllData", function() {
+          this.termfor = new Term(string.split("=")[0].trim(), $for);  
+          this.term = new Term(string.split("=")[1].trim(), $render, $result);
+        });
+      }
+      $(this).closest("l-ex").on("gotNewData", function() {
+        this.termfor = new Term(string.split("=")[0].trim(), $for);  
+        this.term = new Term(string.split("=")[1].trim(), $render, $result);
+      });
+      //$(this).closest("l-eq").trigger("gotAllData");
+    },
+    // Fires when the element was inserted into the document
+    attached: function() {},
+    // Fires when the element was removed from the document
+    detached: function() {},
+    // Fires when an attribute was added, removed, or updated
+    attributeChanged: function(attr, oldVal, newVal) {}
+  });
+	</script>
+</polymer-element>

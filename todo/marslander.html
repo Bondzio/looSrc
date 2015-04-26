@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #742;
+    overflow-x: hidden;
+    }
+    </style>
+</head>
+<body>
+<script src="../js/pixi.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>-->
+<script>
+
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight-20;
+var renderer = new PIXI.autoDetectRenderer(window.innerWidth, maxHeight);
+document.body.appendChild(renderer.view);
+
+var stage = new PIXI.Stage();
+
+background = PIXI.Sprite.fromImage("../img/marsbackground.png");
+background.scale.x = maxHeight/500;
+background.scale.y = maxHeight/500;
+stage.addChild(background);
+
+// Koordinatenachse
+function koordinatenachse(pxProMeter, step) {
+  var koordinatenachse = new PIXI.Graphics();
+  koordinatenachse.lineStyle(4, 0xFFFFFF, 1); 
+  koordinatenachse.moveTo(0, maxHeight);
+  koordinatenachse.lineTo(0, 0);
+  stage.addChild(koordinatenachse);
+  for(var i = 0; i<= maxHeight/pxProMeter; i+=step){
+    skala = new PIXI.Text(i + " m", {font: "16px Tahoma" , fill:"white"});
+    skala.position.x = 10;
+    skala.position.y = maxHeight - i*pxProMeter;
+    skala.anchor.y = 1;
+    stage.addChild(skala);
+  }
+  renderer.render(stage);
+}
+
+// SPARKS
+sparks = [];
+sparkimage = new PIXI.Texture.fromImage("../img/spark1.png");
+function Spark(offset) {
+  this.sprite = new PIXI.Sprite(sparkimage);
+  var randomOffset = (4*Math.random() - 2)/massstab;
+  this.x = x + offset.x/massstab + randomOffset;
+  this.y = y + offset.y/massstab;
+  this.vx = 2*randomOffset;
+  this.vy = v - 10 + Math.abs(15*randomOffset);
+  this.age = 0;
+  this.sprite.position.x = this.x*massstab;
+  this.sprite.position.y = maxHeight-this.y*massstab;
+  sparks.push = this;
+  stage.addChild(this.sprite);
+}
+function sparkle() {
+  if(schub) {
+    for(i=0; i<3; i++) {
+    sparks[sparks.length] = new Spark({x:-29, y:79});
+    sparks[sparks.length] = new Spark({x:27, y:79});
+    }
+  }
+  var i = 0;
+  while(i<sparks.length) {
+    sparks[i].age += 1;
+    sparks[i].sprite.alpha -= 0.04;
+    sparks[i].x += sparks[i].vx * dt;
+    sparks[i].y += sparks[i].vy * dt;
+    sparks[i].sprite.position.x = sparks[i].x*massstab;
+    sparks[i].sprite.position.y = maxHeight-sparks[i].y*massstab;
+    
+    if (sparks[i].age >= 25) {
+      stage.removeChild(sparks[i].sprite);
+      sparks.splice(i,1);
+    }
+    else i++;
+  }
+}
+
+// Meldung
+function meldung(text) {
+  var textfeld = new PIXI.Graphics();
+  textfeld.position.x = 100;
+  textfeld.position.y = 20;
+  textfeld.beginFill(0xddaa77);
+  var textwidth = Math.min(window.innerWidth - 200, 800);
+  textfeld.drawRect(0, 0, textwidth, 35 + 25*Math.ceil(12*text.length/textwidth));
+  textfeld.endFill();
+  var message = new PIXI.Text(text, {font: "bold 20px Tahoma", wordWrap: true, wordWrapWidth : textwidth-10});
+  stage.addChild(textfeld);
+  textfeld.addChild(message);
+  message.position.x = 5;
+  message.position.y = 5;
+  window.addEventListener("keydown", function(key){
+    if(key.which == "13") {
+            stage.removeChild(textfeld);
+            renderer.render(stage);
+            this.removeEventListener("keydown", arguments.callee, false);
+    }
+  });
+  renderer.render(stage);
+}
+
+//SIM
+
+marslander = PIXI.Sprite.fromImage("../img/marsmobil120.png");
+marslander.anchor.x = 0.5;
+marslander.anchor.y = 1;
+stage.addChild(marslander);
+
+var massstab = 5; // in Pixel pro Meter
+var zeitProBild = 0.016; // solange braucht der Browser meist für ein Bild
+var zeitfaktor = 2; //Verschnellerung oder Verlangsamung
+var t = 0
+var dt = zeitfaktor * zeitProBild; // Zeitschritt in s
+
+var g = -3.71; // Fallbeschleunigung in m/s2
+var schub = 0; // ob die Rakte Beschleunigt oder nicht
+var F = 12000; // Schubkraft in Newton
+var m = 1800; // Masse in kg
+var x = 40; // x in Meter; bleibt konstant, da 1-dimensionale Bewegung
+var y = maxHeight/massstab; // Anfangshöhe in m
+var v = 0; // Anfangsgeschwindigkeit in m/s
+
+window.addEventListener("keydown", function(event) {
+  if(event.which == 32){schub = 1;}
+});
+
+window.addEventListener("keyup", function(event) {
+  if(event.which == 32){schub = 0;}
+});
+
+simulate();
+
+function simulate() {
+    a = g;
+    if(schub==1){
+      a = a + F/m;
+    }
+    v = v + a * dt;
+    y = y + v * dt;
+    
+    t = t + dt;
+    
+    sparkle();
+    
+    if(y<=0) {
+      meldung("Aufprallgeschwindigkeit: " + v.toFixed(2) + " m/s");
+    }
+    else {
+      nextStep(simulate);
+    }
+    
+
+    draw();
+
+}
+
+function draw() {
+  marslander.position.x = x*massstab;
+  marslander.position.y = maxHeight - y*massstab;
+  renderer.render(stage);
+}
+
+koordinatenachse(massstab, 20);
+//ENDSIM
+</script>
+</body>
+</html>

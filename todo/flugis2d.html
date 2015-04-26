@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #cdf;
+    overflow-x: hidden;
+    }
+    </style>
+</head>
+<body>
+<div id="anzeige"></div>
+<script src="../js/pixi.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>-->
+<script>
+
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+sin = Math.sin;
+cos = Math.cos;
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight-10;
+var maxWidth = window.innerWidth;
+var renderer = new PIXI.autoDetectRenderer(window.innerWidth, maxHeight);
+document.body.appendChild(renderer.view);
+
+var stage = new PIXI.Stage(0xccddff);
+
+
+background = PIXI.Sprite.fromImage("../img/eveningSky.jpg");
+background.scale.x = maxWidth/820;
+background.scale.y = maxHeight/820;
+stage.addChild(background);
+
+
+// Koordinatenachse
+function koordinatenachse(pxProMeter, step) {
+  var koordinatenachse = new PIXI.Graphics();
+  koordinatenachse.lineStyle(4, 0x000022, 1); 
+  koordinatenachse.moveTo(0, maxHeight);
+  koordinatenachse.lineTo(0, 0);
+  stage.addChild(koordinatenachse);
+  for(var i = 0; i<= maxHeight/pxProMeter; i+=step){
+    skala = new PIXI.Text(i + " m", {font: "16px Tahoma" , fill:"0x000022"});
+    skala.position.x = 10;
+    skala.position.y = maxHeight - i*pxProMeter;
+    skala.anchor.y = 1;
+    stage.addChild(skala);
+  }
+  renderer.render(stage);
+}
+
+anzeige = document.getElementById("anzeige");
+
+// Meldung
+function meldung(text) {
+  var textfeld = new PIXI.Graphics();
+  textfeld.position.x = 100;
+  textfeld.position.y = 20;
+  textfeld.beginFill(0xddaa77);
+  var textwidth = Math.min(window.innerWidth - 200, 800);
+  textfeld.drawRect(0, 0, textwidth, 35 + 25*Math.ceil(12*text.length/textwidth));
+  textfeld.endFill();
+  var message = new PIXI.Text(text, {font: "bold 20px Tahoma", wordWrap: true, wordWrapWidth : textwidth-10});
+  stage.addChild(textfeld);
+  textfeld.addChild(message);
+  message.position.x = 5;
+  message.position.y = 5;
+  window.addEventListener("keydown", function(key){
+    if(key.which == "13") {
+            stage.removeChild(textfeld);
+            renderer.render(stage);
+            this.removeEventListener("keydown", arguments.callee, false);
+    }
+  });
+  renderer.render(stage);
+}
+
+flugis = [];
+
+flugi = PIXI.Sprite.fromImage("../img/flugi50.png");
+flugi.anchor.x = 0.5;
+flugi.anchor.y = 0.5;
+stage.addChild(flugi);
+
+function Flugi() {
+  this.sprite = PIXI.Sprite.fromImage("../img/Segelflieger50.png");
+  this.sprite.anchor.x = 0.5;
+  this.sprite.anchor.y = 0.5;
+  this.x = 0;
+  this.y = 110;
+  stage.addChild(this.sprite);
+  flugis.push(this);
+}
+
+var kiste = false;
+window.addEventListener("keydown", function(e) {
+  console.log(e.which);
+  if(e.which == 32 && kiste == false) {
+    kiste = {};
+    kiste.sprite = PIXI.Sprite.fromImage("../img/kiste.png");
+    kiste.sprite.anchor.x = 0.5;
+    kiste.sprite.anchor.y = 0.5;
+    kiste.x = x;
+    kiste.y = y-2;
+    kiste.vx = vx;
+    kiste.vy = vy;
+    stage.addChild(kiste.sprite);
+  }
+}, 0);
+
+
+
+var massstab = 5; // in Pixel pro Meter
+var zeitProBild = 0.032; // solange braucht der Browser meist für ein Bild
+var zeitfaktor = 1; //Verschnellerung oder Verlangsamung
+var t = 0
+var dt = zeitfaktor * zeitProBild; // Zeitschritt in s
+
+  window.addEventListener("keydown", function(event) {
+  if(event.which == 32){schub = 1;}
+});
+
+window.addEventListener("keyup", function(event) {
+  if(event.which == 32){schub = 0;}
+});
+
+anzeige.style.position  = "absolute";
+anzeige.style.top  = 100;
+anzeige.style.right   = 50;
+
+//SIM
+x = 0;
+y = 90;
+vx = 35;
+vy = 0;
+
+function simulate() {
+    t = t + dt;
+    
+    x = x + vx * dt;
+    
+    if(kiste) {
+    }
+    
+
+    draw();   
+    nextStep(simulate);
+}
+
+
+
+
+
+
+
+
+
+//ENDSIM
+
+function draw() {
+    if (typeof s !== "undefined") {x = s;}
+    oldx = flugi.position.x;
+    oldy = flugi.position.y;
+    newx = x * massstab + 40;
+    newy = maxHeight - y * massstab;
+    flugi.position.x = newx;
+    flugi.position.y = newy;
+    flugi.rotation = Math.atan2(newy-oldy, newx-oldx)
+  
+  
+  for(var i in flugis) {
+    if (typeof flugis[i].s !== "undefined") {flugis[i].x = flugis[i].s}
+    oldx = flugis[i].sprite.position.x;
+    oldy = flugis[i].sprite.position.y;
+    newx = flugis[i].x * massstab + 40;
+    newy = maxHeight - flugis[i].y * massstab;
+    flugis[i].sprite.position.x = newx;
+    flugis[i].sprite.position.y = newy;
+    flugis[i].sprite.rotation = Math.atan2(newy-oldy, newx-oldx);
+  }    
+  
+  if(kiste != false) {
+    if (typeof kiste.s !== "undefined") {kiste.x = kiste.s;}
+    kiste.sprite.position.x = kiste.x * massstab + 40;
+    kiste.sprite.position.y = maxHeight - kiste.y * massstab;
+  }
+  
+  renderer.render(stage);
+}
+
+koordinatenachse(massstab, 20);
+
+simulate();
+</script>
+</body>
+</html>

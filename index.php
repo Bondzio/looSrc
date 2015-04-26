@@ -1,2 +1,2 @@
-<?php header("Location: main/home.php");
+<?php header("Location: sim/index.php");
      

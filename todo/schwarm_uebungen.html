@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    body {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    overflow-x: hidden;
+    }
+    #ergebnis, h2 {
+      font-size:140%;
+      font-family: Verdana;
+    }
+    </style>
+</head>
+<body>
+  <img height=150 src="../img/Enten.jpg">
+  <img height=150 src="../img/Fische.jpg">
+  <img height=150 src="../img/Stare.jpg">
+  <h2>Übungen</h2>
+  <div id="ergebnis">
+    
+  </div>
+<script>
+
+ergebnis = document.getElementById("ergebnis");
+output = "";
+
+//SIM
+
+//Bevor wir den Schwarm simulieren einige Vorübungen:
+
+//FUNKTIONEN
+//Eine Funktion verarbeitet Eingabedaten zu einem Ausgabewert. Beispiele:
+
+function produkt(a,b) {
+  return a*b
+}
+
+function hypotenuse(kathete1, kathete2){
+  return Math.sqrt(kathete1*kathete1 + kathete2*kathete2)
+}
+
+//Nun sind diese Funktion definiert.
+//Damit etwas passiert, muss man sie noch aufrufen:
+//output = produkt(3,4);
+//Entferne die Kommentarzeichen vor der obigen Zeile und aktualisiere den Browser.
+
+//Lass dir nun die Hypotenuse berechnen.
+
+
+//Wenn mehr als ein Wert angezeigt werden soll, verwende den Addieroperator +=
+/*
+a = 30;
+b = 40;
+output = "Das Produkt von " + a + " und " + b + " beträgt: ";
+output += produkt(a,b);
+output += "<br>"; //neue Zeile
+output += "Die Hypotenuse in einem solchen Dreieck hat die Länge ";
+output += hypotenuse(a,b);
+*/
+//Entferne oben das Kommentaranfangszeichen /* und das Schlusszeichen */
+
+//Erstelle nun eine Funktion, welche den Mittelwert von zwei Zahlen ausgibt
+//und berechne damit den Durschnitt von 3.14 und 42
+
+
+
+
+
+
+
+
+
+
+//ARRAY
+//Ein Array ist eine Art Liste:
+
+fruechtekorb = ["Banane", "Apfel", "Trauben", "Ananas"];
+
+/*
+output = fruechtekorb[1] + "<br>";
+output += fruechtekorb[2]+ "<br>";
+output += fruechtekorb[3] + "<br>";
+*/
+
+//Wo ist wohl die Banane hin??? Wie kannst du dir die Banae anzeigen lassen?
+
+//Für Array gibt es praktische Funktionen. z.B.
+// output = fruechtekorb.length
+
+//Folgende Zeile fügt dem Früchtekorb ein weiteres Element hinzu:
+//fruechtekorb[4] = "Birne";
+
+//Lass dir die neue Anzahl Früchte anzeigen.
+
+//Arrays gib es auch mit Zahlen:
+mathnoten = [4, 4.5, 5, 4.25, 5.75]
+
+// Mit einer for-Schleife kann mann alle Elemente des Arrays durchgehen:
+
+for(var i = 0; i < mathnoten.length; i++) {
+  //output += mathnoten[i] + "<br>"; 
+}
+
+//Eine kürzere (aber nicht immer bessere) Schreibweise lautet:
+for (var i in mathnoten) {
+  //output += mathnoten[i] + "<br>";
+}
+
+
+summeMath = 0;
+//Erstelle nun eine For-Schleife, welche alle Mathnoten zur Variable summeMath addiert:
+
+
+
+
+
+//Erstelle nun eine Funtion, welche den Durchschnitt aus einem Array berechnet.
+function durchschnitt(array) {
+  
+  //for(var i = 0; ...... ; ....... ) { ...... }
+  
+  
+  
+}
+
+//Lass dir damit den Durchschnitt der Mathnoten berechnen.
+
+//Unser Schwarm wird ein Array von Fischen/Vögeln sein.
+
+
+//OBJEKTE
+//Bei der Rakete gab es nur eine Geschwindigkeit v und eine Position y.
+//Beim Schwarm wird es für jeden Fisch eine Position und eine Geschwindigkeit geben.
+//Objekte helfen, ein Durcheinander zu vermeiden.
+
+// Einige einfache Objekte:
+elefant = {beine: 4, farbe: "grau"};
+flamingo = {beine: 2, farbe: "rosa"};
+
+//Wie ein Array bestehen Objekte also aus mehreren Werten.
+//Diese sind jedoch nicht nur durchnummeriert, sondern haben eine Bezeichnung.
+//Mann kann die Werte wie folgt abrufen:
+
+/*
+output = elefant["farbe"];
+output += "<br>";
+output += flamingo["beine"];
+*/
+
+//Ebenfalls gibt es folgende einfache Schreibweise:
+/*
+output = elefant.beine;
+output += "<br>";
+output += flamingo.farbe;
+*/
+
+//Man kann lange Objekte auch auf mehrere Zeilen verteilen:
+zeugnis = {
+  Math: 4.5,
+  Franz: 3,
+  Geo: 5,
+  Geschichte: 5,
+}
+
+// oder:
+zeugnis.Englisch = 4;
+zeugnis.Deutsch = 3;
+zeugnis.Musik = 6;
+
+//eine for Schleife liefert alle Fächer des Zeugnisses
+for(var i in zeugnis){
+  //output += i;
+}
+
+//Wie könnte man den Durchschnitt des Zeugnisses berechnen?
+
+
+
+
+
+
+
+
+//Wir wollen nun schauen ob das Zeugnis genügend ist:
+function genuegendTest(zeugnis) {
+  
+  var anzahlUngenuegende = 0;
+  var summeUnterVier = 0;
+  var summeUeberVier = 0;
+  
+  for (var i in zeugnis) {
+      note = zeugnis[i];
+    if (note<4) {
+      summeUnterVier += 4 - note;
+    }
+    else {
+      summeUeberVier += note - 4;
+    }
+  }
+  
+  if(summeUeberVier >= 2 * summeUnterVier) {
+    return "Zeugnis ist genügend";
+  }
+  else {
+    return "Zeugnis ist ungenügend";
+  }
+}
+
+//output = genuegendTest(zeugnis);
+
+//Versuche die Kuntion zu verstehen.
+//Ändere sie nun so ab, dass sie auch schaut, ob es nicht mehr als 4 ungenügende Noten gibt.
+
+//Variere oben die Zeugnisnoten und teste, ob die Funktion korrekt ist.
+
+// Unser Schwarm wird ein Array sein, welcher aus Objekten besteht (einzelne Fische).
+schwarm = []; //neuer leerer Array
+for(var i = 0; i < 50; i++) {
+  schwarm[i] =  {}; //Leeres Objekt, der Fisch Nr i im Schwarm
+  fisch = schwarm[i]; //einfacherer Name für den neuen Fisch, im Prinzip nicht nötig
+  fisch.x = 500 * Math.random(); //Zufallszahl zwischen 0 und 500 als Anfangspoition
+  fisch.y = 500 * Math.random(); //Zufallszahl zwischen 0 und 500 als Anfangspoition
+  fisch.vx = 0;  //Anfangsgeschwindigkeit in x-Richtung
+  fisch.vy = 0;  //Anfangsgeschwindigkeit in y-Richtung
+  //output += i + "       " + fisch.x.toFixed(0) + "    " + fisch.y.toFixed(0) + "<br>" ;
+}
+
+//Enferne den Kommentar zum Anzeigen der Fischpositionen
+//Aktualisiere den Browser einige Male.
+
+//ENDSIM
+ergebnis.innerHTML = output;
+</script>
+</body>
+</html>

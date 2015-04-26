@@ -24,34 +24,29 @@ if($task !== "create" && $task !== "createImage" ) {
   copy("../$path", "../archiv/auto/$dirname/$filename-$now.$extension");
 }
 
-//JSONinsert, JSONupdate, JSONdelete
+//JSONreplace, JSONinsert, JSONupdate, JSONdelete, 
 if(substr($task, 0, 4) === "JSON") {
   $json = json_decode(file_get_contents("../$path"), true);
+  if(substr($task, 4) === "replace") {$json = json_decode($_POST["content"]);}
   
-  if(substr($task, 4) === "replace") {
-    $json = json_decode($content, true);
-  }
-  else if(substr($task, 4) === "insert") {
-    $json[] = $content;
-  }
-  else {
-    $key = $_POST["key"];
-    $val = $_POST["value"];
-    $response->add("log", $key);
-    foreach($json as $index=>$obj) {
-      if($obj[$key] == $val) {
-        if(substr($task, 4) === "update") {
-          $json[$index] = $content;
-        }
-        if(substr($task, 4) === "delete") {
-          unset($json[$index]);
-        }
-      }
+  if(substr($task, 4, 8) === "multiple") {
+    $itemarray = json_decode($_POST["itemarray"], true);
+    foreach($itemarray as $i=>$item) {
+      jsonTasks($json, substr($task, 12), $item);
     }
   }
-  file_put_contents("../$path", json_encode($json));
+  else {
+    $obj = array(
+      "key"=> isset($_POST["key"]) ? $_POST["key"] : null,
+      "value" => isset($_POST["value"]) ? $_POST["value"] : null,
+      "content" => isset($_POST["content"]) ? $_POST["content"] : null);
+    jsonTasks($json, substr($task, 4), $obj);
+  }
+  $success = file_put_contents("../$path", json_encode($json));
+  $response->add("log", "ok" . $success);
   $response->add($filename, $json);
 }
+
 //
 else if ($task == "save") {
   file_put_contents("../$path", $content);
@@ -78,3 +73,28 @@ else if ($task == "createImage") {
 }
 
 $response->send();
+
+function jsonTasks(&$json, $task, $obj) {
+  global $response;
+  if($task === "insert")  {
+    if(isset($_POST["uniquetitle"])) {
+      foreach($json as $index=>$next) {
+        if($json[$index]["title"] === $obj["content"]["title"]) {
+          $response->add("message", "Title exists already!");
+          $response->send();
+          exit();
+        }
+      }
+    }
+    $json[] = $obj["content"];
+  }
+  if($task === "update" || $task === "delete") {
+    foreach($json as $index=>$next) {
+      if($json[$index][$obj["key"]] === $obj["value"]) {
+        if($task === "update") {$json[$index] = $obj["content"];}
+        if($task === "delete") {array_splice($json, $index, 1);}
+      }
+    }
+  }
+  return $json;
+}

@@ -1,0 +1,51 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="l-ex" attributes="" on-click="{{showEdit}}">
+	<template>
+    <link rel="stylesheet" href="../css/prism.css">
+    <style>
+      dfn {font-style: inherit;}
+      :host {position: relative; width: 100%; display: block;}
+      #myhtml {width: 100%; height: 3em;}
+      #edit {display: none; width: 100%; position: absolute;}
+      #edit.active {display: block; background-color: #cde; z-index:10;}
+      #editor {width: 100%;}
+      /*#editor>.tag {display: block;}*/
+    </style>
+    <div id="edit">
+      <pre><code id="editor" class="language-html" contenteditable></code></pre>
+      <button on-click="{{saveEdit}}">OK</button><button on-click="{{cancelEdit}}">Cancel</button>
+    </div>
+    <content></content></template>
+  <script src="../js/libs/prism.js"></script>
+	<script>
+	Polymer('l-ex', {
+    ready: function() {
+      var ex = this;
+      ex.scope = [];
+      this.html = $(this).html();
+      $(this).find("data").each(function(i,e) {
+        ex.scope = ex.scope.filter(function(el) {return el.v != e.getAttribute("v");}).concat([{v: e.getAttribute("v"), z: e.getAttribute("z"), e: e.getAttribute("e")}]);
+        termVar = new Term(this.getAttribute("v"), ex.scope);
+        $(this).append([termVar.getRenderedFormula(),termVar.getFinalResult()].join(" = "));
+      });
+      $(this).find("dfn").each(function(i,e) {
+        termVar = new Term(this.getAttribute("v"), ex.scope);
+        termFormel = new Term(this.getAttribute("f"), ex.scope);
+        $(this).append([termVar.getRenderedFormula(),termFormel.getRenderedFormula(), termFormel.getNumericalSolution(), termFormel.getFinalResult()].join(" = "));
+        ex.scope = ex.scope.filter(function(el) {return el.v != e.getAttribute("v")}).concat([{v: e.getAttribute("v"), z: termFormel.getFinalResult()}]);
+      });
+    },
+    showEdit: function(e) {
+      if($(this.$.edit).hasClass("active")) {return;}
+      $(this.$.edit).addClass("active")
+      $(this.$.editor).html(Prism.highlight(this.html, Prism.languages.markup));
+      log($(this.$.editor).text() == this.html);
+      //Prism.highlightElement(this.$.editor, false, function(){log(1)});
+      e.stopPropagation();
+    },
+    hideEdit: function() {$(this.$.edit).removeClass("active");},
+    cancelEdit: function(e) {this.hideEdit(); e.stopPropagation();},
+    saveEdit: function(e) {this.hideEdit(); e.stopPropagation();},
+  });
+	</script>
+</polymer-element>

@@ -132,7 +132,7 @@ blockquote {
   margin: 1em 40px; }
 
 dfn {
-  font-style: italic; }
+  /* font-style: italic; */ }
 
 hr {
   -moz-box-sizing: content-box;

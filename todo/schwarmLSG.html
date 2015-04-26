@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    }
+    </style>
+</head>
+<body>
+<script src="../js/pixi.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>-->
+<script>
+
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight;
+var maxWidth = window.innerWidth;
+var renderer = new PIXI.autoDetectRenderer(window.innerWidth, maxHeight);
+document.body.appendChild(renderer.view);
+
+var mouse = {x: 0, y:0, lx : 0, ly: 0, dx: 0, dy: 0};
+
+document.addEventListener("mousemove", function(e) {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  //console.log("mx: " + mouseX / massstab + " my: " + (maxHeight - mouseY) / massstab);
+});
+
+function updateMouse() {
+  mouse.dx = mouse.dx * 0.9 + 0.1 * (mouse.x - mouse.lx)/dt;
+  mouse.dy = (mouse.y - mouse.ly)/dt;
+  mouse.ly = mouse.y;
+  mouse.lx = mouse.x;
+}
+
+
+
+var stage = new PIXI.Stage(0x88ccee);
+
+
+background = PIXI.Sprite.fromImage("../img/eveningSky.jpg");
+background.scale.x = maxWidth/1132;
+background.scale.y = maxHeight/864;
+stage.addChild(background);
+
+
+// Koordinatenachse
+function koordinatenachse(pxProMeter, step) {
+  //var koordinatenachse = new PIXI.Graphics();
+  //koordinatenachse.lineStyle(4, 0xFFFFFF, 1); 
+  //koordinatenachse.moveTo(0, maxHeight);
+  //koordinatenachse.lineTo(0, 0);
+  //stage.addChild(koordinatenachse);
+  for(var i = 0; i<= maxHeight/pxProMeter; i+=step){
+    skala = new PIXI.Text(i + " m", {font: "16px Tahoma" , fill:"white"});
+    skala.position.x = 10;
+    skala.position.y = maxHeight - i*pxProMeter;
+    skala.anchor.y = 1;
+    stage.addChild(skala);
+  }
+  renderer.render(stage);
+}
+
+// Meldung
+function meldung(text) {
+  var textfeld = new PIXI.Graphics();
+  textfeld.position.x = 100;
+  textfeld.position.y = 20;
+  textfeld.beginFill(0xddaa77);
+  var textwidth = Math.min(window.innerWidth - 200, 800);
+  textfeld.drawRect(0, 0, textwidth, 35 + 25*Math.ceil(12*text.length/textwidth));
+  textfeld.endFill();
+  var message = new PIXI.Text(text, {font: "bold 20px Tahoma", wordWrap: true, wordWrapWidth : textwidth-10});
+  stage.addChild(textfeld);
+  textfeld.addChild(message);
+  message.position.x = 5;
+  message.position.y = 5;
+  window.addEventListener("keydown", function(key){
+    if(key.which == "13") {
+            stage.removeChild(textfeld);
+            renderer.render(stage);
+            this.removeEventListener("keydown", arguments.callee, false);
+    }
+  });
+  renderer.render(stage);
+}
+
+swarmTexture = PIXI.Texture.fromImage("../img/swarmpoint.png")
+
+//SIM
+var schwarm = []; //Leerer Schwarm Array
+var anzahlTiere = 80; //Grösse des Schwarms
+var massstab = 1; // in Pixel pro Meter
+var zeitProBild = 0.016; // solange braucht der Browser meist für ein Bild
+var zeitfaktor = 2; //Verschnellerung oder Verlangsamung
+var dt = zeitfaktor * zeitProBild; // Zeitschritt in s
+var t = 0;
+var reldir = 0;
+
+//Schwarm erstellen
+for(i = 0; i < anzahlTiere; i++){
+    schwarm[i] = new PIXI.Sprite(swarmTexture);
+    bird = schwarm[i];
+    bird.anchor.x = 0.5;
+    bird.anchor.y = 0.5;
+    bird.x = maxWidth * Math.random();
+    bird.y = maxHeight * Math.random();
+    bird.vx = 1 * (Math.random()-0.5);
+    bird.vy = 1 * (Math.random()-0.5);
+    bird.position = {x: 0, y: 0};
+    stage.addChild(bird);
+}
+
+draw(); //Alle Objekte auf den Bildschitm zeichnen
+simulate(); // Simulation starten
+
+//Die folgende Funktion simulate ruft sich am Ende selbst wieder auf.
+//Sie läuft dahe in jedem Zeitschritt immer ab.
+function simulate() {
+    zentrum = schwarmzentrum(schwarm);
+    for(i in schwarm){
+        bird = schwarm[i];
+        abstandsliste = getAbstandsquadrate(bird, schwarm);
+        naechste = nachbarn(7, abstandsliste);
+        vAlign = alignement(naechste);
+        flucht(bird);
+        bird.vx  += 0.1 * (vAlign.vx - bird.vx);
+        bird.vy  += 0.1 * (vAlign.vy - bird.vy);
+        bird.vx  += 0.002 * (zentrum.x - bird.x);
+        bird.vy  += 0.002 * (zentrum.y - bird.y);
+        bird.vx  += 30*(Math.random()-0.5);
+        bird.vy  += 30*(Math.random()-0.5);
+        bird.vx  += 1000/Math.abs(bird.x) - 1000/(Math.abs(bird.x-maxWidth));
+        bird.vy  += 1000/Math.abs(bird.y) - 1000/(Math.abs(bird.y-maxHeight));;
+        bird.vx *=  1 - 0.0000001* (bird.vx * bird.vx + bird.vy * bird.vy);
+        bird.vy *=  1 - 0.0000001* (bird.vx * bird.vx + bird.vy * bird.vy);
+        bird.x += 1*bird.vx * dt;
+        bird.y += 0.5*bird.vy * dt;
+    }
+    updateMouse();
+    nextStep(simulate);
+    draw();
+}
+
+
+function abstandsquadratVonBis(obj1, obj2){
+    var dx = obj2.x - obj1.x;
+    var dy = obj2.y - obj1.y;
+    return dx*dx + dy*dy
+}
+
+function getAbstandsquadrate(obj1, schwarm) {
+    abstandsliste = [];
+    for (i = 0; i < anzahlTiere; i++) {
+        abstandsliste[i] = abstandsquadratVonBis(obj1, schwarm[i]);
+    }    
+    return abstandsliste;
+}
+
+function schwarmzentrum(schwarm){
+    var xSumme = 0;
+    var ySumme = 0;
+    for (var i in schwarm) {
+        xSumme += schwarm[i].x;
+        ySumme += schwarm[i].y;
+    }
+    zentrum = {x: xSumme/anzahlTiere, y: ySumme/anzahlTiere}
+    return zentrum;
+}
+
+function minimum(array){
+    var min = 0;
+    for (i = 0; i<array.length; i++) {
+        if (array[i] < array[min]) {min = i;}
+    }
+    return min;
+}
+
+function nachbarn(wieviele, array) {
+    var nachbarn = [];
+    for(var i = 0; i < wieviele; i++){
+        min = minimum(array);
+        nachbarn[i] = min;
+        array[min] = 9e99;
+    }
+    return nachbarn;
+}
+
+function alignement(naechste) {
+    vxSumme = 0;
+    vySumme = 0;
+    for(var i in naechste) {
+        vxSumme += schwarm[i].vx;
+        vySumme += schwarm[i].vy;
+    }
+    vNachbarn = {vx: vxSumme/naechste.length, vy: vySumme/naechste.length}
+    return vNachbarn;
+}
+  maxdv = 0;
+
+function flucht(bird) {
+  t +=1;
+  toPreyX = mouse.x / massstab - bird.x;
+  toPreyY =  (maxHeight - mouse.y) / massstab - bird.y;
+  distsqr = toPreyX * toPreyX + toPreyY * toPreyY;
+  rel = {vx : mouse.dx/massstab - bird.vx, vy: -mouse.dy/massstab - bird.vy};
+  danger =  - (rel.vx * toPreyX + rel.vy * toPreyY) / distsqr;
+  //if(t%1000 == 0) console.log("bx: " + reldir + " by: " + rel.vy );
+  dvx = -10*toPreyX/distsqr;
+  dvy = -10*toPreyY/distsqr;
+  if (danger>1) {
+    det = (toPreyX) * rel.vy  - (toPreyY) * rel.vx > 0? 1: -1;
+    dvx += + 10* danger * toPreyY * det / Math.sqrt(distsqr);
+    dvy = - 10*danger * toPreyX * det / Math.sqrt(distsqr);
+  }
+    //bird.scale = {x: dvx, y: dvy};
+
+  dv = Math.sqrt(dvx * dvx  + dvy * dvy);
+  bird.vx += Math.min(20, dv) * dvx/dv;
+  bird.vy += Math.min(20, dv) * dvy/dv;
+}
+
+function draw() {
+    for (i in schwarm){
+      schwarm[i].position.x = schwarm[i].x * massstab;
+      schwarm[i].position.y = maxHeight - schwarm[i].y * massstab;
+    }
+    renderer.render(stage);
+}
+//ENDSIM
+</script>
+</body>
+</html>

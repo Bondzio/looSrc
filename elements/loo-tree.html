@@ -39,6 +39,7 @@
       .hasKids>span>.icon-primitive-dot {display:none;}
       .noKids>span>.icon-plus2 {display:none;}
       .noKids>span>.icon-minus {display:none;}
+      .itemrow, .itemrow>label {padding: 0.2em;}
 		</style>
 		<ul id="tree" unresolved="">
       <li>tree is loading...</li>
@@ -74,9 +75,7 @@
     this.$ul.on("click", ".expanded .icon-minus", this.collapse.bind(this));
     this.$ul.on("click", ".collapsed .icon-plus2", this.expand.bind(this));
     
-    this.$ul.on("change", "input", function(e){that.looTree.fire("recheck", {checklist: that.getChecked(), partof: that.getChecked() })});
-
-
+    this.$ul.on("change", "input", function(e) {that.looTree.fire("recheck", {checklist: that.getChecked()})});
     this.reset();
   }
 
@@ -85,14 +84,17 @@
   Tree.prototype.COLLAPSED = 2;
 
   Tree.prototype.reset = function(){
-    $.getJSON(this.path).then(this.analyzeTree.bind(this))
+    $.getJSON(this.path).then(this.analyzeTree.bind(this));
   }
 
   Tree.prototype.analyzeTree = function(jsondata) {
     this.tree = jsondata;
     this.labels = this.getLabelNames();
+    this.buildTree();
+  }
+  
+  Tree.prototype.buildTree = function() {
     this.checklist = this.looTree.checklist ? this.looTree.checklist.split(",") : [];
-    var that=this;
     this.renderTree();
   }
 
@@ -132,6 +134,10 @@
       }
     }
     return false;
+  }
+  
+  Tree.prototype.isElementDescendantOf = function(possibleDescendent, possibleAncestor) {
+    return (this.getPathOfElement(possibleDescendent)||[]).indexOf(possibleAncestor) > -1;
   }
 
   Tree.prototype.getNumericPathOfElement = function(label, subtree) {
@@ -347,6 +353,11 @@
     this.checklist = checklist;
     this.looTree.setAttribute("checklist", checklist.join(","));
     return checklist;
+  }
+  
+  Tree.prototype.uncheckAll = function() {
+    this.$ul.find("input").prop("checked", false); 
+    this.looTree.fire("recheck", {checklist: this.getChecked()});
   }
 
 	Polymer({

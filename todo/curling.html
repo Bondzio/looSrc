@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <title>Curling</title>
+  <style>
+    body {
+      background-color: #dde;
+      width: 100%;
+    }
+    #rink {
+      position: absolute;
+      z-index:-1;
+    }
+    #shooter {
+      position: absolute;
+    }
+    #target {
+      position: absolute;
+    }
+    #arrow {
+      position: absolute;
+      width: 10px;
+      z-index:-1;
+    }
+  </style>
+</head>
+<body>
+<div id="rink"><img src='../img/Rink600.png'/></div>
+<div id="shooter"><img src='../img/StoneRed80.png'/></div>
+<div id="target"><img src='../img/StoneYellow80.png'/></div>
+<div ><img id="arrow" src='../img/ArrowBlue100.png'/></div>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+var beimNaechstenBild = (function() {return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {window.setTimeout(callback, 16);};})();
+
+function pyth(c1, c2) {
+  return window.Math.sqrt(c1 * c1 + c2 * c2);
+}
+
+function dist(obj1, obj2) {
+  return pyth(obj1.x - obj2.x, obj1.y - obj2.y);
+}
+
+function solveQuadratic(a, b, c) {
+  var diskr = b*b - 4*a*c;
+  if (diskr<0) {
+    return [];
+  }
+  else if(diskr === 0) {
+    return [-b/2/a];
+  }
+  else {
+    return [(-b+window.Math.sqrt(diskr))/2/a, (-b-window.Math.sqrt(diskr))/2/a];
+  }
+}
+
+var dt = 0.016;
+var sin = Math.sin;
+var cos = Math.cos;
+var arctan = Math.atan2;
+var phase = 0;
+var arrow = 0;
+$('#arrow').hide();
+
+var center = {
+  y: 0.35*window.innerHeight,
+  x: 0.5*window.innerWidth
+};
+
+$('#rink').css('left', center.x-300).css('top', center.y-300);
+
+var target = {
+  x: center.x - 200+400*Math.random(),
+  y: center.y + 150,
+  vx: 0,
+  vy: 0,
+  r: 40,
+  m: 5,
+  get_v : function(){return pyth(this.vx, this.vy);}
+};
+
+var shooter = {
+  x: center.x,
+  y: window.innerHeight,
+  vx: 0,
+  vy: 0,
+  r: 40,
+  m: 5,
+  get_v : function(){return pyth(this.vx, this.vy);}
+};
+
+$('#target').offset({top: target.y - target.r, left: target.x - target.r});
+
+var cursor = {
+  x: shooter.x,
+  y: shooter.y
+};
+
+document.onmousemove = function(e) {
+  cursor.x = e.pageX;
+  cursor.y = e.pageY;
+};
+
+function backtrackToCollision(obj1, obj2){
+  var old1x = obj1.x - obj1.vx*dt;
+  var old1y = obj1.y - obj1.vy*dt;
+  var old2x = obj2.x - obj2.vx*dt;
+  var old2y = obj2.y - obj2.vy*dt;
+  var vRelativ1To2 = [obj1.vx-obj2.vx, obj1.vy-obj2.vy];
+  var d = [old2x-old1x, old2y-old1y];
+  var tCollision = solveQuadratic(vRelativ1To2[0]*vRelativ1To2[0]+vRelativ1To2[1]*vRelativ1To2[1], - 2*(d[0]*vRelativ1To2[0]+d[1]*vRelativ1To2[1]), d[0]*d[0] + d[1]*d[1] - (obj1.r+obj2.r)*(obj1.r+obj2.r));
+  tCollision = window.Math.min(tCollision[0], tCollision[1]);
+  obj1.x = old1x + obj1.vx * tCollision;
+  obj1.y = old1y + obj1.vy * tCollision;
+  obj2.x = old2x + obj2.vx * tCollision;
+  obj2.y = old2y + obj2.vy * tCollision;
+}
+
+//SIM
+/* Die Objekte rot und gelb
+haben folgende Eigenschaften:
+rot.x   //Position
+rot.y   //Position
+rot.vx  //Geschwindigkeit
+rot.vy  //Geschwindigkeit
+rot.r   //Radius               */
+
+function checkCollision(rot, gelb) {
+  var dx = rot.x - gelb.x;
+  var dy = rot.y - gelb.y;
+  var abstand = Math.sqrt(dx*dx + dy*dy);
+  if(abstand < rot.r + gelb.r) return true;
+  else return false;
+}
+
+function elasticHit(rot, gelb) {
+  var dx = rot.x - gelb.x;
+  var dy = rot.y - gelb.y;
+  var alpha = arctan(dx, dy);
+
+  //Hier Kollisionscode eingeben:
+  gelb.vx =   rot.vy * sin(alpha) * cos(alpha);
+  gelb.vy =   rot.vy * cos(alpha) * cos(alpha);
+  rot.vx = -  rot.vy * sin(alpha) * cos(alpha);
+  rot.vy =    rot.vy * sin(alpha) * sin(alpha);
+}
+//ENDSIM
+
+$('#shooter').on('click', function(){
+  if (phase === 0) {
+    phase = 1;
+    $('#arrow').show().css('left', shooter.x-5);
+  }
+  else if (phase === 1) {
+    phase = 2;
+    $('#arrow').hide();
+    shooter.vy = - arrow;
+    arrow = 0;
+  }
+});
+
+beimNaechstenBild(animiereSpiel);
+
+function animiereSpiel() {
+
+  //zielen
+  if (phase === 0) {
+    shooter.x = cursor.x;
+  }
+  //schiessen
+  else if (phase === 1) {
+    arrow += 5;
+    $('#arrow').css('top', shooter.y-shooter.r-arrow).css('height', arrow);
+  }
+    //schiessen
+  else if (phase === 2) {
+      if (checkCollision(shooter, target)) {
+          backtrackToCollision(shooter, target);
+          elasticHit(shooter, target);
+          phase = 3;
+          arrow = 0;
+      }
+  }
+  else if (phase === 3) {
+    $('#target').offset({top: Math.round(target.y - target.r), left: Math.round(target.x - target.r)});
+        if (shooter.get_v()<1) {
+          shooter.vx =0;
+          shooter.vy =0;
+        }
+        if (target.get_v()<1) {
+          target.vx =0;
+          target.vy =0;
+        }
+        if (target.get_v()===0 && shooter.get_v()===0) {
+          phase = 0;
+          alert("Ihre Punktzahl lautet: " + (Math.round(1000 - dist(target, center))) + "!");
+          shooter.y = window.innerHeight;
+          target.x = center.x-200+400*Math.random();
+          target.y = center.y + 150;
+          $('#target').offset({top: target.y - target.r, left: target.x - target.r});
+        }
+  }
+
+  $('#shooter').offset({top: Math.round(shooter.y - shooter.r), left: Math.round(shooter.x - shooter.r)});
+
+  target.x += target.vx * dt;
+  target.y += target.vy * dt;
+  shooter.x += shooter.vx * dt;
+  shooter.y += shooter.vy * dt;
+
+
+  //Reibung
+  if (target.get_v()>0) {
+    target.vx -= 6 * target.m * target.vx/target.get_v() * dt;
+    target.vy -= 6 * target.m * target.vy/target.get_v() * dt;
+  }
+  if (shooter.get_v()>0) {
+    shooter.vx -= 6 * shooter.m * shooter.vx/shooter.get_v() * dt;
+    shooter.vy -= 6 * shooter.m * shooter.vy/shooter.get_v() * dt;
+  }
+
+  beimNaechstenBild(animiereSpiel);
+}
+
+/*Wenn sich beide bewegen...
+function elastischerStoss(objThis, objOther) {
+  var dToOtherX = (objOther.x - objThis.x)/dist(objThis, objOther);
+  var dToOtherY = (objOther.y - objThis.y)/dist(objThis, objOther);
+  var vThisToOther = objThis.vx*dToOtherX + objThis.vy*dToOtherY;
+  vThisToOther = [vThisToOther*dToOtherX, vThisToOther*dToOtherY];
+  var vThisTangential = [objThis.vx-vThisToOther[0], objThis.vy-vThisToOther[1]];
+  var vOtherToThis = objOther.vx*(-dToOtherX) + objOther.vy*(-dToOtherY);
+  vOtherToThis = [vOtherToThis*(-dToOtherX), vOtherToThis*(-dToOtherY)];
+  var vOtherTangential = [objOther.vx-vOtherToThis[0], objOther.vy-vOtherToThis[1]];
+  //alert("thisToOther: " + vThisToOther + " vThisTangential " + vThisTangential + " thisvx: " + objThis.vx + "  " + objThis.vy);
+  objThis.vx = vThisTangential[0] + ((objThis.m-objOther.m)*vThisToOther[0]+2*objOther.m*vOtherToThis[0])/(objThis.m + objOther.m);
+  objThis.vy = vThisTangential[1] + ((objThis.m-objOther.m)*vThisToOther[1]+2*objOther.m*vOtherToThis[1])/(objThis.m + objOther.m);
+  objOther.vx = vOtherTangential[0] + ((objOther.m-objThis.m)*vOtherToThis[0]+2*objThis.m*vThisToOther[0])/(objThis.m + objOther.m);
+  objOther.vy = vOtherTangential[1] + ((objOther.m-objThis.m)*vOtherToThis[1]+2*objThis.m*vThisToOther[1])/(objThis.m + objOther.m);
+}
+*/
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Great Us Valley
+http://localhost/flug/flug.html?Latitude=51.53274034007&Longitude=-122.26849514258399&Altitude=1953.9192866005517&Tilt=54.001905309063616&Roll=0.017388532453017636&Heading=-35.30303436579544
+
+Canyons (fast zu steil)
+http://localhost/flug/flug.html?Latitude=36.94538656648433&Longitude=-111.43760989507278&Altitude=1989.853460582833&Tilt=83.69856874948889&Roll=-4.35060600573893e-9&Heading=-76.84789818497347

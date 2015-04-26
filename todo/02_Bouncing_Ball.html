@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/simall.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/pixi.js"></script>
+    <script src="../js/pixi-helpers.js"></script>
+    <script src="../js/myJS.js"></script>
+    <script src="../js/simHelpers.js"></script>    <title>Bouncing Ball</title>
+    <style>
+      body {
+        background: #cce;
+      }
+      
+    </style>
+  </head>
+<body>
+<div class="watchlist">
+</div><script>
+  
+var world = new World({
+  hUnits: 4,
+  coords: {step: 0.5, onlyY: true},
+  unit: "m",
+  minUnits: {x: -1, y:0},
+  bgColor: 0xccccee,
+  fontColor: "#000000"
+});
+
+var ball = new Actor({img: "../img/ball.png", autorotate: false, wUnits: 0.5});
+
+//SIM
+function setup() {
+
+  dt = 0.016;      // Zeitschritt in Sekunden
+  
+  y = 3.00;   // Anfangsposition  
+  
+  r = 0.25;   // Radius des Balls
+  
+  vy = -0.5;  // Anfangsgeschwindigkeit
+  
+  ay = "???"; // Beschleunigung
+}
+
+
+function loop() {
+    
+  y  =  y  +  vy * dt;
+  
+  if(y < -2 ) {
+    alert("Hui, ich bin tief im Boden!");
+    y = 3.00;
+  }
+  
+  world.update();
+}
+
+/***************************************
+ * Aufgabe:
+ * 
+ * 1. Die Bewegung des Balles soll
+ *    ein freier Fall sein.
+ * 
+ * 2. Bei Berührung des Bodens soll der
+ *    Ball seine Richtung umkehren.
+ *    
+ * 3. Der Aufprall soll nicht ganz
+ *    elastisch sein: Multiplizieren 
+ *    Sie v etwa mit 0.80
+ *
+ ***************************************/
+
+
+
+//ENDSIM
+
+setup();
+loopStart();
+
+loopExtension = function() {
+    
+  mapPropsToActor(["x", "y", "vx", "vy"], ball);
+  
+  $(".watchlist").html("y = " + ball.y.toFixed(2) + " m");
+}
+</script>
+</body>
+</html>

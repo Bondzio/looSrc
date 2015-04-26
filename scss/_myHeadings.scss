@@ -2,9 +2,9 @@
 // Address font sizes and margins set differently in IE 6/7.
 // Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome.
 @mixin heading {
-  font-family: Trebuchet MS, Serif;
+  font-family: Trebuchet MS, Serif, serif;
   font-weight: bold;
-  margin: 1em 0em 0.5em -0.06em; //left margin optimized for trebuchet h2
+  margin: 1em 0 0.5em -0.06em; //left margin optimized for trebuchet h2
 }
 h1 {@include heading; font-size: 2rem;   }
 h2 {@include heading; font-size: 1.5rem; }

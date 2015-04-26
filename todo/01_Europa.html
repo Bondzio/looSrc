@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/simall.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/pixi.js"></script>
+    <script src="../js/pixi-helpers.js"></script>
+    <script src="../js/myJS.js"></script>
+    <script src="../js/simHelpers.js"></script>    <title>Europa</title>
+    <style>
+      body {
+/*        background: #000 url(../img/europa.jpg) no-repeat;
+        background-size: 100%;*/
+      }
+      
+    </style>
+  </head>
+<body>
+<div class="watchlist">
+</div><script>
+  
+var world = new World({
+  img: "../img/europa.jpg",
+  wUnits: 4000 /*km*/,
+  coords: {step: 1000},
+  unit: "km",
+  minUnits: {x: 0, y:0},
+  fontColor: "#223355"
+});
+
+var flugi = new Actor({img: "../img/FlugzeugVonOben.png", autorotate: true});
+
+//SIM
+//Die Funktion Setup wird am Anfang einmal ausgeführt.
+
+function setup() {
+    
+  t = 0;           // Zeit in Stunden
+  dt = 0.002;      // Zeitschritt in Stunden
+  
+  // Anfangsposition
+  x = 3800;  
+  y = 2800;
+  
+  // Anfangsgeschwindigkeit
+  vx = -900; 
+  vy = 0;
+  
+}
+
+//Die Funktion Loop wird bei jedem Bild ausgeführt.
+
+function loop() {
+    
+  x = x + vx*dt;
+  
+  t = t + dt;
+  
+  world.update();
+}
+
+/***************************************
+ * Aufgabe:
+ * 
+ * 1. Versuchen Sie, alles zu verstehen.
+ * 
+ * 2. Das Flugzeug soll sich auch in
+ *    y-Richtung bewegen können.
+ *    
+ * 3. Das Flugzeug soll in 5 Stunden
+ *    von Island nach Israel fliegen!
+ *
+ ***************************************/
+
+
+
+//ENDSIM
+
+setup();
+loopStart();
+
+loopExtension = function() {
+  
+  mapPropsToActor(["x", "y", "vx", "vy"], flugi);
+  
+  $(".watchlist").html("t = " + t.toFixed(3) + " h");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>body {background-color: #000; overflow: hidden;}</style>
+  </head>
+<body>
+<script src="../js/pixi.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight-30;
+var maxWidth = window.innerWidth-30;
+var renderer = new PIXI.autoDetectRenderer(maxWidth, maxHeight);
+document.body.appendChild(renderer.view);
+
+var stage = new PIXI.Stage(0x000000);
+
+// Koordinatenachse
+function koordinatenachse(pxProMeter, step) {
+  //var koordinatenachse = new PIXI.Graphics();
+  //koordinatenachse.lineStyle(4, 0xFFFFFF, 1);
+  //koordinatenachse.moveTo(0, maxHeight);
+  //koordinatenachse.lineTo(0, 0);
+  //stage.addChild(koordinatenachse);
+  for(var i = -1.5e11*Math.floor(maxHeight/(2*pxProMeter*1.5e11)); i<= maxHeight/(2*pxProMeter); i+=step){
+
+    skala = new PIXI.Text(Math.round(i/1.5e11) + " AU", {font: "10px Tahoma" , fill:"white"});
+    skala.position.x = 20;
+    skala.position.y = maxHeight/2 - Math.round(i)*pxProMeter;
+    skala.anchor.x = 0.5;
+    skala.anchor.y = 0.5;
+    stage.addChild(skala);
+  }
+  renderer.render(stage);
+}
+
+function spurBeginnen() {
+  spurs = new PIXI.Graphics();
+  stage.addChild(spurs);
+  spur = new PIXI.Graphics();
+  spurs.addChild(spur);
+  spuren = [toScreen(erde)];
+}
+
+function spurZeichnen() {
+  spuren.push(toScreen(erde));
+  spurs.removeChild(spur);
+  spur = new PIXI.Graphics();
+  spur.lineStyle(3, 0xff6600, 1); 
+  spur.moveTo(spuren[0].x, spuren[0].y);
+  for (i=1; i< spuren.length; i++){
+    spur.lineTo(spuren[i].x, spuren[i].y);
+  };
+  spurs.addChild(spur);
+}
+
+
+kalender = new PIXI.Text(0 + " Tage", {font: "20px Tahoma" , fill:"white"});
+    kalender.position.x = 400;
+    kalender.position.y = 20;
+    stage.addChild(kalender);
+
+function toScreen(pos) {
+  var x = maxWidth/2 + pos.x * massstab;
+  var y = maxHeight/2  - pos.y * massstab;
+  return {x: x,y: y};
+}
+
+function draw() {
+  erde.sprite.position = toScreen(erde);
+  renderer.render(stage);
+}
+
+function zeichne(obj) {
+  obj.sprite = new PIXI.Graphics();
+  obj.sprite.beginFill(obj.color);
+  obj.sprite.drawCircle(0,0,obj.r);
+  obj.sprite.position = toScreen(obj);
+  stage.addChild(obj.sprite);
+  renderer.render(stage);
+}
+  
+//SIM
+var mSonne = 1.99e30; // in kg
+var G = 6.67e-11; // in kgm^2kg^-2
+var t=0; // in Sekunden
+var dt = 60*60*48; //Zeitschritt der Simulation
+var massstab = 0.000000001;  // in px pro Meter
+
+erde = {}; //neues leeres Objekt erstellen
+erde.x = 150e9; //Abstand Erde Sonne 150 Mio km
+erde.y = 0;
+erde.vx = 0;
+erde.vy = 29900; //Bahngeschwindigkeit der Erde in m/s
+erde.color = 0x88ccff; //Farbe 0xRRGGBB
+erde.r = 8; //Radius in Pixel (nur für die anzeige relevant)
+
+sonne = {};
+sonne.x = 0;
+sonne.y = 0;
+sonne.color = 0xffeedd; //Farbe 0xRRGGBB
+sonne.r = 12; //Radius in Pixel (nur für die anzeige relevant)
+
+spurBeginnen();
+zeichne(erde);
+zeichne(sonne);
+koordinatenachse(massstab, 150000000000);
+
+simulate();
+
+function simulate() {
+  t += dt;
+  kalender.setText((t/86400).toFixed(0) + " Tage");
+  
+  //Hier folgt die eigentliche Simulation
+  
+  
+  spurZeichnen();
+  draw();
+  nextStep(simulate);
+}
+
+
+//ENDSIM
+
+
+</script>
+</body>
+</html>

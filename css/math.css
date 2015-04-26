@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic&subset=latin,greek-ext,greek,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Tinos:400,700,400italic,700italic&subset=latin,greek-ext,greek,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+  
+@font-face {
+  font-family: 'lmroman';
+  src: url('webfonts/lmroman10-italic-webfont.eot');
+  src: url('webfonts/lmroman10-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/lmroman10-italic-webfont.woff') format('woff'),
+       url('webfonts/lmroman10-italic-webfont.ttf') format('truetype'),
+       url('webfonts/lmroman10-italic-webfont.svg#texgyrescholaitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'lmroman';
+  src: url('webfonts/lmroman10-regular-webfont.eot');
+  src: url('webfonts/lmroman10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/lmroman10-regular-webfont.woff') format('woff'),
+       url('webfonts/lmroman10-regular-webfont.ttf') format('truetype'),
+       url('webfonts/lmroman10-regular-webfont.svg#texgyrescholaitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'droidserif';
+  src: url('webfonts/DroidSerif-Italic-webfont.eot');
+  src: url('webfonts/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/DroidSerif-Italic-webfont.woff') format('woff'),
+       url('webfonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+       url('webfonts/DroidSerif-Italic-webfont.svg#texgyrescholaitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'droidserif';
+  src: url('webfonts/DroidSerif-Regular-webfont.eot');
+  src: url('webfonts/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/DroidSerif-Regular-webfont.woff') format('woff'),
+       url('webfonts/DroidSerif-Regular-webfont.ttf') format('truetype'),
+       url('webfonts/DroidSerif-Regular-webfont.svg#texgyrescholaitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {padding:1em; font-size: 1.5em;
+      font-family: Calibri;
+      font-family: Cambria Math;
+      font-family: "Latin Modern Roman 10";
+      font-family: Asana;
+      font-family: Open Sans;
+      font-family: Droid Serif;
+      font-family: Georgia;
+      font-family: "Old Standard TT";
+      font-family: "Noto Serif";
+      font-family: "Droid Serif";
+      font-family: "Noto Serif", Serif;
+      font-family: lmroman, "Noto Serif", Serif;
+      font-family: Cambria, "Noto Serif", Serif;
+      font-family: droidserif, Cambria, "Noto Serif", Serif;
+
+      }
+
+dfn {font-style: inherit;}
+      
+.term {
+  position:relative;
+/*  line-height: 1.2;
+  line-height: 1.2em;*/
+  white-space: nowrap;
+}
+
+/*.number {word-spacing: -0.07em; white-space: nowrap;}*/
+
+.term span {
+  display: inline-block;
+  /*background-color: rgba(0,0,255,0.01);outline: 1px solid gray;*/
+}
+.term svg {
+ /* position:relative;*/
+/*  vertical-align: baseline;*/
+}
+
+.operator__sign {margin: 0 0.2em;}
+.operator__sign.multiplyImplicit {margin: 0 0.05em;}
+
+/*.enumerator {vertical-align: text-bottom;}
+.denominator {vertical-align: text-top;}*/
+
+.exponent>.openpar:first-child {display:none;}
+.exponent>.closepar:last-child {display:none;}
+
+/*.exponent {vertical-align: text-bottom;}*/
+
+.symbol {font-style: italic; /*padding-right: 0.15em; margin-right: 0;*/ }
+
+.divide, .divisionbar {position: relative;}
+.fracUp, .fracDown {position: absolute; display: block;}
+
+.of.outer, .of.inner {margin: 0 0.1em;}
+

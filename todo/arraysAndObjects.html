@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orbits</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+      body {background-color: #123; overflow: hidden; padding: 1em; margin:0;
+            font-family: Trebuchet, Lucida Sans, Arial, SansSerif; font-size: 2em; color: white;}
+      #backgroundCanvas {position:absolute; background-color:transparent; z-index:-1}
+    </style>
+  </head>
+<body>
+  
+<script src="../js/pixi.js"></script>
+<script src="../js/pixi-helpers.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+var maxHeight = window.innerHeight;
+var maxWidth = window.innerWidth;
+ 
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+//SIM
+
+planeten = ["Merkur", "Venus", "Erde", "Mars", "Jupiter", "Saturn", "Uranus", "Neptun"];
+
+document.write("hello " + planeten[3] + "!<br>");
+
+for(i in planeten) {
+    //document.write("<img src='../img/planets/32/" + planeten[i].toLowerCase() + ".png'><br>");
+}
+
+noten = {
+    Math: 6,
+    Physik: 6,
+    Franz: 3,
+    Geo: 5
+}
+
+noten.Sport = 5.5;
+
+document.write(noten.Math);
+document.write(noten["M" + "ath"]);
+document.write(Object.keys(noten).length);
+
+function sagmir(fach) {
+    document.write(fach + ": " + noten[fach]);
+}
+
+sagmir("Math");
+
+//ENDSIM
+
+</script>
+</body>
+</html>

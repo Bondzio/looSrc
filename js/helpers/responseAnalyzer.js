@@ -8,8 +8,10 @@ function responseAnalyzer(responseArray) {
   for(i in answer.log)   {log(answer.log[i]);}
   for(i in answer.error) {log(answer.error[i]);}
   if (answer.alert) {log(answer.alert.join("\n"));}//{showModalReloadAlert(answer.alert.join("\n"));}
-  if (answer.message) {log(answer.message.join("\n"));}
-
+  if (answer.message) {
+    var $msg = $("<div style='position:absolute; top: 0.5em; right: 0.5em; padding: 0.5em; background-color: #cde;'></div>").html(answer.message.join("\n")).appendTo($("body"));
+    setTimeout(function() {$msg.fadeOut();}, 2000);
+  }
   var props = ["cms", "files"];
   for(var p in props) {
     var property = props[p];

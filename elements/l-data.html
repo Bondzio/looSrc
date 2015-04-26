@@ -1,0 +1,54 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="l-data" attributes="" on-click="{{showEdit}}">
+  <template>
+    <style>
+      :host {position: relative;}
+      #edit {display: none;}
+      #edit.active {display: inline-block; position: absolute; background-color: #cde; z-index:10;}
+    </style>
+    <div id="edit">
+      <input id="datastring" value="{{datastring}}"><br>
+      <input id="for" value="{{variable}}"><br>
+      <button on-click="{{saveEdit}}">OK</button><button on-click="{{cancelEdit}}">Cancel</button>
+    </div>
+    <content></content></template>
+	<script>
+	Polymer('l-data', {
+    // Fires when the "<polymer-element>" has been fully prepared
+    ready: function() {this.update();},
+      //var observer = new MutationObserver(function (mutations) {
+//        log(mutations);
+//      }).observe(this, { childList: true, subtree: true, characterData: true });
+
+    update: function() {
+      var str = this.datastring = this.$.datastring.value || this.textContent;
+      if(str.indexOf("=")>-1) {
+        this.variable = str.split("=")[0].trim();
+        var value = str.split("=")[1].trim();
+        this.val = parseInt(value.split(" ")[0]);
+        this.unit = value.split(" ").length ? value.split(" ")[1] : false;
+        this.innerHTML = "<span style='color:green'>" + this.variable + "</span> = <span style='color:blue'>" + this.val + "</span> " + this.unit||"";
+      }
+      else {
+        this.variable = this.getAttribute("variable");
+        if(str.trim().length) {
+          this.val = parseInt(str.split(" ")[0]);
+          this.unit = str.split(" ").length ? str.split(" ")[1] : false;
+          this.innerHTML = "<span style='color:blue'>" + this.val + "</span> " + this.unit||"";
+        }
+        else {
+          this.val = parseInt(this.getAttribute("val"));
+          this.unit = this.getAttribute("unit");
+        }
+      }
+      $(this).trigger("updateldata");
+    },
+    
+    showEdit: function(e) {$(this.$.edit).addClass("active"); e.stopPropagation();},
+    hideEdit: function() {$(this.$.edit).removeClass("active");},
+    cancelEdit: function(e) {this.hideEdit(); e.stopPropagation();},
+    saveEdit: function(e) {this.update(); this.hideEdit(); e.stopPropagation();},
+    
+  });
+	</script>
+</polymer-element>

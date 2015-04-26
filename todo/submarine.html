@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yellow Submarine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      html, body {margin:0;  padding:0;}
+      body {background-color: #000; overflow: hidden; cursor:  url(img/seestern.cur); font-family: Lucida Sans, Verdana; font-weight: bold;}
+      #anzeige {position:absolute; background-color:#bde; padding: 0.5em; font-size: 1.2em; min-width:5em;}
+      
+    </style>
+  </head>
+<body>
+<div id="anzeige">Quarta b Submarine Game</div>
+<script src="../js/pixi.js"></script>
+
+<script>
+  
+var nextStep = (function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60);};})();
+
+// PIXI 2D Engine - Stage 
+var maxHeight = window.innerHeight;
+var maxWidth = window.innerWidth;
+var renderer = new PIXI.autoDetectRenderer(maxWidth, maxHeight);
+var stage = new PIXI.Stage(0x333377);
+document.body.appendChild(renderer.view);
+
+
+//Bildbeispiel
+uboot = {};
+uboot.bild = new PIXI.Texture.fromImage("../img/submarine.png");
+uboot.sprite = new PIXI.Sprite(uboot.bild);
+uboot.sprite.position.x = maxWidth/3;
+uboot.sprite.position.y = maxHeight/2;
+uboot.sprite.anchor.x = 0.5;
+uboot.sprite.anchor.y = 0.5;
+uboot.vx=0;
+uboot.vy=0;
+stage.addChild(uboot.sprite);
+	
+dt = 0.08;
+a=0;
+ay = 0;
+buddies = [];
+bubbles = [];
+stepcount = 0;
+
+function Buddy() {
+  buddies.push(this);
+  return this;
+}
+Buddy.prototype.step = function() {
+  if(this.move) this.move();
+  if(this.update) this.update();
+  if(this.isDead) this.remove();
+  if(this.draw) this.draw();
+}
+Buddy.prototype.remove = function() {
+  for(var i in buddies) {if(buddies[i]===this) {buddies.splice(i,1);}};
+};
+
+
+function Bubble() {
+  Buddy.call(this);
+  this.sprite = new PIXI.Graphics();
+  this.sprite.beginFill("0xaabbff");
+  this.r = 2*(Math.random()+1);
+  this.sprite.drawCircle(0, 0,this.r);
+  this.sprite.position.x = uboot.sprite.position.x-65 + 10*(Math.random()-0.5);
+  this.sprite.position.y = uboot.sprite.position.y+30+ 10*(Math.random()-0.5);
+  this.vx = -3;
+  this.vy = (2+Math.random())*this.r;
+  stage.addChild(this.sprite);
+  renderer.render(stage);
+  return this;
+}
+Bubble.prototype.step = function() {Buddy.prototype.step.call(this)};
+Bubble.prototype.reset = function() {
+  this.sprite.position.x = uboot.sprite.position.x-60 + 10*(Math.random()-0.5);
+  this.sprite.position.y = uboot.sprite.position.y+30+ 10*(Math.random()-0.5);
+  this.vx = 0;
+  this.vy = 10*Math.random()*this.r;
+};
+Bubble.prototype.update = function() {
+  if(this.sprite.position.x < 0 || this.sprite.position.x > maxWidth || this.sprite.position.y < 0 || this.sprite.position.y > maxHeight){
+    this.isDead = true;
+  }
+};
+Bubble.prototype.remove = function() {
+  for(var i in bubbles) {if(bubbles[i]===this) {bubbles.splice(i,1);}};
+  stage.removeChild(this.sprite);
+  Buddy.prototype.remove.call(this);
+};
+Bubble.prototype.move = function() {
+  move.call(this);
+};
+
+function Fish() {
+  Buddy.call(this);
+  this.bild = new PIXI.Texture.fromImage("../img/fisch02.png");
+  this.sprite = new PIXI.Sprite(this.bild);
+  this.sprite.position.x = Math.random()*maxWidth;
+  this.sprite.position.y = Math.random()*maxHeight;
+  this.vx = Math.random()>0.5?-1:-2;
+  this.vy = 0;
+  stage.addChild(this.sprite);
+  renderer.render(stage);
+  return this;
+}
+Fish.prototype.step = function() {Buddy.prototype.step.call(this)};
+Fish.prototype.reset = function() {
+  this.sprite.position.x = maxWidth + 80;
+  this.sprite.position.y = 50+(maxHeight-100)*Math.random();
+};
+Fish.prototype.update = function() {
+  if(this.sprite.position.x < -100 || this.sprite.position.x > maxWidth + 100 || this.sprite.position.y < -100 || this.sprite.position.y > maxHeight + 100){
+    this.reset();
+  }
+};
+Fish.prototype.remove = function() {
+  stage.removeChild(this.sprite);
+  Buddy.prototype.remove.call(this);
+};
+Fish.prototype.move = function() {
+  move.call(this);
+};
+
+function move() {
+  this.sprite.position.x += (this.vx - uboot.vx) * dt;
+  this.sprite.position.y -= (this.vy - uboot.vy) * dt;
+}
+
+
+
+//Koordinaten auf Bildschirm umrechnen
+massstab = 1;
+function toScreen(obj) {  // obj muss ein x und ein y haben, sowie ein sprite.position.x und sprite.position.y
+  obj.sprite.position.x = maxWidth/2 + obj.x * massstab;
+  obj.sprite.position.y = maxHeight/2 - obj.y * massstab;
+}
+
+//Taste
+window.addEventListener("keydown", taste);
+window.addEventListener("keyup", tasteweg);
+window.addEventListener("mousemove", anzeige);
+
+function taste(e) {
+  if(e.which == 17) {a = 4;}
+  if(e.which == 38) {ay = 2; uboot.sprite.rotation = -0.1;}
+  if(e.which == 40) {ay = -2; uboot.sprite.rotation = 0.1;}
+}
+
+function tasteweg(e) {
+  if(e.which == 17) {a = 0;}
+  if(e.which == 38) {ay = 0;  uboot.sprite.rotation = 0;}
+  if(e.which == 40) {ay = 0;  uboot.sprite.rotation = 0;}
+}
+
+
+
+simulate();
+
+fischli = [];
+for(var i = 0; i<30; i++) {
+  fischli[i] = new Fish();
+}
+
+followMouse = false;
+anzeige = document.getElementById("anzeige");
+
+function anzeige(e) {
+  if(followMouse) {
+    anzeige.style.top = e.pageY-20+"px";
+    anzeige.style.left = e.pageX+20+"px";  
+  }
+  druckAnzeigen(e.pageY/10);
+}
+
+//SIM
+function druckAnzeigen( h ) {
+  followMouse = false;
+  anzeige.textContent = "Quarta b Submarine Game";
+}
+
+//ENDSIM
+
+
+function simulate() {
+  stepcount++;
+  //if(stepcount%100===0) {console.log(buddies.length, bubbles.length);}
+  
+  if(a>0 && stepcount%4 === 0) {
+      bubbles.push(new Bubble());
+  }
+  
+  for(var i in buddies) {
+    buddies[i].step();
+  }
+  
+  uboot.vx += a * dt - 0.1*uboot.vx*dt;
+  uboot.vy += ay * dt - 0.1*uboot.vy*dt;
+//  uboot.sprite.position.x += uboot.vx * dt;
+//  uboot.sprite.position.y += uboot.vy * dt;
+
+  renderer.render(stage);
+  nextStep(simulate);
+}
+
+//ENDSIM
+
+</script>
+</body>
+</html>

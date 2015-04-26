@@ -2,672 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d70df6c-e88f-4f44-8dc5-0d9ca5d34ec8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/threeJS/Icosahedron.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elements/element-template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elements/element-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/loooping.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/loooping_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/organizeBookmarks_1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222140741.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222140747.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222141321.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222141459.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222141503.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141222141624.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209175457.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209175813.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209180443.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209180516.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209180703.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209180825.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209180841.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209190135.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209190420.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141209190433.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141218181659.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219221018.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219221252.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219221436.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219221444.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219221447.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230358.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230402.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230406.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230420.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230424.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230428.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230431.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230435.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230827.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219230851.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232307.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232341.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232346.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232351.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232928.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232931.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232938.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232941.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232944.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232947.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219232950.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219233002.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219234302.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219234305.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219234308.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141219235138.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220000515.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220000522.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220084201.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220084246.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220084313.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220084434.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220084510.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220104333.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220104401.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121318.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121327.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121342.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121411.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121526.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220121547.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220131445.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220131452.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220144708.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220144714.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220144723.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220144731.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220145718.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220145725.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150038.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150046.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150121.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150136.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150230.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150237.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150351.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150423.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150624.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150650.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150659.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150716.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150727.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150738.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150745.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150845.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220150854.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220151643.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220151651.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220151656.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220151709.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141220151722.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221123712.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221123720.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221123733.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221123739.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124332.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124345.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124352.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124454.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124516.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124528.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124536.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124557.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221124604.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125116.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125250.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125314.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125325.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125331.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125746.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125810.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125831.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125857.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221125904.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130052.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130437.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130444.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130925.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130937.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221130943.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131125.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131138.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131143.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131434.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131442.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131609.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221131614.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133600.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133607.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133708.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133715.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133814.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221133820.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221134813.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221134818.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135621.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135709.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135812.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135844.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135934.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221135956.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221140040.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221140217.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221140228.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221140255.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142556.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142606.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142619.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142624.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142648.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221142703.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221230529.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141221230540.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222102112.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222102114.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222102152.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222102156.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222103547.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222103628.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222103746.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141222103805.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflamp-20141221230540.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflamp-20141222103557.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflamp-20141222103628.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflamp-20141222103805.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflampe-20141221230529.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflampe-20141222103547.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\img\Natriumdampflampe-20141222103746.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\jquery.tablesorter\css\bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\NOTICE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\ROADMAP.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\bin\cli.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\dist\math.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\dist\math.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\dist\math.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\chained_operations.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\command_line_interface.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\configuration.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\bignumbers.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\complex_numbers.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\index.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\matrices.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\numbers.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\datatypes\units.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions\customization.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions\expression_trees.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions\index.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions\parsing.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\expressions\syntax.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\extension.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\getting_started.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\index.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\introduction.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\constants.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\abs.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\acos.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\add.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\alphabetical.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\arg.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\asin.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\atan.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\atan2.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\bignumber.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\boolean.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\categorical.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\ceil.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\clone.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\combinations.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\compare.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\compile.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\complex.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\concat.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\conj.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\cos.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\cosh.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\cot.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\coth.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\cross.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\csc.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\csch.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\cube.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\deepEqual.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\det.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\diag.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\distribution.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\divide.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\dot.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\dotDivide.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\dotMultiply.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\dotPow.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\equal.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\eval.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\exp.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\eye.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\factorial.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\filter.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\fix.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\flatten.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\floor.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\forEach.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\format.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\gcd.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\help.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\im.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\import.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\index.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\inv.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\larger.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\largerEq.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\lcm.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\log.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\log10.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\map.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\matrix.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\max.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\mean.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\median.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\min.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\mod.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\multiply.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\norm.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\nthRoot.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\number.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\ones.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\parse.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\parser.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\permutations.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\pickRandom.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\pow.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\print.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\prod.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\random.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\randomInt.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\range.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\re.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\resize.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\round.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sec.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sech.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\select.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sign.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sin.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sinh.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\size.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\smaller.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\smallerEq.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sort.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sqrt.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\square.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\squeeze.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\std.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\string.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\subset.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\subtract.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\sum.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\tan.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\tanh.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\to.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\transpose.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\typeof.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\unaryMinus.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\unaryPlus.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\unequal.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\unit.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\var.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\xgcd.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\functions\zeros.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\index.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\docs\reference\units.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\basic_usage.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\bignumbers.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\angle_configuration.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\basic_usage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\custom_separators.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\old_browsers.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\pretty_printing_with_mathjax.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\requirejs_loading.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\webworkers\webworkers.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\browser\webworkers\worker.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\chained_operations.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\complex_numbers.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\custom_argument_parsing.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\expression_trees.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\expressions.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\function_transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\import.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\matrices.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\examples\units.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\chaining\Selector.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\constants.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\error\ArgumentsError.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\error\DimensionError.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\error\IndexError.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\error\UnsupportedTypeError.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\error\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\Parser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\Infinity.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\LN10.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\LN2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\LOG10E.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\LOG2E.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\NaN.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\SQRT1_2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\SQRT2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\e.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\false.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\i.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\null.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\phi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\pi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\tau.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\true.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\constants\version.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\abs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\add.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\ceil.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\cube.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\dotDivide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\dotMultiply.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\dotPow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\exp.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\fix.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\floor.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\gcd.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\lcm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\log.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\log10.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\mod.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\multiply.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\norm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\nthRoot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\pow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\round.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\sign.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\sqrt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\square.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\subtract.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\unaryMinus.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\unaryPlus.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\arithmetic\xgcd.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\complex\arg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\complex\conj.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\complex\im.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\complex\re.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\bignumber.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\boolean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\complex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\matrix.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\number.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\string.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\construction\unit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\expression\eval.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\expression\help.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\concat.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\cross.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\det.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\diag.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\dot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\eye.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\flatten.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\inv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\ones.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\range.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\resize.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\size.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\squeeze.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\subset.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\transpose.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\matrix\zeros.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\combinations.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\distribution.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\factorial.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\permutations.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\pickRandom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\random.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\probability\randomInt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\compare.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\deepEqual.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\equal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\larger.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\largerEq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\smaller.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\smallerEq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\relational\unequal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\max.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\mean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\median.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\prod.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\std.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\sum.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\statistics\var.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\acos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\asin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\atan.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\atan2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\cos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\cosh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\cot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\coth.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\csc.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\csch.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\sec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\sech.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\sin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\sinh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\tan.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\trigonometry\tanh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\units\to.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\clone.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\filter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\forEach.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\format.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\import.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\map.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\print.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\sort.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\function\utils\typeof.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\docs\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\keywords.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\ArrayNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\AssignmentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\BlockNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\ConditionalNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\ConstantNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\FunctionAssignmentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\FunctionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\IndexNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\Node.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\OperatorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\RangeNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\SymbolNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\UpdateNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\node\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\concat.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\error.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\filter.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\forEach.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\index.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\map.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\max.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\mean.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\min.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\range.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\expression\transform\subset.transform.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\abs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\add.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\ceil.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\cube.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\dotDivide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\dotMultiply.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\dotPow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\exp.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\fix.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\floor.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\gcd.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\lcm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\log.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\log10.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\mod.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\multiply.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\norm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\nthRoot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\pow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\round.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\sign.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\sqrt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\square.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\subtract.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\unaryMinus.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\unaryPlus.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\arithmetic\xgcd.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\complex\arg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\complex\conj.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\complex\im.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\complex\re.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\bignumber.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\boolean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\complex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\matrix.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\number.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\parser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\select.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\string.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\construction\unit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\expression\compile.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\expression\eval.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\expression\help.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\expression\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\concat.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\cross.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\det.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\diag.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\dot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\eye.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\flatten.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\inv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\ones.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\range.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\resize.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\size.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\squeeze.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\subset.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\transpose.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\matrix\zeros.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\combinations.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\distribution.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\factorial.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\permutations.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\pickRandom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\random.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\probability\randomInt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\compare.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\deepEqual.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\equal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\larger.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\largerEq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\smaller.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\smallerEq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\relational\unequal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\max.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\mean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\median.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\prod.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\std.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\sum.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\statistics\var.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\acos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\asin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\atan.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\atan2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\cos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\cosh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\cot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\coth.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\csc.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\csch.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\sec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\sech.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\sin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\sinh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\tan.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\trigonometry\tanh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\units\to.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\clone.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\filter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\forEach.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\format.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\import.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\map.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\print.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\sort.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\function\utils\typeof.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\header.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\math.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Complex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Help.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Matrix.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Range.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\ResultSet.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\Unit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\type\collection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\array.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\bignumber.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\boolean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\latex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\number.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\object.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\string.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\util\types.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\bower_components\mathjs\lib\version.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\LooX\biudUfe.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\LooX\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\LooX\manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\LooX\popup.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\LooX\popup.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\experiments\emptyExperiment.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\img\uploads\linke_spalte.jpg" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\cms\bookmarks.json" afterPath="$PROJECT_DIR$/cms/bookmarksImport.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/00_enhanceConsole.js" afterPath="$PROJECT_DIR$/js/helpers/00_enhanceConsole.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cms/cms.json" afterPath="$PROJECT_DIR$/cms/cms.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/footer.inc.php" afterPath="$PROJECT_DIR$/php/footer.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/globalFunctions.js" afterPath="$PROJECT_DIR$/js/helpers/globalFunctions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/home.php" afterPath="$PROJECT_DIR$/main/home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/session_temp/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/Halbleiter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/helpers/Quantities.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/x Archiv/Term renderOld.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/Term.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/helpers/Term.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/Term_1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/addBookmarkToDb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cms/bookmarksImport_2.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/dbTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/fontassvg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/session_temp/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sim/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elements/l-data.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elements/l-eq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elements/l-ex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/l-ex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/extensions/looX.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/mathTest2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/session_temp_test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experiments/svgPlacement.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/viewBookmarks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/viewBookmarks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/viewBookmarks_1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archiv/viewBookmarks_JSON.php" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20141227145123.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\bookmarks-20150110144109.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141223230246.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\cms-20141229172215.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\labels-20141219144626.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\labels-20141229171527.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\loooping\archiv\auto\cms\labels.json" afterPath="" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\cms\bookmarks.json" afterPath="$PROJECT_DIR$/archiv/bookmarks_1.json" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\cms\webbookmarks.json" afterPath="$PROJECT_DIR$/archiv/webbookmarks.json" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\experiments\mathTest.php" afterPath="$PROJECT_DIR$/archiv/mathTest.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX.crx" afterPath="$PROJECT_DIR$/archiv/extensions/LooX.crx" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX.pem" afterPath="$PROJECT_DIR$/archiv/extensions/LooX.pem" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\biudUfe.js" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/biudUfe.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\icon.png" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/icon.png" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\manifest.json" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/manifest.json" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\options.html" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/options.html" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\options.js" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/options.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\popup.html" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/popup.html" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\LooX\popup.js" afterPath="$PROJECT_DIR$/archiv/extensions/LooX/popup.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\extensions\looX.php" afterPath="$PROJECT_DIR$/archiv/addBookmark.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\js\helpers\globalFunctions.js" afterPath="$PROJECT_DIR$/js/helpers/00_globalFunctions.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\main\organizeBookmarks.php" afterPath="$PROJECT_DIR$/archiv/organizeBookmarks.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\loooping\main\organizeBookmarks_1.php" afterPath="$PROJECT_DIR$/x Archiv/organizeBookmarks_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_myHeadings.scss" afterPath="$PROJECT_DIR$/scss/_myHeadings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiments/elemment-test.php" afterPath="$PROJECT_DIR$/experiments/elemment-test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/initialize.css" afterPath="$PROJECT_DIR$/css/initialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/intro.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/intro.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cms/labels.json" afterPath="$PROJECT_DIR$/cms/labels.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elements/loo-tree.html" afterPath="$PROJECT_DIR$/elements/loo-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/loooping.css.map" afterPath="$PROJECT_DIR$/css/loooping.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/loooping.css" afterPath="$PROJECT_DIR$/css/loooping.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/loooping.scss" afterPath="$PROJECT_DIR$/scss/loooping.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/looopingHelpers.js" afterPath="$PROJECT_DIR$/js/helpers/looopingHelpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/organize.php" afterPath="$PROJECT_DIR$/main/organize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/organizeBookmarks.php" afterPath="$PROJECT_DIR$/main/organizeBookmarks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/outro.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/parser.js" afterPath="$PROJECT_DIR$/js/helpers/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/responseAnalyzer.js" afterPath="$PROJECT_DIR$/js/helpers/responseAnalyzer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/saveSafeCentral.php" afterPath="$PROJECT_DIR$/php/saveSafeCentral.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/uploadImage.php" afterPath="$PROJECT_DIR$/php/uploadImage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers/tinySnippetsFromGiants.js" afterPath="$PROJECT_DIR$/js/helpers/tinySnippetsFromGiants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cms/weblabels.json" afterPath="$PROJECT_DIR$/cms/weblabels.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="loooping.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -682,64 +79,28 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="loooping" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mathTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/mathTest.php">
+      <file leaf-file-name="Term.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2380">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Quanten.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/Quanten.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="responseAnalyzer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/helpers/responseAnalyzer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/helpers/parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7986577" vertical-offset="204" max-vertical-offset="5593">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding>
-                <marker date="1423599342465" expanded="true" signature="10761:10787" placeholder="..." />
-                <marker date="1423599342465" expanded="true" signature="13492:13524" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+                <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emptyExperiment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/emptyExperiment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -753,14 +114,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/helpers/parser.js" />
+        <option value="$PROJECT_DIR$/scss/_myHeadings.scss" />
+        <option value="$PROJECT_DIR$/experiments/sqlitetest/index.php" />
+        <option value="$PROJECT_DIR$/js/helpers/Term.js" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true">
+    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
   </component>
   <component name="JsGruntFileManager">
     <initial>false</initial>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
@@ -799,105 +169,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loooping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="experiments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="options.lastSelected" value="configurable.group.build" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+    <property name="last.edited.regexp" value="Sample Text" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\loooping\experiments\sqlitetest" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\loooping\experiments" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
@@ -917,9 +219,14 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
-    <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -935,29 +242,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1058" extended-state="6" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1928" height="1058" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19935691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18550107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31725615" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12826087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -974,55 +282,322 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiments/mathTest.php">
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2380">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="369" column="3" selection-start-line="369" selection-start-column="3" selection-end-line="369" selection-end-column="3" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.grunt/ftpush/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/saveSafeCentral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/uploadImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_myBreakpoints.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_myHeadings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/Quanten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/responseAnalyzer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/emptyExperiment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/Quanten.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/responseAnalyzer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/emptyExperiment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/emptyExperiment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5676157">
+          <caret line="130" column="38" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/helpers/responseAnalyzer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/helpers/parser.js">
+    <entry file="file://$PROJECT_DIR$/experiments/Quanten.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7986577" vertical-offset="204" max-vertical-offset="5593">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.grunt/ftpush/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/saveSafeCentral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/uploadImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_myBreakpoints.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_myHeadings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66543436">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/ArduinoESP8266.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3544018">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers/Term.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
-            <marker date="1423599342465" expanded="true" signature="10761:10787" placeholder="..." />
-            <marker date="1423599342465" expanded="true" signature="13492:13524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="14486:14516" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15213:15243" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="15954:15984" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="16285:16303" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="19498:19524" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="22939:22952" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="23776:23806" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="26701:26767" placeholder="..." />
+            <marker date="1429875544219" expanded="true" signature="27092:27158" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,7 @@ function Parser(termstring, $renderDom, $resultDom){
   this.$resultDom = $resultDom;
   
   //Cambria
-  this.renderingOptions = {
+  this.rOpt = {
     fracReducer: 0.75,
     fracUpStandard: 0.42,
     fracDownStandard: 0.5,
@@ -20,7 +20,7 @@ function Parser(termstring, $renderDom, $resultDom){
   };
   
 //Open Sans
-//  this.renderingOptions = {
+//  this.rOpt = {
 //    fracReducer: 0.75,
 //    fracUpStandard: 0.5,
 //    fracDownStandard: 0.5,
@@ -128,7 +128,7 @@ Parser.prototype.parse = function(string) {
     if(checkForOperator(reststring[0])) return false; // keine Implizit mit Operator
     if(reststring[0] === "(") return true; // Implizit mit Klammer
     if(reststring[0] === ")") return false; // Implizit mit Klammer
-    for(var k=reststring.length; k>0;k--) {
+    for(var k=reststring.length; k>0; k--) {
       if(!isNaN(+reststring.slice(0, k)) && reststring[k-1] !== " ") return false; // keine Implizit mit Zahl
     }
     if(parser.functions.filter(function(f) {return reststring.indexOf(f.name)>-1;}).length) return true; // Implizit mit Funktion
@@ -314,7 +314,7 @@ Parser.prototype.render = function($el) {
         if(arr[i] === "vec") {
           overlap.top += isHigh?0.1:0;
           isHigh = true;
-          var vecUp = isHigh?(100*(overlap.top+parser.renderingOptions.accentUp)):0;
+          var vecUp = isHigh?(100*(overlap.top+parser.rOpt.accentUp)):0;
           log(vecUp);
           var svgArr = [[10*w,32-vecUp], [100*w-15,32-vecUp], [100*w-17,24-vecUp], [100*w, 34-vecUp], [100*w-17,44-vecUp], [100*w-15, 36-vecUp], [10*w, 36-vecUp]];
           var path = "M"+((svgArr.map(function(point) {return ""+point[0]+" "+point[1];})).join(" L"))+" Z";
@@ -323,7 +323,7 @@ Parser.prototype.render = function($el) {
         else if(arr[i] === "bar") {
           overlap.top += isHigh?0.1:0;
           isHigh = true;
-          var vecUp = isHigh?(100*(overlap.top+parser.renderingOptions.accentUp)):0;
+          var vecUp = isHigh?(100*(overlap.top+parser.rOpt.accentUp)):0;
           var svgArr = [[10*w,30-vecUp], [100*w,30-vecUp], [100*w, 34-vecUp], [10*w, 34-vecUp]];
           var path = "M"+((svgArr.map(function(point) {return ""+point[0]+" "+point[1];})).join(" L"))+" Z";
           temp = "<span class='mod bar' style='position:relative; height:"+h+"em; width:"+w+"em'><svg height='"+h+"em' width='"+w+"em' style='position:absolute; left: 0; top:-"+0+"em;' viewBox='0 0 "+w*100+" "+h*100+"'><path d='"+path+"' stroke='none'></path></svg><span style='position:relative; left:0.06em'>"+temp+"</span></span>";
@@ -356,14 +356,14 @@ Parser.prototype.render = function($el) {
         var n = args[1];
         var zw = z.node.name === "hasPar"?z.args[0].w:z.w;
         var nw = n.node.name === "hasPar"?n.args[0].w:n.w;
-        var fracReducer = parser.renderingOptions.fracReducer; //ES6 explode
-        var fracBarOffset = parser.renderingOptions.fracBarOffset;
-        var fracUpStandard = parser.renderingOptions.fracUpStandard;
-        var fracDownStandard = parser.renderingOptions.fracDownStandard;
+        var fracReducer = parser.rOpt.fracReducer; //ES6 explode
+        var fracBarOffset = parser.rOpt.fracBarOffset;
+        var fracUpStandard = parser.rOpt.fracUpStandard;
+        var fracDownStandard = parser.rOpt.fracDownStandard;
         var fracBarStandard = 0.35;
         var fracBar = fracBarStandard + fracBarOffset;
         var fracBarThickness = 0.07 * fracReducer;
-        var fracMargin = parser.renderingOptions.fracMargin;
+        var fracMargin = parser.rOpt.fracMargin;
         //lineheight = 1.2;
         var fracUp = fracUpStandard + fracMargin + fracBarOffset + fracReducer * z.overlap.bottom; //1fracBar //(args[0].h*fracReducer - fracBar) + fracMargin;
         var fracDown = fracDownStandard + fracBarThickness + fracMargin - fracBarOffset + fracReducer * n.overlap.top; //1 - fracBar + fracMargin// + (args[1].h);
@@ -376,8 +376,8 @@ Parser.prototype.render = function($el) {
           "<span class='arg2' style='position: absolute; top: "+fracDown+"em; left: "+ 0.5 * (width-nw*fracReducer)+"em;'><span class='denominator' style='font-size: "+(100*fracReducer+"%")+"'>"+args[1].html+"</span></span></span>";
       }
       if(token.symbol === "^") {
-        var expUp = parser.renderingOptions.expUp;
-        var expReducer = parser.renderingOptions.expReducer;
+        var expUp = parser.rOpt.expUp;
+        var expReducer = parser.rOpt.expReducer;
         var expMargin = 0.05;
         overlap.top = args[0].overlap.top + expReducer*args[1].overlap.top; // + expUp + expReducer - 1;
         var width = args[0].w + expMargin + expReducer * args[1].w;

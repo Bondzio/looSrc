@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stuctures</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      body {background-color:0;}
+      .item {height:8em; margin-bottom: 0.4em;}
+      .item__img {width: 8em; margin-right: 1em;}
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <button id="grid" type="button">Gitter</button>
+    <button id="cloth" type="button">Vorhang</button>
+    <button id="tree" type="button">Baum</button>
+    <button id="zeichne" type="button">Zeichne</button>
+    <button id="custom" type="button">Parameter</button>
+    <label id="angularStiffness" hidden><input type="range" name="angStiffness" value=15 min=0 max=25 data-exp=0.001 />Starrheit <span>0.032</span></label>
+    <div id="steuerung" hidden>
+      <form>
+        <table>
+          <tr>
+            <td><label><input type="range" name="gravity" value=10 min=0 max=20 data-scale=1 /><br>Gravitation<br><span>10</span> m/s&#178;</label></td>
+            <td><label><input type="range" name="stiffness" value=28 min=0 max=30 data-exp=0.001 /><br>Steifheit<br><span>0.008</span></label></td>
+            <td><label><input type="range" name="angStiffness" value=85 min=0 max=100 data-exp=0.0000000001 /><br>Starrheit<br><span>0.008</span></label></td>
+            <td><label><input type="range" name="maxStress" value=40 min=0 max=50 data-exp=1 /><br>max. Dehnbarkeit<br><span>0.008</span></label></td>
+            <td><label><input type="range" name="angularStability" value=35 min=0 max=50 data-exp=0.11 /><br>max. Biegsamkeit<br><span>0.008</span></label></td>
+            <td><label><input type="checkbox" name="stiff" checked/>Inkomressibel</label></td>
+            <td><label><input type="checkbox" name="drawStress" checked/>Belastung anzeigen</label></td>
+          </tr>
+          <tr>
+            <td><label><input type="range" name="physics_accuracy" value=5 min=1 max=10 data-scale=1 /><br>Tempo vs. Genauigkeit<br><span>5</span></label></td>
+            <td><label><input type="range" name="structy_height" value=10 min=2 max=50  data-scale=1 /><br>Höhe<br><span>10</span></label></td>
+            <td><label><input type="range" name="structy_width" value=30 min=2 max=160  data-scale=1 /><br>Breite<br><span>30</span></label></td>
+            <td><label><input type="range" name="spacing" value=20 min=5 max=30 data-scale=1 /><br>Gitterweite<br><span>20</span></label></td>
+            <td><label><input type="range" name="lineWidth" value=5 min=1 max=10 data-scale=1 /><br>Linienbreite<br><span>0.008</span></label></td>
+            <td><label><input type="checkbox" name="drawPoints"/>Punkte zeichnen</label></td>
+            <td><label><input type="checkbox" name="drawStress" checked/>Belastung anzeigen</label></td>
+          </tr> 
+        </table>
+      </form>
+    </div>
+  <div id="stagecontainer"></div>
+    
+  <canvas id="c" width =800 height=600></canvas>
+    <script>
+
+// settings
+
+//var physics_accuracy  = 5,
+//    gravity           = 1000,
+//    structy_height    = 10,
+//    structy_width     = 30,
+//    spacing           = 20,
+//    stiff             = true,
+//    stiffness         = 0.008,
+//    maxStress         = 10000 * (stiff?0.08:1),
+//    angStiffness      = 0.0002,
+//    angularStability  = 0.5,
+//    drawStress        = true,
+//    drawPoints        = false,
+//    lineWidth         = 5;
+  
+var start_y           = 30;
+
+
+var canvas,
+    ctx,
+    structy,
+    points = [],
+    constraints = [],
+    angulars = [],
+    boundsx,
+    boundsy,
+    phase = "build",
+    t = 0,
+    mouse = {
+        down: false,
+        button: 1,
+        x: 0,
+        y: 0,
+        px: 0,
+        py: 0
+    };
+
+window.requestAnimFrame =
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function (callback) {
+        window.setTimeout(callback, 16.6);
+};
+
+var Structure = function () {
+  this.pointer = false;
+  this.points = [];
+  this.constraints = [];
+  this.angulars = [];
+  constraints = [];
+  angulars = [];
+  return this;
+}
+
+Structure.prototype.create = function() {
+  var start_x = canvas.width / 2 - structy_width * spacing / 2;
+
+  for (var y = 0; y <= structy_height; y++) {
+
+      for (var x = 0; x <= structy_width; x++) {
+
+          var p = new Point(start_x + x * spacing, start_y + y * spacing);
+          p.name = "(" + x + ";" + y + ")";
+          x !== 0 && p.attach(this.points[this.points.length - 1]); //linken Nachbar anheften
+          if(!stiff && y === 0) p.pin(p.x, p.y);
+          if(stiff  && y > structy_height - 1) {p.pin(p.x, p.y)};
+          y !== 0 && p.attach(this.points[x + (y - 1) * (structy_width + 1)]); //oberen Nachbar anheften
+          this.points.push(p);
+      }
+  }
+  //for(var pu = this.points.length-1; pu>=0; pu--) {p =  this.points[pu]; console.log(p.name, p.angulars.length);}
+}
+
+Structure.prototype.tryToBuildConnection = function() {
+  if(!this.pointer && (!this.closest || !this.closest.isNear)) {
+    var p = new Point(mouse.x, mouse.y);
+    this.points.push(p);
+    this.pointer = p;
+    return;
+  }
+  if(!this.pointer && this.closest.isNear) {
+    this.pointer = this.closest;
+    return;
+  }
+  if(this.pointer && this.closest && this.closest.isNear) {
+
+    //Stop Building on Construction on connection to Self
+    if(this.closest === this.pointer) {
+      this.pointer = false;
+      for(var qindex in this.points) {this.points[qindex].isNear = false;}
+      return;
+    }
+
+    //Connect to existing Point if Constraint doesn't exist
+    var doesExist = false;
+    var myC = this.pointer.constraints.length;
+    var oC = this.closest.constraints.length;
+    while(myC-- > 0) {
+      if(this.pointer.constraints[myC].p1 === this.clostest || this.pointer.constraints[myC].p2 === this.clostest) {
+        doesExist = true;
+      }
+    }
+    while(oC-- > 0) {
+      if(this.closest.constraints[oC].p1 === this.pointer || this.closest.constraints[oC].p2 === this.pointer) {
+        doesExist = true;
+      }
+    }
+    if(doesExist) {
+      this.pointer = false;
+      for(var qindex in this.points) {this.points[qindex].isNear = false;}
+      return;
+    }
+    else {
+      this.closest.attach(this.pointer);
+      this.pointer = this.closest;
+    }
+  }
+  else {
+    var p = new Point(mouse.x, mouse.y);
+    if(this.points.length){p.attach(this.pointer);}
+    this.points.push(p);
+    this.pointer = p;
+  }
+}
+
+Structure.prototype.mouseDesign = function() {
+  for(var qindex in this.points) {this.points[qindex].isNear = false;}
+  if(this.points.length === 0) {return false;}
+  this.closest = findClosestPoint(mouse);
+  if(distSqr(mouse, this.closest) < 64) {
+    this.closest.isNear = true;
+  }
+  if(this.pointer) {
+    var p = this.pointer;
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+    ctx.lineTo(mouse.x, mouse.y);
+    ctx.stroke();
+  }
+};
+
+function findClosestPoint(p) {
+  if(!structy.points || !structy.points.length === 0) return false;
+  var minDistSqr = 1000000;
+  var qmin, q;
+  for(var qindex in structy.points) {
+    q = structy.points[qindex];
+    if(distSqr(p,q) < minDistSqr) {
+      minDistSqr = distSqr(p,q);
+      qmin = q;
+    }
+  }
+  return qmin;
+}
+
+
+Structure.prototype.update = function () {
+
+    var i = physics_accuracy;
+
+    while (i--) {
+      var a = angulars.length;
+      while (a--) angulars[a].relax();
+        
+      var p = this.points.length;
+      while (p--) this.points[p].resolve_constraints();
+    }
+    
+    a = angulars.length;
+    while (a--) {if (angulars[a].broken) {angulars[a].remove();}};
+    
+    c = constraints.length;
+    while (c--) {if (constraints[c].broken) {constraints[c].remove();}};
+    
+    i = this.points.length;
+    while (i--) this.points[i].update(.016);
+};
+
+Structure.prototype.draw = function () {
+    ctx.beginPath();
+    ctx.strokeStyle = "#888";
+    var i = constraints.length;
+    while (i--) constraints[i].draw();
+    ctx.stroke();
+    
+    var p = this.points.length;
+    while (p--) this.points[p].draw();
+
+
+};
+
+var Point = function (x, y) {
+    this.x      = x;
+    this.y      = y;
+    this.px     = x;
+    this.py     = y;
+    this.nx     = 0;
+    this.ny     = 0;
+    this.pin_x  = null;
+    this.pin_y  = null;
+    this.constraints = [];
+    this.angulars = [];
+    return this;
+};
+
+Point.prototype.attach = function (point) {
+
+  //add Contraints
+  constraints.push(new Constraint(this, point));
+  this.constraints.push(constraints[constraints.length - 1]);
+  point.constraints.push(constraints[constraints.length - 1]);
+  
+  //addAngularContraints
+  if(stiff) {
+    var thirdpoint;
+    //Winkelverbindung zu allen bestehenden Constraints herstellen
+    var myC = this.constraints.length-1;
+    while(myC--) {
+      thirdpoint = (this.constraints[myC].p1 === this)?this.constraints[myC].p2:this.constraints[myC].p1;
+      angulars.push(new AngularConstraint(point, this, thirdpoint));
+      this.angulars.push(angulars[angulars.length - 1]);
+    }
+    var oC = point.constraints.length-1;
+    while(oC--) {
+      thirdpoint = (point.constraints[oC].p1 === point)?point.constraints[oC].p2:point.constraints[oC].p1;
+      angulars.push(new AngularConstraint(this, point, thirdpoint));
+      point.angulars.push(angulars[angulars.length - 1]);
+    }
+  }
+};
+
+Point.prototype.pin = function (pinx, piny) {
+  this.pin_x = pinx;
+  this.pin_y = piny;
+};
+
+Point.prototype.resolve_constraints = function () {
+    if (this.pin_x !== null && this.pin_y !== null) {
+        this.x = this.pin_x;
+        this.y = this.pin_y;
+        return;
+    }
+
+    var i = this.constraints.length;
+    while (i--) {this.constraints[i].resolve();}
+    
+    //Blocken an linkem und rechtem Rand
+    this.x > boundsx ? this.x = 2 * boundsx - this.x : 1 > this.x && (this.x = 2 - this.x);
+    //Fällt unten nicht raus
+    this.y < 1 ? this.y = 2 - this.y : this.y > boundsy && (this.y = 2 * boundsy - this.y);
+};
+
+Point.prototype.checkMouse = function() {
+  if (mouse.down) {
+    var diff_x = this.x - mouse.x,
+        diff_y = this.y - mouse.y,
+        distsqr = diff_x * diff_x + diff_y * diff_y;
+    if (mouse.button === 1) {
+        if (distsqr < mouse_pull_sqr) {
+            this.px = this.x - (mouse.x - mouse.px) * 1.8;
+            this.py = this.y - (mouse.y - mouse.py) * 1.8;
+        }
+    } else if (distsqr < mouse_cut_sqr) {
+      for(var i = this.constraints.length-1; i>=0; i--) {
+        console.log("cut");
+        this.constraints[i].broken = true;
+      }
+    }
+  }
+}
+
+Point.prototype.update = function (delta) {
+  this.checkMouse();
+  //Verlet Step
+  this.nx = this.x + ((this.x - this.px) * .99);
+  this.ny = this.y + ((this.y - this.py) * .99) + 50 * gravity  * delta * delta;
+
+  this.px = this.x;
+  this.py = this.y;
+
+  this.x = this.nx;
+  this.y = this.ny;
+
+  if(stiff && this.constraints.length * (this.constraints.length-1)/2 !== this.angulars.length) {
+    console.log(this.name + " has " + this.constraints.length + " c + " + this.angulars.length + " a");
+  }
+};
+
+Point.prototype.draw = function () {
+  if(drawPoints || phase === "build") {
+    ctx.beginPath();
+    ctx.arc(this.x,this.y, 4, 0, 6.283);
+    ctx.stroke();
+    //ctx.font="12px Georgia";
+    //ctx.fillText(this.angulars.length,this.x+5,this.y-10);
+  }
+  if(this.isNear) {
+    ctx.beginPath();
+    ctx.arc(this.x,this.y, 8, 0, 6.283);
+    ctx.stroke();
+    //ctx.font="12px Georgia";
+    //ctx.fillText(this.angulars.length,this.x+5,this.y-10);
+  }
+};
+
+
+var Constraint = function (p1, p2) {
+    this.p1     = p1;
+    this.p2     = p2;
+    this.lengthSqr = distSqr(p1, p2);
+    this.stress = 0;
+    //structy.constraints.push(this);
+};
+
+Constraint.prototype.resolve = function () {
+    var dx  = this.p1.x - this.p2.x,
+        dy  = this.p1.y - this.p2.y;
+        dsquare = dx*dx + dy*dy;
+        
+    var rquadrat = this.lengthSqr;
+    this.stress += Math.abs(dsquare - rquadrat);
+    //if (Math.abs(this.stress)>rekord) {console.log(this.stress); rekord = Math.abs(this.stress);}
+    if (this.stress > maxStress * Math.sqrt(this.lengthSqr)) {console.log("break"); this.broken = true;}
+   
+    if(stiff || rquadrat < dsquare){
+    this.p1.x += stiffness * dx * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p1.y += stiffness * dy * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p2.x -= stiffness * dx * (-0.5 + rquadrat/(rquadrat + dsquare));
+    this.p2.y -= stiffness * dy * (-0.5 + rquadrat/(rquadrat + dsquare));
+    }
+};
+
+Constraint.prototype.remove = function () {
+    var p1 = this.p1;
+    var p2 = this.p2;
+    var angs, ang;
+    angs = p1.angulars.length;
+    while(angs--) {
+      ang = p1.angulars[angs];
+      if(ang.a === p2 || ang.c === p2) {
+        p1.angulars.splice(p1.angulars.indexOf(ang), 1);
+        angulars.splice(angulars.indexOf(ang), 1);
+      }
+    }
+    angs = p2.angulars.length;
+    while(angs--) {
+      ang = p2.angulars[angs];
+      if(ang.a === p1 || ang.c === p1) {
+        p2.angulars.splice(p2.angulars.indexOf(ang), 1);
+        angulars.splice(angulars.indexOf(ang), 1);
+      }
+    }
+    p2.constraints.splice(p2.constraints.indexOf(this), 1);
+    p1.constraints.splice(p1.constraints.indexOf(this), 1);
+    constraints.splice(constraints.indexOf(this), 1);
+    //if(p1.constraints.length === 0) remove_point
+};
+
+Constraint.prototype.draw = function () {
+  //console.log(this.stress);
+  if(drawStress) {
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(" + Math.round(30*Math.log(1+Math.abs(this.stress))) + ",0, 0)";
+  }
+  ctx.moveTo(this.p1.x, this.p1.y);
+  ctx.lineTo(this.p2.x, this.p2.y);
+  if(drawStress) {
+    ctx.stroke();
+  }
+  this.stress = 0;
+};
+
+var AngularConstraint = function(a, b, c){ //b is middle
+  this.a = a;
+  this.b = b;
+  this.c = c;
+  this.angle = findAngle(a, b, c);
+  //this.stiffness = angStiffness;
+};
+
+
+
+AngularConstraint.prototype.relax = function() {
+	var angle = findAngle(this.a, this.b, this.c);
+	var diff = angle - this.angle;
+
+	if (diff <= -Math.PI)
+		diff += 2*Math.PI;
+	else if (diff >= Math.PI)
+		diff -= 2*Math.PI;
+
+  if (diff > angularStability) {this.break();} 
+
+	diff *= angStiffness;
+
+  rotate(this.a, this.b, diff);
+  rotate(this.c, this.b, -diff);
+  rotate(this.b, this.a, diff);
+  rotate(this.b, this.c, -diff);  
+};
+
+
+AngularConstraint.prototype.break = function() {
+  console.log("angular break");
+  //Mein Mittelpunkt b bleibt beim Punkt a, Punkt c erhält einen ersatzpunkt d für seine Verbindungen
+  var c = this.c;
+  var b = this.b;
+  var bC = b.constraints.length-1;
+  while(bC-- > 0) {
+    if(!b.constraints[bC]) {continue;}
+    if(b.constraints[bC].p1 === c || b.constraints[bC].p2 === c) {
+      //Erzeuge als Endpunkt der Verbindung, die von c kommt einen Punkt d
+      var d = new Point(b.x, b.y);
+      d.px = b.px;
+      d.py = b.py;
+      d.name = b.name + " new";
+      structy.points.push(d);
+      if(b.constraints[bC].p1 === c) {b.constraints[bC].p2 = d};
+      if(b.constraints[bC].p2 === c) {b.constraints[bC].p1 = d};
+      d.constraints.push(b.constraints[bC]);
+      //Lösche meine Verbindung zu c
+      b.constraints.splice(bC, 1);
+     
+      //Alle meine winkelverbundungen zu c neu nit dem Punkt d verknüpfen statt mit mir.
+      var cA = c.angulars.length;
+      while(cA--) {
+        if(c.angulars[cA].c === b) {c.angulars[cA].c = d;}
+        if(c.angulars[cA].a === b) {c.angulars[cA].a = d;}
+      }
+    }
+  }
+  
+  var bA = b.angulars.length;
+  while(bA--) {
+    //Lösche all meine Winkelverbindungen, die zu c geführt haben.
+    if((b.angulars[bA].c === c || b.angulars[bA].a === c) && b.angulars[bA] !== this) {
+        b.angulars[bA].broken = true;
+    }
+  }
+  this.broken = true;
+};
+
+AngularConstraint.prototype.remove = function() {
+  this.b.angulars.splice(this.b.angulars.indexOf(this), 1);
+	angulars.splice(angulars.indexOf(this), 1); 
+};
+
+
+
+function update() {
+    t+=1;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    if(phase == "build") {structy.mouseDesign();}
+    else if(phase == "play") {structy.update();}
+
+    structy.draw();
+    requestAnimFrame(update);
+}
+
+
+function start() {
+
+    canvas.onmousedown = function (e) {
+        mouse.button  = e.which;
+        mouse.px      = mouse.x;
+        mouse.py      = mouse.y;
+        var rect      = canvas.getBoundingClientRect();
+        mouse.x       = e.clientX - rect.left,
+        mouse.y       = e.clientY - rect.top,
+        mouse.down    = true;
+        e.preventDefault();
+    };
+
+    canvas.onmouseup = function (e) {
+        mouse.down = false;
+        if(phase === "build") {structy.tryToBuildConnection();}
+        e.preventDefault();
+    };
+
+    canvas.onmousemove = function (e) {
+        mouse.px  = mouse.x;
+        mouse.py  = mouse.y;
+        var rect  = canvas.getBoundingClientRect();
+        mouse.x   = e.clientX - rect.left,
+        mouse.y   = e.clientY - rect.top,
+        e.preventDefault();
+    };
+
+    canvas.oncontextmenu = function (e) {
+        e.preventDefault();
+    };
+   
+    boundsx = canvas.width - 1;
+    boundsy = canvas.height - 1;
+
+    //ctx.strokeStyle = '#888';
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = "round";
+  
+    structy = new Structure();
+    //structy.create();
+
+    update();
+    
+}
+
+window.onload = function () {
+    canvas  = document.getElementById('c');
+    ctx     = canvas.getContext('2d');
+    start();
+};
+
+
+function findAngle(p1, mid, p2) {
+    var dir1 = Math.atan2(mid.y-p1.y, mid.x-p1.x),
+        dir2 = Math.atan2(p2.y-mid.y, p2.x-mid.x),
+        angle = dir2-dir1;
+        if(angle > Math.PI) {angle -= 2*Math.PI;}
+        if(angle < -Math.PI) {angle += 2*Math.PI;}
+    return angle;
+}
+
+//Achtung: sollte eigentlich eine Methode von Point sein, da es Point manipuliert
+function rotate(point, origin, angle) {
+  point.x =  (point.x-origin.x) * Math.cos(angle) - (point.y-origin.y) *Math.sin(angle) + origin.x;
+  point.y = (point.x-origin.x) * Math.sin(angle) + (point.y-origin.y) *Math.cos(angle) + origin.y;
+  return point;
+}
+
+function distSqr(p, q) {
+  return (p.x-q.x)*(p.x-q.x) + (p.y-q.y)*(p.y-q.y);
+}
+
+$("input[type='range']").each(updateValueFromRange);
+$("input[type='range']").on("change", updateValueFromRange);
+$("input[type='checkbox']").each(updateValueFromCheckbox);
+$("input[type='checkbox']").on("change", updateValueFromCheckbox);
+
+function updateValueFromRange() {
+  $this = $(this);
+  if($this.data("scale")) {
+    console.log($this.val(), $this.attr("name"), $this.data("scale") );
+    $this.parents("label").find("span").text(($this.val()*$this.data("scale")).toPrecision(2));
+    window[$this.attr("name")] = $this.val()*$this.data("scale");
+  }
+  if($this.data("exp")) {
+    $this.parents("label").find("span").text(($this.data("exp") * Math.pow(10, 0.1 * $this.val())).toPrecision(2));
+    window[$this.attr("name")] = $this.data("exp") * Math.pow(10, 0.1 * $this.val());
+  }
+}
+
+function updateValueFromCheckbox() {
+  $this = $(this);
+  console.log($this.is(':checked'), $this.attr("name"));
+  window[$this.attr("name")] = $this.is(':checked');
+}
+
+
+$("#grid").on("click", function(){
+    physics_accuracy  = 5;
+    gravity           = 10;
+    structy_height    = 10;
+    structy_width     = 30;
+    spacing           = 20;
+    stiff             = true;
+    stiffness         = 0.8;
+    maxStress         = 80;
+    angStiffness      = 0.032;
+    angularStability  = 350;
+    drawStress        = true;
+    drawPoints        = false;
+    lineWidth         = 5;
+    mouse_pull_sqr    = 20*spacing,
+    mouse_cut_sqr     = 3*spacing;
+    ctx.lineWidth = lineWidth;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    structy = new Structure();
+    structy.create();
+    phase = "play";
+  });
+  
+$("#cloth").on("click", function(){
+    physics_accuracy  = 1;
+    gravity           = 10;
+    structy_height    = 25;
+    structy_width     = 60;
+    spacing           = 8;
+    stiff             = false;
+    stiffness         = 0.8;
+    maxStress         = 10000;
+    angStiffness      = 0.000000002;
+    angularStability  = 50;
+    drawStress        = false;
+    drawPoints        = false;
+    lineWidth         = 1;
+    mouse_pull_sqr    = 20*spacing,
+    mouse_cut_sqr     = 3*spacing;
+    ctx.lineWidth = lineWidth;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    structy = new Structure();
+    structy.create();
+    phase = "play";
+  });
+  
+$("#tree").on("click", function(){
+    $("#angularStiffness").show();
+  
+    physics_accuracy  = 8;
+    gravity           = 2;
+    stiff             = true;
+    stiffness         = 0.7;
+    maxStress         = 10000;
+    angStiffness      = 0.032;
+    angularStability  = 50;
+    drawStress        = false;
+    drawPoints        = false;
+    lineWidth         = 3;
+    mouse_pull_sqr    = 20*spacing,
+    mouse_cut_sqr     = 3*spacing;
+    ctx.lineWidth = lineWidth;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    structy = new Structure();
+    root = new Point(canvas.width / 2 -7, canvas.height / 2 + 80);
+    root.pin(canvas.width / 2-7, canvas.height / 2 + 80);
+    structy.points.push(root);
+    root2 = new Point(canvas.width / 2+7, canvas.height / 2 + 80);
+    root2.pin(canvas.width / 2+7, canvas.height / 2 + 80);
+    structy.points.push(root2);
+    root2.attach(root);
+    p = new Point(canvas.width / 2, canvas.height / 2);
+    structy.points.push(p);
+    p.attach(root);
+    p.attach(root2);
+    
+    var branch = function(parent, i, nMax, coef, dir) {
+      //console.log(parent.x + dir.x * coef, parent.y + dir.y * coef)
+      var p = new Point(parent.x + dir.x * coef, parent.y + dir.y * coef);
+      structy.points.push(p);
+      p.attach(parent);
+      if (i < nMax) {
+        branch(p, i+1, nMax, coef*coef, rotate({x: dir.x, y: dir.y}, {x: 0, y: 0}, -0.4-0.04*Math.random()));
+        branch(p, i+1, nMax, coef*coef*0.95, rotate({x: dir.x, y: dir.y}, {x: 0, y: 0}, -0.08+0.16*Math.random()));
+        branch(p, i+1, nMax, coef*coef, rotate({x: dir.x, y: dir.y}, {x: 0, y: 0}, +0.4+0.04*Math.random()));
+      }
+    }
+    branch(p, 0, 3, 0.99, rotate({x: 0, y: -60}, {x: 0, y: 0}, -0.4-0.04*Math.random()));
+    branch(p, 0, 3, 0.99*0.95, rotate({x: 0, y: -60}, {x: 0, y: 0}, 0.08-0.16*Math.random()));
+    branch(p, 0, 3, 0.99, rotate({x: 0, y: -60}, {x: 0, y: 0}, +0.4+0.04*Math.random()));
+    phase = "play";
+  });
+
+$("#zeichne").on("click", function(){
+    if (phase=="build") phase = "play";
+    else if (phase=="play") {
+      physics_accuracy  = 5;
+      gravity           = 10;
+      stiff             = true;
+      stiffness         = 0.7;
+      maxStress         = 10000;
+      angStiffness      = 0.032;
+      angularStability  = 5;
+      drawStress        = false;
+      drawPoints        = false;
+      lineWidth         = 6;
+      mouse_pull_sqr    = 20*spacing,
+      mouse_cut_sqr     = 3*spacing;
+      ctx.lineWidth = lineWidth;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      structy = new Structure();
+      phase = "build";
+    }
+  });
+  
+$("#custom").on("click", function(){
+      mouse_pull_sqr    = 20*spacing,
+      mouse_cut_sqr     = 3*spacing;
+    $("#steuerung").show();
+    $("input[type='range']").each(updateValueFromRange);
+    $("input[type='range']").on("change", updateValueFromRange);
+    $("input[type='checkbox']").each(updateValueFromCheckbox);
+    $("input[type='checkbox']").on("change", updateValueFromCheckbox);
+    ctx.lineWidth = lineWidth;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    structy = new Structure();
+    structy.create();
+    phase = "play";
+  });
+  
+  $("button").not("#custom").on("click", function(){$("#steuerung").hide();});
+  $("button").not("#tree").on("click", function(){$("#angularStiffness").hide();});
+
+
+//var Cloth = function () {
+//
+//    this.points = [];
+//    this.constraints = [];
+//
+//    var start_x = canvas.width / 2 - cloth_width * spacing / 2;
+//
+//    for (var y = 0; y <= cloth_height; y++) {
+//
+//        for (var x = 0; x <= cloth_width; x++) {
+//
+//            var p = new Point(start_x + x * spacing, start_y + y * spacing);
+//
+//            x != 0 && p.attach(this.points[this.points.length - 1]); //linken Nachbar anheften
+//            y == 0 && p.pin(p.x, p.y);
+//            y != 0 && p.attach(this.points[x + (y - 1) * (cloth_width + 1)]); //oberen Nachbar anheften
+//
+//            this.points.push(p);
+//        }
+//    }
+//};
+
+    </script>
+  </body>
+</html>
